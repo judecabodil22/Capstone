@@ -46,6 +46,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
+      <bean id="BeaFormDao" class="financials.dao.BeaFormDao">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
      <bean id="DatDao" class="financials.dao.DatDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
