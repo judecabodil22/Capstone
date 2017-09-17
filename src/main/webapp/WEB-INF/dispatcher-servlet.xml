@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="
 http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -10,7 +12,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
 http://www.springframework.org/schema/mvc 
 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-<<<<<<< HEAD
 	<context:component-scan base-package="financials.controllers">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -58,7 +59,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<bean id="DisbursementDAO" class="financials.dao.DisbursementDAO">
 		<constructor-arg ref="dataSource"></constructor-arg>
 	</bean>
-=======
+
     <context:component-scan base-package="financials.controllers">
         <context:include-filter type="annotation"
             expression="org.springframework.stereotype.Controller" />
@@ -104,7 +105,12 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
      <bean id="SampleDao" class="financials.dao.SampleDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
-    
+
+<!--    
+<<<<<<< HEAD
 >>>>>>> 75cb5beccbc8b48e1fb86ecdb5d0a5c197142464
+=======
+>>>>>>> 75cb5beccbc8b48e1fb86ecdb5d0a5c197142464
+-->
 
 </beans>
