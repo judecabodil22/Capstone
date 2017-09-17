@@ -106,11 +106,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
 
-<!--    
-<<<<<<< HEAD
->>>>>>> 75cb5beccbc8b48e1fb86ecdb5d0a5c197142464
-=======
->>>>>>> 75cb5beccbc8b48e1fb86ecdb5d0a5c197142464
--->
 
 </beans>

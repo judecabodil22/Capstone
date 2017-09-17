@@ -1,10 +1,10 @@
 
 # Mobile Tools for Java (J2ME)
 resources/
-
+target/
 /target/
-target/m2e-wtp/web-resources/META-INF/maven/Financials/Capstone/pom.properties
 *.MF
 *.properties
 .classpath
-*.properties
+.settings/
+.project
