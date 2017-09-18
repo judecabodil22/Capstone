@@ -18,7 +18,7 @@ public class KaiController {
 	@Autowired
 	private KaiDao AbiDao;
 
-	@RequestMapping("Collections")
+	@RequestMapping("/Collections")
 	public ModelAndView Kai(@ModelAttribute("modelKai") KaiModel Abi) {
 		ModelAndView c_view = new ModelAndView();
 		c_view.addObject("Welcome", "Hello Bish!");

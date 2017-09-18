@@ -18,7 +18,7 @@ public class SampleController
 	private SampleDao dao;
 	
 	
-	@RequestMapping("/sample")
+	@RequestMapping("/sdfsdfdsfsample")
 	public ModelAndView sample(@ModelAttribute("modelSample") SampleModel jude)
 	{	
 		

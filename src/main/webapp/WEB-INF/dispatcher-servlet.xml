@@ -12,7 +12,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
 http://www.springframework.org/schema/mvc 
 http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-    <context:component-scan base-package="ledger.controllers">
+    <context:component-scan base-package="financials.controllers">
         <context:include-filter type="annotation"
             expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
@@ -57,6 +57,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     </bean>
 	
 	 <bean id="KaiDao" class="financials.dao.KaiDao">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="ddao" class="financials.dao.DisbursementDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="GLDao" class="financials.dao.GLSampDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
 
