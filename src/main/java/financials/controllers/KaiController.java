@@ -27,7 +27,7 @@ public class KaiController {
 		return c_view;
 	}
 
-	@RequestMapping("/C_save")
+	@RequestMapping("/c_save")
 	public ModelAndView save(@ModelAttribute("modelKai") KaiModel Abi,
 			@RequestParam(value = "Save", required = false) String Save,
 			@RequestParam(value = "Update", required = false) String Update,
@@ -62,7 +62,7 @@ public class KaiController {
 			message="Failed!";
 		}
 		
-		c_view.addObject("hello",message);
+		c_view.addObject("Welcome",message);
 		c_view.setViewName("Collections/Kai");
 
 		return c_view;
