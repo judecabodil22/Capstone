@@ -40,17 +40,17 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
   	</bean>
     
     <!-- DAO auto-wired -->
-    <bean id="UserDao" class="financials.dao.UserDao">
+   <!--  <bean id="UserDao" class="financials.dao.UserDao">
         <constructor-arg ref="dataSource"></constructor-arg>
-    </bean>
+    </bean> -->
     
       <bean id="BeaFormDao" class="financials.dao.BeaFormDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
-     <bean id="DatDao" class="financials.dao.DatDao">
+  <!--    <bean id="DatDao" class="financials.dao.DatDao">
         <constructor-arg ref="dataSource"></constructor-arg>
-    </bean>
+    </bean> -->
     
      <bean id="SampleDao" class="financials.dao.SampleDao">
         <constructor-arg ref="dataSource"></constructor-arg>
@@ -67,5 +67,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="GLDao" class="financials.dao.GLSampDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+    
+       <bean id="AdminDao" class="financials.dao.AdminDao">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+     <bean id="AdminFundDao" class="financials.dao.AdminFundDao">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
 
 </beans>
