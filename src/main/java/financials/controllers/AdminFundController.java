@@ -105,16 +105,33 @@ public class AdminFundController {
 	}
 	
 	
-	@RequestMapping("fuck")
-	public ModelAndView modal(@ModelAttribute("findbyID") AdminFundModel fund,
+	
+	@RequestMapping("admin_delete")
+	public ModelAndView delete(@ModelAttribute("fundingHappiness") AdminFundModel fund,
 			@RequestParam(value = "submit", required = false) String save,
 			@RequestParam(value = "reset", required = false) String reset,
-			@RequestParam(value = "tanginangmodal", required = false) String tangina)
+			@RequestParam(value = "Delete", required = false) String delete)
 	{
-		System.out.println(tangina);
-		return null;
-	}
+		ModelAndView mav = new ModelAndView();
+		
 	
+		mav.setViewName("Admin/Funds");
+			
+		if(delete != null)
+		{
+			dao.delete(fund);
+			System.out.println("Success");
+			List<AdminFundModel> list = dao.getFunds();
+			mav.addObject("list", list);
+			
+		}
+		
+		System.out.println(delete);
+		
+		
+		
+		return mav;
+	}
 	
 	
 	

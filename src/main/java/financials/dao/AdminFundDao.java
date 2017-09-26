@@ -38,7 +38,7 @@ public class AdminFundDao {
 	
 	public boolean update(AdminFundModel user) {
 
-		sql = "Update Users " + "Set fund_code = ?, fund_description = ? " + "WHERE fund_uid = ?";
+		sql = "Update tbl_fund " + "Set fund_code = ?, fund_description = ? " + "WHERE fund_uid = ?";
 
 		jdbcTemplate.update(sql, new Object[] { user.getFund_code(), user.getFund_description(), user.getFund_uid()});
 
@@ -66,7 +66,7 @@ public class AdminFundDao {
 	
 	public List<AdminFundModel> findByIDList(AdminFundModel user) {
 
-		sql = "Select * from USERS " + "WHERE user_id = '" + user.getFund_uid() + "'";
+		sql = "Select * from tbl_fund " + "WHERE fund_uid = '" + user.getFund_uid() + "'";
 
 		return jdbcTemplate.query(sql, new RowMapper<AdminFundModel>() {
 			public AdminFundModel mapRow(ResultSet rs, int row) throws SQLException {
@@ -79,6 +79,18 @@ public class AdminFundDao {
 
 		});
 	}
+	
+	
+	public boolean delete(AdminFundModel fund) {
+
+		sql = "Delete from tbl_fund " + "WHERE fund_uid = ?";
+
+		jdbcTemplate.update(sql, new Object[] { fund.getFund_uid() });
+
+		return true;
+
+	}
+
 	
 	
 	

@@ -411,7 +411,7 @@
                             </div>
                             <div class="portlet-body">
                                 <div class="table-scrollable">
-                                   
+                                   <form:form action="admin_delete" modelAttribute="fundingHappiness">
 									<table  style="text-align:center" class="table table-striped table-bordered table-advance table-hover">
                                         <thead>
                                             <tr>
@@ -439,35 +439,30 @@
                                                 <td class="highlight">
                                                     <div class="info"></div>
                                                     
-                                                    	<input type="hidden" value="${MyOneAndOnly.fund_uid}">
-                                                    	<input type="hidden" value="${MyOneAndOnly.fund_code}">
-                                                    	<input type="hidden" value="${MyOneAndOnly.fund_description}">
-                                                    <form:form action="fuck">	
-                                                      <a type="submit" data-toggle="modal" id="tanginangmodal" data-href="#edit" href="#edit">${MyOneAndOnly.fund_code}</a>
-                                                      </form:form>
+                                                    	<form:input type="hidden" id="uid" path="fund_uid" value="${MyOneAndOnly.fund_uid}"/>
+                                                    	<input type="hidden" id="code" value="${MyOneAndOnly.fund_code}">
+                                                    	<input type="hidden" id="description" value="${MyOneAndOnly.fund_description}">
+                                                    	
+                                                
+                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" onClick="SendToModal()">${MyOneAndOnly.fund_code}</a> </button>
+                                                    
                                                 </td>
                                                 <td class="hidden-xs">${MyOneAndOnly.fund_description}</td>
                                                  <td>
-                                                    <a href="#" class="btn default btn-xs black">
+                                                    <input type="submit" value="Delete" name="Delete" class="btn default btn-xs black">
                                                         <i class="fa fa-trash-o"></i>
-                                                        Delete
-                                                    </a>
+                                                        
+                                                    
                                                 </td>
                                                 
                                             </tr>
 										</c:forEach>		
                                                 
-                                           
-                                           
-                                           
 										
-											
-												
-												
                                         </tbody>
 										
                                     </table>
-								
+								</form:form>
                                 </div>
 									
 									
@@ -486,7 +481,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">New Account</h4>
+                                <h4 class="modal-title">New Fund</h4>
                             </div>
                             <div class="modal-body">
 
@@ -538,7 +533,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">New Account</h4>
+                                <h4 class="modal-title">Edit Fund</h4>
                             </div>
                             <div class="modal-body">
                     
@@ -550,7 +545,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="code">Code</label>  
   <div class="col-md-5">
-  <form:input id="code" name="code" type="text"  class="form-control input-md" path="fund_code"/>
+  <form:input  id="modal_code" type="text" class="form-control input-md" path="fund_code"/>
   <span class="help-block">numbers only</span>  
   </div>
 </div>
@@ -559,7 +554,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="description">Description</label>  
   <div class="col-md-8">
-  <form:input id="description" name="description" type="text" class="form-control input-md" path="fund_description"/>
+  <form:input  id="modal_description" type="text" class="form-control input-md" path="fund_description"/>
   <span class="help-block">Fund Description</span>  
   </div>
 </div>
@@ -632,8 +627,22 @@
     </script>
     <!-- end of page level js -->
   
+  <script type="text/javascript">
   
-
+  	function SendToModal()
+  	{
+  		/* document.getElementById('modal_code').value = document.getElementById('code').value;
+  		document.getElementById('modal_description').value = document.getElementById('description').value;
+  		console.log(document.getElementById('modal_code').value);
+  		window.location.reload(); */
+  		
+  		
+  	
+  		
+  	}
+  	
+  </script>
+	
   
   
   
