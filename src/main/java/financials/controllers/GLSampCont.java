@@ -1,5 +1,7 @@
 package financials.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,6 +27,9 @@ public class GLSampCont
 		nav.addObject("b", "Hello User");
 		nav.setViewName("GLedger/GLSample");
 		
+		List<GLSampMod> selist = dao.getUsers();
+		nav.addObject("c", selist);
+		
 		return nav;
 	}
 	
@@ -32,23 +37,32 @@ public class GLSampCont
 	public ModelAndView user(@ModelAttribute("ModelBindUser") GLSampMod glsamp,
 			@RequestParam(value = "gls_save", required = false) String glsave,
 			@RequestParam(value = "gls_alter", required = false) String glalter,
-			@RequestParam(value = "gls_remove", required = false) String gldel)
+			@RequestParam(value = "gls_remove", required = false) String gldel,
+			@RequestParam(value = "gls_get", required = false) String glsel,
+			@RequestParam(value = "gls_get2", required = false) String glsel2)	
 	{		
 		String message = "";
 		boolean bool = true;
 		
+		ModelAndView ins = new ModelAndView();
+		
 		
 		if (glsave!=null)
 		{
+			
 			bool = dao.insert(glsamp);
 			if (bool)
 			{
 				message = "PASOK";
+				
 			}
 			else 
 			{
 				message = "error failed to insert";
 			}
+			
+			List<GLSampMod> selist = dao.getUsers();
+			ins.addObject("c", selist);
 			
 		}
 		
@@ -63,6 +77,8 @@ public class GLSampCont
 			{
 				message = "wala";
 			}
+			List<GLSampMod> selist = dao.getUsers();
+			ins.addObject("c", selist);
 			
 		}
 		
@@ -77,12 +93,26 @@ public class GLSampCont
 			{
 				message = "CRY";
 			}
+			List<GLSampMod> selist = dao.getUsers();
+			ins.addObject("c", selist);
 			
 		}
 		
+		else if (glsel!=null)
+		{
+			List<GLSampMod> selist = dao.getUsers();
+			ins.addObject("c", selist);
+		}
+		
+		else if (glsel2!=null)
+		{
+			List<GLSampMod> sel2ist = dao.findByIDList(glsamp);
+			ins.addObject("c", sel2ist);
+		}
+	
 
 			
-		ModelAndView ins = new ModelAndView();
+
 		
 		ins.addObject("b", message);
 		ins.setViewName("GLedger/GLSample");
