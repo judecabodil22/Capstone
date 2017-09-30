@@ -14,6 +14,4 @@ public class financials_dashboardController {
 		fd.setViewName("financials_dashboard");
 		return fd;
 	}
-	
-
 }
