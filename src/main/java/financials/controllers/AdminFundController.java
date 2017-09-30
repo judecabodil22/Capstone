@@ -81,28 +81,7 @@ public class AdminFundController {
 		return mav;
 	}
 	
-	@RequestMapping("admin_id")
-	public ModelAndView findID(@ModelAttribute("findbyID") AdminFundModel fund,
-			@RequestParam(value = "submit", required = false) String save,
-			@RequestParam(value = "reset", required = false) String reset)
-	{
-		ModelAndView mav = new ModelAndView();
-		
 	
-		mav.setViewName("Admin/Funds");
-			
-		if(save != null)
-		{
-			dao.update(fund);
-			System.out.println("Success");
-			List<AdminFundModel> list = dao.getFunds();
-			mav.addObject("list", list);
-			
-		}
-		
-		
-		return mav;
-	}
 	
 	
 	

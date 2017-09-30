@@ -326,7 +326,7 @@
 										</li>
 									
 										<li>
-											<a href="resources/ChartofAccounts.html">
+											<a href="admin_CoA">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
 												Chart of Accounts					
 											</a>
@@ -405,14 +405,14 @@
                                 <div class="pull-right">
 									
 									<a type="button" class="btn btn-success btn-sm" data-toggle="modal" data-href="#add" href="#add"><span class="glyphicon glyphicon-check"></span>Add</a>
-                                    <a type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-href="#responsive" href="resources/#responsive"><span class="fa fa-ban"></span> Delete</a>
+                                  
                                    </div>
                                    
                             </div>
                             <div class="portlet-body">
                                 <div class="table-scrollable">
-                                   <form:form action="admin_delete" modelAttribute="fundingHappiness">
-									<table  style="text-align:center" class="table table-striped table-bordered table-advance table-hover">
+                               
+									<table  id="dashboard_table" style="text-align:center" class="table table-striped table-bordered table-advance table-hover">
                                         <thead>
                                             <tr>
                                                 <th style="text-align:center">
@@ -435,25 +435,23 @@
                                         <tbody>
                                         
                                         <c:forEach var="MyOneAndOnly" items="${list}">
-                                            <tr>
-                                                <td class="highlight">
-                                                    <div class="info"></div>
-                                                    
-                                                    	<form:input type="hidden" id="uid" path="fund_uid" value="${MyOneAndOnly.fund_uid}"/>
-                                                    	<input type="hidden" id="code" value="${MyOneAndOnly.fund_code}">
-                                                    	<input type="hidden" id="description" value="${MyOneAndOnly.fund_description}">
-                                                    	
+                                        	 <tr data-uid="${MyOneAndOnly.fund_uid}" data-code="${MyOneAndOnly.fund_code}" data-desc="${MyOneAndOnly.fund_description}" >
                                                 
-                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" onClick="SendToModal()">${MyOneAndOnly.fund_code}</a> </button>
-                                                    
+                                                    <form:form action="admin_delete" modelAttribute="fundingHappiness">
+                                                <td class="highlight" class="info">
+                                                     <div class="info"></div>
+
+                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${MyOneAndOnly.fund_code}</a>
                                                 </td>
                                                 <td class="hidden-xs">${MyOneAndOnly.fund_description}</td>
                                                  <td>
-                                                    <input type="submit" value="Delete" name="Delete" class="btn default btn-xs black">
-                                                        <i class="fa fa-trash-o"></i>
-                                                        
-                                                    
+                                                   	<form:input type="hidden" id="uid" path="fund_uid" value="${MyOneAndOnly.fund_uid}"/>
+                                                    <input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
+                                                  
+                                                  	                                       
                                                 </td>
+                                                
+                                                </form:form>
                                                 
                                             </tr>
 										</c:forEach>		
@@ -462,7 +460,7 @@
                                         </tbody>
 										
                                     </table>
-								</form:form>
+								
                                 </div>
 									
 									
@@ -537,7 +535,7 @@
                             </div>
                             <div class="modal-body">
                     
-<form:form class="form-horizontal" action="admin_save" modelAttribute="fundingHappiness" name="FundForm">
+<form:form class="form-horizontal" action="admin_update" modelAttribute="fundingHappiness" name="FundForm">
 <fieldset>
 
 
@@ -545,6 +543,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="code">Code</label>  
   <div class="col-md-5">
+   <form:input  id="modal_uid" type="hidden" class="form-control input-md" path="fund_uid"/>
   <form:input  id="modal_code" type="text" class="form-control input-md" path="fund_code"/>
   <span class="help-block">numbers only</span>  
   </div>
@@ -615,6 +614,7 @@
     <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
      <script src="resources/vendors/jscharts/Chart.js"></script>
     <script src="resources/js/dashboard.js" type="text/javascript"></script>
+   
     <script type="text/javascript">
     $(document).ready(function() {
         var composeHeight = $('#calendar').height() +21 - $('.adds').height();
@@ -627,21 +627,29 @@
     </script>
     <!-- end of page level js -->
   
-  <script type="text/javascript">
-  
-  	function SendToModal()
-  	{
-  		/* document.getElementById('modal_code').value = document.getElementById('code').value;
-  		document.getElementById('modal_description').value = document.getElementById('description').value;
-  		console.log(document.getElementById('modal_code').value);
-  		window.location.reload(); */
-  		
-  		
-  	
-  		
-  	}
-  	
-  </script>
+  <script>
+$(document).ready(function(){
+	// code to read selected table row cell data (values).
+	$(".ToModal").on('click',function(){
+		// get data
+		var data = $(this).closest('tr').data();
+
+		// put to modal ----------------------- start
+		// using jquery codes
+		/* $('#modal_code').val(data.code);
+		$('#modal_description').val(data.desc); */
+		
+		// using native javascript codes
+		 document.getElementById("modal_code").value = data.code;
+		 document.getElementById("modal_description").value = data.desc;
+		 document.getElementById("modal_uid").value = data.uid;
+		// put to modal ----------------------- ends
+	});
+});
+
+
+
+</script>
 	
   
   
