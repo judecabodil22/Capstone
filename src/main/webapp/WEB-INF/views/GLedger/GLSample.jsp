@@ -32,11 +32,36 @@
 				<td><Input type="submit" value="enter" name="gls_save"></td>
 				<td><Input type="submit" value="update" name="gls_alter"></td>
 				<td><Input type="submit" value="delete" name="gls_remove"></td>
+				<td><Input type="submit" value="select" name="gls_get"></td>
+				<td><Input type="submit" value="select2" name="gls_get2"></td>
 				
 			</tr>
 			
 		</table>
 	</form:form>
+	
+	<center>
+		<table border="2" width="70%" cellpadding="2"
+			style="text-align: center">
+
+			<tr>
+				<th>User ID</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+
+			<c:forEach var="user" items="${c}">
+
+				<tr>
+					<td>${user.user_id}</td>
+					<td>${user.user_name}</td>
+					<td>${user.pass_word}</td>
+
+				</tr>
+			</c:forEach>
+
+		</table>
+	</center>
 
 </body>
 </html>

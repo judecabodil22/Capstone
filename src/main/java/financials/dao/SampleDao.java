@@ -1,8 +1,13 @@
 package financials.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -39,6 +44,42 @@ public class SampleDao
 
 		return true;
 	}
+	
+	public List<SampleModel> getUsers() {
+
+		sql = "Select * from USERS";
+
+		return jdbcTemplate.query(sql, new RowMapper<SampleModel>() {
+			public SampleModel mapRow(ResultSet rs, int row) throws SQLException {
+				SampleModel user = new SampleModel();
+				user.setUser_id(rs.getString("user_id"));
+				user.setUser_name(rs.getString("user_name"));
+				user.setPass_word(rs.getString("pass_word"));
+				
+				return user;
+			}
+
+		});
+	}
+	
+	public List<SampleModel> findByIDList(SampleModel user) {
+
+		sql = "Select * from USERS " + "WHERE user_id = '" + user.getUser_id() + "'";
+
+		return jdbcTemplate.query(sql, new RowMapper<SampleModel>() {
+			public SampleModel mapRow(ResultSet rs, int row) throws SQLException {
+				SampleModel user = new SampleModel();
+				user.setUser_id(rs.getString("user_id"));
+				user.setUser_name(rs.getString("user_name"));
+				user.setPass_word(rs.getString("pass_word"));
+				return user;
+			}
+
+		});
+	}
+	
+	
+	
 	
 	
 }

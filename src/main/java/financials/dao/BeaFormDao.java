@@ -12,7 +12,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.BeaFormModel;
-import financials.model.UserModel;
 
 public class BeaFormDao {
 
