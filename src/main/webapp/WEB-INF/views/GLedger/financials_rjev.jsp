@@ -27,27 +27,7 @@
     <!--end of page level css-->
     
     <!-- Added Scripts -->
-	<!--page level css -->
-    <!-- daterange picker -->
-    <link href="resources/vendors/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
-    <!--select css-->
-    <link href="resources/vendors/select2/select2.css" rel="stylesheet" />
-    <link rel="stylesheet" href="resources/vendors/select2/select2-bootstrap.css" />
-    <!--clock face css-->
-    <link href="resources/vendors/iCheck/skins/all.css" rel="stylesheet" />
-    <link href="resources/css/pages/formelements.css" rel="stylesheet" />
-    <!--end of page level css-->
-    
-    <!--page level css -->
-    <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.colReorder.min.css" />
-    <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.scroller.min.css" />
-    <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.bootstrap.css" />
-    <link href="resources/2css/pages/tables.css" rel="stylesheet" type="text/css">
-    <!--end of page level css-->
-    
-	<!--page level css -->
-	<link rel="stylesheet" href="resources/css/pages/tab.css" />
-    <!--end of page level css-->
+	   <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
     <!-- /Added Scripts -->
    
 </head>
@@ -284,13 +264,13 @@
                                     Journal Entry Voucher
                                 </a>	
                                 	<ul class="sub-menu">
-                                		<li class="active">
+                                		<li>
                                 			<a href="financials_createjev">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Create JEV
                                     		</a>
                                 		</li>
-                                		<li>
+                                		<li class="active">
                                 			<a href="financials_reviewjev">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Review JEV
@@ -485,7 +465,7 @@
         <aside class="right-side">
         	<!-- Main Content -->
         	<section class="content-header">
-        		<h1>Create Journal Entry Voucher</h1>
+        		<h1>Review Journal Entry Voucher</h1>
         			<ol class="breadcrumb">
         				<li class="active">
         					<!--a href="resources/#">
@@ -497,294 +477,142 @@
             </section>
             
             <section class="content">
-			<!-- JEV start -->
-				<div class="col-md-12">
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<h3 class="panel-title">Journal Entry Voucher</h3>
-                         </div>
-                         
-                         <div class="panel-body">
-                         	<div class="bs-example">
-                         		<ul class="nav nav-tabs">
-                         			<li>
-                         				<a data-toggle="tab">Part I</a>
-                                    </li>
-                                    <li>
-                         				<a data-toggle="tab">Part II</a>
-                                    </li>
-                                    <li>
-                         				<a data-toggle="tab">Part III</a>
-                                    </li>
-                                 </ul>
-                             </div>
-                             
-                             <br>
-                             
-                             <div id="myTabContent" class="tab-content">
-                             
-                             	<!-- Page I -->
-                             	<div class="tab-pane fade active in" id="page1">
-                             	
-                             	<!-- Entry Date -->
-                             	<div class="col-md-4 form-group">
-                             		<label>Entry Date</label>
-                             			<div class="input-group">
-                             				<div class="input-group-addon">
-                             					<i class="fa fa-calendar"></i>
-                                            </div>
-                                        <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
-                                        </div>
-                                 </div>
-                         
-                         		 <!-- Fund -->
-                         		 <div class="col-md-12 form-group">
-                         		 	<label>Fund</label>
-                         		 		<select id="e1" class="form-control select2">
-                         		 			<optgroup label="Fund Sample">
-                         		 				<option value="1">Fund Sample 1</option>
-                         		 				<option value="2">Fund Sample 2</option>
-                         		 				<option value="3">Fund Sample 3</option>
-                         		 				<option value="4">Fund Sample 4</option>
-                         		 				<option value="5">Fund Sample 5</option>
-                         		 			</optgroup>
-                         		 		</select>
-                         		 </div>
-                         		 
-                         		 <!-- Transaction Type -->
-                         		 <div class="col-md-12 form-group">
-                         		 	<label>Transaction Type</label>
-                         		 		<select id="e1" class="form-control select2">
-                         		 			<option value="1">Collection</option>
-                         		 			<option value="2">Disbursement</option>
-                                    	</select>
-                                 </div>
-								
-								 <!-- Transaction Template -->
-                         		 <div class="col-md-12 form-group">
-                         		 	<label>Transaction Template</label>
-                         		 		<select id="e1" class="form-control select2">
-                         		 				<option value="1">Template 1</option>
-                         		 				<option value="2">Template 2</option>
-                         		 				<option value="3">Template 3</option>
-                         		 				<option value="4">Template 4</option>
-                         		 				<option value="5">Template 5</option>
-                         		 		</select>
-                         		 </div>
-                         		 
-                         		 <!-- Particulars -->								
-                         		 <div class="col-md-12 form-group">
-                         		 	<label>Particulars</label>
-                         		 	<textarea id="textarea" class="form-control" style="resize:none" maxlength="1000" rows="3" placeholder="Write something here..."></textarea>
-                                 </div>         
-                                 
-                                 <!-- Buttons -->
-                                 <div class="form-group pull-right">
-                                 	<a data-toggle="tab" href="#page2">
-                                 		<button type="submit" class="btn btn-responsive btn-primary">Next</button>	
-                                 	</a>
-										<button type="submit" class="btn btn-responsive btn-default">Clear</button>	
-								 </div>
- 
-                                 </div>
-                                 
-                                 <!-- Page II -->
-                                 <div class="tab-pane fade" id="page2">
-                                 
-                                 <!-- Table of Accounts -->
-                                 <div class="row">
-                                 	<div class="col-md-12">
-                                 		<div class="panel panel-primary filterable">
-                                 			<div class="panel-heading clearfix">
-                                 				<h2 class="panel-title pull-left">
-                                 				Table of Accounts
-                                 				</h2>
-                                			<div class="pull-right">
-                                    			<button type="button" class="btn btn-success btn-sm" id="addButton">Add</button>
-                                    			<button type="button" class="btn btn-danger btn-sm" id="delButton">Delete</button>
-                             				</div>
-                             				</div>
-                             			
-                             			<div class="panel-body">
-                             				<table class="table" id="table3">
-                             					<thead>
-                             						<tr>
-                             							<th class="col-md-2">Responsibility <br> Center</th>
-                             							<th class="col-md-3">Accounts</th>
-                             							<th class="col-md-3">Description</th>
-                             							<th class="col-md-2">Debit</th>
-                             							<th class="col-md-2">Credit</th>
-                             						</tr>
-                             					</thead>
-                             					
-                             					<tbody>
-                             						<tr>
-                             							<td>
-                             								<select id="e1" class="form-control select2">
-                             										<option value="1">IT Department</option>
-                             										<option value="2">HR Department</option>
-                             										<option value="3">Faculty Department</option>
-                             								</select>
-                             							</td>
-                             							
-                             							<td>
-                             								<select id="e1" class="form-control select2">
-                             									<optgroup label="Assets">
-                             										<option value="1">Cash</option>
-                             										<option value="2">Accounts Receivable</option>
-                             										<option value="3">Notes Receivable</option>
-                             									</optgroup>
-                             									<optgroup label="Liabilities">
-                             										<option value="1">Accounts Payable</option>
-                             										<option value="1">Notes Payable</option>
-                             									</optgroup>
-                             								</select>
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="text" class="form-control" maxlength="100"/>
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="number" class="form-control" />
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="number" class="form-control" />
-                             							</td>
-                             						</tr>
-                             						
-                             						<tr>
-                             							<td>
-                             								<!--select id="e1" class="form-control select2">
-                             										<option value="1">IT Department</option>
-                             										<option value="2">HR Department</option>
-                             										<option value="3">Faculty Department</option>
-                             								</select-->
-                             							</td>
-                             							
-                             							<td>
-                             								<select id="e1" class="form-control select2">
-                             									<optgroup label="Assets">
-                             										<option value="1">Cash</option>
-                             										<option value="2">Accounts Receivable</option>
-                             										<option value="3">Notes Receivable</option>
-                             									</optgroup>
-                             									<optgroup label="Liabilities">
-                             										<option value="1">Accounts Payable</option>
-                             										<option value="1">Notes Payable</option>
-                             									</optgroup>
-                             								</select>
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="text" class="form-control" maxlength="100"/>
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="number" class="form-control" />
-                             							</td>
-                             							
-                             							<td>
-                             								<input type="number" class="form-control" />
-                             							</td>
-                             						</tr>		
-                             						
-												</tbody>
-											</table>
-										</div>
-										</div>
-									</div>
-								 </div>
-								 
-								 <!-- Table of Supporting Documents -->
-                                 <div class="row"> 	
-                                 	<div class="col-md-12">
-                                 		<div class="panel panel-primary filterable">
-                                 			<div class="panel-heading clearfix">
-                                 				<h2 class="panel-title pull-left">
-                                 				Table of Supporting Documents
-                                 				</h2>
-                                			<div class="pull-right">
-                                    			<button type="button" class="btn btn-success btn-sm" id="addButton">Add</button>
-                                    			<button type="button" class="btn btn-danger btn-sm" id="delButton">Delete</button>
-                             				</div>
-                             				</div>
-                             			
-                             			<div class="panel-body">
-                             				<table class="table" id="table3">
-                             					<thead>
-                             						<tr>
-                             							<th class="col-md-4">Description</th>
-                             							<th class="col-md-4">Value</th>
-                             							<th class="col-md-2">Date</th>
-                             						</tr>
-                             					</thead>
-                             					
-                             					<tbody>
-                             					<tr>
-                             						<td>
-                             							<select id="e1" class="form-control select2">
-                             								<option value="1">Receipt</option>
-                             								<option value="1">Voucher</option>
-                             							</select>
-                             						</td>
-                             						
-                             						<td>
-                             							<input type="text" class="form-control"/>
-                             						</td>
-                             						
-                             						<td>
-                             							<input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
-                                               		</td>
-                                               	</tr>
-                                               	
-                                               	</tbody>
-                                          	</table>     	
-                                        </div>
-                                        </div>
-                             		</div>			
-								</div>
-								
-								<!-- Buttons -->
-                                <div class="form-group pull-right">
-                                	<a data-toggle="tab" href="#page3">
-                                 		<button type="submit" class="btn btn-responsive btn-primary">Next</button>	
-                                 	</a>
-										<button type="submit" class="btn btn-responsive btn-default">Clear</button>	
-								</div>
-								
-								</div>
-								
-								<!-- Page III -->
-								<div class="tab-pane fade" id="page3">
-								<!-- Prepared by -->
-								<div class="col-md-6 form-group">
-									<div>
-										<label for="disabledSelect">Prepared by</label>
-											<input class="form-control" id="disabledInput" type="text" placeholder="User Accountant" disabled>
-									</div>
-								</div>
-								
-								<!-- Remarks -->								
-                         		<div class="col-md-12 form-group">
-                         			<label>Remarks</label>
-                         			<textarea id="textarea" class="form-control" style="resize:none" maxlength="300" rows="3" placeholder="Write something here..."></textarea>
-                                </div>
-                                
-                                <!-- Buttons -->
-                                <div class="form-group pull-right">
-									<button type="submit" class="btn btn-responsive btn-primary">Submit</button>	
-									<button type="submit" class="btn btn-responsive btn-default">Cancel</button>	
-								</div>
-                                </div>
-
-                                </div> 
+            	<!-- List of JEV -->
+            	<div class="row">
+            		<div class="col-md-12">
+            			<div class="panel panel-primary filterable">
+            				<div class="panel-heading clearfix">
+            					<h3 class="panel-title pull-left">
+            					List of Journal Entry Vouchers
+                                </h3>
                             </div>
+                            
+                            <div class="panel-body">
+                            	<table class="table table-bordered table-hover">
+                            	
+                            		<thead>
+                            			<tr>
+                            				<th class="col-md-2">Entry Date</th>
+                            				<th class="col-md-2">JEV No</th>
+                            				<th class="col-md-2">Accountant Name</th>
+                            				<th class="col-md-1">Status</th>
+                            				<th class="col-md-1" colspan=2>Actions</th>
+                            			</tr>
+                            		</thead>
+                            		
+                            		<tbody>
+                            			<tr>
+                            				<td>01/01/2017</td>
+                            				<td>JEV010117</td>
+                            				<td>Juan Una</td>
+                            				<td>
+                            					<span class="label label-md label-warning">Pending</span>
+                            				</td>
+                            				<td>
+                            					<a href="#" class="btn default btn-xs purple">
+                                                        <i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                  </td> 
+                                                  <td>
+                                                 <a href="#" class="btn default btn-xs black">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        Delete
+                                                    </a>
+                            				</td>
+                            			</tr>
+                            			
+                            			<tr role="row">
+                            				<td>01/02/2017</td>
+                            				<td>JEV010217</td>
+                            				<td>Panga Dala</td>
+                            				<td>
+                            					<span class="label label-md label-warning">Pending</span>
+                            				</td>
+                            				<td>
+                            					<a href="#" class="btn default btn-xs purple">
+                                                        <i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                  </td> 
+                                                  <td>
+                                                 <a href="#" class="btn default btn-xs black">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        Delete
+                                                    </a>
+                            				</td>
+                            			</tr>
+                            			
+                            			<tr role="row">
+                            				<td>01/03/2017</td>
+                            				<td>JEV010317</td>
+                            				<td>Tatlo Tres</td>
+                            				<td>
+                            					<span class="label label-md label-warning">Pending</span>
+                            				</td>
+                            				<td>
+                            					<a href="#" class="btn default btn-xs purple">
+                                                        <i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                  </td> 
+                                                  <td>
+                                                 <a href="#" class="btn default btn-xs black">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        Delete
+                                                    </a>
+                            				</td>
+                            			</tr>
+                            			
+                            			<tr role="row">
+                            				<td>01/04/2017</td>
+                            				<td>JEV010417</td>
+                            				<td>Apa Quat</td>
+                            				<td>
+                            					<span class="label label-md label-warning">Pending</span>
+                            				</td>
+                            				<td>
+                            					<a href="#" class="btn default btn-xs purple">
+                                                        <i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                  </td> 
+                                                  <td>
+                                                 <a href="#" class="btn default btn-xs black">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        Delete
+                                                    </a>
+                            				</td>
+                            			</tr>
+                            			
+                            			<tr role="row">
+                            				<td>01/05/2017</td>
+                            				<td>JEV010517</td>
+                            				<td>Lima Singko</td>
+                            			<td>
+                            					<span class="label label-md label-warning">Pending</span>
+                            				</td>
+                            				<td>
+                            					<a href="#" class="btn default btn-xs purple">
+                                                        <i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                  </td> 
+                                                  <td>
+                                                 <a href="#" class="btn default btn-xs black">
+                                                        <i class="fa fa-trash-o"></i>
+                                                        Delete
+                                                    </a>
+                            				</td>
+                            			</tr>
+	
+                            		</tbody>
+                            	</table>
+                            </div>
+                        </div>
+                	</div>
+                </div>    
 
-                    </div>
-                  </div>
-        
 			</section>		
 		</aside>		
 	</div>			
@@ -835,30 +663,7 @@
     <!-- end of page level js -->
     
     <!-- Added Scripts -->
-	<!-- beginning of page level js -->
-    <!-- InputMask -->
-    <script src="resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-    <script src="resources/vendors/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
-    <script src="resources/vendors/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
-    <!-- date-range-picker -->
-    <script src="resources/vendors/daterangepicker/daterangepicker.js" type="text/javascript"></script>
-    <script src="resources/vendors/select2/select2.js" type="text/javascript"></script>
-    <script src="resources/vendors/iCheck/icheck.js" type="text/javascript"></script>
-    <script src="resources/vendors/iCheck/demo/js/custom.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/autogrow/js/jQuery-autogrow.js" type="text/javascript"></script>
-    <script src="resources/vendors/maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/card/jquery.card.js" type="text/javascript"></script>
-    <script src="resources/js/pages/formelements.js" type="text/javascript"></script>
-    <!-- end of page level js -->
-    
-    <!-- beginning of page level js -->
-    <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.colReorder.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.scroller.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="resources/js/pages/table-advanced.js"></script>
-    <!-- end of page level js -->
+
     <!-- /Added Scripts -->
     
 </body>
