@@ -32,6 +32,8 @@
 					<input type="submit" value="Submit" name="Save">
 					<input type="submit" value="Update" name="Update">
 					<input type="submit" value="Delete" name="Delete">
+					<input type="submit" value="SelectAll" name="SelectAll">
+					<input type="submit" value="SelectFrom" name="SelectFrom">
 				</td>
 			</tr>
 			<tr>
@@ -44,5 +46,28 @@
 
 		</table>
 </form:form>
+
+	<center>
+		<table border="2" width="70%" cellpadding="2"
+			style="text-align: center">
+
+			<tr>
+				<th>User ID</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+
+			<c:forEach var="user" items="${Byangcake}">
+
+				<tr>
+					<td>${user.user_id}</td>
+					<td>${user.user_name}</td>
+					<td>${user.pass_word}</td>
+
+				</tr>
+			</c:forEach>
+
+		</table>
+	</center>
 </body>
 </html>
