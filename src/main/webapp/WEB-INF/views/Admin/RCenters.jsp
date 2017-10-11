@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Funds</title>
+    <title>Responsibility Centers</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -321,7 +321,7 @@
 										<li>
 											<a href="accountTypes">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
-												Account Types				
+												Account Types					
 											</a>
 										</li>
 									
@@ -384,7 +384,7 @@
         <aside class="right-side">
             <!-- Main content -->
             <section class="content-header">
-                <h1>Types of Funds</h1>
+                <h1>Types of Responsibility Centers</h1>
                 <ol class="breadcrumb">
                     <li class="active">
                         <a href="resources/#">
@@ -400,7 +400,7 @@
                            <div class="portlet-title">
                                 <h3 class="caption">
                                      <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Funds
+                                    Responsibility Center
                                 </h3>
                                 <div class="pull-right">
 									
@@ -421,6 +421,11 @@
                                                 </th>
                                                 <th  style="text-align:center" class="hidden-xs">
                                                     <i class="fa fa-user"></i>
+												Acronym
+                                                </th>
+                                                
+                                                 <th  style="text-align:center" class="hidden-xs">
+                                                    <i class="fa fa-user"></i>
 												Description
                                                 </th>
                                                 
@@ -434,18 +439,19 @@
                                         </thead>
                                         <tbody>
                                         
-                                        <c:forEach var="MyOneAndOnly" items="${list}">
-                                        	 <tr data-uid="${MyOneAndOnly.fund_uid}" data-code="${MyOneAndOnly.fund_code}" data-desc="${MyOneAndOnly.fund_description}" >
+                                        <c:forEach var="center" items="${rCenters}">
+                                        	 <tr data-uid="${center.resp_center_uid}" data-code="${center.resp_center_code}" data-desc="${center.resp_center_description}" data-acronym="${center.resp_center_acronym}" >
                                                 
-                                              <form:form action="admin_funds_delete" modelAttribute="fundingHappiness">
+                                              <form:form action="admin_rcenters_delete" modelAttribute="rcDelete">
                                                 <td class="highlight" class="info">
                                                      <div class="info"></div>
 
-                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${MyOneAndOnly.fund_code}</a>
+                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${center.resp_center_code}</a>
                                                 </td>
-                                                <td class="hidden-xs">${MyOneAndOnly.fund_description}</td>
+                                                <td class="hidden-xs">${center.resp_center_acronym}</td>
+                                                 <td class="hidden-xs">${center.resp_center_description}</td>
                                                  <td>
-                                                   	<form:input type="hidden" id="uid" path="fund_uid" value="${MyOneAndOnly.fund_uid}"/>
+                                                   	<form:input type="hidden" id="uid" path="resp_center_uid" value="${center.resp_center_uid}"/>
                                                     <input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
                                                   
                                                   	                                       
@@ -457,7 +463,7 @@
 										</c:forEach>		
                                                 
 										
-                                        </tbody>
+                                        </tbody> 
 										
                                     </table>
 								
@@ -479,13 +485,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">New Fund</h4>
+                                <h4 class="modal-title">New Responsibility Center</h4>
                             </div>
                             <div class="modal-body">
 
 
                   
-<form:form class="form-horizontal" action="admin_funds_save" modelAttribute="fundingHappiness" name="FundForm">
+<form:form class="form-horizontal" action="admin_rcenters_save" modelAttribute="RCenterSave" name="RCForm">
 <fieldset>
 
 
@@ -493,17 +499,86 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="code">Code</label>  
   <div class="col-md-5">
-  <form:input id="code" name="code" type="text"  class="form-control input-md" path="fund_code"/>
+  <form:input id="code" name="code" type="text"  class="form-control input-md" path="resp_center_code"/>
   <span class="help-block">numbers only</span>  
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="code">Acronym</label>  
+  <div class="col-md-5">
+  <form:input id="acronym" name="acronym" type="text"  class="form-control input-md" path="resp_center_acronym"/>
+  <span class="help-block">Shortened Name of the Office</span>  
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="description">Description</label>  
-  <div class="col-md-8">
-  <form:input id="description" name="description" type="text"  class="form-control input-md" path="fund_description"/>
+  <div class="col-md-5">
+  <form:input id="description" name="description" type="text"  class="form-control input-md" path="resp_center_description"/>
   <span class="help-block">Fund Description</span>  
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+ <label class="col-md-4 control-label" for="button1id"></label>
+  <div class="col-md-12">
+   <input type="submit" class="btn btn-success" value="Submit" style="width:100%;">
+ </div>
+</div>
+
+</fieldset>
+</form:form>
+			</div>	
+		</div>
+	</div>							
+</div>
+	 <!-- End of Add -->	
+	
+ <!--Edit-->
+
+<div class="modal fade in" id="edit" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Edit Fund</h4>
+                            </div>
+                            <div class="modal-body">
+                    
+<form:form class="form-horizontal" action="admin_rcenters_update" modelAttribute="RCUpdate" name="RCForm">
+<fieldset>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="code">Code</label>  
+  <div class="col-md-5">
+   <form:input  id="modal_uid" type="hidden" class="form-control input-md" path="resp_center_uid"/>
+  <form:input  id="modal_code" type="text" class="form-control input-md" path="resp_center_code"/>
+  <span class="help-block">numbers only</span>  
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="code">Acronym</label>  
+  <div class="col-md-5">
+  <form:input id="modal_acronym" type="text"  class="form-control input-md" path="resp_center_acronym"/>
+  <span class="help-block">Shortened Name of the Office</span>  
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="description">Description</label>  
+  <div class="col-md-8">
+  <form:input  id="modal_description" type="text" class="form-control input-md" path="resp_center_description"/>
+  <span class="help-block">Office Description</span>  
   </div>
 </div>
 
@@ -522,58 +597,7 @@
 		</div>
 	</div>							
 </div>
-	 <!-- End of Add -->	
-	
-<!--Edit-->
-
-<div class="modal fade in" id="edit" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">Edit Fund</h4>
-                            </div>
-                            <div class="modal-body">
-                    
-<form:form class="form-horizontal" action="admin_funds_update" modelAttribute="fundingHappiness" name="FundForm">
-<fieldset>
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="code">Code</label>  
-  <div class="col-md-5">
-   <form:input  id="modal_uid" type="hidden" class="form-control input-md" path="fund_uid"/>
-  <form:input  id="modal_code" type="text" class="form-control input-md" path="fund_code"/>
-  <span class="help-block">numbers only</span>  
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="description">Description</label>  
-  <div class="col-md-8">
-  <form:input  id="modal_description" type="text" class="form-control input-md" path="fund_description"/>
-  <span class="help-block">Fund Description</span>  
-  </div>
-</div>
-
-<!-- Button (Double) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="button1id"></label>
-  <div class="col-md-8">
-    <input type="submit"  name="submit" class="btn btn-success">
-    <input type="reset"   name="reset" class="btn btn-danger" onClick="ClearForm()">
-  </div>
-</div>
-
-</fieldset>
-</form:form>
-			</div>	
-		</div>
-	</div>							
-</div>
-	 <!-- End of Edit -->		
+	 <!-- End of Edit -->	
 		
 		
 		
@@ -643,6 +667,7 @@ $(document).ready(function(){
 		 document.getElementById("modal_code").value = data.code;
 		 document.getElementById("modal_description").value = data.desc;
 		 document.getElementById("modal_uid").value = data.uid;
+		 document.getElementById("modal_acronym").value = data.acronym;
 		// put to modal ----------------------- ends
 	});
 });

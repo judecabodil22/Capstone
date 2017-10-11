@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import financials.dao.SampleDao;
 import financials.model.SampleModel;
-import financials.model.UserModel;
 
 @Controller
 public class SampleController 

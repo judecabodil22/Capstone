@@ -34,7 +34,7 @@ public class AdminFundController {
 	}
 	
 	
-	@RequestMapping("admin_save")
+	@RequestMapping("admin_funds_save")
 	public ModelAndView save(@ModelAttribute("fundingHappiness") AdminFundModel fund,
 			@RequestParam(value = "submit", required = false) String save,
 			@RequestParam(value = "reset", required = false) String reset)
@@ -42,8 +42,8 @@ public class AdminFundController {
 		ModelAndView mav = new ModelAndView();
 		
 	
-		mav.setViewName("Admin/Funds");
-			
+		
+		mav.setViewName("redirect:admin_funds");
 		if(save != null)
 		{
 			dao.insert(fund);
@@ -58,7 +58,7 @@ public class AdminFundController {
 	}
 	
 	
-	@RequestMapping("admin_update")
+	@RequestMapping("admin_funds_update")
 	public ModelAndView update(@ModelAttribute("fundingHappiness") AdminFundModel fund,
 			@RequestParam(value = "submit", required = false) String save,
 			@RequestParam(value = "reset", required = false) String reset)
@@ -66,7 +66,7 @@ public class AdminFundController {
 		ModelAndView mav = new ModelAndView();
 		
 	
-		mav.setViewName("Admin/Funds");
+		mav.setViewName("redirect:admin_funds");
 			
 		if(save != null)
 		{
@@ -85,7 +85,7 @@ public class AdminFundController {
 	
 	
 	
-	@RequestMapping("admin_delete")
+	@RequestMapping("admin_funds_delete")
 	public ModelAndView delete(@ModelAttribute("fundingHappiness") AdminFundModel fund,
 			@RequestParam(value = "submit", required = false) String save,
 			@RequestParam(value = "reset", required = false) String reset,
@@ -94,7 +94,7 @@ public class AdminFundController {
 		ModelAndView mav = new ModelAndView();
 		
 	
-		mav.setViewName("Admin/Funds");
+		mav.setViewName("redirect:admin_funds");
 			
 		if(delete != null)
 		{

@@ -318,9 +318,9 @@
 									<ul class="sub-menu">
 									
 										<li>
-											<a href="Elements.jsp">
+											<a href="accountTypes">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
-												Financial Elements					
+												Account Types					
 											</a>
 										</li>
 									
@@ -352,14 +352,14 @@
 										</li>
 										
 										<li>
-											<a href="Transaction.jsp">
+											<a href="admin_transaction">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
 												Transaction Type				
 											</a>
 										</li>
 									
 										<li>
-											<a href="ResponsibilityCenter.jsp">
+											<a href="admin_rCenters">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true" style="text-align:center"></i>
 												Responsibility Center				
 											</a>

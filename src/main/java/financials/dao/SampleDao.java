@@ -12,7 +12,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.SampleModel;
-import financials.model.UserModel;
+
 
 public class SampleDao
 {
