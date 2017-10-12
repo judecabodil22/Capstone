@@ -68,7 +68,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
-<<<<<<< HEAD
+
     <bean id="lqdao" class="financials.dao.liquidationDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
@@ -84,7 +84,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="tvd" class="financials.dao.TVoucherDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
-=======
+
        <bean id="AdminDao" class="financials.dao.AdminDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
@@ -108,9 +108,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="AdminCoADao" class="financials.dao.AdminCoADao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
-    
-     
-    
->>>>>>> e30a98d5b58606eb6e4bda1737e526b42b254096
 
 </beans>
