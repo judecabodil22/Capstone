@@ -1,4 +1,4 @@
-package financials.model;
+/*package financials.model;
 
 public class UserModel {
 	
@@ -42,3 +42,4 @@ public class UserModel {
 	}
 
 }
+*/

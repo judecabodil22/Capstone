@@ -1,13 +1,17 @@
 package financials.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.BeaFormModel;
-import financials.model.UserModel;
 
 public class BeaFormDao {
 
@@ -47,4 +51,47 @@ public class BeaFormDao {
 		return true;
 
 	}
+	
+	public boolean select(BeaFormModel Bea) {
+
+		sql = "select * from Users " + "WHERE user_id = ?";
+
+		jdbcTemplate.update(sql, new Object[] { Bea.getUser_id()});
+
+		return true;
+
+	}
+
+
+public List<BeaFormModel> getUsers() {
+
+	sql = "Select * from USERS";
+
+	return jdbcTemplate.query(sql, new RowMapper<BeaFormModel>() {
+		public BeaFormModel mapRow(ResultSet rs, int row) throws SQLException {
+			BeaFormModel user = new BeaFormModel();
+			user.setUser_id(rs.getString("user_id"));
+			user.setUser_name(rs.getString("user_name"));
+			user.setPass_word(rs.getString("pass_word"));
+			return user;
+		}
+
+	});
+}
+public List<BeaFormModel> findByIDList(BeaFormModel bea) {
+
+	sql = "Select * from USERS " + "WHERE user_id = '" + bea.getUser_id() + "'";
+
+	return jdbcTemplate.query(sql, new RowMapper<BeaFormModel>() {
+		public BeaFormModel mapRow(ResultSet rs, int row) throws SQLException {
+			BeaFormModel bea = new BeaFormModel();
+			bea.setUser_id(rs.getString("user_id"));
+			bea.setUser_name(rs.getString("user_name"));
+			bea.setPass_word(rs.getString("pass_word"));
+			return bea;
+		}
+
+	});
+}
+
 }

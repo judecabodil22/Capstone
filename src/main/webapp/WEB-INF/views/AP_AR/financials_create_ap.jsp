@@ -1,115 +1,8 @@
-<%-- <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <html>
 
 <head>
-
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script>
-
-	google.charts.load("current", {
-		packages : [ 'corechart' ]
-	});
-	
-	
-	google.charts.load('current', {'packages':['bar']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-    
-    var chartHeaders=["Attributes","Level of Attribute","Isa pang label","1","2"];
-    var chartData = [];
-    
-    chartData.push(chartHeaders);
-    
-    <c:forEach var="obj" items="${sampleData}">
-    
-    chartData.push(["${obj.name}",${obj.value},23,12,53]);
-    
-    </c:forEach>
-    	
-    var data = google.visualization.arrayToDataTable(chartData);
-    
-    
-      var options = {
-        chart: {
-          title: 'Justin Jude Attribute',
-          subtitle: 'For Example',
-          animation: 
-          {
-       	  duration: 1000,
-       	  easing: 'out',
-       	  startup: true
-          },
-          
-          
-        },
-        
-        bars: 'vertical', // Required for Material Bar Charts.
-        	colors : [ 'ef6f6c', '01bc8c', '67c5df', 'f89a14', '418bca',
-				'e9573f', 'a9b6bc', 'c67b10', '346fa1' ]
-          
-        
-      };
-
-      var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-      chart.draw(data, google.charts.Bar.convertOptions(options));
-    }
-	
-	
-	google.charts.setOnLoadCallback(drawChart2);
-
-	function drawChart2() {
-
-		var chartHeader = [ "Name", "Value","Another Value" ];
-		var chartData = [];
-
-		chartData.push(chartHeader);
-
-		<c:forEach var="obj" items="${sampleData}">
-	
-
-			chartData.push([ "${obj.name}", ${obj.value},${obj.value2}]);
-			
-		</c:forEach>
-
-		var data = google.visualization.arrayToDataTable(chartData);
-
-		var options = {
-
-			pieHole : 0.5,
-			pieSliceTextStyle : {
-				color : 'white',
-			},
-			legend : 'bottom',
-			
-			title:'Justin Jude Composition',
-
-			/*   colors:['#F44336','#E91E63','#9C27B0','#3F51B5','#2196F3','#FF5722','#FFC107'] */
-
-			colors : [ 'ef6f6c', '01bc8c', '67c5df', 'f89a14', '418bca',
-					'e9573f', 'a9b6bc', 'c67b10', '346fa1' ]
-
-		}
-
-		var chart = new google.visualization.PieChart(document
-				.getElementById('piechart'));
-
-			chart.draw(data, options);
-			
-			
-			/*  <div id="barchart_material" style="height: 500px;"></div>
-			 <div id="piechart" style="width: 900px; height: 500px;"></div> */
-	}
-</script>
-<title>Sample Dashboard</title>
-
-
-  <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Blank Page | Josh Admin Template</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -118,29 +11,20 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
-    <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-    <!--end of page level css-->
-
-	
+    <link href="vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/metisMenu.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- end of global css -->
 </head>
 
-
-<body class="skin-josh" onLoad="drawChart();">
+<body class="skin-josh">
     <header class="header">
-        <a href="resources/index.html" class="logo">
-            <img src="resources/img/logo.png" alt="Logo">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo">
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -158,8 +42,8 @@
                         <ul class="dropdown-menu dropdown-messages pull-right">
                             <li class="dropdown-title">4 New Messages</li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
-                                    <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
+                                <a href="javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
+                                    <img data-src="holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
                                         <strong>Riot Zeast</strong>
                                         <br>Hello, You there?
@@ -169,9 +53,9 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
-                                    <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
+                                    <img data-src="holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
                                         <strong>John Kerry</strong>
                                         <br>Can we Meet ?
@@ -181,11 +65,11 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
-                                    <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
+                                    <img data-src="holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
                                         <strong>Jenny Kerry</strong>
                                         <br>Dont forgot to call...
@@ -195,11 +79,11 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
-                                    <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
+                                    <img data-src="holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
                                         <strong>Ronny</strong>
                                         <br>Hey! sup Dude?
@@ -288,7 +172,7 @@
                     </li>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img data-src="resources/holder.js/35x35/#fff:#000" width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
+                            <img data-src="holder.js/35x35/#fff:#000" width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
                             <div class="riot">
                                 <div>
                                     Riot
@@ -301,7 +185,7 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header bg-light-blue">
-                                <img data-src="resources/holder.js/90x90/#fff:#000" class="img-responsive img-circle" alt="User Image">
+                                <img data-src="holder.js/90x90/#fff:#000" class="img-responsive img-circle" alt="User Image">
                                 <p class="topprofiletext">Riot Zeast</p>
                             </li>
                             <!-- Menu Body -->
@@ -363,7 +247,7 @@
                             </li>
                             <li>
                                 <a href="gridmanager.html">
-                                    <i class="livicon" data-name="new-window" title="Page Builder" data-loop="true" data-color="#37bc9b" data-hc="#37bc9b" data-s="25"></i>
+                                    <i class="livicon" data-name="new-window" title="Form Builder 1" data-loop="true" data-color="#37bc9b" data-hc="#37bc9b" data-s="25"></i>
                                 </a>
                             </li>
                         </ul>
@@ -371,11 +255,12 @@
                     <div class="clearfix"></div>
                     <!-- BEGIN SIDEBAR MENU -->
                     <ul id="menu" class="page-sidebar-menu">
-                        <li class="active">
+                        <li>
                             <a href="index.html">
                                 <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
                                 <span class="title">Dashboard</span>
                             </a>
+
                         </li>
                         <li>
                             <a href="#">
@@ -430,6 +315,12 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="form_layout.html">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Form Layouts
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="validation.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Validation
@@ -441,7 +332,7 @@
                                         Form Elements
                                     </a>
                                 </li>
-                                 <li>
+                                <li>
                                     <a href="form_layouts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Layouts
@@ -632,7 +523,7 @@
                         <li>
                             <a href="#">
                                 <i class="livicon" data-name="table" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
-                                <span class="title">Tables</span>
+                                <span class="title">DataTables</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
@@ -640,6 +531,12 @@
                                     <a href="simple_table.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Simple tables
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="responsive_tables.html">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Responsive Datatables
                                     </a>
                                 </li>
                                 <li>
@@ -652,12 +549,6 @@
                                     <a href="editable_table.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Editable Datatables
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="responsive_tables.html">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        Responsive Datatables
                                     </a>
                                 </li>
                             </ul>
@@ -704,8 +595,8 @@
                         <li>
                             <a href="calendar.html">
                                 <i class="livicon" data-c="#F89A14" data-hc="#F89A14" data-name="calendar" data-size="18" data-loop="true"></i>
-                                <span class="badge badge-danger">7</span>
                                 Calendar
+                                <span class="badge badge-danger">7</span>
                             </a>
                         </li>
                         <li>
@@ -738,8 +629,8 @@
                         <li>
                             <a href="tasks.html">
                                 <i class="livicon" data-c="#EF6F6C" data-hc="#EF6F6C" data-name="list-ul" data-size="18" data-loop="true"></i>
-                                <span class="badge badge-danger">10</span>
                                 Tasks
+                                <span class="badge badge-danger">10</span>
                             </a>
                         </li>
                         <li>
@@ -895,7 +786,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="#">
                                 <i class="livicon" data-name="flag" data-c="#418bca" data-hc="#418bca" data-size="18" data-loop="true"></i>
                                 <span class="title">Pages</span>
@@ -950,10 +841,85 @@
                                         500 Error
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active" id="active">
                                     <a href="blank.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Blank Page
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+            </section>
+        </aside>
+        <aside class="right-side">
+            <section class="content-header">
+                <h1>Blank page</h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">
+                            <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>Pages</li>
+                    <li class="active">Blank page</li>
+                </ol>
+            </section>
+            <section class="content"></section>
+			
+			                    <div class="clearfix"></div>
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <ul id="menu" class="page-sidebar-menu">
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="#">
+                                <i class="livicon" data-name="table" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
+                                <span class="title">System Setup</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="create_of_payable.html">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        Create Payable
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="livicon" data-name="table" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
+                                <span class="title">Accounts Payable</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="list_of_payable.html">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        List of Payables
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						                        <li>
+                            <a href="#">
+                                <i class="livicon" data-name="table" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
+                                <span class="title">Accounts Receivable</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="list_of_receivable.html">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        List of Receivables
                                     </a>
                                 </li>
                             </ul>
@@ -966,557 +932,260 @@
         </aside>
         <!-- Right side column. Contains the navbar and content of the page -->
         <aside class="right-side">
-            <!-- Main content -->
+            <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>Welcome to Dashboard</h1>
+                <!--section starts-->
+                <h1>List of Payable</h1>
                 <ol class="breadcrumb">
-                    <li class="active">
-                        <a href="#">
-                            <i class="livicon" data-name="home" data-size="16" data-color="#333" data-hovercolor="#333"></i>
+                    <li>
+                        <a href="index.html">
+                            <i class="livicon" data-name="home" data-size="18" data-loop="true"></i>
                             Home
                         </a>
                     </li>
+                    <li>
+                        <a href="#">Accounts Payable</a>
+                    </li>
+                    <li class="active">List of Payables</li>
                 </ol>
             </section>
+            <!--section ends-->
             <section class="content">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 margin_10 animated fadeInLeftBig">
-                        <!-- Trans label pie charts strats here-->
-                        <div class="lightbluebg no-radius">
-                            <div class="panel-body squarebox square_boxs">
-                                <div class="col-xs-12 pull-left nopadmar">
-                                    <div class="row">
-                                        <div class="square_box col-xs-7 text-right">
-                                            <span>Views Today</span>
-                                            <div class="number" id="myTargetElement"></div>
-                                        </div>
-                                        <i class="livicon  pull-right" data-name="eye-open" data-l="true" data-c="#fff" data-hc="#fff" data-s="70"></i>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <small class="stat-label">Last Week</small>
-                                            <h4 id="myTargetElement1.1"></h4>
-                                        </div>
-                                        <div class="col-xs-6 text-right">
-                                            <small class="stat-label">Last Month</small>
-                                            <h4 id="myTargetElement1.2"></h4>
-                                        </div>
-                                    </div>
+   <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary filterable">
+                            <div class="panel-heading clearfix  ">
+                                <div class="panel-title pull-left">
+                                       <div class="caption">
+                                    <i class="livicon" data-name="camera-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                                    Input Payable
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 margin_10 animated fadeInUpBig">
-                        <!-- Trans label pie charts strats here-->
-                        <div class="redbg no-radius">
-                            <div class="panel-body squarebox square_boxs">
-                                <div class="col-xs-12 pull-left nopadmar">
-                                    <div class="row">
-                                        <div class="square_box col-xs-7 pull-left">
-                                            <span>Today's Sales</span>
-                                            <div class="number" id="myTargetElement2"></div>
-                                        </div>
-                                        <i class="livicon pull-right" data-name="piggybank" data-l="true" data-c="#fff" data-hc="#fff" data-s="70"></i>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <small class="stat-label">Last Week</small>
-                                            <h4 id="myTargetElement2.1"></h4>
-                                        </div>
-                                        <div class="col-xs-6 text-right">
-                                            <small class="stat-label">Last Month</small>
-                                            <h4 id="myTargetElement2.2"></h4>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-6 margin_10 animated fadeInDownBig">
-                        <!-- Trans label pie charts strats here-->
-                        <div class="goldbg no-radius">
-                            <div class="panel-body squarebox square_boxs">
-                                <div class="col-xs-12 pull-left nopadmar">
-                                    <div class="row">
-                                        <div class="square_box col-xs-7 pull-left">
-                                            <span>Subscribers</span>
-                                            <div class="number" id="myTargetElement3"></div>
-                                        </div>
-                                        <i class="livicon pull-right" data-name="archive-add" data-l="true" data-c="#fff" data-hc="#fff" data-s="70"></i>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <small class="stat-label">Last Week</small>
-                                            <h4 id="myTargetElement3.1"></h4>
-                                        </div>
-                                        <div class="col-xs-6 text-right">
-                                            <small class="stat-label">Last Month</small>
-                                            <h4 id="myTargetElement3.2"></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 margin_10 animated fadeInRightBig">
-                        <!-- Trans label pie charts strats here-->
-                        <div class="palebluecolorbg no-radius">
-                            <div class="panel-body squarebox square_boxs">
-                                <div class="col-xs-12 pull-left nopadmar">
-                                    <div class="row">
-                                        <div class="square_box col-xs-7 pull-left">
-                                            <span>Registered Users</span>
-                                            <div class="number" id="myTargetElement4"></div>
-                                        </div>
-                                        <i class="livicon pull-right" data-name="users" data-l="true" data-c="#fff" data-hc="#fff" data-s="70"></i>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <small class="stat-label">Last Week</small>
-                                            <h4 id="myTargetElement4.1"></h4>
-                                        </div>
-                                        <div class="col-xs-6 text-right">
-                                            <small class="stat-label">Last Month</small>
-                                            <h4 id="myTargetElement4.2"></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--/row-->
-                <div class="row ">
-                    <div class="col-md-8 col-sm-6">
-                        <div class="panel panel-border">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    <i class="livicon" data-name="dashboard" data-size="20" data-loop="true" data-c="#F89A14" data-hc="#F89A14"></i>
-                                    Realtime Server Load
-                                    <small>- Load on the Server</small>
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                              <div id="barchart_material" style="height: 500px;"></div>              
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="panel blue_gradiant_bg">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    <i class="livicon" data-name="linechart" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Server Stats
-                                    <small class="white-text">- Monthly Report</small>
-                                </h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="sparkline-chart">
-                                            <div class="number" id="sparkline_bar"></div>
-                                            <h3 class="title">Network</h3>
-                                        </div>
-                                    </div>
-                                    <div class="margin-bottom-10 visible-sm"></div>
-                                    <div class="margin-bottom-10 visible-sm"></div>
-                                    <div class="col-sm-6">
-                                        <div class="sparkline-chart">
-                                            <div class="number" id="sparkline_line"></div>
-                                            <h3 class="title">Load Rate</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- BEGIN Percentage monitor -->
-                        <div class="panel green_gradiante_bg ">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    <i class="livicon" data-name="spinner-six" data-size="16" data-loop="false" data-c="#fff" data-hc="white"></i>
-                                    Result vs Target
-                                </h3>
-                            </div>
-                            <div class="panel-body nopadmar">
-                                <div class="row">
-                                    <div class="col-sm-6 text-center">
-                                        <h4 class="small-heading">Sales</h4>
-                                        <span class="chart cir chart-widget-pie widget-easy-pie-1" data-percent="45">
-                                            <span class="percent">45</span>
-                                            <canvas height="110" width="110"></canvas>
-                                        </span>
-                                    </div>
-                                    <!-- /.col-sm-4 -->
-                                    <div class="col-sm-6 text-center">
-                                        <h4 class="small-heading">Reach</h4>
-                                        <span class="chart cir chart-widget-pie widget-easy-pie-3" data-percent="25">
-                                            <span class="percent">25</span>
-                                            <canvas height="110" width="110"></canvas>
-                                        </span>
-                                    </div>
-                                    <!-- /.col-sm-4 -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- END BEGIN Percentage monitor-->
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="row">
-                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="panel panel-border">
-                            <div class="panel-heading border-light">
-                                <h4 class="panel-title">
-                                    <i class="livicon" data-name="calendar" data-size="16" data-loop="true" data-c="#333" data-hc="#333"></i>
-                                    Calendar
-                                </h4>
-                                <span class="pull-right">
-                                    <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
-                                    <i class="glyphicon glyphicon-remove removepanel clickable"></i>
-                                </span>
-                            </div>
-                            <div class="panel-body">
-                                <div id='external-events'></div>
-                                <div id="calendar"></div>
-                                <div class="box-footer pad-5">
-                                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Create event</a>
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title" id="myModalLabel">
-                                                    <i class="fa fa-plus"></i>
-                                                    Create Event
-                                                </h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="input-group">
-                                                    <input type="text" id="new-event" class="form-control" placeholder="Event">
-                                                    <div class="input-group-btn">
-                                                        <button type="button" id="color-chooser-btn" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-                                                            Type
-                                                            <span class="caret"></span>
-                                                        </button>
-                                                        <ul class="dropdown-menu pull-right" id="color-chooser">
-                                                            <li>
-                                                                <a class="palette-primary" href="#">Primary</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="palette-success" href="#">Success</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="palette-info" href="#">Info</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="palette-warning" href="#">warning</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="palette-danger" href="#">Danger</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="palette-default" href="#">Default</a>
-                                                            </li>
+                           
 
-                                                        </ul>
+                            </div>
+                            <div class="panel-body">
+							
+							
+						<div class="col-lg-12">
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <form class="form-horizontal">
+														<div class="form-group col-md-12">
+                                                                <label for="">Institute Name</label>
+                                                                <input type="text" class="form-control ">
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Claimant Name</label>
+                                                                <input type="text" class="form-control">
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Purpose</label>
+                                                                <select  class="form-control select2">
+																<option value="">AAAACK</option>
+																</select>
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Fund Cluster</label>
+                                                                <select  class="form-control select2">
+																<option value="">AAAACK</option>
+																</select>
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Responsibility Center</label>
+                                                                <select  class="form-control select2">
+																<option value="">AAAACK</option>
+																</select>
+														</div>
+                                                        </form>
                                                     </div>
-                                                    <!-- /btn-group --> </div>
-                                                <!-- /input-group --> </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger pull-right"  data-dismiss="modal">
-                                                    Close
-                                                    <i class="fa fa-times"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-success pull-left" id="add-new-event" data-dismiss="modal">
-                                                    <i class="fa fa-plus"></i>
-                                                    Add
-                                                </button>
+													
+                                                    <div class="col-md-6">
+                                                           <form class="form-horizontal">
+													<div class="form-group">
+														<label>Voucher Date</label>
+														<div class="input-group date form_datetime col-md-8" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+															<input class="form-control" size="16" type="text" value="" readonly>
+															<span class="input-group-addon">
+																<span class="glyphicon glyphicon-th"></span>
+															</span>
+														</div>
+													</div>
+													<div class="form-group">
+														<label>Due Date</label>
+														<div class="input-group date form_datetime col-md-8" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+															<input class="form-control" size="16" type="text" value="" readonly>
+															<span class="input-group-addon">
+																<span class="glyphicon glyphicon-th"></span>
+															</span>
+														</div>
+													</div>
+													
+													
+														<div class="form-group col-md-12">
+                                                                <label for="">Amount</label>
+                                                                <input type="text" class="form-control">
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Status</label>
+                                                                <select  class="form-control select2">
+																<option value="">AAAACK</option>
+																</select>
+														</div>
+														<div class="form-group col-md-12">
+                                                                <label for="">Action</label>
+                                                                <select  class="form-control select2">
+																<option value="">AAAACK</option>
+																</select>
+														</div>
+                                         
+                                                      
+                                                        </form></div>
+													
+                                                </div>
+												   <div class="row">
+															<hr>
+															<div style="float: right">
+															<button type="submit" class="btn btn-primary" value="Submit"><span class="glyphicon glyphicon-floppy-disk" title="Submit"></span></button>
+															</div>
+														  </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <!-- To do list -->
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="panel panel-primary todolist">
-                            <div class="panel-heading border-light">
-                                <h4 class="panel-title">
-                                    <i class="livicon" data-name="medal" data-size="18" data-color="white" data-hc="white" data-l="true"></i>
-                                    To Do List
-                                </h4>
-                            </div>
-                            <div class="panel-body nopadmar">
-                                <form class="row list_of_items">
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck checkbox-custom">
-                                                <input type="checkbox" class="striked large" />
-                                            </div>
-                                            <div class="todotext todoitem">Meeting with CEO</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Team Out</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Review On Sales</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Meeting with Client</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Analysis on Views</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Seminar on Market</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Business Review</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Purchase Equipment</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Meeting with CEO</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="todolist_list showactions">
-                                        <div class="col-md-8 col-sm-8 col-xs-8 nopadmar custom_textbox1">
-                                            <div class="todoitemcheck">
-                                                <input type="checkbox" class="striked" />
-                                            </div>
-                                            <div class="todotext todoitem">Takeover Leads</div>
-                                        </div>
-                                        <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </a>
-                                            |
-                                            <a href="#" class="tododelete redcolor">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="todolist_list adds">
-                                    <form role="form" id="main_input_box" class="form-inline">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="AddTask">Add Task</label>
-                                            <input id="custom_textbox" name="Item" type="text" required placeholder="Add list item here" class="form-control" />
-                                        </div>
-                                        <input type="submit" value="Add Task" class="btn btn-primary add_button" />
-                                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary filterable">
+                            <div class="panel-heading clearfix  ">
+                                <div class="panel-title pull-left">
+                                       <div class="caption">
+                                    <i class="livicon" data-name="camera-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                                    Table Tools
                                 </div>
+                                    
+                                </div>
+                                <div class="tools pull-right"></div>
+
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped table-responsive" id="table1">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Transaction Number</th>
+											<th>Institute Name</th>
+                                            <th>Voucher Date</th>
+                                            <th>Due Date</th>
+											<th>Amount</th>
+											<th>Status</th>
+											<th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+											<td>223131321</td>
+                                            <td>Eureka's Furniture</td>
+                                            <td>2017-04-15</td>
+                                            <td>2017-12-30</td>
+											<td>20,000.00</td>
+                                            <td><span class="label label-sm label-warning">Overdue</span></td>
+                                            <td>  
+												<a href="stack1" class="btn default btn-xs purple" data-toggle="modal" data-href="#stack1">
+													<i class="fa fa-eye" ></i>
+													View
+                                                </a>
+											</td>
+                                        </tr>
+                                        <tr>
+											<td>20143242</td>
+                                            <td>Wilcon</td>
+                                            <td>2017-10-15</td>
+                                            <td>2018-01-30</td>
+											<td>50,000.00</td>
+                                            <td> <span class="label label-sm label-success">Paid</span></td>
+                                            <td>
+												<a href="#" class="btn default btn-xs purple">
+													<i class="fa fa-eye" data-toggle="modal" data-href="#responsive" href="#responsive"></i>
+													View
+                                                </a>
+											</td>
+                                        </tr>
+                                        
+</tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="row ">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="panel panel-danger">
-                            <div class="panel-heading border-light">
-                                <h4 class="panel-title">
-                                    <i class="livicon" data-name="mail" data-size="18" data-color="white" data-hc="white" data-l="true"></i>
-                                    Quick Mail
-                                </h4>
-                            </div>
-                            <div class="panel-body no-padding">
-                                <div class="compose row">
-                                    <label class="col-md-3 hidden-xs">To:</label>
-                                    <input type="text" class="col-md-9 col-xs-9" placeholder="name@email.com " tabindex="1" />
-                                    <div class="clear"></div>
-                                    <label class="col-md-3 hidden-xs">Subject:</label>
-                                    <input type="text" class="col-md-9 col-xs-9" tabindex="1" placeholder="Subject" />
-                                    <div class="clear"></div>
-                                    <div class='box-body'>
-                                        <form>
-                                            <textarea class="textarea textarea_home" placeholder="Write mail content here"></textarea>
-                                        </form>
-                                    </div>
-                                    <br />
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-danger">Send</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-                        <div class="panel panel-border">
-                        
-                            <div class="panel-heading">
-                                <h4 class="panel-title pull-left">
-                                    <i class="livicon" data-name="map" data-size="16" data-loop="true" data-c="#515763" data-hc="#515763"></i>
-                                    Visitors Map
-                                </h4>
 
-                                <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        <i class="livicon" data-name="settings" data-size="16" data-loop="true" data-c="#515763" data-hc="#515763"></i>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <a class="panel-collapse collapses" href="#">
-                                                <i class="fa fa-angle-up"></i>
-                                                <span>Collapse</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="panel-refresh" href="#">
-                                                <i class="fa fa-refresh"></i>
-                                                <span>Refresh</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="panel-config" href="#panel-config" data-toggle="modal">
-                                                <i class="fa fa-wrench"></i>
-                                                <span>Configurations</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="panel-expand" href="#">
-                                                <i class="fa fa-expand"></i>
-                                                <span>Fullscreen</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-
+                <!-- Third Basic Table Ends Here-->
+                <!--delete modal starts here-->
+				  <!--- stack1 model -->
+                <div class="modal fade bs-example-modal-sm in" id="stack1" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Stack One</h4>
                             </div>
-                            <div class="panel-body nopadmar">
-                                <div id="world-map-markers" style="width:100%; height:300px;"></div>
+                            <div class="modal-body">
+                                <p>One fine body…</p>
+                                <p>One fine body…</p>
+                                <p>One fine body…</p>
+                                <p>
+                                    Name:
+                                    <input id="name21" name="name" type="text" class="form-control">
+                                </p>
+                                <p>
+                                    Password:
+                                    <input id="name22" name="name" type="text" class="form-control">
+                                </p>
+                                <a class="btn btn-default" data-toggle="modal" href="#stack2">Launch modal</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn">Close</button>
+                                <button type="button" class="btn btn-primary">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                
+
+                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title custom_align" id="Heading">
+                                    Delete this entry
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="alert alert-warning">
+                                    <span class="glyphicon glyphicon-warning-sign"></span>
+                                    Are you sure you want to delete this Record?
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <button type="button" class="btn btn-warning">
+                                    <span class="glyphicon glyphicon-ok-sign"></span>
+                                    Yes
+                                </button>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			
+			
+
         </aside>
         <!-- right-side -->
     </div>
@@ -1524,81 +1193,14 @@
         <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
     </a>
     <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-   <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
+    <script src="vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
+    <script src="vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
+   <script src="js/josh.js" type="text/javascript"></script>
+    <script src="js/metisMenu.js" type="text/javascript"> </script>
+    <script src="vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
-    <!-- begining of page level js -->
-    <!--  todolist-->
-    <script src="resources/js/todolist.js"></script>
-    <!-- EASY PIE CHART JS -->
-    <script src="resources/vendors/charts/easypiechart.min.js"></script>
-    <script src="resources/vendors/charts/jquery.easypiechart.min.js"></script>
-    <!--for calendar-->
-    <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
-    <!--   Realtime Server Load  -->
-    <script src="resources/vendors/charts/jquery.flot.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
-    <!--Sparkline Chart-->
-    <script src="resources/vendors/charts/jquery.sparkline.js"></script>
-    <!-- Back to Top-->
-    <script type="text/javascript" src="resources/vendors/countUp/countUp.js"></script>
-    <!--   maps -->
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-     <script src="resources/vendors/jscharts/Chart.js"></script>
-    <script src="resources/js/dashboard.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var composeHeight = $('#calendar').height() +21 - $('.adds').height();
-        $('.list_of_items').slimScroll({
-            color: '#A9B6BC',
-            height: composeHeight + 'px',
-            size: '5px'
-        });
-    });
-    </script>
-
-<script>
-var options = {
-		useEasing: true, 
-		useGrouping: true, 
-		separator: ',', 
-		decimal: '.', 
-		};
-
-<c:forEach var="obj" items="${particular}">
-
-var count=${obj.value}
-
-</c:forEach>
-
-
-var demo = new countUp("myTargetElement", 12.52, count, 0, 6, options);
-console.debug();
-demo.start();
-
-
-</script>
-	<!-- end of page level js -->
-  
 </body>
 </html>
-
-
-
-
-
-
-
-</html>
-
- 
- 
- --%>

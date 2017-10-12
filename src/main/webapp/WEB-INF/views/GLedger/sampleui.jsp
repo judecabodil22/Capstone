@@ -1,121 +1,15 @@
-<%-- <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
 
 <head>
-
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script>
-
-	google.charts.load("current", {
-		packages : [ 'corechart' ]
-	});
-	
-	
-	google.charts.load('current', {'packages':['bar']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-    
-    var chartHeaders=["Attributes","Level of Attribute","Isa pang label","1","2"];
-    var chartData = [];
-    
-    chartData.push(chartHeaders);
-    
-    <c:forEach var="obj" items="${sampleData}">
-    
-    chartData.push(["${obj.name}",${obj.value},23,12,53]);
-    
-    </c:forEach>
-    	
-    var data = google.visualization.arrayToDataTable(chartData);
-    
-    
-      var options = {
-        chart: {
-          title: 'Justin Jude Attribute',
-          subtitle: 'For Example',
-          animation: 
-          {
-       	  duration: 1000,
-       	  easing: 'out',
-       	  startup: true
-          },
-          
-          
-        },
-        
-        bars: 'vertical', // Required for Material Bar Charts.
-        	colors : [ 'ef6f6c', '01bc8c', '67c5df', 'f89a14', '418bca',
-				'e9573f', 'a9b6bc', 'c67b10', '346fa1' ]
-          
-        
-      };
-
-      var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-      chart.draw(data, google.charts.Bar.convertOptions(options));
-    }
-	
-	
-	google.charts.setOnLoadCallback(drawChart2);
-
-	function drawChart2() {
-
-		var chartHeader = [ "Name", "Value","Another Value" ];
-		var chartData = [];
-
-		chartData.push(chartHeader);
-
-		<c:forEach var="obj" items="${sampleData}">
-	
-
-			chartData.push([ "${obj.name}", ${obj.value},${obj.value2}]);
-			
-		</c:forEach>
-
-		var data = google.visualization.arrayToDataTable(chartData);
-
-		var options = {
-
-			pieHole : 0.5,
-			pieSliceTextStyle : {
-				color : 'white',
-			},
-			legend : 'bottom',
-			
-			title:'Justin Jude Composition',
-
-			/*   colors:['#F44336','#E91E63','#9C27B0','#3F51B5','#2196F3','#FF5722','#FFC107'] */
-
-			colors : [ 'ef6f6c', '01bc8c', '67c5df', 'f89a14', '418bca',
-					'e9573f', 'a9b6bc', 'c67b10', '346fa1' ]
-
-		}
-
-		var chart = new google.visualization.PieChart(document
-				.getElementById('piechart'));
-
-			chart.draw(data, options);
-			
-			
-			/*  <div id="barchart_material" style="height: 500px;"></div>
-			 <div id="piechart" style="width: 900px; height: 500px;"></div> */
-	}
-</script>
-<title>Sample Dashboard</title>
-
-
-  <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Josh Admin Template</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -132,12 +26,9 @@
     <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
     <!--end of page level css-->
-
-	
 </head>
 
-
-<body class="skin-josh" onLoad="drawChart();">
+<body class="skin-josh">
     <header class="header">
         <a href="resources/index.html" class="logo">
             <img src="resources/img/logo.png" alt="Logo">
@@ -145,20 +36,20 @@
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
             <div>
-                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <a href="resources/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                     <div class="responsive_nav"></div>
                 </a>
             </div>
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="livicon" data-name="message-flag" data-loop="true" data-color="#42aaca" data-hovercolor="#42aaca" data-size="28"></i>
+                        <a href="resources/#" class="dropdown-toggle" data-toggle="dropdown"> <i class="livicon" data-name="message-flag" data-loop="true" data-color="#42aaca" data-hovercolor="#42aaca" data-size="28"></i>
                             <span class="label label-success">4</span>
                         </a>
                         <ul class="dropdown-menu dropdown-messages pull-right">
                             <li class="dropdown-title">4 New Messages</li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
+                                <a href="javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
                                     <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
                                         <strong>Riot Zeast</strong>
@@ -169,7 +60,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
                                     <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="icon">
                                     <div class="message-body">
@@ -181,7 +72,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
@@ -195,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Mark as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
@@ -209,12 +100,12 @@
                                 </a>
                             </li>
                             <li class="footer">
-                                <a href="#">View all</a>
+                                <a href="resources/#">View all</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="resources/#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="livicon" data-name="bell" data-loop="true" data-color="#e9573f" data-hovercolor="#e9573f" data-size="28"></i>
                             <span class="label label-warning">7</span>
                         </a>
@@ -225,7 +116,7 @@
                                 <ul class="menu">
                                     <li>
                                         <i class="livicon danger" data-n="timer" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">after a long time</a>
+                                        <a href="resources/#">after a long time</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             Just Now
@@ -233,7 +124,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon success" data-n="gift" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">Jef's Birthday today</a>
+                                        <a href="resources/#">Jef's Birthday today</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             Few seconds ago
@@ -241,7 +132,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon warning" data-n="dashboard" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">out of space</a>
+                                        <a href="resources/#">out of space</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             8 minutes ago
@@ -249,7 +140,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon bg-aqua" data-n="hand-right" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">New friend request</a>
+                                        <a href="resources/#">New friend request</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             An hour ago
@@ -257,7 +148,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon danger" data-n="shopping-cart-in" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">On sale 2 products</a>
+                                        <a href="resources/#">On sale 2 products</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             3 Hours ago
@@ -265,7 +156,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon success" data-n="image" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">Lee Shared your photo</a>
+                                        <a href="resources/#">Lee Shared your photo</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             Yesterday
@@ -273,7 +164,7 @@
                                     </li>
                                     <li>
                                         <i class="livicon warning" data-n="thumbs-up" data-s="20" data-c="white" data-hc="white"></i>
-                                        <a href="#">David liked your photo</a>
+                                        <a href="resources/#">David liked your photo</a>
                                         <small class="pull-right">
                                             <span class="livicon paddingright_10" data-n="timer" data-s="10"></span>
                                             2 July 2014
@@ -282,12 +173,12 @@
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="#">View all</a>
+                                <a href="resources/#">View all</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="resources/#" class="dropdown-toggle" data-toggle="dropdown">
                             <img data-src="resources/holder.js/35x35/#fff:#000" width="35" class="img-circle img-responsive pull-left" height="35" alt="riot">
                             <div class="riot">
                                 <div>
@@ -306,14 +197,14 @@
                             </li>
                             <!-- Menu Body -->
                             <li>
-                                <a href="#">
+                                <a href="resources/#">
                                     <i class="livicon" data-name="user" data-s="18"></i>
                                     My Profile
                                 </a>
                             </li>
                             <li role="presentation"></li>
                             <li>
-                                <a href="#">
+                                <a href="resources/#">
                                     <i class="livicon" data-name="gears" data-s="18"></i>
                                     Account Settings
                                 </a>
@@ -321,13 +212,13 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="lockscreen.html">
+                                    <a href="resources/lockscreen.html">
                                         <i class="livicon" data-name="lock" data-s="18"></i>
                                         Lock
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="login.html">
+                                    <a href="resources/login.html">
                                         <i class="livicon" data-name="sign-out" data-s="18"></i>
                                         Logout
                                     </a>
@@ -347,22 +238,22 @@
                     <div class="nav_icons">
                         <ul class="sidebar_threeicons">
                             <li>
-                                <a href="form_builder.html">
+                                <a href="practice">
                                     <i class="livicon" data-name="hammer" title="Form Builder 1" data-loop="true" data-color="#42aaca" data-hc="#42aaca" data-s="25"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="form_builder2.html">
+                                <a href="resources/form_builder2.html">
                                     <i class="livicon" data-name="list-ul" title="Form Builder 2" data-loop="true" data-color="#e9573f" data-hc="#e9573f" data-s="25"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="buttonbuilder.html">
+                                <a href="resources/buttonbuilder.html">
                                     <i class="livicon" data-name="vector-square" title="Button Builder" data-loop="true" data-color="#f6bb42" data-hc="#f6bb42" data-s="25"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="gridmanager.html">
+                                <a href="resources/gridmanager.html">
                                     <i class="livicon" data-name="new-window" title="Page Builder" data-loop="true" data-color="#37bc9b" data-hc="#37bc9b" data-s="25"></i>
                                 </a>
                             </li>
@@ -372,38 +263,38 @@
                     <!-- BEGIN SIDEBAR MENU -->
                     <ul id="menu" class="page-sidebar-menu">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="resources/index.html">
                                 <i class="livicon" data-name="home" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
                                 <span class="title">Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="medal" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i>
                                 <span class="title">Builders</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="form_builder.html">
+                                    <a href="resources/form_builder.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Builder
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="form_builder2.html">
+                                    <a href="resources/form_builder2.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Builder 2
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="buttonbuilder.html">
+                                    <a href="resources/buttonbuilder.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Button Builder
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="gridmanager.html">
+                                    <a href="resources/gridmanager.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Page Builder
                                     </a>
@@ -411,50 +302,50 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="doc-portrait" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
                                 <span class="title">Forms</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="form_examples.html">
+                                    <a href="resources/form_examples.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Examples
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="editor.html">
+                                    <a href="resources/editor.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Editors
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="validation.html">
+                                    <a href="resources/validation.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Validation
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="formelements.html">
+                                    <a href="resources/formelements.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Elements
                                     </a>
                                 </li>
                                  <li>
-                                    <a href="form_layouts.html">
+                                    <a href="resources/form_layouts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Layouts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="formwizard.html">
+                                    <a href="resources/formwizard.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Form Wizards
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="accordionformwizard.html">
+                                    <a href="resources/accordionformwizard.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Accordion Wizards
                                     </a>
@@ -462,116 +353,116 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="brush" data-c="#F89A14" data-hc="#F89A14" data-size="18" data-loop="true"></i>
                                 <span class="title">UI Features</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="animatedicons.html">
+                                    <a href="resources/animatedicons.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Animated Icons
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">
+                                    <a href="resources/buttons.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Buttons
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="advanced_buttons.html">
+                                    <a href="resources/advanced_buttons.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Advanced Buttons
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tabs_accordions.html">
+                                    <a href="resources/tabs_accordions.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Tabs and Accordions
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="panels.html">
+                                    <a href="resources/panels.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Panels
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="icon.html">
+                                    <a href="resources/icon.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Font Icons
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="color.html">
+                                    <a href="resources/color.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Color Picker Slider
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="grid.html">
+                                    <a href="resources/grid.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Grid Layout
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="carousel.html">
+                                    <a href="resources/carousel.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Carousel
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="advanced_modals.html">
+                                    <a href="resources/advanced_modals.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Advanced Modals
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tagsinput.html">
+                                    <a href="resources/tagsinput.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Tags Input
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="nestable.html">
+                                    <a href="resources/nestable.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Nestable List
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="tagsinput.html">
+                                    <a href="resources/tagsinput.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Tags Input
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="nestable.html">
+                                    <a href="resources/nestable.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Nestable List
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="toastr.html">
+                                    <a href="resources/toastr.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Toastr Notifications
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="notifications.html">
+                                    <a href="resources/notifications.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Notifications
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="session_timeout.html">
+                                    <a href="resources/session_timeout.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Session Timeout
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="portlet_draggable.html">
+                                    <a href="resources/portlet_draggable.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Draggable Portlets
                                     </a>
@@ -579,50 +470,50 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="lab" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i>
                                 <span class="title">UI Components</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="general.html">
+                                    <a href="resources/general.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         General Components
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="pickers.html">
+                                    <a href="resources/pickers.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Pickers
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="x-editable.html">
+                                    <a href="resources/x-editable.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         X-editable
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="timeline.html">
+                                    <a href="resources/timeline.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Timeline
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="transitions.html">
+                                    <a href="resources/transitions.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Transitions
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="sliders.html">
+                                    <a href="resources/sliders.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Sliders
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="knob.html">
+                                    <a href="resources/knob.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Circles Sliders
                                     </a>
@@ -630,32 +521,32 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="table" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
                                 <span class="title">Tables</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="simple_table.html">
+                                    <a href="resources/simple_table.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Simple tables
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="advanced_tables.html">
+                                    <a href="resources/advanced_tables.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Advanced Data Tables
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="editable_table.html">
+                                    <a href="resources/editable_table.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Editable Datatables
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="responsive_tables.html">
+                                    <a href="resources/responsive_tables.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Responsive Datatables
                                     </a>
@@ -663,38 +554,38 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="barchart" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i>
                                 <span class="title">Charts</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="charts.html">
+                                    <a href="resources/charts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Flot Charts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="piecharts.html">
+                                    <a href="resources/piecharts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Pie Charts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="charts_animation.html">
+                                    <a href="resources/charts_animation.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Animated Charts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="jscharts.html">
+                                    <a href="resources/jscharts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         JS Charts
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="sparklinecharts.html">
+                                    <a href="resources/sparklinecharts.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Sparkline Charts
                                     </a>
@@ -702,33 +593,33 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="resources/calendar.html">
                                 <i class="livicon" data-c="#F89A14" data-hc="#F89A14" data-name="calendar" data-size="18" data-loop="true"></i>
                                 <span class="badge badge-danger">7</span>
                                 Calendar
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="mail" data-size="18" data-c="#5bc0de" data-hc="#5bc0de" data-loop="true"></i>
                                 <span class="title">Email</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="mail_box.html">
+                                    <a href="resources/mail_box.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Inbox
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="compose.html">
+                                    <a href="resources/compose.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Compose
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="view_mail.html">
+                                    <a href="resources/view_mail.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Single Mail
                                     </a>
@@ -736,51 +627,51 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="tasks.html">
+                            <a href="resources/tasks.html">
                                 <i class="livicon" data-c="#EF6F6C" data-hc="#EF6F6C" data-name="list-ul" data-size="18" data-loop="true"></i>
                                 <span class="badge badge-danger">10</span>
                                 Tasks
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="image" data-c="#418BCA" data-hc="#418BCA" data-size="18" data-loop="true"></i>
                                 <span class="title">Gallery</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="gallery.html">
+                                    <a href="resources/gallery.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Gallery
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="masonry_gallery.html">
+                                    <a href="resources/masonry_gallery.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Masonry Gallery
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dropzone.html">
+                                    <a href="resources/dropzone.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Dropzone
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="imagecropping.html">
+                                    <a href="resources/imagecropping.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Image Cropping
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="multiple_upload.html">
+                                    <a href="resources/multiple_upload.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Multiple File Upload
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="imgmagnifier.html">
+                                    <a href="resources/imgmagnifier.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Image Magnifier
                                     </a>
@@ -788,32 +679,32 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="users" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i>
                                 <span class="title">Users</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="users.html">
+                                    <a href="resources/users.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Users
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="adduser.html">
+                                    <a href="resources/adduser.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Add New User
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="view_user.html">
+                                    <a href="resources/view_user.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         View User
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="deleted_users.html">
+                                    <a href="resources/deleted_users.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Deleted Users
                                     </a>
@@ -821,26 +712,26 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="map" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
                                 <span class="title">Maps</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="googlemaps.html">
+                                    <a href="resources/googlemaps.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Google Maps
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="vectormaps.html">
+                                    <a href="resources/vectormaps.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Vector Maps
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="advancedmaps.html">
+                                    <a href="resources/advancedmaps.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Advanced Maps
                                     </a>
@@ -848,26 +739,26 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="comment" data-c="#F89A14" data-hc="#F89A14" data-size="18" data-loop="true"></i>
                                 <span class="title">Blog</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="blog_list.html">
+                                    <a href="resources/blog_list.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Blog List
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blog_details.html">
+                                    <a href="resources/blog_details.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Blog Details
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="add_newblog.html">
+                                    <a href="resources/add_newblog.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Add New Blog
                                     </a>
@@ -875,20 +766,20 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="move" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i>
                                 <span class="title">News</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="news.html">
+                                    <a href="resources/news.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         News
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="news_item.html">
+                                    <a href="resources/news_item.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         News Details
                                     </a>
@@ -896,62 +787,62 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="resources/#">
                                 <i class="livicon" data-name="flag" data-c="#418bca" data-hc="#418bca" data-size="18" data-loop="true"></i>
                                 <span class="title">Pages</span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="lockscreen.html">
+                                    <a href="resources/lockscreen.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Lockscreen
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="invoice.html">
+                                    <a href="resources/invoice.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Invoice
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login.html">
+                                    <a href="resources/login.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Login
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login2.html">
+                                    <a href="resources/login2.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Login 2
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login.html#toregister">
+                                    <a href="resources/login.html#toregister">
                                         <i class="fa fa-angle-double-right"></i>
                                         Register
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="register2.html">
+                                    <a href="resources/register2.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Register 2
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="404.html">
+                                    <a href="resources/404.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         404 Error
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="500.html">
+                                    <a href="resources/500.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         500 Error
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blank.html">
+                                    <a href="resources/blank.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         Blank Page
                                     </a>
@@ -971,7 +862,7 @@
                 <h1>Welcome to Dashboard</h1>
                 <ol class="breadcrumb">
                     <li class="active">
-                        <a href="#">
+                        <a href="resources/#">
                             <i class="livicon" data-name="home" data-size="16" data-color="#333" data-hovercolor="#333"></i>
                             Home
                         </a>
@@ -988,7 +879,7 @@
                                     <div class="row">
                                         <div class="square_box col-xs-7 text-right">
                                             <span>Views Today</span>
-                                            <div class="number" id="myTargetElement"></div>
+                                            <div class="number" id="myTargetElement1"></div>
                                         </div>
                                         <i class="livicon  pull-right" data-name="eye-open" data-l="true" data-c="#fff" data-hc="#fff" data-s="70"></i>
                                     </div>
@@ -1097,7 +988,7 @@
                                 </h3>
                             </div>
                             <div class="panel-body">
-                              <div id="barchart_material" style="height: 500px;"></div>              
+                              <div id="realtimechart" style="height:350px;"></div>
                             </div>
                         </div>
                     </div>
@@ -1181,7 +1072,7 @@
                                 <div id='external-events'></div>
                                 <div id="calendar"></div>
                                 <div class="box-footer pad-5">
-                                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Create event</a>
+                                    <a href="resources/#" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Create event</a>
                                 </div>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1204,22 +1095,22 @@
                                                         </button>
                                                         <ul class="dropdown-menu pull-right" id="color-chooser">
                                                             <li>
-                                                                <a class="palette-primary" href="#">Primary</a>
+                                                                <a class="palette-primary" href="resources/#">Primary</a>
                                                             </li>
                                                             <li>
-                                                                <a class="palette-success" href="#">Success</a>
+                                                                <a class="palette-success" href="resources/#">Success</a>
                                                             </li>
                                                             <li>
-                                                                <a class="palette-info" href="#">Info</a>
+                                                                <a class="palette-info" href="resources/#">Info</a>
                                                             </li>
                                                             <li>
-                                                                <a class="palette-warning" href="#">warning</a>
+                                                                <a class="palette-warning" href="resources/#">warning</a>
                                                             </li>
                                                             <li>
-                                                                <a class="palette-danger" href="#">Danger</a>
+                                                                <a class="palette-danger" href="resources/#">Danger</a>
                                                             </li>
                                                             <li>
-                                                                <a class="palette-default" href="#">Default</a>
+                                                                <a class="palette-default" href="resources/#">Default</a>
                                                             </li>
 
                                                         </ul>
@@ -1261,11 +1152,11 @@
                                             <div class="todotext todoitem">Meeting with CEO</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1278,11 +1169,11 @@
                                             <div class="todotext todoitem">Team Out</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1295,11 +1186,11 @@
                                             <div class="todotext todoitem">Review On Sales</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1312,11 +1203,11 @@
                                             <div class="todotext todoitem">Meeting with Client</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1329,11 +1220,11 @@
                                             <div class="todotext todoitem">Analysis on Views</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1346,11 +1237,11 @@
                                             <div class="todotext todoitem">Seminar on Market</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1363,11 +1254,11 @@
                                             <div class="todotext todoitem">Business Review</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1380,11 +1271,11 @@
                                             <div class="todotext todoitem">Purchase Equipment</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1397,11 +1288,11 @@
                                             <div class="todotext todoitem">Meeting with CEO</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1414,11 +1305,11 @@
                                             <div class="todotext todoitem">Takeover Leads</div>
                                         </div>
                                         <div class="col-md-4  col-sm-4 col-xs-4  pull-right showbtns todoitembtns">
-                                            <a href="#" class="todoedit">
+                                            <a href="resources/#" class="todoedit">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </a>
                                             |
-                                            <a href="#" class="tododelete redcolor">
+                                            <a href="resources/#" class="tododelete redcolor">
                                                 <span class="glyphicon glyphicon-trash"></span>
                                             </a>
                                         </div>
@@ -1462,7 +1353,7 @@
                                     </div>
                                     <br />
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-danger">Send</a>
+                                        <a href="resources/#" class="btn btn-danger">Send</a>
                                     </div>
                                 </div>
                             </div>
@@ -1483,25 +1374,25 @@
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a class="panel-collapse collapses" href="#">
+                                            <a class="panel-collapse collapses" href="resources/#">
                                                 <i class="fa fa-angle-up"></i>
                                                 <span>Collapse</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="panel-refresh" href="#">
+                                            <a class="panel-refresh" href="resources/#">
                                                 <i class="fa fa-refresh"></i>
                                                 <span>Refresh</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="panel-config" href="#panel-config" data-toggle="modal">
+                                            <a class="panel-config" href="resources/#panel-config" data-toggle="modal">
                                                 <i class="fa fa-wrench"></i>
                                                 <span>Configurations</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="panel-expand" href="#">
+                                            <a class="panel-expand" href="resources/#">
                                                 <i class="fa fa-expand"></i>
                                                 <span>Fullscreen</span>
                                             </a>
@@ -1520,7 +1411,7 @@
         </aside>
         <!-- right-side -->
     </div>
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
+    <a id="back-to-top" href="resources/#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
         <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
     </a>
     <!-- global js -->
@@ -1564,41 +1455,7 @@
         });
     });
     </script>
-
-<script>
-var options = {
-		useEasing: true, 
-		useGrouping: true, 
-		separator: ',', 
-		decimal: '.', 
-		};
-
-<c:forEach var="obj" items="${particular}">
-
-var count=${obj.value}
-
-</c:forEach>
-
-
-var demo = new countUp("myTargetElement", 12.52, count, 0, 6, options);
-console.debug();
-demo.start();
-
-
-</script>
-	<!-- end of page level js -->
+    <!-- end of page level js -->
   
 </body>
 </html>
-
-
-
-
-
-
-
-</html>
-
- 
- 
- --%>

@@ -1,4 +1,4 @@
-package financials.controllers;
+/*package financials.controllers;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class DashBoardController {
 	
 
 	
-	/*@RequestMapping("/Dashboard")
+	@RequestMapping("/Dashboard")
 	public ModelAndView board()
 	{
 		ModelAndView mav = new ModelAndView();
@@ -33,13 +33,13 @@ public class DashBoardController {
 		
 		return mav;
 		
-	}*/
+	}
 	
 	@RequestMapping("/db")
 	public ModelAndView Practice(@ModelAttribute("modelBindDate") DateModel date)
 	{
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("NewFile");
+		mav.setViewName("Dashboard");
 		
 		
 		
@@ -55,3 +55,4 @@ public class DashBoardController {
 
 
 }
+*/

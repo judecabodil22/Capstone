@@ -1,5 +1,7 @@
 package financials.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,8 +23,12 @@ public class BeaFormController {
 	{
 		ModelAndView view = new ModelAndView();
 		
-		view.addObject("Vianca", "Hello Bea  -Joong ki");
+		List<BeaFormModel> userlist = BeaDao.getUsers();	
+		
+		view.addObject("Vianca", "Hello  -Joong ki");
 		view.setViewName("AP_AR/BeaForm");
+		view.addObject("Byangcake", userlist);
+
 		return view;		
 	}
 	
@@ -30,20 +36,32 @@ public class BeaFormController {
 	public ModelAndView APARSave(@ModelAttribute("modelBeaForm") BeaFormModel bea,
 			@RequestParam(value = "Save", required = false) String save,
 			@RequestParam(value = "Update", required = false) String update,
-			@RequestParam(value = "Delete", required = false) String delete)
+			@RequestParam(value = "Delete", required = false) String delete,
+			@RequestParam(value = "Select", required = false) String select,
+			@RequestParam(value = "SelectFrom", required = false) String selectfrom)
+	
 	{
 	
 		String message ="";
 		boolean bool = true;
+		
+		ModelAndView view = new ModelAndView();
+		
 		if(save!=null) {
-			bool = BeaDao.insert(bea);
 			
+			bool = BeaDao.insert(bea);	
 		}
 		else if(update!=null) {
 			bool = BeaDao.update(bea);
 		}
 		else if(delete!=null) {
 			bool = BeaDao.delete(bea);
+		}
+		else if(select!=null) {
+			BeaDao.getUsers();
+		}
+		else if(selectfrom!=null) {
+			List<BeaFormModel> ekel = BeaDao.findByIDList(bea);	
 		}
 	
 		
@@ -53,7 +71,9 @@ public class BeaFormController {
 		else {
 			message = "Failed!";
 		}
-		ModelAndView view = new ModelAndView();
+		
+		List<BeaFormModel> userlist = BeaDao.getUsers();
+		view.addObject("Byangcake", userlist);
 		
 		view.addObject("Vianca", message);
 		view.setViewName("AP_AR/BeaForm");

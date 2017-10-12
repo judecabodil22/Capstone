@@ -1,5 +1,7 @@
 package financials.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +24,17 @@ public class SampleController
 	public ModelAndView sample(@ModelAttribute("modelSample") SampleModel jude)
 	{	
 		
-		ModelAndView mav = new ModelAndView();
+		List<SampleModel> list = dao.getUsers();
+		
+		ModelAndView mav = new ModelAndView();		
 		
 		mav.addObject("hello", "Hello World");
+		
+		mav.addObject("jude", list);
+		
 		mav.setViewName("GLedger/SampleJsp");
+		
+		
 		
 		return mav;
 	}
@@ -33,7 +42,9 @@ public class SampleController
 	@RequestMapping("/GL_save")
 	public ModelAndView save(@ModelAttribute("modelSample") SampleModel jude,
 			@RequestParam(value = "save", required = false) String save,
-			@RequestParam(value = "update", required = false) String update)
+			@RequestParam(value = "update", required = false) String update,
+			@RequestParam(value = "select", required = false) String select,
+			@RequestParam(value = "id", required = false) String id)
 	{	
 		
 		ModelAndView mav = new ModelAndView();
@@ -47,7 +58,17 @@ public class SampleController
 		{
 			dao.update(jude);
 		}
+		else if(select!=null)
+		{
+			dao.getUsers();
+		}
 		
+		else if(id!=null)
+		{
+			List<SampleModel> list = dao.findByIDList(jude);
+			mav.addObject("jude", list);
+			
+		}
 		
 		return mav;
 	}
