@@ -1,6 +1,6 @@
 package financials.model;
 
-public class AdminCoAModel {
+public class AdminCOAModel {
 	
 	private int coa_account_uid;
 	private int coa_code;
