@@ -67,5 +67,21 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="GLDao" class="financials.dao.GLSampDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+    
+    <bean id="lqdao" class="financials.dao.liquidationDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="dvd" class="financials.dao.DVDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="tbd" class="financials.dao.tblreportsDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="tvd" class="financials.dao.TVoucherDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
 
 </beans>
