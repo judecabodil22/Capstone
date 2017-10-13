@@ -5,10 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class financials_cjevController {
+@RequestMapping("JEV")
+public class JEVController {
 	
-	@RequestMapping("financials_createjev") //url
-	public ModelAndView fdash()
+	@RequestMapping("list") //url
+	public ModelAndView listing()
+	{
+		ModelAndView fd = new ModelAndView();
+		fd.setViewName("GLedger/JEV/list");//
+		return fd;
+	}
+	
+	@RequestMapping("create") //url
+	public ModelAndView create()
 	{
 		ModelAndView fd = new ModelAndView();
 		fd.setViewName("GLedger/JEV/create");//
