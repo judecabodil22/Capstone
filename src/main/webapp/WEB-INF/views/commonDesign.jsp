@@ -21,12 +21,13 @@
     <!-- end of global css -->    
 
     <!-- Added Scripts -->
-    <!-- for top buttons -->
+    <!-- @Dashboard - for top buttons -->
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
     
     <!-- /Added Scripts -->
    
-   <meta charset="UTF-8">
+    <!-- Unfixed Scripts -->
+    <meta charset="UTF-8">
     
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,7 +38,7 @@
     <![endif]-->
     <!-- global css -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	 <link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
+	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -66,9 +67,9 @@
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-      <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
       
-      <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
     <!--livicons-->
     <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
@@ -77,9 +78,9 @@
     <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
     <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
+    <!-- /Unfixed Scripts -->
    
 </head>
-
 
 <body class="skin-josh">
 	<header class="header">
@@ -225,6 +226,7 @@
                           	</li>
                         </ul> 
                    </li>
+                   <!-- /User Information -->
                 </ul>
             </div>               
         </nav>
@@ -259,7 +261,14 @@
                         
                         <!-- System Setup sub-menu -->
                         <ul class="sub-menu">
-                        	<li>
+                        	 <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Account Types
+                                </a>
+                             </li>
+                        
+                        	 <li>
                         		<a href="resources/#">
                         			<i class="fa fa-angle-double-right"></i>
                         			Chart of Accounts
@@ -286,13 +295,6 @@
                         			Fund
                                 </a>
                              </li>
-                             
-                             <li>
-                        		<a href="resources/#">
-                        			<i class="fa fa-angle-double-right"></i>
-                        			Template 
-                                </a>
-                             </li>
                         </ul>        
                     </li>
                     
@@ -309,7 +311,7 @@
                     		<li>
                     			<a href="resources/#">
                     				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
-                                    Journal Entry Voucher
+                                    	<span class="title">Journal Entry Voucher</span>
                                 </a>	
                                 	<ul class="sub-menu">
                                 		<li>
@@ -374,7 +376,7 @@
                     		<li>
                     			<a href="resources/#">
                     				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
-                                    Journal Entry Voucher
+                                    <span class="title">Journal Entry Voucher</span>
                                 </a>
                             </li>
                             
@@ -382,7 +384,7 @@
                             <li>
                             	<a href="resources/#">
                             		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
-                            			<span class="title">Accounts Receivable</span>
+                            		<span class="title">Accounts Receivable</span>
                           		</a>
                         	</li>
                         	
