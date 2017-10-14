@@ -1,5 +1,6 @@
 package financials.controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,12 +16,16 @@ public class APAR_DashboardController {
 	{
 		ModelAndView view = new ModelAndView();
 		
-		List<BeaFormModel> userlist = APAR_DashboardController.getUsers();	
+		List<BeaFormModel> userlist = this.getUsers();	
 		
 		view.addObject("Vianca", "Hello Bea  -Joong ki");
 		view.setViewName("AP_AR/BeaForm");
 		view.addObject("Byangcake", userlist);
 
 		return view;		
+	}
+	
+	public List<BeaFormModel> getUsers(){
+		return new ArrayList<BeaFormModel>();
 	}
 }

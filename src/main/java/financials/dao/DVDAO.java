@@ -12,8 +12,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.DVModel;
-import financials.model.DisbursementSampleModel;
-import financials.model.UserModel;
 
 public class DVDAO {
 	public JdbcTemplate jdbcTemplate;

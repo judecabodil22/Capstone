@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.AdminCoADao;
-import financials.model.AdminCoAModel;
+import financials.model.AdminCOAModel;
 
 @Controller
 public class AdminCoAController {
@@ -16,8 +16,8 @@ public class AdminCoAController {
 	AdminCoADao dao;
 	
 	@RequestMapping("admin_CoA")
-	public ModelAndView admin_coa(@ModelAttribute("CoASave") AdminCoAModel model1,
-			@ModelAttribute("CoA_delete") AdminCoAModel model2)
+	public ModelAndView admin_coa(@ModelAttribute("CoASave") AdminCOAModel model1,
+			@ModelAttribute("CoA_delete") AdminCOAModel model2)
 	{
 		ModelAndView mav = new ModelAndView();
 				mav.setViewName("Admin/ChartOfAccounts");
@@ -28,7 +28,7 @@ public class AdminCoAController {
 	}
 	
 	@RequestMapping("admin_CoA_save")
-	public ModelAndView admin_coa_save(@ModelAttribute("CoASave") AdminCoAModel model)
+	public ModelAndView admin_coa_save(@ModelAttribute("CoASave") AdminCOAModel model)
 	{	
 		
 		dao.insert(model);
@@ -40,7 +40,7 @@ public class AdminCoAController {
 	}
 	
 	@RequestMapping("admin_CoA_delete")
-	public ModelAndView admin_coa_delete(@ModelAttribute("CoA_delete") AdminCoAModel model)
+	public ModelAndView admin_coa_delete(@ModelAttribute("CoA_delete") AdminCOAModel model)
 	{	
 		
 		dao.delete(model);

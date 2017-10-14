@@ -11,10 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import financials.model.AdminCoAModel;
-import financials.model.AdminTransactionModel;
-import financials.model.AdminCoAModel;
-import financials.model.AdminCoAModel;
+import financials.model.AdminCOAModel;
 
 public class AdminCoADao {
 	
@@ -29,7 +26,7 @@ public class AdminCoADao {
 	}
 	
 	
-	public List<AdminCoAModel> dropDownType() {
+	public List<AdminCOAModel> dropDownType() {
 
 		
 		sql = "Select tbl1.*, tbl2.acc_description as Parent from tbl_account_type tbl1		\r\n" + 
@@ -37,9 +34,9 @@ public class AdminCoADao {
 				"		ON tbl1.acc_parent_uid = tbl2.acc_uid\r\n" + 
 				"			ORDER BY Parent asc";
 		
-		return jdbcTemplate.query(sql, new RowMapper<AdminCoAModel>() {
-			public AdminCoAModel mapRow(ResultSet rs, int row) throws SQLException {
-				AdminCoAModel user = new AdminCoAModel();
+		return jdbcTemplate.query(sql, new RowMapper<AdminCOAModel>() {
+			public AdminCOAModel mapRow(ResultSet rs, int row) throws SQLException {
+				AdminCOAModel user = new AdminCOAModel();
 				user.setAcc_description(rs.getString("acc_description"));
 				user.setAcc_parent_uid(rs.getInt("acc_parent_uid"));
 				user.setParent(rs.getString("Parent"));
@@ -49,7 +46,7 @@ public class AdminCoADao {
 		});
 	}
 	
-public boolean insert(AdminCoAModel user) {
+public boolean insert(AdminCOAModel user) {
 
 		
 		
@@ -82,15 +79,15 @@ public boolean insert(AdminCoAModel user) {
 	}
 	
 	
-public List<AdminCoAModel> getCoA() {
+public List<AdminCOAModel> getCoA() {
 
 	sql = "Select tbl1.*, tbl2.acc_description as Parent from tbl_coa tbl1\r\n" + 
 			"			INNER JOIN tbl_account_type tbl2\r\n" + 
 			"			On tbl1.acc_parent_uid= tbl2.acc_uid";
 
-	return jdbcTemplate.query(sql, new RowMapper<AdminCoAModel>() {
-		public AdminCoAModel mapRow(ResultSet rs, int row) throws SQLException {
-			AdminCoAModel user = new AdminCoAModel();
+	return jdbcTemplate.query(sql, new RowMapper<AdminCOAModel>() {
+		public AdminCOAModel mapRow(ResultSet rs, int row) throws SQLException {
+			AdminCOAModel user = new AdminCOAModel();
 			
 			user.setCoa_account_uid(rs.getInt("coa_account_uid"));
 			user.setCoa_code(rs.getInt("coa_code"));
@@ -106,7 +103,7 @@ public List<AdminCoAModel> getCoA() {
 	});
 }
 
-public boolean delete(AdminCoAModel user) {
+public boolean delete(AdminCOAModel user) {
 
 	sql = "Delete from tbl_coa " + "WHERE coa_account_uid = ?";
 

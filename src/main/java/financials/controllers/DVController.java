@@ -11,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.DVDAO;
 import financials.model.DVModel;
-import financials.model.UserModel;
 
 @Controller
 public class DVController {
