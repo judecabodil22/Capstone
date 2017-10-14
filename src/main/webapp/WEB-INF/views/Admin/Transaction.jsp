@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Funds</title>
+    <title>Transactions</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -321,7 +321,7 @@
 										<li>
 											<a href="accountTypes">
 											<i class="livicon" data-name="chevron-right" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i>
-												Account Types				
+												Account Types					
 											</a>
 										</li>
 									
@@ -384,7 +384,7 @@
         <aside class="right-side">
             <!-- Main content -->
             <section class="content-header">
-                <h1>Types of Funds</h1>
+                <h1>Transactions Types</h1>
                 <ol class="breadcrumb">
                     <li class="active">
                         <a href="resources/#">
@@ -400,7 +400,7 @@
                            <div class="portlet-title">
                                 <h3 class="caption">
                                      <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Funds
+                                    Transactions
                                 </h3>
                                 <div class="pull-right">
 									
@@ -415,43 +415,57 @@
 									<table  id="dashboard_table" style="text-align:center" class="table table-striped table-bordered table-advance table-hover">
                                         <thead>
                                             <tr>
-                                                <th style="text-align:center">
-                                                    <i class="fa fa-sort-alpha-desc"></i>
-                                                 Code
+                                            	  <th style="text-align:center">
+                                                    <i class="fa fa-sort-numeric-asc"></i>
+													
+                                                 ID
                                                 </th>
                                                 <th  style="text-align:center" class="hidden-xs">
                                                     <i class="fa fa-user"></i>
+												Code
+                                                </th>
+												 <th  style="text-align:center" class="hidden-xs">
+                                                    <i class="fa fa-user"></i>
 												Description
                                                 </th>
-                                                
-                                                <th  style="text-align:center" class="hidden-xs">
+												 <th  style="text-align:center" class="hidden-xs">
+                                                    <i class="fa fa-user"></i>
+												Parent
+                                                </th>
+												
+												 <th  style="text-align:center" class="hidden-xs">
                                                     <i class="fa fa-trash-o"></i>
 											    Delete
                                                 </th>
-                                               
-												
                                             </tr>
                                         </thead>
                                         <tbody>
                                         
-                                        <c:forEach var="MyOneAndOnly" items="${list}">
-                                        	 <tr data-uid="${MyOneAndOnly.fund_uid}" data-code="${MyOneAndOnly.fund_code}" data-desc="${MyOneAndOnly.fund_description}" >
+                                        <c:forEach var="list" items="${transaction}">
+                                        	 <tr data-uid="${list.trans_transaction_type_uid}" data-code="${list.trans_code}" data-desc="${list.trans_description}" data-parent="${list.trans_transaction_parent_uid}" >
                                                 
-                                              <form:form action="admin_funds_delete" modelAttribute="fundingHappiness">
+                                            
                                                 <td class="highlight" class="info">
                                                      <div class="info"></div>
 
-                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${MyOneAndOnly.fund_code}</a>
-                                                </td>
-                                                <td class="hidden-xs">${MyOneAndOnly.fund_description}</td>
-                                                 <td>
-                                                   	<form:input type="hidden" id="uid" path="fund_uid" value="${MyOneAndOnly.fund_uid}"/>
-                                                    <input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
-                                                  
-                                                  	                                       
+                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${list.trans_transaction_type_uid}</a>
+                                                   
                                                 </td>
                                                 
-                                                </form:form>
+                                                <td class="hidden-xs">${list.trans_code}</td>
+                                                
+                                                 <td class="hidden-xs">${list.trans_description}</td>
+                                                 
+                                                  <td class="hidden-xs">${list.parent}</td>
+                                                
+                                                 <td>
+                                                 	<form:form action="admin_transactions_delete" modelAttribute="transaction_delete">
+                                                   	<form:input type="hidden" id="uid" path="trans_transaction_type_uid" value="${list.trans_transaction_type_uid}"/>
+                                                    <input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">  
+                                                     </form:form>    	                                       
+                                                </td>
+                                                
+                                               
                                                 
                                             </tr>
 										</c:forEach>		
@@ -473,115 +487,178 @@
     </div>
 	
 		 
- <!--Add-->  
-<div class="modal fade in" id="add" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+ 	<!-- add -->
+
+	 <div class="modal fade in" id="add" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">New Fund</h4>
+                                <h4 class="modal-title">New Transaction Type</h4>
                             </div>
                             <div class="modal-body">
-
-
-                  
-<form:form class="form-horizontal" action="admin_funds_save" modelAttribute="fundingHappiness" name="FundForm">
+                                
+								<form:form action="admin_transaction_save" modelAttribute="ModelBindSave" class="form-horizontal">
 <fieldset>
 
+<!-- Form Name -->
+
+
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="">Parent Type</label>
+  <div class="col-md-4">
+   
+   <form:select id="" name="" class="form-control" path="trans_transaction_parent_uid">
+
+	<c:forEach var="list" items="${types}">  
+   	 
+   	<form:option value="${list.trans_transaction_type_uid}">
+           <c:out value="${list.trans_description}"/>
+ 	</form:option>
+     
+	</c:forEach>
+	<form:option value="99" path="trans_transaction_parent_uid">null (Is a Parent)</form:option>
+ </form:select>
+ 
+ 
+ 
+  </div>
+</div>
+
 
 <!-- Text input-->
+
 <div class="form-group">
-  <label class="col-md-4 control-label" for="code">Code</label>  
+  <label class="col-md-4 control-label" for="textinput">Code</label>  
   <div class="col-md-5">
-  <form:input id="code" name="code" type="text"  class="form-control input-md" path="fund_code"/>
-  <span class="help-block">numbers only</span>  
+  <form:input id="textinput" name="textinput" type="text" placeholder="Transaction Code" class="form-control input-md" path="trans_code"/>
+    
   </div>
 </div>
 
-<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="description">Description</label>  
-  <div class="col-md-8">
-  <form:input id="description" name="description" type="text"  class="form-control input-md" path="fund_description"/>
-  <span class="help-block">Fund Description</span>  
+  <label class="col-md-4 control-label" for="textinput">Description</label>  
+  <div class="col-md-5">
+  <form:input id="textinput" name="textinput" type="text" placeholder="Transaction Description" class="form-control input-md" path="trans_description"/>
+    
   </div>
 </div>
+
 
 <!-- Button (Double) -->
-<div class="form-group">
+
   <label class="col-md-4 control-label" for="button1id"></label>
-  <div class="col-md-8">
-    <input type="submit"  name="submit" class="btn btn-success">
-    <input type="reset"   name="reset" class="btn btn-danger">
-  </div>
-</div>
+  
+   <input type="submit" class="btn btn-success" value="Submit" style="width:100%;">
+   
+  
+
+
 
 </fieldset>
-</form:form>
-			</div>	
-		</div>
-	</div>							
-</div>
-	 <!-- End of Add -->	
-	
-<!--Edit-->
 
-<div class="modal fade in" id="edit" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+</form:form>
+								
+									
+		
+							</div>	
+						</div>
+					</div>
+					
+							
+		</div>
+		
+	<!-- end of add -->
+	
+	
+
+		 	<!-- edit -->
+
+	 <div class="modal fade in" id="edit" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">Edit Fund</h4>
+                                <h4 class="modal-title">Edit Transaction Type</h4>
                             </div>
                             <div class="modal-body">
-                    
-<form:form class="form-horizontal" action="admin_funds_update" modelAttribute="fundingHappiness" name="FundForm">
+                                
+								<form:form action="admin_transaction_update" modelAttribute="transaction_update" class="form-horizontal">
 <fieldset>
 
+<!-- Form Name -->
+
+
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="">Parent Type</label>
+  <div class="col-md-4">
+   
+   <form:select id="" name="" class="form-control" path="trans_transaction_parent_uid">
+
+	<c:forEach var="list" items="${types}">  
+   	 
+   	<form:option value="${list.trans_transaction_type_uid}">
+           <c:out value="${list.trans_description}"/>
+ 	</form:option>
+     
+	</c:forEach>
+	<form:option value="99" path="trans_transaction_parent_uid">null (Is a Parent)</form:option>
+ </form:select>
+ 
+ 
+ 
+  </div>
+</div>
+
 
 <!-- Text input-->
+
 <div class="form-group">
-  <label class="col-md-4 control-label" for="code">Code</label>  
+  <label class="col-md-4 control-label" for="textinput">Code</label>  
   <div class="col-md-5">
-   <form:input  id="modal_uid" type="hidden" class="form-control input-md" path="fund_uid"/>
-  <form:input  id="modal_code" type="text" class="form-control input-md" path="fund_code"/>
-  <span class="help-block">numbers only</span>  
+  <form:input id="modal_code" name="textinput" type="text" class="form-control input-md" path="trans_code"/>
+  <form:input id="modal_uid" name="textinput" type="hidden"  class="form-control input-md" path="trans_transaction_type_uid"/>
+    
   </div>
 </div>
 
-<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="description">Description</label>  
-  <div class="col-md-8">
-  <form:input  id="modal_description" type="text" class="form-control input-md" path="fund_description"/>
-  <span class="help-block">Fund Description</span>  
+  <label class="col-md-4 control-label" for="textinput">Description</label>  
+  <div class="col-md-5">
+  <form:input id="modal_description" name="textinput" type="text"  class="form-control input-md" path="trans_description"/>
+    
   </div>
 </div>
+
 
 <!-- Button (Double) -->
-<div class="form-group">
+
   <label class="col-md-4 control-label" for="button1id"></label>
-  <div class="col-md-8">
-    <input type="submit"  name="submit" class="btn btn-success">
-    <input type="reset"   name="reset" class="btn btn-danger" onClick="ClearForm()">
-  </div>
-</div>
+  
+   <input type="submit" class="btn btn-success" value="Submit" style="width:100%;">
+   
+  
+
+
 
 </fieldset>
+
 </form:form>
-			</div>	
+								
+											
+							</div>	
+						</div>
+					</div>
+					
+							
 		</div>
-	</div>							
-</div>
-	 <!-- End of Edit -->		
 		
+	<!-- end of edit -->
 		
-		
-		
-		
-		
-	
-	
 	
     <!-- global js -->
     <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>

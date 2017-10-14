@@ -1,30 +1,6 @@
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>Financials System Project</title>
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
-    <!-- end of global css -->    
-
-    <!-- Added Scripts -->
-    <!-- for top buttons -->
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-    
-    <!-- /Added Scripts -->
-   
+    <%@ include file="head.jsp" %>
 </head>
 
 <body class="skin-josh">
@@ -176,6 +152,7 @@
         </nav>
   	</header>
   	
+  	
   	<div class="wrapper row-offcanvas row-offcanvas-left">
   	<!-- Left side column. contains the logo and sidebar -->
   		<aside class="left-side sidebar-offcanvas">
@@ -188,7 +165,7 @@
   					<ul id="menu" class="page-sidebar-menu">
   					
   					<!-- Dashboard -->
-  					<li class="active">
+  					<li>
   						<a href="financials_dashboard">
   							<!--i class="livicon" data-name="barchart" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i-->
   								<span class="title">Dashboard</span>
@@ -243,7 +220,7 @@
                     </li>
                     
                     <!-- Transaction-->
-                    <li>
+                    <li class="active">
                     	<a href="resources/#">
                     		<!--i class="livicon" data-name="laptop" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i-->
                     			<span class="title">Transaction</span>
@@ -252,13 +229,13 @@
                     	
                     	<!-- Transaction sub-menu -->
                     	<ul class="sub-menu">
-                    		<li>
+                    		<li class="active">
                     			<a href="resources/#">
                     				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
                                     Journal Entry Voucher
                                 </a>	
                                 	<ul class="sub-menu">
-                                		<li>
+                                		<li class="active">
                                 			<a href="financials_createjev">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Create JEV
@@ -319,13 +296,6 @@
                     	<ul class="sub-menu">
                     		<li>
                     			<a href="resources/#">
-                    				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
-                                    Journal Entry Voucher
-                                </a>
-                            </li>
-                            
-                    		<li>
-                    			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
                                  	Chart of Accounts
                             	</a>
@@ -357,101 +327,72 @@
                     
                     	<!-- Reports sub-menu -->
                     	<ul class="sub-menu">
-                    		
-                    		<!-- Financial Statements -->
                     		<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
-                                 	Financial Statements
+                                 	General Journal
                              	</a>
-                             	
-                             	<!-- Financial Statement sub-menu -->
-                             	<ul class="sub-menu">
-                             		<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			Trial Balance
-                             			</a>
-                             
-                             			<ul class="sub-menu">
-                             				<li>
-                             					<a href="resources/#">
-                             						<i class="fa fa-angle-double-right"></i>
-                                					Unadjusted Trial Balance	
-                             					</a>
-                        					</li>
-                        		
-                        					<li>
-                             					<a href="resources/#">
-                             						<i class="fa fa-angle-double-right"></i>
-                                					Pre-Closing Trial Balance	
-                             					</a>
-                        					</li>
-                        		
-                        					<li>
-                             					<a href="resources/#">
-                             						<i class="fa fa-angle-double-right"></i>
-                                					Post-Closing Trial Balance	
-                             					</a>
-                        					</li>
-                        				</ul>         
-                        			</li>
-                        			
-                        			<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			Statement of Financial Position
-                             			</a>
-                             		</li>
-                             		
-                             		<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			Statement of Financial Performance
-                             			</a>
-                             		</li>
-                             		
-                             		<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			Statement of Cash Flows
-                             			</a>
-                             		</li>
-                             		
-                             		<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			Statement of Changes in Assets/Equity
-                             			</a>
-                             		</li>	
-                             	</ul>	
                         	</li>
-                        	
-                        	<!-- Journals and Ledgers -->
+                        
                         	<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
-                                 	Journal/Ledgers
+                                 	General Ledger
                              	</a>
-                             	
-                             	<!-- Journals and Ledgers sub-menu -->
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Trial Balance
+                             	</a>
+                             
                              	<ul class="sub-menu">
                              		<li>
                              			<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			General Journal
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Unadjusted Trial Balance	
                              			</a>
                         			</li>
-                        
+                        		
                         			<li>
-                    					<a href="resources/#">
-                    						<i class="fa fa-angle-double-right"></i>
-                                 			General Ledger
+                             			<a href="resources/#">
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Pre-Closing Trial Balance	
                              			</a>
                         			</li>
-                        		</ul>
-                        	 </li>
-						</ul>   		
+                        		
+                        			<li>
+                             			<a href="resources/#">
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Post-Closing Trial Balance	
+                             			</a>
+                        			</li>
+                        		</ul>         
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Statement of Income and Expense
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                	Statement of Changes in Equity
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                	Statement of Cash Flows
+                             	</a>
+                        	</li>
+                    	</ul>
+                	</li>
                 
                 	<!-- Manage Users -->
                 	<li>
@@ -479,7 +420,7 @@
                     	</ul>
                 	</li>
                 
-                	<!-- Help -->
+                	<!-- Manage Users -->
                 	<li>
                 		<a href="resources/#">
                 			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
@@ -492,40 +433,39 @@
    			</section>
 		</aside>
 		
-		<aside class="right-side">
-			<!-- Main Content -->
-			<section class="content-header">
-				<h1>Create Journal Entry Voucher</h1>
-					<ol class="breadcrumb">
-						<li class="active">
-							<!--a href="resources/#">
-								<i class="livicon" data-name="home" data-size="16" data-color="#333" data-hovercolor="#333"></i>
-								Home
-							</a-->
+        <aside class="right-side">
+        	<!-- Main Content -->
+        	<section class="content-header">
+        		<h1>Create Journal Entry Voucher</h1>
+        			<ol class="breadcrumb">
+        				<li class="active">
+        					<!--a href="resources/#">
+        						<i class="livicon" data-name="home" data-size="16" data-color="#333" data-hovercolor="#333"></i>
+        						Home
+        					</a-->
                     	</li>
                 	</ol>
             </section>
             
             <section class="content">
-            	<!-- JEV Start -->
-            	<div class="col-md-12">
-            		<div class="panel panel-primary">
-            		
-            			<div class="panel-heading">
-            				<h3 class="panel-title">Journal Entry Voucher</h3>
-                    	</div>
-                    	
-                    	<div class="panel-body">
-                    		<div class="bs-example">
-                    			<ul class="nav nav-pills">
-                    				<li class="active">
-                         				<a href="#page1" data-toggle="tab">Particulars</a>
+			<!-- JEV start -->
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">Journal Entry Voucher</h3>
+                         </div>
+                         
+                         <div class="panel-body">
+                         	<div class="bs-example">
+                         		<ul class="nav nav-tabs">
+                         			<li>
+                         				<a data-toggle="tab">Part I</a>
                                     </li>
                                     <li>
-                         				<a href="#page2" data-toggle="tab">Accounting Entries</a>
+                         				<a data-toggle="tab">Part II</a>
                                     </li>
                                     <li>
-                         				<a href="#page3" data-toggle="tab">Supporting Documents</a>
+                         				<a data-toggle="tab">Part III</a>
                                     </li>
                                  </ul>
                              </div>
@@ -543,8 +483,8 @@
                              			<div class="input-group">
                              				<div class="input-group-addon">
                              					<i class="fa fa-calendar"></i>
-                             				</div>
-                             				<input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
+                                            </div>
+                                        <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
                                         </div>
                                  </div>
                          
@@ -591,7 +531,7 @@
                                  
                                  <!-- Buttons -->
                                  <div class="form-group pull-right">
-                                 	<a data-toggle="tab" >
+                                 	<a data-toggle="tab" href="#page2">
                                  		<button type="submit" class="btn btn-responsive btn-primary">Next</button>	
                                  	</a>
 										<button type="submit" class="btn btn-responsive btn-default">Clear</button>	
@@ -759,7 +699,7 @@
 								
 								<!-- Buttons -->
                                 <div class="form-group pull-right">
-                                	<a data-toggle="tab">
+                                	<a data-toggle="tab" href="#page3">
                                  		<button type="submit" class="btn btn-responsive btn-primary">Next</button>	
                                  	</a>
 										<button type="submit" class="btn btn-responsive btn-default">Clear</button>	
@@ -777,7 +717,7 @@
 									</div>
 								</div>
 								
-								<!-- Remarks -->								
+								<!-- Remarks -->
                          		<div class="col-md-12 form-group">
                          			<label>Remarks</label>
                          			<textarea id="textarea" class="form-control" style="resize:none" maxlength="300" rows="3" placeholder="Write something here..."></textarea>
@@ -797,27 +737,9 @@
                   </div>
         
 			</section>		
-		</aside-->		
-		
-		
-        
-	</div>			
-	
-	<!-- End Scripts -->
-    <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
+		</aside>		
+	</div>
     
-    <!-- Added Scripts -->
-    
-    <!-- /Added Scripts -->
-    
+	<%@ include file="script.jsp" %>
 </body>
 </html>

@@ -6,7 +6,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	${dis}
+<div>
+	<h1>${dis}</h1>
+	</div>
 	<form:form action="d_save" modelAttribute="insert" method="post">
 		<table>
 			<tr>
@@ -27,10 +29,43 @@
 			<tr>
 				<td><input type="submit" value="Submit" name="save"></td>
 				
+				<td><input type="submit" value="Update" name="update"></td>
+				
+				<td><input type="submit" value="Delete" name="delete"></td>
+				
+				<td><input type="submit" value="Find User" name="findByID"></td>
+				
+				<td><input type="submit" value="Select All" name="select"></td>
 			</tr>
+			
+			
 		</table>
 	</form:form>
 
+	<center>
+		<table border="2" width="70%" cellpadding="2"
+			style="text-align: center">
+
+			<tr>
+				<th>User ID</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+
+			<c:forEach var="user" items="${userList}">
+
+				<tr>
+					<td>${user.user_id}</td>
+					<td>${user.user_name}</td>
+					<td>${user.pass_word}</td>
+
+				</tr>
+			</c:forEach>
+
+		</table>
+	</center>
+
+	
 	
 	
 	
