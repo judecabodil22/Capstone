@@ -3,7 +3,7 @@
 
 <html>
 
-<%@ include file = "CommonDashboard.jsp" %>
+<%@ include file = "commonDesign.jsp" %>
 
 <title>Financials System Project</title>
 
