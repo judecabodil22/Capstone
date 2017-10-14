@@ -21,16 +21,11 @@
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
     <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-    <!--end of page level css-->
-    
-    <!-- Added Scripts -->
 
+    <!-- Added Scripts -->
+    <!-- for top buttons -->
+    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
+    
     <!-- /Added Scripts -->
    
 </head>
@@ -184,7 +179,6 @@
         </nav>
   	</header>
   	
-  	
   	<div class="wrapper row-offcanvas row-offcanvas-left">
   	<!-- Left side column. contains the logo and sidebar -->
   		<aside class="left-side sidebar-offcanvas">
@@ -328,6 +322,29 @@
                     	<ul class="sub-menu">
                     		<li>
                     			<a href="resources/#">
+                    				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                                    Journal Entry Voucher
+                                </a>
+                            </li>
+                            
+                            <!-- Accounts Receivable -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            			<span class="title">Accounts Receivable</span>
+                          		</a>
+                        	</li>
+                        	
+                        	<!-- Accounts Payable -->
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="livicon" data-name="sign-out" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                        			<span class="title">Accounts Payable</span>
+                           		</a>
+                      		</li>
+                            
+                    		<li>
+                    			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
                                  	Chart of Accounts
                             	</a>
@@ -359,72 +376,101 @@
                     
                     	<!-- Reports sub-menu -->
                     	<ul class="sub-menu">
+                    		
+                    		<!-- Financial Statements -->
                     		<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
-                                 	General Journal
+                                 	Financial Statements
                              	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	General Ledger
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	Trial Balance
-                             	</a>
+                             	
+                             	<!-- Financial Statement sub-menu -->
+                             	<ul class="sub-menu">
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Trial Balance
+                             			</a>
                              
+                             			<ul class="sub-menu">
+                             				<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Unadjusted Trial Balance	
+                             					</a>
+                        					</li>
+                        		
+                        					<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Pre-Closing Trial Balance	
+                             					</a>
+                        					</li>
+                        		
+                        					<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Post-Closing Trial Balance	
+                             					</a>
+                        					</li>
+                        				</ul>         
+                        			</li>
+                        			
+                        			<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Financial Position
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Financial Performance
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Cash Flows
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Changes in Assets/Equity
+                             			</a>
+                             		</li>	
+                             	</ul>	
+                        	</li>
+                        	
+                        	<!-- Journals and Ledgers -->
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Journal/Ledgers
+                             	</a>
+                             	
+                             	<!-- Journals and Ledgers sub-menu -->
                              	<ul class="sub-menu">
                              		<li>
                              			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Unadjusted Trial Balance	
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			General Journal
                              			</a>
                         			</li>
-                        		
+                        
                         			<li>
-                             			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Pre-Closing Trial Balance	
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			General Ledger
                              			</a>
                         			</li>
-                        		
-                        			<li>
-                             			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Post-Closing Trial Balance	
-                             			</a>
-                        			</li>
-                        		</ul>         
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	Statement of Income and Expense
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                	Statement of Changes in Equity
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                	Statement of Cash Flows
-                             	</a>
-                        	</li>
-                    	</ul>
-                	</li>
+                        		</ul>
+                        	 </li>
+						</ul>   		
                 
                 	<!-- Manage Users -->
                 	<li>
@@ -452,7 +498,7 @@
                     	</ul>
                 	</li>
                 
-                	<!-- Manage Users -->
+                	<!-- Help -->
                 	<li>
                 		<a href="resources/#">
                 			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
@@ -498,9 +544,9 @@
 					</div>
 					
 					<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-						<a  href="resources/#" type="button" class="btn btn-lg btn-primary">
+						<a  href="financials_createjev" type="button" class="btn btn-lg btn-primary">
 							<strong class="livicon" data-name="notebook" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
-								<label style="position:relative; top:2em">JOURNAL ENTRY <br> VOUCHER</label>
+								<label style="position:relative; top:1.5em">JOURNAL ENTRY <br> VOUCHER</label>
 						</a>
 					</div>
 					
@@ -513,14 +559,14 @@
 				</div>
 				
 				<br>
-
-
-
-
+				
+				
+				
+				
+				
 			</section>		
 		</aside>		
 	</div>			
-	
 	
 	<!-- End Scripts -->
     <!-- global js -->
@@ -529,42 +575,10 @@
     <!--livicons-->
     <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
     <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-   <script src="resources/js/josh.js" type="text/javascript"></script>
+    <script src="resources/js/josh.js" type="text/javascript"></script>
     <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
     <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
-    <!-- beginning of page level js -->
-    <!--  todolist-->
-    <script src="resources/js/todolist.js"></script>
-    <!-- EASY PIE CHART JS -->
-    <script src="resources/vendors/charts/easypiechart.min.js"></script>
-    <script src="resources/vendors/charts/jquery.easypiechart.min.js"></script>
-    <!--for calendar-->
-    <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
-    <!--   Realtime Server Load  -->
-    <script src="resources/vendors/charts/jquery.flot.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
-    <!--Sparkline Chart-->
-    <script src="resources/vendors/charts/jquery.sparkline.js"></script>
-    <!-- Back to Top-->
-    <script type="text/javascript" src="resources/vendors/countUp/countUp.js"></script>
-    <!--   maps -->
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="resources/vendors/jscharts/Chart.js"></script>
-    <script src="resources/js/dashboard.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var composeHeight = $('#calendar').height() +21 - $('.adds').height();
-        $('.list_of_items').slimScroll({
-            color: '#A9B6BC',
-            height: composeHeight + 'px',
-            size: '5px'
-        });
-    });
-    </script>
-    <!-- end of page level js -->
     
     <!-- Added Scripts -->
     
