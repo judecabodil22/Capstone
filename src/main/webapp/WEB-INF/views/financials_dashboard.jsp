@@ -1,3 +1,6 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
 
 <head>
@@ -43,10 +46,10 @@
         <!-- /Logo -->
         
         <!-- Navigation Icon -->
-		<nav class="navbar navbar-static-top" role="navigation">
+		<nav class="navbar navbar-static-top" role="navigation" style="background:rgb(81,87,99);">
 			<!-- Sidebar toggle button-->
  			<div>
- 				<a href="resources/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">	
+ 				<a href="resources/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button" style="background:rgb(81,87,99);">	
  					<div class="responsive_nav"></div>
  				</a>	
  			</div>
