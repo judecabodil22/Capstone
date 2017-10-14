@@ -188,7 +188,7 @@
   					<ul id="menu" class="page-sidebar-menu">
   					
   					<!-- Dashboard -->
-  					<li class="active">
+  					<li>
   						<a href="financials_dashboard">
   							<!--i class="livicon" data-name="barchart" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i-->
   								<span class="title">Dashboard</span>
@@ -243,7 +243,7 @@
                     </li>
                     
                     <!-- Transaction-->
-                    <li>
+                    <li class="active">
                     	<a href="resources/#">
                     		<!--i class="livicon" data-name="laptop" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i-->
                     			<span class="title">Transaction</span>
@@ -252,13 +252,13 @@
                     	
                     	<!-- Transaction sub-menu -->
                     	<ul class="sub-menu">
-                    		<li>
+                    		<li class="active">
                     			<a href="resources/#">
                     				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
                                     Journal Entry Voucher
                                 </a>	
                                 	<ul class="sub-menu">
-                                		<li>
+                                		<li class="active">
                                 			<a href="financials_createjev">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Create JEV
@@ -323,6 +323,22 @@
                                     Journal Entry Voucher
                                 </a>
                             </li>
+                            
+                            <!-- Accounts Receivable -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            			<span class="title">Accounts Receivable</span>
+                          		</a>
+                        	</li>
+                        	
+                        	<!-- Accounts Payable -->
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="livicon" data-name="sign-out" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                        			<span class="title">Accounts Payable</span>
+                           		</a>
+                      		</li>
                             
                     		<li>
                     			<a href="resources/#">

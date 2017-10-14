@@ -324,6 +324,22 @@
                                 </a>
                             </li>
                             
+                            <!-- Accounts Receivable -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            			<span class="title">Accounts Receivable</span>
+                          		</a>
+                        	</li>
+                        	
+                        	<!-- Accounts Payable -->
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="livicon" data-name="sign-out" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                        			<span class="title">Accounts Payable</span>
+                           		</a>
+                      		</li>
+                            
                     		<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
