@@ -16,13 +16,13 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.UserModel;
 
-public class UserDao {
+public class UserDAO {
 	
 	public JdbcTemplate jdbcTemplate;
 	public PlatformTransactionManager platformTransactionManager;
 	public TransactionTemplate transactionTemplate;
 	
-	public UserDao(DataSource dataSource) {
+	public UserDAO(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
