@@ -156,14 +156,15 @@
 											</tr>
 											<c:forEach var="pay" items="${pList}">
 
-												<tr>
-													<td>${pay.institute_name}</td>
+												<tr data-institute="${pay.ap_institute_name}">
+												
+													<td>${pay.ap_institute_name}</td>
 													<td>${pay.purpose}</td>
 													<td>${pay.date}</td>
 													<td>${pay.amount}</td>
-													<td><span style="margin-top: 75px;"
+<!-- btn btn-success btn-large -->					<td><span style="margin-top: 75px;"
 														class="label label-sm label-warning">${pay.status}</span></td>
-													<td><a class="btn btn-success btn-large"
+													<td><a class="ToModal"
 														data-toggle="modal" data-href="#responsive"
 														href="#responsive">Payment</a></td>
 												</tr>
@@ -262,17 +263,16 @@
 							</table>
 						</div>
 						<div class="col-md-6">
-							<tr>
-								<br>
+							
 								<table>
-									<br>
+								
 									<tr>
 										<td><label class="control-label"> Institute Name
 												<span class='require'>*</span>
 										</label></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-											class="form-control" id="disabledInput" type="text" path="institute"
-											disabled="true"></form:input></td>
+											class="form-control" id="IName" type="text" path="institute"
+											readOnly="true"></form:input></td>
 									</tr>
 									<tr>
 										<td><label class="control-label"> Claimant Name <span
@@ -399,5 +399,34 @@
 		<script type="text/javascript"
 			src="resources/js/pages/table-advanced.js"></script>
 		<!-- end of page level js -->
+		
+		 <script>
+$(document).ready(function(){
+	// code to read selected table row cell data (values).
+	$(".ToModal").on('click',function(){
+		// get data
+		var data = $(this).closest('tr').data();
+
+		// put to modal ----------------------- start
+		// using jquery codes
+		/* $('#modal_code').val(data.code);
+		$('#modal_description').val(data.desc); */
+		
+		// using native javascript codes
+		 document.getElementById("IName").value = data.institute;
+		 document.getElementById("modal_description").value = data.desc;
+		 document.getElementById("modal_uid").value = data.uid;
+		// put to modal ----------------------- ends
+	});
+});
+
+
+
+</script>
 </body>
+
+
+
+
+
 </html>

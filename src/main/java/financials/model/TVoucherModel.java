@@ -2,7 +2,7 @@ package financials.model;
 
 public class TVoucherModel {
 
-	private String institute_name;
+	private String ap_institute_name;
 	private String purpose;
 	private String date;
 	private String amount;
@@ -23,12 +23,7 @@ public class TVoucherModel {
 	private String mfo_pap;
 	private String dv_amount;
 	
-	public String getInstitute_name() {
-		return institute_name;
-	}
-	public void setInstitute_name(String institute_name) {
-		this.institute_name = institute_name;
-	}
+	
 	public String getPurpose() {
 		return purpose;
 	}
@@ -139,6 +134,12 @@ public class TVoucherModel {
 	}
 	public void setDv_amount(String dv_amount) {
 		this.dv_amount = dv_amount;
+	}
+	public String getAp_institute_name() {
+		return ap_institute_name;
+	}
+	public void setAp_institute_name(String ap_institute_name) {
+		this.ap_institute_name = ap_institute_name;
 	}
 	
 }

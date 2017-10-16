@@ -33,7 +33,7 @@ public class TVoucherDAO {
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
-				tvm.setInstitute_name(rs.getString("ap_institute_name"));
+				tvm.setAp_institute_name(rs.getString("ap_institute_name"));
 				tvm.setPurpose(rs.getString("ap_purpose"));
 				tvm.setDate(rs.getString("ap_date"));
 				tvm.setAmount(rs.getString("ap_amount"));

@@ -37,7 +37,7 @@
                             <div class="portlet-body">
                                 <div class="table-scrollable">
                                
-									<table  id="dashboard_table" style="text-align:center" class="table table-striped table-bordered table-advance table-hover">
+									<table  class="table table-striped table-hover" id="sample_5" style="text-align:center">
                                         <thead>
                                             <tr>
                                                 <th style="text-align:center">
@@ -56,7 +56,7 @@
                                                 
                                                 <th  style="text-align:center" class="hidden-xs">
                                                     <i class="fa fa-trash-o"></i>
-											    Delete
+											    Action
                                                 </th>
                                                
 												
@@ -74,12 +74,16 @@
                                                    <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${center.resp_center_code}</a>
                                                 </td>
                                                 <td class="hidden-xs">${center.resp_center_acronym}</td>
-                                                 <td class="hidden-xs">${center.resp_center_description}</td>
+                                                 <td class="hidden-xs alignment">${center.resp_center_description}</td>
                                                  <td>
-                                                   	<form:input type="hidden" id="uid" path="resp_center_uid" value="${center.resp_center_uid}"/>
-                                                    <input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
-                                                  
-                                                  	                                       
+                                                 
+                                                   	<form:input  type="hidden" id="uid" path="resp_center_uid" value="${center.resp_center_uid}"/>
+                                              		<div class="spring">
+                                                    	<a  type="button"  data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="btn btn-info btn-sm ToModal nature">Edit</a>
+													</div>													
+												 	<div class="spring"> 
+                                                     	<input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
+                                                 	</div>                      	                                       
                                                 </td>
                                                 
                                                 </form:form>
@@ -97,12 +101,15 @@
 									
                             </div>
                         </div>
-                    </div>
+                    </div>               
             </section>
         </aside>
         <!-- right-side -->
     </div>
 	
+		 
+ 
+		 
 		 
  <!--Add-->  
 <div class="modal fade in" id="add" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
