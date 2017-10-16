@@ -163,7 +163,6 @@ public class JEVDAO {
 			jdbcTemplate.update(sql.toString(), params.toArray());
 			bool = true;
         } catch (Exception e) {
-	        // TODO: handle exception
         	bool = false;
         	e.printStackTrace();
         }

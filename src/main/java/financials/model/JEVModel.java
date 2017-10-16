@@ -1,12 +1,13 @@
 package financials.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 public class JEVModel {
 	
 	private	Integer jev_id;
 	private	String jev_no;
-	private	Timestamp jev_date;
+	private	Date jev_date;
 	private	Integer fund_uid;
 	private	Integer tmp_header_uid;
 	private	String particulars;
@@ -17,9 +18,9 @@ public class JEVModel {
 	private	Integer resp_center_uid;
 	private String status;
 	private Integer prepared_by;
-	private	Timestamp approved_date;
+	private	Date approved_date;
 	private	Integer approved_by;
-	private	Timestamp disapproved_date;
+	private	Date disapproved_date;
 	private	Integer disapproved_by;
 	private	String remarks;
 	
@@ -98,14 +99,14 @@ public class JEVModel {
 	/**
 	 * @return the jev_date
 	 */
-	public Timestamp getJev_date() {
+	public Date getJev_date() {
 		return jev_date;
 	}
 
 	/**
 	 * @param jev_date the jev_date to set
 	 */
-	public void setJev_date(Timestamp jev_date) {
+	public void setJev_date(Date jev_date) {
 		this.jev_date = jev_date;
 	}
 
@@ -252,14 +253,14 @@ public class JEVModel {
 	/**
 	 * @return the approved_date
 	 */
-	public Timestamp getApproved_date() {
+	public Date getApproved_date() {
 		return approved_date;
 	}
 
 	/**
 	 * @param approved_date the approved_date to set
 	 */
-	public void setApproved_date(Timestamp approved_date) {
+	public void setApproved_date(Date approved_date) {
 		this.approved_date = approved_date;
 	}
 
@@ -280,7 +281,7 @@ public class JEVModel {
 	/**
 	 * @return the disapproved_date
 	 */
-	public Timestamp getDisapproved_date() {
+	public Date getDisapproved_date() {
 		return disapproved_date;
 	}
 

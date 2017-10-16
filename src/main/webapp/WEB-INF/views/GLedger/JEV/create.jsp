@@ -1,5 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +57,9 @@
                         </h3>
                     </div>
                     <div class="panel-body">
+
                         <form:form action="save" modelAttribute="modelBindJEV" method="post" accept-charset="UTF-8" role="form">
+                        
                             <!-- Date yyyy-mm-dd -->
                             <div class="form-group">
                                 <label>
@@ -65,7 +69,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <form:input path="jev_date" type="text" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
+                                    <form:input path="jev_date" name="jev_date" type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
                                 </div>
                                 <!-- /.input group -->
                             </div>
@@ -75,7 +79,7 @@
                                 <label for="e1" class="control-label">
                                     Fund
                                 </label>
-                                <form:select path="fund_uid" id="e1" class="form-control select2">
+                                <form:select path="fund_uid" name="fund_uid" id="e1" class="form-control select2">
                                     <form:option value="1">Fund Sample 1</form:option>
                                     <form:option value="2">Fund Sample 2</form:option>
                                     <form:option value="3">Fund Sample 3</form:option>
@@ -88,7 +92,7 @@
                                 <label for="e1" class="control-label">
                                     Transaction Type
                                 </label>
-                                <form:select path="trans_transaction_type_uid" id="e1" class="form-control select2">
+                                <form:select path="trans_transaction_type_uid" name="trans_transaction_type_uid" id="e1" class="form-control select2">
                                     <form:option value="1">Collection</form:option>
                                     <form:option value="2">Disbursement</form:option>
                                 </form:select>
@@ -99,7 +103,7 @@
                                 <label for="e1" class="control-label">
                                     Transaction Template
                                 </label>
-                                <form:select path="tmp_header_uid" id="e1" class="form-control select2">
+                                <form:select path="tmp_header_uid" name="tmp_header_uid" id="e1" class="form-control select2">
                                     <form:option value="1">Template 1</form:option>
                                     <form:option value="2">Template 2</form:option>
                                     <form:option value="3">Template 3</form:option>
@@ -112,22 +116,20 @@
                                 <label for="e1" class="control-label">
                                     Account Type
                                 </label>
-                                <form:select path="particulars" id="e1" class="form-control select2">
-                                    <optgroup label="Fund Sample">
-                                        <form:option value="1">Account Type 1</form:option>
-                                        <form:option value="2">Account Type 2</form:option>
-                                        <form:option value="3">Account Type 3</form:option>
-                                        <form:option value="4">Account Type 4</form:option>
-                                        <form:option value="5">Account Type 5</form:option>
-                                    </optgroup>
+                                <form:select path="acc_uid" name="acc_uid" id="e1" class="form-control select2">
+                                    <form:option value="1">Account Type 1</form:option>
+                                    <form:option value="2">Account Type 2</form:option>
+                                    <form:option value="3">Account Type 3</form:option>
+                                    <form:option value="4">Account Type 4</form:option>
+                                    <form:option value="5">Account Type 5</form:option>
                                 </form:select>
                             </div>
                             
                             <div class="form-group">
                                 <label for="default" class="control-label">Text Area</label>
-                                <form:textarea path="particulars" id="textarea" class="form-control" maxlength="1000" rows="2" placeholder="This textarea has a limit of 1000 chars."></form:textarea>
+                                <form:textarea path="particulars" name="particulars" id="textarea" class="form-control" maxlength="1000" rows="2" placeholder="This textarea has a limit of 1000 chars."></form:textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Create JEV</button>
+                            <input type="submit" class="btn btn-primary" value="Create JEV">
                         </form:form>
                     </div>
                 </div>
