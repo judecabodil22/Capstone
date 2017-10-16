@@ -28,9 +28,9 @@ public class KaiDao
 	
 	public boolean insert(KaiModel Abi) {
 
-		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
+		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
 
-		jdbcTemplate.update(sql, new Object[] {Abi.getUser_id(), Abi.getUser_name(), Abi.getPass_word()});
+		jdbcTemplate.update(sql, new Object[] {Abi.getUser_id(), Abi.getUsername(), Abi.getPassword()});
 
 		return true;
 		
@@ -38,9 +38,9 @@ public class KaiDao
 	}
 	public boolean update(KaiModel Abi) {
 
-		sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
+		sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
 
-		jdbcTemplate.update(sql, new Object[] { Abi.getUser_name(), Abi.getPass_word(), Abi.getUser_id() });
+		jdbcTemplate.update(sql, new Object[] { Abi.getUsername(), Abi.getPassword(), Abi.getUser_id() });
 
 		return true;
 	}
@@ -62,8 +62,8 @@ public class KaiDao
 			public KaiModel mapRow(ResultSet rs, int row) throws SQLException {
 				KaiModel user = new KaiModel();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 
@@ -78,8 +78,8 @@ public class KaiDao
 			public KaiModel mapRow(ResultSet rs, int row) throws SQLException {
 				KaiModel user = new KaiModel();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 

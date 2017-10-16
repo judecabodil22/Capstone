@@ -11,7 +11,7 @@ public class financials_cjevController {
 	public ModelAndView fdash()
 	{
 		ModelAndView fd = new ModelAndView();
-		fd.setViewName("GLedger/JEV/create");//
+		fd.setViewName("GLedger/financials_cjev");//
 		return fd;
 	}
 }

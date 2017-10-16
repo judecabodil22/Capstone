@@ -39,7 +39,7 @@ public class UserController extends BaseController {
 		){
 		ModelAndView mav = new ModelAndView();
 		
-		UserModel modelUser = daoUser.get(null, user.getUser_name(), user.getPass_word());
+		UserModel modelUser = daoUser.get(null, user.getUsername(), user.getPassword());
 		// login successful
 		if(modelUser != null){
 			mav.setViewName("redirect:/financials_dashboard");

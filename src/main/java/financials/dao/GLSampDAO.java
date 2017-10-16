@@ -27,9 +27,9 @@ public class GLSampDAO {
 
 	public boolean insert(GLSampMod samp) {
 
-		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
+		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
 
-		jdbcTemplate.update(sql, new Object[] { samp.getUser_id(), samp.getUser_name(), samp.getPass_word() });
+		jdbcTemplate.update(sql, new Object[] { samp.getUser_id(), samp.getUsername(), samp.getPassword() });
 
 		return true;
 
@@ -37,9 +37,9 @@ public class GLSampDAO {
 
 	public boolean update(GLSampMod sampUp) {
 
-		sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
+		sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
 
-		jdbcTemplate.update(sql, new Object[] { sampUp.getUser_name(), sampUp.getPass_word(), sampUp.getUser_id() });
+		jdbcTemplate.update(sql, new Object[] { sampUp.getUsername(), sampUp.getPassword(), sampUp.getUser_id() });
 
 		return true;
 	}
@@ -62,8 +62,8 @@ public class GLSampDAO {
 			public GLSampMod mapRow(ResultSet rs, int row) throws SQLException {
 				GLSampMod user = new GLSampMod();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 
@@ -79,8 +79,8 @@ public class GLSampDAO {
 			public GLSampMod mapRow(ResultSet rs, int row) throws SQLException {
 				GLSampMod user = new GLSampMod();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 

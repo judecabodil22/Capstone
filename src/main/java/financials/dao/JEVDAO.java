@@ -101,11 +101,11 @@ public class JEVDAO {
 			params.add(id);
 		}
 		if(username != null){
-			sql.append(" AND user_name=? ");
+			sql.append(" AND username=? ");
 			params.add(username);
 		}
 		if(password != null){
-			sql.append(" AND pass_word=? ");
+			sql.append(" AND password=? ");
 			params.add(password);
 		}
 		
@@ -118,9 +118,9 @@ public class JEVDAO {
 						if (rs.next()) {
 							
 							UserModel model = new UserModel(
-									rs.getString("user_id"),
-									rs.getString("user_name"),
-									rs.getString("pass_word")); //avoid storing password anywhere
+									rs.getInt("user_id"),
+									rs.getString("username"),
+									rs.getString("password")); //avoid storing password anywhere
 							return model;
 						}
 						return null;
@@ -129,18 +129,35 @@ public class JEVDAO {
 	}
 	
 	
-	public boolean insert(UserModel modelUser) {
+	public boolean insert(JEVModel model) {
 		List<Object> params = new ArrayList<Object>();
 		
-		StringBuilder sql = new StringBuilder("INSERT INTO users");
-		sql.append(" VALUES ( ");
-		sql.append(" ? ");
-		params.add(modelUser.getUser_id());
-		sql.append(" , ? ");
-		params.add(modelUser.getUser_name());
-		sql.append(" , ? ");
-		params.add(modelUser.getPass_word());
-		sql.append(" ) ");
+		StringBuilder sql = new StringBuilder("INSERT INTO ");
+		sql.append(this.table);
+		sql.append(" ( ");
+		sql.append(" jev_no, ");
+		sql.append(" jev_date, ");
+		sql.append(" fund_uid, ");
+		sql.append(" tmp_header_uid, ");
+		sql.append(" particulars, ");
+		sql.append(" trans_transaction_type_uid, ");
+		sql.append(" acc_uid, ");
+		sql.append(" resp_center_uid, ");
+		sql.append(" status, ");
+		sql.append(" prepared_by ");
+		sql.append(" ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) ");
+		
+		params.add(model.getJev_no());
+		params.add(model.getJev_date());
+		params.add(model.getFund_uid());
+		params.add(model.getTmp_header_uid());
+		params.add(model.getParticulars());
+		params.add(model.getTrans_transaction_type_uid());
+		params.add(model.getAcc_uid());
+		params.add(model.getResp_center_uid());
+		params.add(model.getStatus());
+		params.add(model.getPrepared_by());
+		
 		boolean bool = false;
 		try {
 			jdbcTemplate.update(sql.toString(), params.toArray());
@@ -154,8 +171,8 @@ public class JEVDAO {
 	}
 	
 	public boolean update(UserModel user) {
-		String sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
-		jdbcTemplate.update(sql, new Object[] { user.getUser_name(), user.getPass_word(), user.getUser_id() });
+		String sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
+		jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getUser_id() });
 		return true;
 	}
 

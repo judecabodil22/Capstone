@@ -33,13 +33,13 @@
                                     <div class="input-group-addon">
                                         <i class="livicon" data-name="at" data-size="18" data-c="#000" data-hc="#000" data-loop="true"></i>
                                     </div>
-                                    <form:input class="form-control" placeholder="Username" name="user_name" path="user_name" type="text" />
+                                    <form:input class="form-control" placeholder="Username" name="username" path="username" type="text" />
                                 </div>
                                 <div class="form-group input-group">
                                     <div class="input-group-addon">
                                         <i class="livicon" data-name="key" data-size="18" data-c="#000" data-hc="#000" data-loop="true"></i>
                                     </div>
-                                    <form:input class="form-control" placeholder="Password" name="pass_word" path="pass_word" type="password" />
+                                    <form:input class="form-control" placeholder="Password" name="password" path="password" type="password" />
                                 </div>
                                 <div class="form-group">
                                     <label>
