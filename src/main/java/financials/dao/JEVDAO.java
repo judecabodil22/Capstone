@@ -14,16 +14,79 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import financials.model.JEVModel;
 import financials.model.UserModel;
 
-public class UserDao {
+public class JEVDAO {
 	
 	public JdbcTemplate jdbcTemplate;
 	public PlatformTransactionManager platformTransactionManager;
 	public TransactionTemplate transactionTemplate;
 	
-	public UserDao(DataSource dataSource) {
+	public JEVDAO(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+	
+	public String table = "tbl_jev";
+	public JEVModel setData(ResultSet rs) throws SQLException {
+		JEVModel model = new JEVModel(
+				rs.getInt("jev_id"),
+				rs.getString("jev_no"),
+				rs.getTimestamp("jev_date"),
+				rs.getInt("fund_uid"),
+				rs.getInt("tmp_header_uid"),
+				rs.getString("particulars"),
+				rs.getInt("trans_transaction_type_uid"),
+				rs.getInt("acc_uid"),
+				rs.getFloat("amount"),
+				rs.getBoolean("account_flag"),
+				rs.getInt("resp_center_uid"),
+				rs.getString("status"),
+				rs.getInt("prepared_by"),
+				rs.getTimestamp("approved_date"),
+				rs.getInt("approved_by"),
+				rs.getTimestamp("disapproved_date"),
+				rs.getInt("disapproved_by"),
+				rs.getString("remarks")
+		);
+		return model;
+	}
+	public List<JEVModel> list() {
+		List<Object> params = new ArrayList<Object>();
+		StringBuilder sql = new StringBuilder("SELECT * FROM ");
+		sql.append(this.table);
+		sql.append(" WHERE 0=0 ");
+		
+		JEVDAO _this = this;
+		return jdbcTemplate.query(
+				sql.toString(), 
+				params.toArray(), 
+				new RowMapper<JEVModel>() {
+					public JEVModel mapRow(ResultSet rs, int row) throws SQLException {
+						return _this.setData(rs);
+					}
+				}
+		);
+	}
+	public JEVModel get() {
+		List<Object> params = new ArrayList<Object>();
+		StringBuilder sql = new StringBuilder("SELECT * FROM ");
+		sql.append(this.table);
+		sql.append(" WHERE 0=0 ");
+		JEVDAO _this = this;
+		return jdbcTemplate.query(
+				sql.toString(), 
+				params.toArray(), 
+				new ResultSetExtractor<JEVModel>(){
+					public JEVModel extractData(ResultSet rs) throws SQLException,
+							DataAccessException {
+						if (rs.next()) {
+							return _this.setData(rs);
+						}
+						return null;
+					}
+				}
+		);
 	}
 	
 	public UserModel get(String id, String username, String password) {
@@ -90,14 +153,6 @@ public class UserDao {
 		return bool;
 	}
 	
-	
-	
-//	public boolean insert(UserModel user) {
-//		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
-//		jdbcTemplate.update(sql, new Object[] { user.getUser_id(), user.getUser_name(), user.getPass_word() });
-//		return true;
-//	}
-
 	public boolean update(UserModel user) {
 		String sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
 		jdbcTemplate.update(sql, new Object[] { user.getUser_name(), user.getPass_word(), user.getUser_id() });
@@ -108,59 +163,5 @@ public class UserDao {
 		String sql = "Delete from Users " + "WHERE user_id = ?";
 		jdbcTemplate.update(sql, new Object[] { user.getUser_id() });
 		return true;
-	}
-
-	public List<UserModel> getUsers() {
-		String sql = "Select * from USERS";
-		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
-			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
-				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
-				return user;
-			}
-		});
-	}
-
-	public List<UserModel> findByIDList(UserModel user) {
-		String sql = "Select * from USERS " + "WHERE user_id = '" + user.getUser_id() + "'";
-		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
-			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
-				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
-				return user;
-			}
-
-		});
-	}
-
-	public List<UserModel> dropDownId() {
-		String sql = "Select user_id from Users";
-		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
-			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
-				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
-				return user;
-			}
-
-		});
-	}
-
-
-	public List<UserModel> UserValidation(UserModel user) {
-		String sql = "Select user_id from Users where "
-				+ "user_name = ? "
-				+ "AND "
-				+ "pass_word = ? ";
-		return jdbcTemplate.query(sql, new Object[] {user.getUser_name(), user.getPass_word()}, new RowMapper<UserModel>() {
-			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
-				UserModel user = new UserModel();
-				String i = user.setUser_id(rs.getString("user_id"));
-				return user;
-			}
-		});
 	}
 }

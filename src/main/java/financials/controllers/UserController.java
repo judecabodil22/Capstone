@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import financials.dao.UserDao;
+import financials.dao.UserDAO;
 import financials.model.UserModel;
 
 @Controller
 public class UserController extends BaseController {
 	
 	@Autowired
-	private UserDao daoUser;
+	private UserDAO daoUser;
 	
 	@RequestMapping(value = "/")
 	public ModelAndView init(@ModelAttribute("modelBindUser") UserModel user){
