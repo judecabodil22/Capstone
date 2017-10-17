@@ -108,19 +108,269 @@
 					<div class="clearfix"></div>
 					<!-- BEGIN SIDEBAR MENU -->
 					<ul class="page-sidebar-menu" id="menu">
-						<li><a href="resources/index.html"> <i class="livicon"
-								data-name="home" data-size="18" data-c="#418BCA"
-								data-hc="#418BCA" data-loop="true"></i> <span class="title">Dashboard</span>
-						</a></li>
-						<li><a href="resources/#"> <span class="title">Transactions</span>
+						<li class="active">
+  						<a href="financials_dashboard">
+  							<!--i class="livicon" data-name="barchart" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i-->
+  								<span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                        
+                    <!-- System Setup -->
+                    <li>
+                    	<a href="resources/#">
+                    		<!--i class="livicon" data-name="gear" data-size="18" data-c="#00bc8c" data-hc="#00bc8c" data-loop="true"></i-->
+                    			<span class="title">System Setup</span>
+                    			<span class="fa arrow"></span>
+                        </a>
+                        
+                        <!-- System Setup sub-menu -->
+                        <ul class="sub-menu">
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Chart of Accounts
+                                </a>
+                             </li>
+                             
+                             <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Responsibility Center
+                                </a>
+                             </li>
+                             
+                             <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Transaction Type
+                                </a>
+                             </li>
+                             
+                             <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Fund
+                                </a>
+                             </li>
+                             
+                             <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Template 
+                                </a>
+                             </li>
+                        </ul>        
+                    </li>
+                    
+                    <!-- Transaction-->
+                    <li>
+                    	<a href="resources/#">
+                    		<!--i class="livicon" data-name="laptop" data-c="#5bc0de" data-hc="#5bc0de" data-size="18" data-loop="true"></i-->
+                    			<span class="title">Transaction</span>
+                    			<span class="fa arrow"></span>
+                    	</a>
+                    	
+                    	<!-- Transaction sub-menu -->
+                    	<ul class="sub-menu">
+                    		<li>
+                    			<a href="resources/#">
+                    				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                                    Journal Entry Voucher
+                                </a>	
+                                	<ul class="sub-menu">
+                                		<li>
+                                			<a href="financials_createjev">
+                                				<i class="fa fa-angle-double-right"></i>
+                                     			Create JEV
+                                    		</a>
+                                		</li>
+                                		<li>
+                                			<a href="financials_reviewjev">
+                                				<i class="fa fa-angle-double-right"></i>
+                                     			Review JEV
+                                    		</a>
+                                		</li>
+                                	</ul>
+                            </li>
+                                
+                            <!-- Accounts Receivable -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            			<span class="title">Accounts Receivable</span>
+                          		</a>
+                        	</li>
+                        	
+                        	<!-- Accounts Payable -->
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="livicon" data-name="sign-out" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                        			<span class="title">Accounts Payable</span>
+                           		</a>
+                      		</li>
+                                
+                            <!-- Collections -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="piggybank" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                                    <span class="title">Collections</span>       
+                                 </a>
+                            </li>
+                            
+                            <!-- Disbursement -->
+                            <li>
+                            	<a href="voucher_transaction">
+                            		<i class="livicon" data-name="money" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                                    <span class="title">Disbursement</span>     
+                                 </a>
+                            </li>
+                        </ul>        
+					</li>
+				
+					<!-- Queries -->	
+					<li>
+						<a href="resources/#">
+							<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
+								<span class="title">Queries</span>
 								<span class="fa arrow"></span>
-						</a>
-							<ul class="sub-menu">
-								<li><a href="resources/Disbursement_for_Payroll.html">
-										Disbursement </a></li>
-							</ul>
-						<li><a href="resources/"> Reports </a></li>
-						</li>
+                    	</a>                        
+                    
+                    	<!-- Queries sub-menu -->
+                    	<ul class="sub-menu">
+                    		<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Chart of Accounts
+                            	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Responsibility Center
+                            	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Fund
+                            	</a>
+                        	</li>
+                    	</ul>
+                	</li>       
+                                
+                	<!-- Reports -->                
+                	<li>
+                		<a href="resources/#">
+                			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
+                				<span class="title">Reports</span>
+                				<span class="fa arrow"></span>
+                    	</a>
+                    
+                    	<!-- Reports sub-menu -->
+                    	<ul class="sub-menu">
+                    		<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	General Journal
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	General Ledger
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Trial Balance
+                             	</a>
+                             
+                             	<ul class="sub-menu">
+                             		<li>
+                             			<a href="resources/#">
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Unadjusted Trial Balance	
+                             			</a>
+                        			</li>
+                        		
+                        			<li>
+                             			<a href="resources/#">
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Pre-Closing Trial Balance	
+                             			</a>
+                        			</li>
+                        		
+                        			<li>
+                             			<a href="resources/#">
+                             				<i class="fa fa-angle-double-right"></i>
+                                			Post-Closing Trial Balance	
+                             			</a>
+                        			</li>
+                        		</ul>         
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Statement of Income and Expense
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                	Statement of Changes in Equity
+                             	</a>
+                        	</li>
+                        
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                	Statement of Cash Flows
+                             	</a>
+                        	</li>
+                    	</ul>
+                	</li>
+                
+                	<!-- Manage Users -->
+                	<li>
+                		<a href="resources/#">
+                			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
+                			<span class="title">Manage Users</span>
+                    	</a>
+                	</li>
+                
+                	<!-- Settings -->
+                	<li>
+                		<a href="resources/#">
+                			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
+                			<span class="title">Settings</span>
+                			<span class="fa arrow"></span>
+                    	</a>
+                    
+                    	<ul class="sub-menu">
+                    		<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Institution Details
+                             	</a>
+                        	</li>
+                    	</ul>
+                	</li>
+                
+                	<!-- Manage Users -->
+                	<li>
+                		<a href="resources/#">
+                			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
+                			<span class="title">Help</span>
+                    	</a>
+                	</li>
+         			</ul>
 			</section>
 			<!-- /.sidebar -->
 		</aside>
@@ -138,7 +388,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
-						<div class="portlet box default">
+						<div class="portlet box primary">
 							<div class="portlet-title">
 								<div class="caption">Payables</div>
 							</div>
@@ -156,8 +406,8 @@
 											</tr>
 											<c:forEach var="pay" items="${pList}">
 
-												<tr>
-													<td>${pay.institute_name}</td>
+												<tr data-inst="${pay.ap_institute_name}">
+													<td>${pay.ap_institute_name}</td>
 													<td>${pay.purpose}</td>
 													<td>${pay.date}</td>
 													<td>${pay.amount}</td>
@@ -165,7 +415,7 @@
 														class="label label-sm label-warning">${pay.status}</span></td>
 													<td><a class="btn btn-success btn-large"
 														data-toggle="modal" data-href="#responsive"
-														href="#responsive">Payment</a></td>
+														href="#responsive" class="ToModal">Payment</a></td>
 												</tr>
 											</c:forEach>
 										</thead>
@@ -201,25 +451,25 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-md-6">
-							<h4>Disbursement Voucher</h4>
+							<h4><label style="font-style:bold;">Disbursement Voucher</label></h4>
 							<table class="col-md-12">
 								<thead>
 									<tr>
-										<td><label class="control-label"> DV No. <span
-												class='require'>*</span></label></td>
+										<td>DV No. <span
+												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px;" id="name"
 											name="name" type="text" placeholder="Voucher No"
 											class="form-control" path="dv_no"/></td>
 									</tr>
 									<tr>
-										<td><label class="control-label"> ORS/BURS No. <span
-												class='require'>*</span></label></td>
+										<td>ORS/BURS No. <span
+												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
 											id="name" name="name" type="text" placeholder="ORS/BURS No"
 											class="form-control" path="ors_burs_no"/></td>
 									</tr>
 									<tr>
-										<td><label>Disbursement Purpose</label> <span class='require'>*</span></td>
+										<td>Disbursement Purpose <span class='require'>*</span></td>
 										<td><form:select style="margin-left: 10px; margin-top: 10px;"
 															class="form-control col-md-12" path="purpose_name" name="purpose_name">
 															<c:forEach var="purpose" items="${dropDown}">
@@ -231,9 +481,9 @@
 														</form:select></td>
 									</tr>
 									<tr>
-										<td><label class="control-label"> Mode of Payment
+										<td>Mode of Payment
 												<span class='require'>*</span>
-										</label></td>
+										</td>
 										<td><form:select style="margin-left: 10px; margin-top: 10px;"
 													class="form-control col-md-12" path="mode_of_payment" name="payment_mode">
 													<c:forEach var="mode" items="${dropDown2}">
@@ -246,13 +496,13 @@
 												</form:select></td>
 									</tr>
 									<tr>
-										<td><label  class="control-label"> Employee No. <span
-												class='require'>*</span></label></td>
-										<td><form:select style="margin-left: 10px; margin-top: 10px;" class="form-control col-md-12" path="employee_no" name="employee_no">
+										<td>Employee Assigned <span
+												class='require'>*</span></td>
+										<td><form:select style="margin-left: 10px; margin-top: 10px;" class="form-control col-md-12" path="employee_assigned" name="employee_no">
 													<c:forEach var="emp" items="${dropDown6}">
 
-														<option value="${emp.employee_no}">
-          											<c:out value="${emp.employee_no}"/>
+														<option value="${emp.employee_assigned}">
+          											<c:out value="${emp.employee_assigned}"/>
     												</option>
 													</c:forEach>
 
@@ -262,28 +512,28 @@
 							</table>
 						</div>
 						<div class="col-md-6">
-							<tr>
-								<br>
+						
 								<table>
 									<br>
 									<tr>
-										<td><label class="control-label"> Institute Name
+										<td>Institute Name
 												<span class='require'>*</span>
-										</label></td>
+										</td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-											class="form-control" id="disabledInput" type="text" path="institute"
-											disabled="true"></form:input></td>
+											class="form-control" id="inst_name" type="text" path="institute"
+											readOnly="true"></form:input></td>
+											
 									</tr>
 									<tr>
-										<td><label class="control-label"> Claimant Name <span
-												class='require'>*</span></label></td>
+										<td>Claimant Name <span
+												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
 											class="form-control" id="disabledInput" type="text" path="claimant_name"
 											disabled="true"></form:input></td>
 									</tr>
 									<tr>
-										<td><label class="control-label"> Address <span
-												class='require'>*</span></label></td>
+										<td>Address <span
+												class='require'>*</span></td>
 										<td><div class="col-md-12">
 												<form:textarea style="margin-top: 10px;" class="form-control"
 													id="message" name="message" placeholder="Enter Address" path="address"
@@ -291,8 +541,8 @@
 											</div></td>
 									</tr>
 									<tr>
-										<td><label class="control-label"> Fund Cluster <span
-												class='require'>*</span></label></td>
+										<td>Fund Cluster <span
+												class='require'>*</span></td>
 										<td><form:select style="margin-left: 10px; margin-top: 10px;"
 													class="form-control col-md-12" path="fund_cluster" name="fund_cluster">
 													<c:forEach var="fund" items="${dropDown5}">
@@ -305,8 +555,8 @@
 												</form:select></td>
 									</tr>
 									<tr>
-										<td><label class="control-label"> Date <span
-												class='require'>*</span></label></td>
+										<td>Date <span
+												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
 											id="name" name="name" type="text" placeholder="Date"
 											class="form-control" path="dv_date"></form:input></td>
@@ -319,26 +569,19 @@
 								<div class="input-group col-md-12">
 									<thead>
 										<tr>
-											<th>Particulars</th>
-											<th>Responsibility Center</th>
-											<th>MFO/PAP</th>
-											<th>Amount</th>
+											<td style="text-align:center;">Particulars</td>
+											<td style="text-align:center;">Responsibility Center</td>
+											<td style="text-align:center;">MFO/PAP</td>
+											<td style="text-align:center;">Amount</td>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td><form:input type="text" placeholder="Particulars"
 												class="form-control" path="particulars"></form:input></td>
-											<td><form:select class="form-control col-md-12"
-																path="responsibility_center" name="responsibility_center">
-																	<c:forEach var="agency" items="${dropDown7}">
-
-																		<option value="${agency.responsibility_center}">
-          																<c:out value="${agency.responsibility_center}"/>
-    																	</option>
-																	</c:forEach>
-
-															</form:select></td>
+											<td><form:input 
+											class="form-control" id="disabledInput" type="text" path="responsibility_center"
+											disabled="true"></form:input></td>
 											<td><form:input type="text" placeholder="MFO/PAP"
 												class="form-control" path="mfo_pap"></form:input></td>
 											<td><form:input type="text" placeholder="Amount"
@@ -399,5 +642,29 @@
 		<script type="text/javascript"
 			src="resources/js/pages/table-advanced.js"></script>
 		<!-- end of page level js -->
+		
+		
+		  <script>
+$(document).ready(function(){
+	// code to read selected table row cell data (values).
+	$(".ToModal").on('click',function(){
+		// get data
+		var data = $(this).closest('tr').data();
+
+		// put to modal ----------------------- start
+		// using jquery codes
+		/* $('#modal_code').val(data.code);
+		$('#modal_description').val(data.desc); */
+		
+		// using native javascript codes
+		 document.getElementById("inst_name").value = data.inst;
+		 
+		// put to modal ----------------------- ends
+	});
+});
+
+
+
+</script>
 </body>
 </html>

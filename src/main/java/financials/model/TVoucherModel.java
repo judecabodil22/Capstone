@@ -2,11 +2,13 @@ package financials.model;
 
 public class TVoucherModel {
 
-	private String institute_name;
+	private String ap_institute_name;
 	private String purpose;
 	private String date;
 	private String amount;
 	private String status;
+	private String resp_center;
+	private String claim_name;
 	
 	private String dv_no;
 	private String ors_burs_no;
@@ -17,17 +19,18 @@ public class TVoucherModel {
 	private String address;
 	private String fund_cluster;
 	private String dv_date;
-	private String employee_no;
+	private String employee_assigned;
 	private String particulars;
 	private String responsibility_center;
 	private String mfo_pap;
 	private String dv_amount;
 	
-	public String getInstitute_name() {
-		return institute_name;
+	
+	public String getAp_institute_name() {
+		return ap_institute_name;
 	}
-	public void setInstitute_name(String institute_name) {
-		this.institute_name = institute_name;
+	public void setAp_institute_name(String ap_institute_name) {
+		this.ap_institute_name = ap_institute_name;
 	}
 	public String getPurpose() {
 		return purpose;
@@ -56,6 +59,18 @@ public class TVoucherModel {
 	}
 	
 	
+	public String getResp_center() {
+		return resp_center;
+	}
+	public void setResp_center(String resp_center) {
+		this.resp_center = resp_center;
+	}
+	public String getClaim_name() {
+		return claim_name;
+	}
+	public void setClaim_name(String claim_name) {
+		this.claim_name = claim_name;
+	}
 	public String getDv_no() {
 		return dv_no;
 	}
@@ -110,11 +125,12 @@ public class TVoucherModel {
 	public void setDv_date(String dv_date) {
 		this.dv_date = dv_date;
 	}
-	public String getEmployee_no() {
-		return employee_no;
+	
+	public String getEmployee_assigned() {
+		return employee_assigned;
 	}
-	public void setEmployee_no(String employee_no) {
-		this.employee_no = employee_no;
+	public void setEmployee_assigned(String employee_assigned) {
+		this.employee_assigned = employee_assigned;
 	}
 	public String getParticulars() {
 		return particulars;

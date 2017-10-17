@@ -27,14 +27,16 @@ public class TVoucherController {
 			@ModelAttribute("fund_cluster") TVoucherModel tvm5,
 			@ModelAttribute("responsibility_center") TVoucherModel tvm6,
 			@ModelAttribute("ors_burs_no") TVoucherModel tvm7,
-			@ModelAttribute("employee_no") TVoucherModel tvm8,
+			@ModelAttribute("employee_assigned") TVoucherModel tvm8,
 			@ModelAttribute("institute") TVoucherModel tvm9,
 			@ModelAttribute("claimant_name") TVoucherModel tvm10,
 			@ModelAttribute("dv_date") TVoucherModel tvm11,
 			@ModelAttribute("address") TVoucherModel tvm12,
 			@ModelAttribute("particulars") TVoucherModel tvm13,
 			@ModelAttribute("mfo_pap") TVoucherModel tvm14,
-			@ModelAttribute("dv_amount") TVoucherModel tvm15) {
+			@ModelAttribute("dv_amount") TVoucherModel tvm15,
+			@ModelAttribute("resp_center") TVoucherModel tvm16,
+			@ModelAttribute("claim_name") TVoucherModel tvm17) {
 		
 		ModelAndView mav = new ModelAndView();
 		List<TVoucherModel> dropDown = dropDown();

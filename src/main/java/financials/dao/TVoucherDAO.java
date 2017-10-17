@@ -28,16 +28,18 @@ public class TVoucherDAO {
 	}
 	public List<TVoucherModel> getList() {
 
-		sql = "Select ap_institute_name, ap_purpose, ap_date, ap_amount, ap_status from tbl_apayable ";
+		sql = "Select ap_institute_name, ap_purpose, ap_date, ap_amount, ap_status, claimant_name, ap_resp_center from tbl_apayable ";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
-				tvm.setInstitute_name(rs.getString("ap_institute_name"));
+				tvm.setAp_institute_name(rs.getString("ap_institute_name"));
 				tvm.setPurpose(rs.getString("ap_purpose"));
 				tvm.setDate(rs.getString("ap_date"));
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setStatus(rs.getString("ap_status"));
+				tvm.setClaim_name(rs.getString("claimant_name"));
+				tvm.setResp_center(rs.getString("ap_resp_center"));
 				return tvm;
 			}
 		});
@@ -101,12 +103,12 @@ public class TVoucherDAO {
 	
 	public List<TVoucherModel> dropDownEmployee() {
 
-		sql = "Select employee_no from disb_officer";
+		sql = "Select first_name+' '+last_name as Employee_Assigned from disb_officer ";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
-				tvm.setEmployee_no(rs.getString("employee_no"));
+				tvm.setEmployee_assigned(rs.getString("employee_assigned"));
 				return tvm;
 			}
 
