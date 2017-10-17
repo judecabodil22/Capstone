@@ -38,11 +38,11 @@ public class UserDAO {
 			params.add(id);
 		}
 		if(username != null){
-			sql.append(" AND user_name=? ");
+			sql.append(" AND username=? ");
 			params.add(username);
 		}
 		if(password != null){
-			sql.append(" AND pass_word=? ");
+			sql.append(" AND password=? ");
 			params.add(password);
 		}
 		
@@ -55,9 +55,9 @@ public class UserDAO {
 						if (rs.next()) {
 							
 							UserModel model = new UserModel(
-									rs.getString("user_id"),
-									rs.getString("user_name"),
-									rs.getString("pass_word")); //avoid storing password anywhere
+									rs.getInt("user_id"),
+									rs.getString("username"),
+									rs.getString("password")); //avoid storing password anywhere
 							return model;
 						}
 						return null;
@@ -74,9 +74,9 @@ public class UserDAO {
 		sql.append(" ? ");
 		params.add(modelUser.getUser_id());
 		sql.append(" , ? ");
-		params.add(modelUser.getUser_name());
+		params.add(modelUser.getUsername());
 		sql.append(" , ? ");
-		params.add(modelUser.getPass_word());
+		params.add(modelUser.getPassword());
 		sql.append(" ) ");
 		boolean bool = false;
 		try {
@@ -93,14 +93,14 @@ public class UserDAO {
 	
 	
 //	public boolean insert(UserModel user) {
-//		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
-//		jdbcTemplate.update(sql, new Object[] { user.getUser_id(), user.getUser_name(), user.getPass_word() });
+//		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
+//		jdbcTemplate.update(sql, new Object[] { user.getUser_id(), user.getUsername(), user.getPassword() });
 //		return true;
 //	}
 
 	public boolean update(UserModel user) {
-		String sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
-		jdbcTemplate.update(sql, new Object[] { user.getUser_name(), user.getPass_word(), user.getUser_id() });
+		String sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
+		jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getUser_id() });
 		return true;
 	}
 
@@ -115,9 +115,9 @@ public class UserDAO {
 		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
 			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
 				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUser_id(rs.getInt("user_id"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 		});
@@ -128,9 +128,9 @@ public class UserDAO {
 		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
 			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
 				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUser_id(rs.getInt("user_id"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 
@@ -142,7 +142,7 @@ public class UserDAO {
 		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
 			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
 				UserModel user = new UserModel();
-				user.setUser_id(rs.getString("user_id"));
+				user.setUser_id(rs.getInt("user_id"));
 				return user;
 			}
 
@@ -152,13 +152,12 @@ public class UserDAO {
 
 	public List<UserModel> UserValidation(UserModel user) {
 		String sql = "Select user_id from Users where "
-				+ "user_name = ? "
+				+ "username = ? "
 				+ "AND "
-				+ "pass_word = ? ";
-		return jdbcTemplate.query(sql, new Object[] {user.getUser_name(), user.getPass_word()}, new RowMapper<UserModel>() {
+				+ "password = ? ";
+		return jdbcTemplate.query(sql, new Object[] {user.getUsername(), user.getPassword()}, new RowMapper<UserModel>() {
 			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
 				UserModel user = new UserModel();
-				String i = user.setUser_id(rs.getString("user_id"));
 				return user;
 			}
 		});

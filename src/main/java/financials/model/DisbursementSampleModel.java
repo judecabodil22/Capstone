@@ -3,8 +3,8 @@ package financials.model;
 public class DisbursementSampleModel {
 
 	private String user_id;
-	private String user_name;
-	private String pass_word;
+	private String username;
+	private String password;
 
 	public String getUser_id() {
 		return user_id;
@@ -14,20 +14,20 @@ public class DisbursementSampleModel {
 		this.user_id = user_id;
 	}
 
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getPass_word() {
-		return pass_word;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPass_word(String pass_word) {
-		this.pass_word = pass_word;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

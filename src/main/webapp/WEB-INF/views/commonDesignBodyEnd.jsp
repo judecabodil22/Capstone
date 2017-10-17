@@ -77,7 +77,7 @@
     <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
     <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
-<<<<<<< HEAD
+
     
      <meta charset="UTF-8">
    
@@ -169,10 +169,9 @@
     <!-- end of page level js -->
 	
     <!--end of page level css-->
-=======
+
     <!-- /Unfixed Scripts -->
->>>>>>> 476467eed351378ea7ae5cd53d33572a0f712c46
-   
+
 </head>
 
 <body class="skin-josh">
@@ -360,15 +359,14 @@
                         			Account Types
                                 </a>
                              </li>
-<<<<<<< HEAD
+
                              
                              <li>
                         		<a href="admin_rCenters">
-=======
+
                         
                         	 <li>
                         		<a href="resources/#">
->>>>>>> 476467eed351378ea7ae5cd53d33572a0f712c46
                         			<i class="fa fa-angle-double-right"></i>
                         			Chart of Accounts
                                 </a>
