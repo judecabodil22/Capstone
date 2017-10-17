@@ -90,10 +90,20 @@
                                             <td>${datum.jev_date}</td>
                                             <td>${datum.prepared_by}</td>
                                             <td>
-                                                ${datum.status}
+                                                <c:choose>
+                                                    <c:when test="${datum.status eq 'Pending'}">
+                                                        <span class="label label-sm label-info">${datum.status}</span>
+                                                    </c:when>
+                                                    <c:when test="${datum.status eq 'Approved'}">
+                                                        <span class="label label-sm label-success">${datum.status}</span>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        ${datum.status}
+                                                    </c:otherwise>
+                                                </c:choose>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> View</a>
+                                                <a href="${ctx}/JEV/view/${datum.jev_no}" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> View</a>
                                             </td>
                                         </tr>
                                     </c:forEach>

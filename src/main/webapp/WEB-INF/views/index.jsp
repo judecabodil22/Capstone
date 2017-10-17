@@ -24,18 +24,9 @@
     <link href="resources/vendors/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet" />
     <link href="resources/vendors/validation/dist/css/bootstrapValidator.min.css" rel="stylesheet"/>
 </head>
-
-<c:choose>
-    <c:when test="${not empty message}">
-        <div class="alert alert-success alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            ${message}
-        </div>
-    </c:when>
-    <c:otherwise>
-    </c:otherwise>
-</c:choose>
 <body>
+    <%@ include file = "commonMsg.jsp" %>
+    
     <div class="container">
         <div class="row vertical-offset-100">
             <div class=" col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3  col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">

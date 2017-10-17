@@ -2,7 +2,9 @@ package financials.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -88,6 +90,55 @@ public class JEVDAO {
 				}
 		);
 	}
+	
+	public JEVModel getByJevNo(String jev_no) {
+		List<Object> params = new ArrayList<Object>();
+		StringBuilder sql = new StringBuilder("SELECT * FROM ");
+		sql.append(this.table);
+		sql.append(" WHERE 0=0 ");
+		if(jev_no != null){
+			sql.append(" AND jev_no=? ");
+			params.add(jev_no);
+		}
+		JEVDAO _this = this;
+		
+		return jdbcTemplate.query(
+				sql.toString(), 
+				params.toArray(), 
+				new ResultSetExtractor<JEVModel>(){
+					public JEVModel extractData(ResultSet rs) throws SQLException, DataAccessException {
+						if (rs.next()) {
+							return _this.setData(rs);
+						}
+						return null;
+					}
+				}
+		);
+	}
+	
+	
+	public String getNewJevNo(Date jev_date) {
+		List<Object> params = new ArrayList<Object>();
+		StringBuilder sql = new StringBuilder("SELECT count(*) as cnt FROM ");
+		sql.append(this.table);
+		sql.append(" WHERE 0=0 ");
+		
+		SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyyMMdd");
+		SimpleDateFormat DATE_FORMAT_DASHES = new SimpleDateFormat("yyyy-MM-dd");
+		String sjev_date = null;
+		if(jev_date != null){
+			sjev_date = DATE_FORMAT.format(jev_date);
+			sql.append(" AND convert(date, jev_date)=? ");
+			params.add(DATE_FORMAT_DASHES.format(jev_date));
+		}
+		
+		int count = jdbcTemplate.queryForObject(sql.toString(), params.toArray(), Integer.class);
+		StringBuilder jev_no = new StringBuilder(sjev_date);
+		jev_no.append(String.format("%04d", ++count));
+		return jev_no.toString();
+	}
+	
+	
 	
 	public UserModel get(String id, String username, String password) {
 		List<Object> params = new ArrayList<Object>();

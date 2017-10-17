@@ -29,6 +29,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <mvc:resources mapping="WEB-INF/views/*" location="views/" />
    	<mvc:resources mapping="resources/**" location="resources/html/"/>
     <mvc:resources mapping="JEV/resources/**" location="resources/html/"/>
+    <mvc:resources mapping="JEV/view/resources/**" location="resources/html/"/>
   
       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	    <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
