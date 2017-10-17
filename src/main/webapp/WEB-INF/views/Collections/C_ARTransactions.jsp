@@ -1,9 +1,11 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
-
+<title>Accounts Receivables | Financials</title>
 <head>
     <meta charset="UTF-8">
-    <title>Accounts Receivables | Financials</title>
+    
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +47,7 @@
                         <ul class="dropdown-menu dropdown-messages pull-right">
                             <li class="dropdown-title">4 New Messages</li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Airi Satou as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
+                                <a href="javascript:;" class="message"> <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Airi Satou as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
                                     <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="image">
                                     <div class="message-body">
                                         <strong>Riot Zeast</strong>
@@ -56,7 +58,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Airi Satou as Read"><span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span></i> 
                                     <img data-src="resources/holder.js/45x45/#000:#fff" class="img-responsive message-image" alt="image">
                                     <div class="message-body">
@@ -68,7 +70,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Airi Satou as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
@@ -82,7 +84,7 @@
                                 </a>
                             </li>
                             <li class="unread message">
-                                <a href="resources/javascript:;" class="message">
+                                <a href="javascript:;" class="message">
                                     <i class="pull-right" data-toggle="tooltip" data-placement="top" title="Airi Satou as Read">
                                         <span class="pull-right ol livicon" data-n="adjust" data-s="10" data-c="#287b0b"></span>
                                     </i>
