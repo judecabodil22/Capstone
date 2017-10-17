@@ -26,18 +26,18 @@ public class BeaFormDao {
 	
 	public boolean insert(BeaFormModel Bea) {
 
-		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
+		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
 
-		jdbcTemplate.update(sql, new Object[] { Bea.getUser_id(), Bea.getUser_name(), Bea.getPass_word()});
+		jdbcTemplate.update(sql, new Object[] { Bea.getUser_id(), Bea.getUsername(), Bea.getPassword()});
 
 		return true;	
 
 	}
 	public boolean update(BeaFormModel Bea) {
 
-		sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
+		sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
 
-		jdbcTemplate.update(sql, new Object[] {Bea.getUser_name(), Bea.getPass_word(), Bea.getUser_id()});
+		jdbcTemplate.update(sql, new Object[] {Bea.getUsername(), Bea.getPassword(), Bea.getUser_id()});
 
 		return true;
 	}
@@ -71,8 +71,8 @@ public List<BeaFormModel> getUsers() {
 		public BeaFormModel mapRow(ResultSet rs, int row) throws SQLException {
 			BeaFormModel user = new BeaFormModel();
 			user.setUser_id(rs.getString("user_id"));
-			user.setUser_name(rs.getString("user_name"));
-			user.setPass_word(rs.getString("pass_word"));
+			user.setUsername(rs.getString("username"));
+			user.setPassword(rs.getString("password"));
 			return user;
 		}
 
@@ -86,8 +86,8 @@ public List<BeaFormModel> findByIDList(BeaFormModel bea) {
 		public BeaFormModel mapRow(ResultSet rs, int row) throws SQLException {
 			BeaFormModel bea = new BeaFormModel();
 			bea.setUser_id(rs.getString("user_id"));
-			bea.setUser_name(rs.getString("user_name"));
-			bea.setPass_word(rs.getString("pass_word"));
+			bea.setUsername(rs.getString("username"));
+			bea.setPassword(rs.getString("password"));
 			return bea;
 		}
 

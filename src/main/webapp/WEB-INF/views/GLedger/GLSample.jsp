@@ -20,12 +20,12 @@
 
 			<tr>
 				<td>username</td>
-				<td><form:input type="text" path="user_name"/></td>
+				<td><form:input type="text" path="username"/></td>
 			</tr>
 
 			<tr>
 				<td>password</td>
-				<td><form:input type="password" path="pass_word"/></td>
+				<td><form:input type="password" path="password"/></td>
 			</tr>
 			
 			<tr>
@@ -54,8 +54,8 @@
 
 				<tr>
 					<td>${user.user_id}</td>
-					<td>${user.user_name}</td>
-					<td>${user.pass_word}</td>
+					<td>${user.username}</td>
+					<td>${user.password}</td>
 
 				</tr>
 			</c:forEach>

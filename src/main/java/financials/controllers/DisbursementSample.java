@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.DisbursementDAO;
 import financials.model.DisbursementSampleModel;
-import financials.model.UserModel;
+
 
 @Controller
 public class DisbursementSample {

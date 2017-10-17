@@ -18,12 +18,12 @@
 			</tr>
 			<tr>
 				<td>User name</td>
-				<td><form:input type="text" path="user_name"/></td>
+				<td><form:input type="text" path="username"/></td>
 				
 			</tr>
 			<tr>
 				<td>Password</td>
-				<td><form:input type="password" path="pass_word"/></td>
+				<td><form:input type="password" path="password"/></td>
 				
 			</tr>
 			<tr>
@@ -56,8 +56,8 @@
 
 				<tr>
 					<td>${Abi.user_id}</td>
-					<td>${Abi.user_name}</td>
-					<td>${Abi.pass_word}</td>
+					<td>${Abi.username}</td>
+					<td>${Abi.password}</td>
 
 				</tr>
 			</c:forEach>

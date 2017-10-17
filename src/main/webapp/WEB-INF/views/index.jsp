@@ -41,7 +41,7 @@
             <div class=" col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3  col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center">Sign In</h3>
+                        <h3 class="panel-title text-center">Financial System</h3>
                     </div>
                     <div class="panel-body">
                         <form:form action="login" modelAttribute="modelBindUser" method="post" accept-charset="UTF-8" role="form">
@@ -50,7 +50,7 @@
                                     <div class="input-group-addon">
                                         <i class="livicon" data-name="at" data-size="18" data-c="#000" data-hc="#000" data-loop="true"></i>
                                     </div>
-                                    <form:input path="user_name" class="form-control" placeholder="Username" name="user_name" type="text" required="required" />
+                                    <form:input path="username" class="form-control" placeholder="Username" name="username" type="text" required="required" />
                                     <span class="input-group-addon danger">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </span>
@@ -59,7 +59,7 @@
                                     <div class="input-group-addon">
                                         <i class="livicon" data-name="key" data-size="18" data-c="#000" data-hc="#000" data-loop="true"></i>
                                     </div>
-                                    <form:input path="pass_word" class="form-control" placeholder="Password" name="password" type="password" value="" required="required" />
+                                    <form:input path="password" class="form-control" placeholder="Password" name="password" type="password" value="" required="required" />
                                     <span class="input-group-addon danger">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </span>

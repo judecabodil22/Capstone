@@ -1,19 +1,182 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<html>
+<head>
+    <meta charset="UTF-8">   
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
+    <!-- end of global css -->    
 
-<%@ include file = "commonDesign.jsp" %>
+    <!-- Added Scripts -->
+    <!-- @Dashboard - for top buttons -->
+    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
+    
+    <!-- /Added Scripts -->
+   
+    <!-- Unfixed Scripts -->
+    <meta charset="UTF-8">
+    
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
-<title>Financials System Project</title>
+    <!-- font Awesome -->
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
+	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	
+    <!-- end of global css -->    
+    <!--page level css -->
+    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
+    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
+	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/http <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />s://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
+      
+    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--livicons-->
+    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
+    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
+    <script src="resources/js/josh.js" type="text/javascript"></script>
+    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
+    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
+    <!-- end of global js -->
 
-<aside class="right-side">
-	<!-- Main Content -->
-	<section class="content-header">
-		<h1>Dashboard</h1>
-	</section>
+    
+     <meta charset="UTF-8">
+   
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	 <link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- font Awesome -->
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
+	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	
+    <!-- end of global css -->    
+    <!--page level css -->
+    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
+    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
+	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- end of global css -->
+    <!-- page level css -->
+    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
+	
+	  <!-- global js -->
+    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--livicons-->
+    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
+    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
+   <script src="resources/js/josh.js" type="text/javascript"></script>
+    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
+    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
+    <!-- end of global js -->
+    <!-- begining of page level js -->
+    <!--  todolist-->
+    <script src="resources/js/todolist.js"></script>
+    <!-- EASY PIE CHART JS -->
+    <script src="resources/vendors/charts/easypiechart.min.js"></script>
+    <script src="resources/vendors/charts/jquery.easypiechart.min.js"></script>
+    <!--for calendar-->
+    <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
+    <!--   Realtime Server Load  -->
+    <script src="resources/vendors/charts/jquery.flot.min.js" type="text/javascript"></script>
+    <script src="resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
+    <!--Sparkline Chart-->
+    <script src="resources/vendors/charts/jquery.sparkline.js"></script>
+    <!-- Back to Top-->
+    <script type="text/javascript" src="resources/vendors/countUp/countUp.js"></script>
+    <!--   maps -->
+    <script src="resources/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+     <script src="resources/vendors/jscharts/Chart.js"></script>
+    <script src="resources/js/dashboard.js" type="text/javascript"></script>
+   
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var composeHeight = $('#calendar').height() +21 - $('.adds').height();
+        $('.list_of_items').slimScroll({
+            color: '#A9B6BC',
+            height: composeHeight + 'px',
+            size: '5px'
+        });
+    });
+    </script>
+    <!-- end of page level js -->
+	
+    <!--end of page level css-->
+
+    <!-- /Unfixed Scripts -->
+
+</head>
+
+<body class="skin-josh">
+	<header class="header">
 		
-<<<<<<< HEAD
 		<!-- Logo -->
 		<a href="financials_dashboard" class="logo">
 			<!-- <img src="resources/img/logo.png" alt="Logo"> -->
@@ -22,10 +185,10 @@
         <!-- /Logo -->
         
         <!-- Navigation Icon -->
-		<nav class="navbar navbar-static-top" role="navigation">
+		<nav class="navbar navbar-static-top" role="navigation" style="background:rgb(81,87,99);">
 			<!-- Sidebar toggle button-->
  			<div>
- 				<a href="resources/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">	
+ 				<a href="resources/#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button" style="background:rgb(81,87,99);">	
  					<div class="responsive_nav"></div>
  				</a>	
  			</div>
@@ -155,11 +318,11 @@
                           	</li>
                         </ul> 
                    </li>
+                   <!-- /User Information -->
                 </ul>
             </div>               
         </nav>
   	</header>
-  	
   	
   	<div class="wrapper row-offcanvas row-offcanvas-left">
   	<!-- Left side column. contains the logo and sidebar -->
@@ -190,7 +353,19 @@
                         
                         <!-- System Setup sub-menu -->
                         <ul class="sub-menu">
-                        	<li>
+                        	 <li>
+                        		<a href="resources/#">
+                        			<i class="fa fa-angle-double-right"></i>
+                        			Account Types
+                                </a>
+                             </li>
+
+                             
+                             <li>
+                        		<a href="admin_rCenters">
+
+                        
+                        	 <li>
                         		<a href="resources/#">
                         			<i class="fa fa-angle-double-right"></i>
                         			Chart of Accounts
@@ -217,13 +392,6 @@
                         			Fund
                                 </a>
                              </li>
-                             
-                             <li>
-                        		<a href="resources/#">
-                        			<i class="fa fa-angle-double-right"></i>
-                        			Template 
-                                </a>
-                             </li>
                         </ul>        
                     </li>
                     
@@ -240,17 +408,17 @@
                     		<li>
                     			<a href="resources/#">
                     				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
-                                    Journal Entry Voucher
+                                    	<span class="title">Journal Entry Voucher</span>
                                 </a>	
                                 	<ul class="sub-menu">
                                 		<li>
-                                			<a href="financials_createjev">
+                                			<a href="JEV/create">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Create JEV
                                     		</a>
                                 		</li>
                                 		<li>
-                                			<a href="financials_reviewjev">
+                                			<a href="JEV/list">
                                 				<i class="fa fa-angle-double-right"></i>
                                      			Review JEV
                                     		</a>
@@ -284,7 +452,7 @@
                             
                             <!-- Disbursement -->
                             <li>
-                            	<a href="voucher_transaction">
+                            	<a href="resources/#">
                             		<i class="livicon" data-name="money" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
                                     <span class="title">Disbursement</span>     
                                  </a>
@@ -302,6 +470,29 @@
                     
                     	<!-- Queries sub-menu -->
                     	<ul class="sub-menu">
+                    		<li>
+                    			<a href="resources/#">
+                    				<i class="livicon" data-name="notebook" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                                    <span class="title">Journal Entry Voucher</span>
+                                </a>
+                            </li>
+                            
+                            <!-- Accounts Receivable -->
+                            <li>
+                            	<a href="resources/#">
+                            		<i class="livicon" data-name="sign-in" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            		<span class="title">Accounts Receivable</span>
+                          		</a>
+                        	</li>
+                        	
+                        	<!-- Accounts Payable -->
+                        	<li>
+                        		<a href="resources/#">
+                        			<i class="livicon" data-name="sign-out" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                        			<span class="title">Accounts Payable</span>
+                           		</a>
+                      		</li>
+                            
                     		<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
@@ -335,72 +526,101 @@
                     
                     	<!-- Reports sub-menu -->
                     	<ul class="sub-menu">
+                    		
+                    		<!-- Financial Statements -->
                     		<li>
                     			<a href="resources/#">
                     				<i class="fa fa-angle-double-right"></i>
-                                 	General Journal
+                                 	Financial Statements
                              	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	General Ledger
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	Trial Balance
-                             	</a>
+                             	
+                             	<!-- Financial Statement sub-menu -->
+                             	<ul class="sub-menu">
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Trial Balance
+                             			</a>
                              
+                             			<ul class="sub-menu">
+                             				<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Unadjusted Trial Balance	
+                             					</a>
+                        					</li>
+                        		
+                        					<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Pre-Closing Trial Balance	
+                             					</a>
+                        					</li>
+                        		
+                        					<li>
+                             					<a href="resources/#">
+                             						<i class="fa fa-angle-double-right"></i>
+                                					Post-Closing Trial Balance	
+                             					</a>
+                        					</li>
+                        				</ul>         
+                        			</li>
+                        			
+                        			<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Financial Position
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Financial Performance
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Cash Flows
+                             			</a>
+                             		</li>
+                             		
+                             		<li>
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			Statement of Changes in Assets/Equity
+                             			</a>
+                             		</li>	
+                             	</ul>	
+                        	</li>
+                        	
+                        	<!-- Journals and Ledgers -->
+                        	<li>
+                    			<a href="resources/#">
+                    				<i class="fa fa-angle-double-right"></i>
+                                 	Journal/Ledgers
+                             	</a>
+                             	
+                             	<!-- Journals and Ledgers sub-menu -->
                              	<ul class="sub-menu">
                              		<li>
                              			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Unadjusted Trial Balance	
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			General Journal
                              			</a>
                         			</li>
-                        		
+                        
                         			<li>
-                             			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Pre-Closing Trial Balance	
+                    					<a href="resources/#">
+                    						<i class="fa fa-angle-double-right"></i>
+                                 			General Ledger
                              			</a>
                         			</li>
-                        		
-                        			<li>
-                             			<a href="resources/#">
-                             				<i class="fa fa-angle-double-right"></i>
-                                			Post-Closing Trial Balance	
-                             			</a>
-                        			</li>
-                        		</ul>         
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                 	Statement of Income and Expense
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                	Statement of Changes in Equity
-                             	</a>
-                        	</li>
-                        
-                        	<li>
-                    			<a href="resources/#">
-                    				<i class="fa fa-angle-double-right"></i>
-                                	Statement of Cash Flows
-                             	</a>
-                        	</li>
-                    	</ul>
-                	</li>
+                        		</ul>
+                        	 </li>
+						</ul>   		
                 
                 	<!-- Manage Users -->
                 	<li>
@@ -428,7 +648,7 @@
                     	</ul>
                 	</li>
                 
-                	<!-- Manage Users -->
+                	<!-- Help -->
                 	<li>
                 		<a href="resources/#">
                 			<!--i class="livicon" data-name="doc-portrait" data-c="#EF6F6C" data-hc="#EF6F6C" data-size="18" data-loop="true"></i-->
@@ -440,51 +660,3 @@
       			</div>
    			</section>
 		</aside>
-=======
-	<section class="content">
-		<div class="row">
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
-		
-			<!-- shortcut buttons -->
-			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="#" type="button" class="btn btn-lg btn-success">
-					<strong class="livicon" data-name="piggybank" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
-						<label style="position:relative; top:2em">COLLECTIONS</label>
-				</a>
-			</div>
-			
-			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="#" type="button" class="btn btn-lg btn-danger">
-					<strong class="livicon" data-name="money" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
-						<label style="position:relative; top:2em">DISBURSEMENT</label>
-				</a>
-			</div>
-			
-			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="financials_createjev" type="button" class="btn btn-lg btn-primary">
-					<strong class="livicon" data-name="notebook" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
-						<label style="position:relative; top:1.5em">JOURNAL ENTRY <br> VOUCHER</label>
-				</a>
-			</div>
-			
-			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="#" type="button" class="btn btn-lg">
-					<strong class="livicon" data-name="plus" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
-						<label style="position:relative; top:2em">ADD</label>
-				</a>
-			</div>
-			
-		</div>
-			
-			<br>
-
-	</section>
-</aside>
-</div>
-	
-	<!-- Added Scripts -->
-	
-	<!-- /Added Scripts -->
-
-</body>	
-</html>
