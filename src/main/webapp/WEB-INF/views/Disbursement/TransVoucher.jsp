@@ -406,12 +406,7 @@
 											</tr>
 											<c:forEach var="pay" items="${pList}">
 
-<<<<<<< HEAD
-												<tr data-inst="${pay.ap_institute_name}">
-=======
 												<tr data-institute="${pay.ap_institute_name}">
-												
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
 													<td>${pay.ap_institute_name}</td>
 													<td>${pay.purpose}</td>
 													<td>${pay.date}</td>
@@ -517,11 +512,6 @@
 							</table>
 						</div>
 						<div class="col-md-6">
-<<<<<<< HEAD
-						
-=======
-							
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
 								<table>
 								
 									<tr>
@@ -529,14 +519,8 @@
 												<span class='require'>*</span>
 										</td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-<<<<<<< HEAD
-											class="form-control" id="inst_name" type="text" path="institute"
-											readOnly="true"></form:input></td>
-											
-=======
 											class="form-control" id="IName" type="text" path="institute"
 											readOnly="true"></form:input></td>
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
 									</tr>
 									<tr>
 										<td>Claimant Name <span
@@ -657,43 +641,25 @@
 			src="resources/js/pages/table-advanced.js"></script>
 		<!-- end of page level js -->
 		
-<<<<<<< HEAD
-		
-		  <script>
-=======
-		 <script>
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
-$(document).ready(function(){
-	// code to read selected table row cell data (values).
-	$(".ToModal").on('click',function(){
-		// get data
-		var data = $(this).closest('tr').data();
-
-		// put to modal ----------------------- start
-		// using jquery codes
-		/* $('#modal_code').val(data.code);
-		$('#modal_description').val(data.desc); */
-		
-		// using native javascript codes
-<<<<<<< HEAD
-		 document.getElementById("inst_name").value = data.inst;
-		 
-=======
-		 document.getElementById("IName").value = data.institute;
-		 document.getElementById("modal_description").value = data.desc;
-		 document.getElementById("modal_uid").value = data.uid;
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
-		// put to modal ----------------------- ends
-	});
-});
-
-
-
-</script>
-</body>
-
-
-
-
-
+		<script>
+            $(document).ready(function(){
+            	// code to read selected table row cell data (values).
+            	$(".ToModal").on('click',function(){
+            		// get data
+            		var data = $(this).closest('tr').data();
+            
+            		// put to modal ----------------------- start
+            		// using jquery codes
+            		/* $('#modal_code').val(data.code);
+            		$('#modal_description').val(data.desc); */
+            		
+            		// using native javascript codes
+            		 document.getElementById("IName").value = data.institute;
+            		 document.getElementById("modal_description").value = data.desc;
+            		 document.getElementById("modal_uid").value = data.uid;
+            		// put to modal ----------------------- ends
+            	});
+            });
+        </script>
+    </body>
 </html>

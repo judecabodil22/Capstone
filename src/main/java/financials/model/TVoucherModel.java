@@ -26,15 +26,6 @@ public class TVoucherModel {
 	private String dv_amount;
 	
 	
-<<<<<<< HEAD
-	public String getAp_institute_name() {
-		return ap_institute_name;
-	}
-	public void setAp_institute_name(String ap_institute_name) {
-		this.ap_institute_name = ap_institute_name;
-	}
-=======
->>>>>>> fd8c1e1fc9b746518d1b18cff6babcdca12afc92
 	public String getPurpose() {
 		return purpose;
 	}
