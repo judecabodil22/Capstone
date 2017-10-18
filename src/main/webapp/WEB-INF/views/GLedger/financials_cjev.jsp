@@ -676,6 +676,7 @@
                              				Add
                              				<i class="fa fa-plus"></i>
                              				</button>
+                             				<button type="button" class="btn btn-danger btn-sm" id="delButton">Remove</button>
                              			</div>
                              		</div>
                              		
@@ -881,11 +882,14 @@
                              			<div class="panel panel-primary filterable">
                              				
                              				<div class="panel-heading clearfix">
-                             					<h2 class="panel-title pull-left">
+                             					<h2 class="panel-title pull-left caption" style="position:relative; top:0.5em">
                              					Table of Supporting Documents
                              					</h2>
                              				<div class="pull-right">
-                             					<button type="button" class="btn btn-success btn-sm" id="addButton">Add</button>
+                             					<button type="button" class="btn btn-success btn-sm" id="addButton">
+                             					Add
+                             					<i class="fa fa-plus"></i>
+                             					</button>
                              					<button type="button" class="btn btn-danger btn-sm" id="delButton">Remove</button>
                              				</div>
                              				</div>
@@ -938,7 +942,6 @@
 									</div>
 								
 									<!-- Buttons -->
-									<span class="hello" data-layout="top" data-type="success">Success</span>
 									<div class="form-group pull-right">
 										<a href="#page1" data-toggle="tab">
 		                           			<button type="submit" class="btn btn-responsive btn-primary">Submit</button>

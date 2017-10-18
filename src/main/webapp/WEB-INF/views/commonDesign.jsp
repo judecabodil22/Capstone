@@ -418,7 +418,7 @@
                                 </a>
                             </div>
                             
-                            <div class="pull-left">
+                            <div class="pull-right">
                          		<a href="#">
                          			<i class="livicon" data-name="sign-out" data-s="18"></i>
                          			Logout
