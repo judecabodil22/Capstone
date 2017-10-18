@@ -646,6 +646,16 @@
                              			</select>
                              	</div>
                              	
+                             	<!-- Responsibility Center -->
+                             	<div class="col-md-12 form-group">
+                             		<label>Responsibility Center</label>
+                             			<select id="e1" class="form-control select2">
+                             				<option value="1">IT Department</option>
+		                             		<option value="2">HR Department</option>
+		                   					<option value="3">Faculty</option>
+		                   				</select>
+                             	</div>
+                             	
                              	<!-- Particulars -->								
                              	<div class="col-md-12 form-group required">
                              		<label>Particulars</label>
@@ -686,11 +696,10 @@
                              				<table class="table table-striped table-bordered table-hover">
                              					<thead>
                              						<tr>
-                             							<th style="width: 175px;">Responsibility Center</th>
-		                                                <th style="width: 200px;">Accounts</th>
-		                             					<th style="width: 200px;">Description</th>
-		                             					<th style="width: 150px;">Debit</th>
-		                             					<th style="width: 150px;">Credit</th>	         
+		                                                <th class="col-md-2">Accounts</th>
+		                             					<th class="col-md-2">Description</th>
+		                             					<th class="col-md-2">Debit</th>
+		                             					<th class="col-md-2">Credit</th>	         
 		                             				</tr>
 		                             			</thead>
 		                             			
@@ -698,12 +707,32 @@
 		                             				<tr>
 		                             					<td>
 		                             						<select id="e1" class="form-control select2">
-		                             							<option value="1">IT Department</option>
-		                             							<option value="2">HR Department</option>
-		                             							<option value="3">Faculty</option>
-		                             						</select>
-		                             					</td>
-		                             	
+		                             							<optgroup label="Assets">
+		                             								<option value="1">Cash</option>
+                             										<option value="2">Accounts Receivable</option>
+                             										<option value="3">Notes Receivable</option>
+                             									</optgroup>
+                             									<optgroup label="Liabilities">
+                             										<option value="1">Accounts Payable</option>
+                             										<option value="1">Notes Payable</option>
+                           										</optgroup>
+                           									</select>
+                           								</td>
+                           								
+                           								<td>
+                           									<input type="text" class="form-control" maxlength="500"/>
+                           								</td>
+                           								
+                           								<td>
+                           									<input type="text" class="form-control" maxlength="19"/>
+                           								</td>
+                           								
+                           								<td>
+                           									<input type="text" class="form-control" maxlength="19"/>
+                           								</td>
+                           							</tr>
+                           							
+                           							<tr>
 		                             					<td>
 		                             						<select id="e1" class="form-control select2">
 		                             							<optgroup label="Assets">
@@ -734,14 +763,6 @@
                            							<tr>
 		                             					<td>
 		                             						<select id="e1" class="form-control select2">
-		                             							<option value="1">IT Department</option>
-		                             							<option value="2">HR Department</option>
-		                             							<option value="3">Faculty</option>
-		                             						</select>
-		                             					</td>
-		                             	
-		                             					<td>
-		                             						<select id="e1" class="form-control select2">
 		                             							<optgroup label="Assets">
 		                             								<option value="1">Cash</option>
                              										<option value="2">Accounts Receivable</option>
@@ -770,14 +791,6 @@
                            							<tr>
 		                             					<td>
 		                             						<select id="e1" class="form-control select2">
-		                             							<option value="1">IT Department</option>
-		                             							<option value="2">HR Department</option>
-		                             							<option value="3">Faculty</option>
-		                             						</select>
-		                             					</td>
-		                             	
-		                             					<td>
-		                             						<select id="e1" class="form-control select2">
 		                             							<optgroup label="Assets">
 		                             								<option value="1">Cash</option>
                              										<option value="2">Accounts Receivable</option>
@@ -804,43 +817,6 @@
                            							</tr>
                            							
                            							<tr>
-		                             					<td>
-		                             						<select id="e1" class="form-control select2">
-		                             							<option value="1">IT Department</option>
-		                             							<option value="2">HR Department</option>
-		                             							<option value="3">Faculty</option>
-		                             						</select>
-		                             					</td>
-		                             	
-		                             					<td>
-		                             						<select id="e1" class="form-control select2">
-		                             							<optgroup label="Assets">
-		                             								<option value="1">Cash</option>
-                             										<option value="2">Accounts Receivable</option>
-                             										<option value="3">Notes Receivable</option>
-                             									</optgroup>
-                             									<optgroup label="Liabilities">
-                             										<option value="1">Accounts Payable</option>
-                             										<option value="1">Notes Payable</option>
-                           										</optgroup>
-                           									</select>
-                           								</td>
-                           								
-                           								<td>
-                           									<input type="text" class="form-control" maxlength="500"/>
-                           								</td>
-                           								
-                           								<td>
-                           									<input type="text" class="form-control" maxlength="19"/>
-                           								</td>
-                           								
-                           								<td>
-                           									<input type="text" class="form-control" maxlength="19"/>
-                           								</td>
-                           							</tr>
-                           							
-                           							<tr>
-		                             					<td></td>
 		                             					<td></td>
 		                             					<td>
 		                             						<div class="pull-right" style="position:relative; top:0.5em">
