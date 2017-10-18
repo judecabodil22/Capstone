@@ -256,6 +256,33 @@
     <script type="text/javascript" src="resources/js/pages/table-advanced.js"></script>
 	<script src="resources/vendors/modal/js/classie.js"></script>
 	<script src="resources/vendors/modal/js/modalEffects.js"></script>
+	
+	 <meta charset="UTF-8">
+   
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+    <!-- end of global css -->
+    <!--page level css -->
+    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
+    <!--page level styles ends-->
+	
+	 <!--Eto dinagdag ko-->
+	<link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
+    <!--end of page level css-->
+	
    	
     <script type="text/javascript">
     $(document).ready(function() {
@@ -272,6 +299,63 @@
     <!--end of page level css-->
     
     <!-- /Unfixed Scripts -->
+    
+        <!-- global js -->
+        <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+        <!--livicons-->
+        <script src="resources/vendors/livicons/minified/raphael-min.js"></script>
+        <script src="resources/vendors/livicons/minified/livicons-1.4.min.js"></script>
+        <script src="resources/js/josh.js" type="text/javascript"></script>
+        <script src="resources/js/metisMenu.js" type="text/javascript"></script>
+        <script src="resources/vendors/holder-master/holder.js"></script>
+        <!-- end of global js -->
+        <!-- begining of page level js -->
+        <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+        <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
+		
+		 <meta charset="UTF-8">
+ 
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+		
+		<!-- Dinagdag ko rin to -->
+		<script src="resources/vendors/modal/js/classie.js"></script>
+		<script src="resources/vendors/modal/js/modalEffects.js"></script>
+
+		  <meta charset="UTF-8">
+    
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- end of global css -->
+    <!-- page level css -->
+    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
+    <!--end of page level css-->
+        
+    
 
 </head>
 
@@ -418,7 +502,7 @@
                                 </a>
                             </div>
                             
-                            <div class="pull-left">
+                            <div class="pull-right">
                          		<a href="#">
                          			<i class="livicon" data-name="sign-out" data-s="18"></i>
                          			Logout
@@ -550,10 +634,33 @@
                             
                             <!-- Collections -->
                             <li>
-                            	<a href="financials_ctransac">
+                            	<a href="#">
                             		<i class="livicon" data-name="piggybank" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
                             			<span class="title">Collections</span>
+                            			<span class="fa arrow"></span>
                             	</a>
+                            	
+                           	<ul class="sub-menu">
+									
+										<li>
+											<a href="financials_ctransac">
+												<i class="fa fa-angle-double-right"></i>
+												Cashier					
+											</a>
+										</li>
+										
+										<li>
+											<a href="financials_ctransac2">
+												<i class="fa fa-angle-double-right"></i>
+												Accounts Receivable					
+											</a>
+										</li>
+									
+									
+                               
+									</ul>
+                            	
+                            	
                             </li>
                             
                             <!-- Disbursement -->
@@ -742,6 +849,15 @@
                              		</li>
                              	</ul>
                         	</li>
+                        	
+                        	<li>
+                        	<a href="financials_invoice">
+                            		<i class="fa fa-angle-double-right"></i>
+                            		Invoice
+                             	</a>
+                        	
+                        	</li>
+                        	
                         </ul>
                         
                         <!-- Manage Users -->
