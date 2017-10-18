@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.TVoucherDAO;
@@ -77,5 +78,37 @@ public class TVoucherController {
 	
 	public List<TVoucherModel> dropDown6() {
 		return tvdao.dropDownEmployee();
+	}
+	
+	@RequestMapping("trans_save")
+	public ModelAndView mav(@ModelAttribute("insert") TVoucherModel tvm,
+			@RequestParam(value = "submit", required = false) String submit,
+			@RequestParam(value = "update", required = false) String update) {
+
+		ModelAndView mav = new ModelAndView();
+		try {
+			if (submit != null) {
+	
+				tvdao.submit(tvm);
+				tvdao.update(tvm);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		mav.setViewName("Disbursement/TransVoucher");
+		List<TVoucherModel> dropDown = dropDown();
+		List<TVoucherModel> dropDown2 = dropDown2();
+		List<TVoucherModel> dropDown5 = dropDown5();
+		List<TVoucherModel> dropDown6 = dropDown6();
+		List<TVoucherModel> dropDown7 = dropDown7();
+		mav.addObject("dis", "Disbursement");
+		mav.addObject("dropDown", dropDown);
+		mav.addObject("dropDown2", dropDown2);
+		mav.addObject("dropDown5", dropDown5);
+		mav.addObject("dropDown6", dropDown6);
+		mav.addObject("dropDown7", dropDown7);
+		mav.addObject("pList", listPayable());
+		return mav;
 	}
 }

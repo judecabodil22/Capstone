@@ -124,7 +124,7 @@
                     
                     <!-- Disbursement -->
                     <li>
-                    	<a href="${ctx}/resources/#">
+                    	<a href="${ctx}/resources/voucher_transaction">
                     		<i class="livicon" data-name="money" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
                             <span class="title">Disbursement</span>     
                          </a>

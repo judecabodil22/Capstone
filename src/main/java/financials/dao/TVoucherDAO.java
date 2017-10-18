@@ -12,6 +12,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import financials.model.DVModel;
+import financials.model.DisbursementSampleModel;
 import financials.model.TVoucherModel;
 import financials.model.tblreportsModel;
 
@@ -28,16 +29,17 @@ public class TVoucherDAO {
 	}
 	public List<TVoucherModel> getList() {
 
-		sql = "Select ap_institute_name, ap_purpose, ap_date, ap_amount, ap_status, claimant_name, ap_resp_center from tbl_apayable ";
+		sql = "Select * from tbl_apayable ";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
+				tvm.setAp_uid(rs.getString("ap_uid"));
 				tvm.setAp_institute_name(rs.getString("ap_institute_name"));
 				tvm.setPurpose(rs.getString("ap_purpose"));
 				tvm.setDate(rs.getString("ap_date"));
 				tvm.setAmount(rs.getString("ap_amount"));
-				tvm.setStatus(rs.getString("ap_status"));
+				tvm.setAp_status(rs.getString("ap_status"));
 				tvm.setClaim_name(rs.getString("claimant_name"));
 				tvm.setResp_center(rs.getString("ap_resp_center"));
 				return tvm;
@@ -114,5 +116,29 @@ public class TVoucherDAO {
 
 		});
 	}
+	
+	public boolean submit(TVoucherModel tvm) {
+
+		String sql = "Insert into dv_transaction(dv_no, ors_burs_no, disbursement_purpose, mode_of_payment, institute_name, claimant_name,"
+						+ "address, fund_cluster, date, particulars, responsibility_center, mfo_pap, amount, employee_assigned)" + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+		jdbcTemplate.update(sql, new Object[] { tvm.getDv_no(), tvm.getOrs_burs_no(), tvm.getPurpose_name(), tvm.getMode_of_payment(),
+												tvm.getInstitute(), tvm.getClaimant_name(), tvm.getAddress(), tvm.getFund_cluster(),
+												tvm.getDv_date(), tvm.getParticulars(), tvm.getResponsibility_center(),
+												tvm.getMfo_pap(), tvm.getDv_amount(), tvm.getEmployee_assigned()});
+
+		return true;
+		
+	}
+	
+	public boolean update(TVoucherModel tvm) {
+
+		sql = "Update tbl_apayable " + "Set ap_status = 'Paid' " + "WHERE ap_uid = ?";
+
+		jdbcTemplate.update(sql, new Object[] { tvm.getAp_uid() });
+
+		return true;
+	}
+	
 }
 
