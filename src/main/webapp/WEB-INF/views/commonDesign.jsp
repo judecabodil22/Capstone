@@ -550,7 +550,7 @@
                             
                             <!-- Collections -->
                             <li>
-                            	<a href="#">
+                            	<a href="financials_ctransac">
                             		<i class="livicon" data-name="piggybank" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
                             			<span class="title">Collections</span>
                             	</a>

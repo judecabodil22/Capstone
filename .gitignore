@@ -12,6 +12,3 @@ target/
 target/m2e-wtp/web-resources/META-INF/maven/Financials/Capstone/pom.properties
 *.properties
 /target
-/.classpath
-/.project
-/.settings

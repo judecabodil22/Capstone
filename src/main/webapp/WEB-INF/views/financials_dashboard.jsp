@@ -12,10 +12,8 @@
 	<section class="content-header">
 		<h1>Dashboard</h1>
 	</section>
-		
 	<section class="content">
 		<div class="row">
-		
 			<!-- shortcut buttons -->
 			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
 				<a href="#" type="button" class="btn btn-lg btn-success">

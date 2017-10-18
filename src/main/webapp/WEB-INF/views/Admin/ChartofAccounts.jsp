@@ -153,9 +153,9 @@
                                                  	<form:form action="admin_CoA_delete" modelAttribute="CoA_delete">
                                                    	<form:input type="hidden" id="uid" path="coa_account_uid" value="${list.coa_account_uid}"/>
                                                    												
-												 	<div class="spring"> 
+												 	
                                                      	<input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
-                                                 	</div>  
+                                                 	
                                                      </form:form>    	                                       
                                                 </td>
                                                 
@@ -292,90 +292,7 @@
 	
 	
 
-			<%-- <!-- edit -->
-
-	 <div class="modal fade in" id="edit" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">Edit Account Type</h4>
-                            </div>
-                            <div class="modal-body">
-                                
-								<form:form action="admin_accountType_update" modelAttribute="accountType_update" class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-
-
-<!-- Select Basic -->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="">Parent Type</label>
-  <div class="col-md-4">
-   
-   <form:select id="" name="" class="form-control" path="acc_parent_uid">
-
-	<c:forEach var="list" items="${accounts}">  
-   	 
-   	<form:option value="${list.acc_uid}">
-           <c:out value="${list.acc_description}"/>
- 	</form:option>
-     
-	</c:forEach>
-	<form:option value="99" path="acc_parent_uid">null (Is a Parent)</form:option>
- </form:select>
- 
- 
- 
-  </div>
-</div>
-
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Code</label>  
-  <div class="col-md-5">
-  <form:input id="modal_code" name="textinput" type="text" class="form-control input-md" path="acc_code"/>
-  <form:input id="modal_uid" name="textinput" type="hidden"  class="form-control input-md" path="acc_uid"/>
-    
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Description</label>  
-  <div class="col-md-5">
-  <form:input id="modal_description" name="textinput" type="text"  class="form-control input-md" path="acc_description"/>
-    
-  </div>
-</div>
-
-
-<!-- Button (Double) -->
-
-  <label class="col-md-4 control-label" for="button1id"></label>
-  
-   <input type="submit" class="btn btn-success" value="Submit" style="width:80%;">
-   
-  
-
-
-
-</fieldset>
-
-</form:form>
-								
-											
-							</div>	
-						</div>
-					</div>
-					
-							
-		</div>
-		
-	<!-- end of edit --> --%>
+			
 		 
 	
     <!-- global js -->
