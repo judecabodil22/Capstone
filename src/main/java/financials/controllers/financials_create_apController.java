@@ -7,11 +7,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class financials_create_apController {
 	
-	@RequestMapping("/financials_ap_create")//url
+	@RequestMapping("/APC")//url
 	public ModelAndView fapc()
 	{
 		ModelAndView apc = new ModelAndView();
-		apc.setViewName("BeaForm");
+		apc.setViewName("AP_AR/financials_create_ap");
 		return apc;
 	}
 
