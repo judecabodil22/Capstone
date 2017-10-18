@@ -86,7 +86,7 @@
                         
                         <ul class="sub-menu">
                             <li id="JEV_create">
-                                <a href="${ctx}/JEV/create">
+                                <a href="${ctx}/financials_createjev">
                                     <i class="fa fa-angle-double-right"></i>
                                     Create JEV
                                 </a>
@@ -347,7 +347,7 @@
                 
                 <!-- Manage Users -->
                 <li>
-                    <a href="#">
+                    <a href="financials_manageusers">
                         <!-- <i class="livicon" data-name=" " data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i> -->
                             <span class="title">Manage Users</span>
                     </a>
