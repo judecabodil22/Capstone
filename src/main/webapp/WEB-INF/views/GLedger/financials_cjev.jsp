@@ -35,12 +35,6 @@
     <link href="resources/css/pages/formelements.css" rel="stylesheet" />
     <!-- form elements scripts -->
     
-    <!-- editable table scripts -->
-    <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/select2.css" />
-    <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.bootstrap.css" />
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-    <!-- /editable table scripts -->
-    
     <!-- responsive tables scripts -->
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
     <!-- responsive tables scripts -->
@@ -855,22 +849,22 @@
                              	<!-- Table of Supporting Documents -->
                              	<div class="row">
                              		<div class="col-md-12">
-                             			<div class="panel panel-primary filterable">
+                             			<div class="portlet box primary">
+                             			
+                             				<div class="portlet-title">
+		                             			<div class="caption" style="position:relative; top:0.25em">
+		                             				Table of Supporting Documents
+		                             			</div>
+		                             			<div class="pull-right">
+		                             				<button type="button" class="btn btn-success btn-sm" id="addButton">
+		                             				Add
+		                             				<i class="fa fa-plus"></i>
+		                             				</button>
+		                             				<button type="button" class="btn btn-danger btn-sm" id="delButton">Remove</button>
+		                             			</div>
+		                             		</div>
                              				
-                             				<div class="panel-heading clearfix">
-                             					<h2 class="panel-title pull-left caption" style="position:relative; top:0.5em">
-                             					Table of Supporting Documents
-                             					</h2>
-                             				<div class="pull-right">
-                             					<button type="button" class="btn btn-success btn-sm" id="addButton">
-                             					Add
-                             					<i class="fa fa-plus"></i>
-                             					</button>
-                             					<button type="button" class="btn btn-danger btn-sm" id="delButton">Remove</button>
-                             				</div>
-                             				</div>
-                             				
-                             				<div class="panel-body">
+                             				<div class="portlet-body">
                              					<table class="table" id="table3">
                              						<thead>
                              							<tr>
@@ -988,13 +982,6 @@
     <!-- card -->
     <script src="resources/vendors/card/jquery.card.js" type="text/javascript"></script>
     <!-- /form elements scripts -->
-    
-    <!-- editable table scripts -->
-    <script type="text/javascript" src="resources/vendors/datatables/select2.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="resources/js/pages/table-editable.js"></script>
-    <!-- /editable table scripts -->
     
     <!-- advanced modal scripts -->
     <script src="resources/vendors/modal/js/classie.js"></script>
