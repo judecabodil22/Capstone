@@ -262,12 +262,12 @@
 											</div>
 											<div class="form-group">
 												<label for="inputnumber" class="control-label">
-													TIN/Employee No. <span class='require'>*</span>
-												</label> <form:select class="form-control col-md-12" path="employee_no" name="employee_no">
+													Employee Assigned<span class='require'>*</span>
+												</label> <form:select class="form-control col-md-12" path="employee_assigned" name="employee_assigned">
 													<c:forEach var="emp" items="${dropDown6}">
 
-														<option value="${emp.employee_no}">
-          											<c:out value="${emp.employee_no}"/>
+														<option value="${emp.employee_assigned}">
+          											<c:out value="${emp.employee_assigned}"/>
     												</option>
 													</c:forEach>
 

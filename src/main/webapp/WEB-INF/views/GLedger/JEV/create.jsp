@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
 
 <!DOCTYPE html>
@@ -28,9 +29,9 @@
     
     <%@ include file = "../../commonHead.jsp" %>
 </head>
-
 <body class="skin-josh">
 
+<%@ include file = "../../commonMsg.jsp" %>
 <%@ include file = "../../commonHeader.jsp" %>
 
 <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -69,7 +70,12 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <form:input path="jev_date" name="jev_date" type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
+                                    <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
+                                    <form:input path="jev_date" name="jev_date" value="${jsp_jev_date}"
+                                        type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
+                                    <span class="input-group-addon danger" required="required">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </span>
                                 </div>
                                 <!-- /.input group -->
                             </div>

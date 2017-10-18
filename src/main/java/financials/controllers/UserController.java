@@ -49,7 +49,7 @@ public class UserController extends BaseController {
 		// login failed
 		else {
 			mav.setViewName("index");
-			mav.addObject("message", "Invalid User"); // variable to view (same controller)
+			mav.addObject("error", "Invalid User"); // variable to view (same controller)
 			// remove login credentials in session
 			this.delLoginSession(session);
 		}

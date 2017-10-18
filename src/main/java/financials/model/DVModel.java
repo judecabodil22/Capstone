@@ -11,11 +11,12 @@ public class DVModel {
 	private String address;
 	private String fund_cluster;
 	private String date;
-	private String employee_no;
+	private String employee_assigned;
 	private String particulars;
 	private String responsibility_center;
 	private String mfo_pap;
 	private String amount;
+	private String employee_no;
 	
 	public String getDv_no() {
 		return dv_no;
@@ -72,11 +73,12 @@ public class DVModel {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	public String getEmployee_no() {
-		return employee_no;
+	
+	public String getEmployee_assigned() {
+		return employee_assigned;
 	}
-	public void setEmployee_no(String employee_no) {
-		this.employee_no = employee_no;
+	public void setEmployee_assigned(String employee_assigned) {
+		this.employee_assigned = employee_assigned;
 	}
 	public String getParticulars() {
 		return particulars;
@@ -101,6 +103,12 @@ public class DVModel {
 	}
 	public void setAmount(String amount) {
 		this.amount = amount;
+	}
+	public String getEmployee_no() {
+		return employee_no;
+	}
+	public void setEmployee_no(String employee_no) {
+		this.employee_no = employee_no;
 	}
 	
 	
