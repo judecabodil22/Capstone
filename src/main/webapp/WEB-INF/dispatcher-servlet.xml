@@ -26,33 +26,36 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <property name="suffix" value=".jsp"></property>
     </bean>
 
-    <mvc:resources mapping="views/" location="/WEB-INF/views/*" />
-   	<mvc:resources mapping="resources/**" location="/resources/html/"/>
+    <mvc:resources mapping="WEB-INF/views/*" location="views/" />
+   	<mvc:resources mapping="resources/**" location="resources/html/"/>
+    <mvc:resources mapping="JEV/resources/**" location="resources/html/"/>
+    <mvc:resources mapping="JEV/view/resources/**" location="resources/html/"/>
   
       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	    <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 	    <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=Financials;integratedSecurity=true" />
-	  
-  	</bean>
+  	   </bean>
+
+	
 
   	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     	<property name="dataSource" ref="dataSource" />
   	</bean>
     
     <!-- DAO auto-wired -->
-   <!--  <bean id="UserDao" class="financials.dao.UserDao">
-        <constructor-arg ref="dataSource"></constructor-arg>
-    </bean> -->
-    
-      <bean id="BeaFormDao" class="financials.dao.BeaFormDao">
+    <bean id="UserDAO" class="financials.dao.UserDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
-  <!--    <bean id="DatDao" class="financials.dao.DatDao">
+    <bean id="JEVDAO" class="financials.dao.JEVDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
-    </bean> -->
+    </bean>
     
-     <bean id="SampleDao" class="financials.dao.SampleDao">
+    <bean id="BeaFormDao" class="financials.dao.BeaFormDao">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="SampleDao" class="financials.dao.SampleDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
 	
@@ -68,6 +71,23 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
+
+    <bean id="lqdao" class="financials.dao.liquidationDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="dvd" class="financials.dao.DVDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="tbd" class="financials.dao.tblreportsDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
+    <bean id="tvd" class="financials.dao.TVoucherDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+
        <bean id="AdminDao" class="financials.dao.AdminDao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
@@ -91,8 +111,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="AdminCoADao" class="financials.dao.AdminCoADao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
-    
-     
-    
 
 </beans>

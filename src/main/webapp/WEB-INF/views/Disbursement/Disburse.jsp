@@ -6,7 +6,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	${dis}
+<div>
+	<h1>${dis}</h1>
+	</div>
 	<form:form action="d_save" modelAttribute="insert" method="post">
 		<table>
 			<tr>
@@ -16,21 +18,54 @@
 
 			<tr>
 				<td>Username:</td>
-				<td><form:input type="text" path="user_name" /></td>
+				<td><form:input type="text" path="username" /></td>
 			</tr>
 
 			<tr>
 				<td>Password:</td>
-				<td><form:input type="password" path="pass_word" /></td>
+				<td><form:input type="password" path="password" /></td>
 			</tr>
 
 			<tr>
 				<td><input type="submit" value="Submit" name="save"></td>
 				
+				<td><input type="submit" value="Update" name="update"></td>
+				
+				<td><input type="submit" value="Delete" name="delete"></td>
+				
+				<td><input type="submit" value="Find User" name="findByID"></td>
+				
+				<td><input type="submit" value="Select All" name="select"></td>
 			</tr>
+			
+			
 		</table>
 	</form:form>
 
+	<center>
+		<table border="2" width="70%" cellpadding="2"
+			style="text-align: center">
+
+			<tr>
+				<th>User ID</th>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+
+			<c:forEach var="user" items="${userList}">
+
+				<tr>
+					<td>${user.user_id}</td>
+					<td>${user.username}</td>
+					<td>${user.password}</td>
+
+				</tr>
+			</c:forEach>
+
+		</table>
+	</center>
+
+	
 	
 	
 	

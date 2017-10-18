@@ -28,9 +28,9 @@ public class SampleDao
 	
 	public boolean insert(SampleModel jude) {
 
-		String sql = "Insert into Users(user_id,user_name,pass_word)" + "VALUES(?,?,?)";
+		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
 
-		jdbcTemplate.update(sql, new Object[] {jude.getUser_id(), jude.getUser_name(), jude.getPass_word()});
+		jdbcTemplate.update(sql, new Object[] {jude.getUser_id(), jude.getUsername(), jude.getPassword()});
 
 		return true;		
 
@@ -38,9 +38,9 @@ public class SampleDao
 	
 	public boolean update(SampleModel user) {
 
-		sql = "Update Users " + "Set user_name = ?, pass_word = ? " + "WHERE user_id = ?";
+		sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
 
-		jdbcTemplate.update(sql, new Object[] { user.getUser_name(), user.getPass_word(), user.getUser_id() });
+		jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getUser_id() });
 
 		return true;
 	}
@@ -53,8 +53,8 @@ public class SampleDao
 			public SampleModel mapRow(ResultSet rs, int row) throws SQLException {
 				SampleModel user = new SampleModel();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				
 				return user;
 			}
@@ -70,8 +70,8 @@ public class SampleDao
 			public SampleModel mapRow(ResultSet rs, int row) throws SQLException {
 				SampleModel user = new SampleModel();
 				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setPass_word(rs.getString("pass_word"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
 				return user;
 			}
 

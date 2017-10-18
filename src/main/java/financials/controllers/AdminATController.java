@@ -15,7 +15,7 @@ public class AdminATController {
 	@Autowired
 	AccountTypeDao dao;
 
-	@RequestMapping("accountTypes")
+	@RequestMapping("admin_accountTypes")
 	public ModelAndView account_types(@ModelAttribute("ATSave") AccountTypeModel model1,
 			@ModelAttribute("accountType_delete") AccountTypeModel model2,
 			@ModelAttribute("accountType_update") AccountTypeModel model3) {
@@ -24,6 +24,7 @@ public class AdminATController {
 		mav.setViewName("Admin/AccountTypes");
 		mav.addObject("types", dao.dropDownType());
 		mav.addObject("accounts", dao.getAccountType());
+		mav.addObject("module", "admin_accountTypes");
 		return mav;
 	}
 
@@ -34,7 +35,7 @@ public class AdminATController {
 
 		ModelAndView mav = new ModelAndView();
 
-		mav.setViewName("redirect:accountTypes");
+		mav.setViewName("redirect:admin_accountTypes");
 
 		return mav;
 	}
@@ -46,7 +47,7 @@ public class AdminATController {
 
 		ModelAndView mav = new ModelAndView();
 
-		mav.setViewName("redirect:accountTypes");
+		mav.setViewName("redirect:admin_accountTypes");
 
 		return mav;
 
@@ -59,7 +60,7 @@ public class AdminATController {
 
 		ModelAndView mav = new ModelAndView();
 
-		mav.setViewName("redirect:accountTypes");
+		mav.setViewName("redirect:admin_accountTypes");
 
 		return mav;
 

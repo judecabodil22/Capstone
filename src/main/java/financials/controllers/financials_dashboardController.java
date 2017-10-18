@@ -11,8 +11,7 @@ public class financials_dashboardController {
 	public ModelAndView fdash()
 	{
 		ModelAndView fd = new ModelAndView();
-		fd.setViewName("financials_dashboard");
+		fd.setViewName("financials_dashboard");//.jsp file
 		return fd;
 	}
 }
-
