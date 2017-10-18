@@ -150,9 +150,9 @@
                     
                     <!-- Disbursement -->
                     <li>
-                        <a href="#">
-                            <i class="livicon" data-name="money" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
-                                <span class="title">Disbursement</span>
+                    	<a href="${ctx}/voucher_transaction">
+                    		<i class="livicon" data-name="money" data-c="#FFFFFF" data-hc="#FFFFFF" data-size="18" data-loop="true"></i>
+                            <span class="title">Disbursement</span>     
                         </a>
                     </li>
                 </ul>        
