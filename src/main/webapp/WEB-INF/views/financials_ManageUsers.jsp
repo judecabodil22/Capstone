@@ -23,7 +23,14 @@
     <!-- end of global css -->
 
     <!-- Added Scripts -->
-
+    <!-- advanced modal scripts -->
+    <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
+    <!-- /advanced modal scripts -->
+    
+    <!-- responsive tables scripts -->
+    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
+    <!-- responsive tables scripts -->
+    
     <!-- /Added Scripts -->
 </head>
 
@@ -545,7 +552,111 @@
         	
         	<section class="content">
         	
-        		
+        	<!-- User List Table -->
+        	<div class="col-md-12">
+        		<div class="portlet box primary">
+                             		
+               		<div class="portlet-title">
+               			<div class="caption" style="position:relative; top:0.25em">
+               				Table of Accounts
+               			</div>
+               			<div class="pull-right">
+               				<a class="btn btn-success btn-sm" data-toggle="modal" data-href="#responsive" href="#responsive">
+               				Add
+               				<i class="fa fa-plus"></i>
+               				</a>
+               				<button type="button" class="btn btn-danger btn-sm" id="delButton">Remove</button>
+               			</div>
+               		</div>
+                             		
+               		<div class="portlet-body">
+               		
+               			<div class="table-responsive">
+               				<table class="table table-striped table-bordered table-hover">
+               					<thead>
+               						<tr>
+	                                    <th>#</th>
+	                 					<th>Name</th>
+	                 					<th>Username</th>
+	                 					<th >Role</th>	         
+	                 				</tr>
+	                 			</thead>
+	                 			
+	                 			<tbody>
+                 					<tr>
+                 						<td>1</td>
+                 						<td>Juan Una</td>
+                 						<td>uno</td>
+                 						<td>user</td>
+                 					</tr>
+                 					<tr>
+                 						<td>2</td>
+                 						<td>Dos Lang</td>
+                 						<td>sapat</td>
+                 						<td>user</td>
+                 					</tr>
+                 					<tr>
+                 						<td>3</td>
+                 						<td>Okay Lang</td>
+                 						<td>masaya</td>
+                 						<td>user</td>
+                 					</tr>
+                 						
+    
+           						</tbody>
+           					</table>
+           				</div>
+             		</div>
+				</div>
+        	
+	           	<!--- Add Modal-->
+	           	<div class="modal fade in" id="responsive" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+	           		<div class="modal-dialog modal-md">
+	           			<div class="modal-content">
+	           				<div class="modal-header">
+	           					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+	           					<h4 class="modal-title">Add User</h4>
+	           				</div>
+	           				
+	           				<div class="modal-body">
+	           					<p>First Name:
+	           						<input id="name11" name="name" type="text" class="form-control">
+	           					</p>
+	           					<p>Last Name:
+	           						<input id="name11" name="name" type="text" class="form-control">
+	           					</p>
+	           					<p>User Role:
+	           						<input id="name11" name="name" type="text" class="form-control">
+	           					</p>
+                                <p>User Name:
+	           						<select id="e1" class="form-control select2">
+       									<option value="1">Administrator</option>
+     									<option value="2">Chief Accountant</option>
+     									<option value="3">Accountant</option>
+     									<option value="4">AP/AR Officer</option>
+     									<option value="5">Collection Officer</option>
+     									<option value="6">Collection Officer</option>
+     									<option value="7">User</option>			
+   									</select>
+	           					</p>
+	           					<p>Password:
+	           						<input id="name11" name="name" type="text" class="form-control">
+	           					</p>
+	           					<p>Confirm Password:
+	           						<input id="name11" name="name" type="text" class="form-control">
+	           					</p>
+                            </div>
+                            
+                            <div class="modal-footer">
+                            	<button type="button" data-dismiss="modal" class="btn btn-primary">Save</button>
+                            	<button type="button" data-dismiss="modal" class="btn">Cancel</button>
+                            </div>
+                        
+                          </div>
+     					</div>			
+	           						 
+					  </div>
+	
 			</section>                  
 		</aside>
     </div> 
@@ -562,6 +673,11 @@
     <!-- end of global js -->
     
     <!-- Added Scripts -->
+    
+    <!-- advanced modal scripts -->
+    <script src="resources/endors/modal/js/classie.js"></script>
+    <script src="resources/vendors/modal/js/modalEffects.js"></script>
+    <!-- /advanced modal scripts -->
     
     <!-- /Added Scripts -->
 </body>

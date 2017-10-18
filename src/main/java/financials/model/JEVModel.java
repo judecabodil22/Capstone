@@ -12,6 +12,7 @@ public class JEVModel {
 	private	Integer tmp_header_uid;
 	private	String particulars;
 	private	Integer trans_transaction_type_uid;
+	private	Integer acc_uid;
 	private	Float amount;
 	private	Boolean account_flag;
 	private	Integer resp_center_uid;
@@ -34,6 +35,7 @@ public class JEVModel {
             Integer tmp_header_uid, 
             String particulars,
             Integer trans_transaction_type_uid, 
+            Integer acc_uid, 
             Float amount,
             Boolean account_flag, 
             Integer resp_center_uid,
@@ -53,6 +55,7 @@ public class JEVModel {
 	    this.tmp_header_uid = tmp_header_uid;
 	    this.particulars = particulars;
 	    this.trans_transaction_type_uid = trans_transaction_type_uid;
+	    this.acc_uid = acc_uid;
 	    this.amount = amount;
 	    this.account_flag = account_flag;
 	    this.resp_center_uid = resp_center_uid;
@@ -161,6 +164,20 @@ public class JEVModel {
 	 */
 	public void setTrans_transaction_type_uid(Integer trans_transaction_type_uid) {
 		this.trans_transaction_type_uid = trans_transaction_type_uid;
+	}
+
+	/**
+	 * @return the acc_uid
+	 */
+	public Integer getAcc_uid() {
+		return acc_uid;
+	}
+
+	/**
+	 * @param acc_uid the acc_uid to set
+	 */
+	public void setAcc_uid(Integer acc_uid) {
+		this.acc_uid = acc_uid;
 	}
 
 	/**

@@ -379,7 +379,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<!--section starts-->
-				<h1>Transaction</h1>
+				<h1>Disbursement Transaction</h1>
 
 			</section>
 			<!--section ends-->
@@ -406,16 +406,16 @@
 											</tr>
 											<c:forEach var="pay" items="${pList}">
 
-												<tr data-institute="${pay.ap_institute_name}">
+												<tr data-institute="${pay.ap_institute_name}" data-claimant="${pay.claim_name}" data-rcenter="${pay.resp_center}" data-amount="${pay.amount}" data-id="${pay.ap_uid}">
 													<td>${pay.ap_institute_name}</td>
 													<td>${pay.purpose}</td>
 													<td>${pay.date}</td>
 													<td>${pay.amount}</td>
 <!-- btn btn-success btn-large -->					<td><span style="margin-top: 75px;"
-														class="label label-sm label-warning">${pay.status}</span></td>
-													<td><a class="ToModal"
+														class="label label-sm label-primary">${pay.ap_status}</span></td>
+													<td><a class="ToModal" onclick="toModal(this)"
 														data-toggle="modal" data-href="#responsive"
-														href="#responsive" class="ToModal">Payment</a></td>
+														href="#responsive">Payment</a></td>
 												</tr>
 											</c:forEach>
 										</thead>
@@ -449,6 +449,7 @@
 					<h4 class="modal-title">Responsive</h4>
 				</div>
 				<div class="modal-body">
+				<form:form action="trans_save" modelAttribute="insert">
 					<div class="row">
 						<div class="col-md-6">
 							<h4><label style="font-style:bold;">Disbursement Voucher</label></h4>
@@ -512,6 +513,8 @@
 							</table>
 						</div>
 						<div class="col-md-6">
+						<br>
+						<br>
 								<table>
 								
 									<tr>
@@ -519,15 +522,15 @@
 												<span class='require'>*</span>
 										</td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-											class="form-control" id="IName" type="text" path="institute"
+											class="form-control" id="inst_name" type="text" path="institute"
 											readOnly="true"></form:input></td>
 									</tr>
 									<tr>
 										<td>Claimant Name <span
 												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-											class="form-control" id="disabledInput" type="text" path="claimant_name"
-											disabled="true"></form:input></td>
+											class="form-control" id="claim_name" type="text" path="claimant_name"
+											readOnly="true"></form:input></td>
 									</tr>
 									<tr>
 										<td>Address <span
@@ -578,21 +581,23 @@
 											<td><form:input type="text" placeholder="Particulars"
 												class="form-control" path="particulars"></form:input></td>
 											<td><form:input 
-											class="form-control" id="disabledInput" type="text" path="responsibility_center"
-											disabled="true"></form:input></td>
+											class="form-control" id="rcenter" type="text" path="responsibility_center"
+											readOnly="true"></form:input></td>
 											<td><form:input type="text" placeholder="MFO/PAP"
 												class="form-control" path="mfo_pap"></form:input></td>
-											<td><form:input type="text" placeholder="Amount"
-												class="form-control" path="dv_amount"></form:input></td>
+											<td><form:input class="form-control" id="amount" type="text" path="dv_amount"
+											readOnly="true"></form:input></td>
 										</tr>
 									</tbody>
 							</table>
 						</center>
 					</div>
 					<div class="modal-footer">
+					<form:input type="hidden" path="ap_uid" id="ap_uid"></form:input>
 						<button type="button" data-dismiss="modal" class="btn">Close</button>
-						<button type="button" class="btn btn-primary">Submit</button>
+						<button name="submit" type="submit" class="btn btn-primary">Submit</button>
 					</div>
+					</form:form>
 				</div>
 			</div>
 		</div>
@@ -643,23 +648,16 @@
 		
 		<script>
             $(document).ready(function(){
-            	// code to read selected table row cell data (values).
-            	$(".ToModal").on('click',function(){
-            		// get data
-            		var data = $(this).closest('tr').data();
-            
-            		// put to modal ----------------------- start
-            		// using jquery codes
-            		/* $('#modal_code').val(data.code);
-            		$('#modal_description').val(data.desc); */
-            		
-            		// using native javascript codes
-            		 document.getElementById("IName").value = data.institute;
-            		 document.getElementById("modal_description").value = data.desc;
-            		 document.getElementById("modal_uid").value = data.uid;
-            		// put to modal ----------------------- ends
-            	});
+            	
             });
+            function toModal(obj){
+            	var data = $(obj).closest('tr').data();
+            	$('.modal #inst_name').val(data.institute);
+            	$('.modal #claim_name').val(data.claimant);
+            	$('.modal #rcenter').val(data.rcenter);
+            	$('.modal #amount').val(data.amount);
+            	$('.modal #ap_uid').val(data.id);
+            }
         </script>
     </body>
 </html>

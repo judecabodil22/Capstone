@@ -2,11 +2,12 @@ package financials.model;
 
 public class TVoucherModel {
 
+	private String ap_uid;
 	private String ap_institute_name;
 	private String purpose;
 	private String date;
 	private String amount;
-	private String status;
+	private String ap_status;
 	private String resp_center;
 	private String claim_name;
 	
@@ -26,6 +27,12 @@ public class TVoucherModel {
 	private String dv_amount;
 	
 	
+	public String getAp_uid() {
+		return ap_uid;
+	}
+	public void setAp_uid(String ap_uid) {
+		this.ap_uid = ap_uid;
+	}
 	public String getPurpose() {
 		return purpose;
 	}
@@ -45,14 +52,15 @@ public class TVoucherModel {
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
 	
 	
+	
+	public String getAp_status() {
+		return ap_status;
+	}
+	public void setAp_status(String ap_status) {
+		this.ap_status = ap_status;
+	}
 	public String getResp_center() {
 		return resp_center;
 	}
