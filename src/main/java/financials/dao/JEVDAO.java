@@ -39,7 +39,6 @@ public class JEVDAO {
 				rs.getInt("tmp_header_uid"),
 				rs.getString("particulars"),
 				rs.getInt("trans_transaction_type_uid"),
-				rs.getInt("acc_uid"),
 				rs.getFloat("amount"),
 				rs.getBoolean("account_flag"),
 				rs.getInt("resp_center_uid"),
@@ -192,11 +191,10 @@ public class JEVDAO {
 		sql.append(" tmp_header_uid, ");
 		sql.append(" particulars, ");
 		sql.append(" trans_transaction_type_uid, ");
-		sql.append(" acc_uid, ");
 		sql.append(" resp_center_uid, ");
 		sql.append(" status, ");
 		sql.append(" prepared_by ");
-		sql.append(" ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) ");
+		sql.append(" ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) ");
 		
 		params.add(model.getJev_no());
 		params.add(model.getJev_date());
@@ -204,7 +202,6 @@ public class JEVDAO {
 		params.add(model.getTmp_header_uid());
 		params.add(model.getParticulars());
 		params.add(model.getTrans_transaction_type_uid());
-		params.add(model.getAcc_uid());
 		params.add(model.getResp_center_uid());
 		params.add(model.getStatus());
 		params.add(model.getPrepared_by());

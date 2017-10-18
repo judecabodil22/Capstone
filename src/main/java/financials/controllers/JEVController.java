@@ -42,6 +42,7 @@ public class JEVController extends BaseController {
 		
 		mav.addObject("data", daoJEV.list());
 		
+		mav.addObject("module", "JEV_list");
 		return mav;
 	}
 	
@@ -66,6 +67,7 @@ public class JEVController extends BaseController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("GLedger/JEV/create");
 		mav.addObject("modelJEV", modelJEV);
+		mav.addObject("module", "JEV_create");
 		return mav;
 	}
 	
@@ -110,6 +112,7 @@ public class JEVController extends BaseController {
 			mav.setViewName("GLedger/JEV/create");
 			mav.addObject("error", "Insert Failed");
 		}
+		mav.addObject("module", "JEV_create");
 		return mav;
 	}
 	
@@ -130,6 +133,7 @@ public class JEVController extends BaseController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("GLedger/JEV/view");
 		mav.addObject("modelJEV", modelJEV);
+		mav.addObject("module", "JEV_list");
 		return mav;
 	}
 }

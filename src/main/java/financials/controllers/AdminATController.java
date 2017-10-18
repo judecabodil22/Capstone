@@ -24,6 +24,7 @@ public class AdminATController {
 		mav.setViewName("Admin/AccountTypes");
 		mav.addObject("types", dao.dropDownType());
 		mav.addObject("accounts", dao.getAccountType());
+		mav.addObject("module", "admin_accountTypes");
 		return mav;
 	}
 

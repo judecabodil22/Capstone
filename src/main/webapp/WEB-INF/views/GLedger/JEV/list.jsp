@@ -70,20 +70,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>JEV010117</td>
-                                        <td>2017-01-01</td>
-                                        <td>Juan Dela Cruz</td>
-                                        <td>
-                                            <span class="label label-sm label-success">Approved</span>
-                                            <span class="label label-sm label-info">Pending</span>
-                                            <span class="label label-sm label-warning">Suspended</span>
-                                            <span class="label label-sm label-danger">Blocked</span>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> View</a>
-                                        </td>
-                                    </tr>
+                                    <!-- <span class="label label-sm label-success">Approved</span>
+                                    <span class="label label-sm label-info">Pending</span>
+                                    <span class="label label-sm label-warning">Suspended</span>
+                                    <span class="label label-sm label-danger">Blocked</span> -->
                                     <c:forEach var="datum" items="${data}">
                                         <tr>
                                             <td>${datum.jev_no}</td>

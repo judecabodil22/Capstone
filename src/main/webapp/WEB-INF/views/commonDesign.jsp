@@ -544,7 +544,7 @@
                         
                         <!-- System Setup sub-menu -->
                         <ul class="sub-menu">
-                        	<li>
+                        	<li id="admin_accountTypes">
                         		<a href="admin_accountTypes">
                         			<i class="fa fa-angle-double-right"></i>
                         			Account Types
@@ -898,4 +898,18 @@
          		</div>
          	</section>
         </aside>
-        
+
+<script>
+$(document).ready(function(){
+    $.each($('.sidebar li'), function(k, v){
+        $(v).removeClass("active");
+    });
+    $('#' + "${module}").addClass("active");
+    $.each($('#' + "${module}").parents('li'), function(k, v){
+        $(v).addClass("active");
+    });
+    $.each($('#' + "${module}").parents('ul'), function(k, v){
+        $(v).addClass("collapse in").attr("aria-expanded", true);
+    });
+});
+</script>

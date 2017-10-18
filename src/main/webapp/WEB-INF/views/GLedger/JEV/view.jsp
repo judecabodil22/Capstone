@@ -85,9 +85,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Account Type</td>
+                                <td>Responsibility Center</td>
                                 <td>
-                                    <label>${modelJEV.acc_uid}</label>
+                                    <label>${modelJEV.resp_center_uid}</label>
                                 </td>
                             </tr>
                             <tr>

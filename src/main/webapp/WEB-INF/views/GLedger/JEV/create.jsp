@@ -120,14 +120,12 @@
                             
                             <div class="form-group">
                                 <label for="e1" class="control-label">
-                                    Account Type
+                                    Responsibility Center
                                 </label>
-                                <form:select path="acc_uid" name="acc_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Account Type 1</form:option>
-                                    <form:option value="2">Account Type 2</form:option>
-                                    <form:option value="3">Account Type 3</form:option>
-                                    <form:option value="4">Account Type 4</form:option>
-                                    <form:option value="5">Account Type 5</form:option>
+                                <form:select path="resp_center_uid" name="resp_center_uid" id="e1" class="form-control select2">
+                                    <form:option value="1">IT Department</form:option>
+                                    <form:option value="2">HR Department</form:option>
+                                    <form:option value="3">Faculty</form:option>
                                 </form:select>
                             </div>
                             
