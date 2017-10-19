@@ -365,7 +365,7 @@
 		<!-- Logo -->
 		<a href="financials_dashboard" class="logo">
 			<!-- <img src="resources/img/logo.png" alt="Logo"> -->
-			FINANCIALS
+			<h1>FINANCIALS</h1>
         </a>       
         <!-- /Logo -->
         
