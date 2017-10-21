@@ -413,7 +413,7 @@
 													<td>${pay.amount}</td>
 <!-- btn btn-success btn-large -->					<td><span style="margin-top: 75px;"
 														class="label label-sm label-primary">${pay.ap_status}</span></td>
-													<td><a class="ToModal" onclick="toModal(this)"
+													<td><a class="ToModal"
 														data-toggle="modal" data-href="#responsive"
 														href="#responsive">Payment</a></td>
 												</tr>
@@ -634,30 +634,29 @@
 		<!-- begining of page level js -->
 		<script type="text/javascript"
 			src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
-		<script type="text/javascript"
-			src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
+		<!-- <script type="text/javascript"
+			src="resources/vendors/datatables/dataTables.tableTools.min.js"></script> -->
 		<script type="text/javascript"
 			src="resources/vendors/datatables/dataTables.colReorder.min.js"></script>
 		<script type="text/javascript"
 			src="resources/vendors/datatables/dataTables.scroller.min.js"></script>
 		<script type="text/javascript"
 			src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
-		<script type="text/javascript"
-			src="resources/js/pages/table-advanced.js"></script>
+		<!-- <script type="text/javascript"
+			src="resources/js/pages/table-advanced.js"></script> -->
 		<!-- end of page level js -->
 		
 		<script>
             $(document).ready(function(){
-            	
+                $('table .ToModal').on('click', function(){
+                    var data = $(obj).closest('tr').data();
+                    $('.modal #inst_name').val(data.institute);
+                    $('.modal #claim_name').val(data.claimant);
+                    $('.modal #rcenter').val(data.rcenter);
+                    $('.modal #amount').val(data.amount);
+                    $('.modal #ap_uid').val(data.id);
+                });
             });
-            function toModal(obj){
-            	var data = $(obj).closest('tr').data();
-            	$('.modal #inst_name').val(data.institute);
-            	$('.modal #claim_name').val(data.claimant);
-            	$('.modal #rcenter').val(data.rcenter);
-            	$('.modal #amount').val(data.amount);
-            	$('.modal #ap_uid').val(data.id);
-            }
         </script>
     </body>
 </html>
