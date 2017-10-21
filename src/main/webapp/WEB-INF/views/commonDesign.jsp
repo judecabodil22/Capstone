@@ -31,14 +31,9 @@
     <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
 
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
 	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	
     <!-- end of global css -->    
@@ -48,15 +43,8 @@
     <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
     <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
    
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
       
     <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -69,50 +57,6 @@
     <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
     <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
-   
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
-
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
-	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-	
-    <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-	
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    
-    <!-- end of global css -->
-    <!-- page level css -->
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-	
-	<!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
-    <!-- begining of page level js -->
-    <!--  todolist-->
     <script src="resources/js/todolist.js"></script>
     <!-- EASY PIE CHART JS -->
     <script src="resources/vendors/charts/easypiechart.min.js"></script>
@@ -132,121 +76,13 @@
     <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <script src="resources/vendors/jscharts/Chart.js"></script>
     <script src="resources/js/dashboard.js" type="text/javascript"></script>
-  
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
-
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
-	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-	
-    <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    
-    <!-- end of global css -->
-    <!-- page level css -->
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-   
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
-
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
-	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-	
-    <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-   
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    
-    <!-- end of global css -->
-    <!-- page level css -->
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-	
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	 <link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
-
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
-	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-	
-    <!-- end of global css -->    
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
-    <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-	
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    
-    <!-- end of global css -->
-    <!-- page level css -->
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-    
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
     <!-- end of global css -->    
     <!--page level css -->
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.colReorder.min.css" />
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.scroller.min.css" />
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.bootstrap.css" />
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css">
     <!--end of page level css-->
 		
-	<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
     <!-- begining of page level js -->
     <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
@@ -256,32 +92,6 @@
     <script type="text/javascript" src="resources/js/pages/table-advanced.js"></script>
 	<script src="resources/vendors/modal/js/classie.js"></script>
 	<script src="resources/vendors/modal/js/modalEffects.js"></script>
-	
-	 <meta charset="UTF-8">
-   
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    <!-- end of global css -->
-    <!--page level css -->
-    <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-    <!--page level styles ends-->
-	
-	 <!--Eto dinagdag ko-->
-	<link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
-    <!--end of page level css-->
 	
    	
     <script type="text/javascript">
@@ -295,68 +105,6 @@
     });
     </script>
     <!-- end of page level js -->
-	
-    <!--end of page level css-->
-    
-    <!-- /Unfixed Scripts -->
-    
-        <!-- global js -->
-        <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-        <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-        <!--livicons-->
-        <script src="resources/vendors/livicons/minified/raphael-min.js"></script>
-        <script src="resources/vendors/livicons/minified/livicons-1.4.min.js"></script>
-        <script src="resources/js/josh.js" type="text/javascript"></script>
-        <script src="resources/js/metisMenu.js" type="text/javascript"></script>
-        <script src="resources/vendors/holder-master/holder.js"></script>
-        <!-- end of global js -->
-        <!-- begining of page level js -->
-        <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-        <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
-		
-		 <meta charset="UTF-8">
- 
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-		
-		<!-- Dinagdag ko rin to -->
-		<script src="resources/vendors/modal/js/classie.js"></script>
-		<script src="resources/vendors/modal/js/modalEffects.js"></script>
-
-		  <meta charset="UTF-8">
-    
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
-    
-    <!-- end of global css -->
-    <!-- page level css -->
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
-    <!--end of page level css-->
-        
-    
-
 </head>
 
 <body class="skin-josh">
@@ -600,14 +348,14 @@
                                 </a>
                                 
                                 <ul class="sub-menu">
-                                	<li>
+                                	<li id="JEV_create">
                                 		<a href="financials_createjev">
                                 			<i class="fa fa-angle-double-right"></i>
                                 			Create JEV
                                 		</a>
                                 	</li>
                                 	
-                                	<li>
+                                	<li id="JEV_list">
                                 		<a href="JEV/list">
                                 			<i class="fa fa-angle-double-right"></i>
                                 			Review JEV
