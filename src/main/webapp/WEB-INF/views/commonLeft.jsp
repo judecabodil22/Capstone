@@ -86,7 +86,7 @@
                         
                         <ul class="sub-menu">
                             <li id="JEV_create">
-                                <a href="${ctx}/financials_createjev">
+                                <a href="${ctx}/JEV/create">
                                     <i class="fa fa-angle-double-right"></i>
                                     Create JEV
                                 </a>
@@ -348,7 +348,6 @@
                 <!-- Manage Users -->
                 <li>
                     <a href="financials_manageusers">
-                        <!-- <i class="livicon" data-name=" " data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i> -->
                             <span class="title">Manage Users</span>
                     </a>
                 </li>
@@ -356,7 +355,6 @@
                 <!-- Settings -->
                 <li>
                     <a href="#">
-                        <!-- <i class="livicon" data-name=" " data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i> -->
                             <span class="title">Settings</span>
                             <span class="fa arrow"></span>
                     </a>
@@ -383,17 +381,3 @@
         </div>
     </section>
 </aside>
-<script>
-$(document).ready(function(){
-    $.each($('.sidebar li'), function(k, v){
-        $(v).removeClass("active");
-    });
-    $('#' + "${module}").addClass("active");
-    $.each($('#' + "${module}").parents('li'), function(k, v){
-        $(v).addClass("active");
-    });
-    $.each($('#' + "${module}").parents('ul'), function(k, v){
-        $(v).addClass("collapse in").attr("aria-expanded", true);
-    });
-});
-</script>
