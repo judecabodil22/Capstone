@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Error </title>
+    <title> Error ${no}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- global level js-->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -19,14 +19,14 @@
 
 <body>
     <div class="hgroup">
-        <h1>Authentication Error</h1>
+        <h1>Error ${no}</h1>
         <div>
             <i class="livicon" data-name="user-ban" data-size="50" data-c="#fff" data-hc="#fff" data-loop="true"></i>
         </div>
         
-        <h2>Page is not available for public access</h2>
+        <h2>Page is not available</h2>
         <a href="${ctx}/">
-            <button type="button" class="btn btn-responsive button-alignment">Login</button>
+            <button type="button" class="btn btn-responsive button-alignment">Home</button>
         </a>
     </div>
     <!-- global js -->
