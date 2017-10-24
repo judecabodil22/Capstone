@@ -30,11 +30,12 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
    	<mvc:resources mapping="resources/**" location="resources/html/"/>
     <mvc:resources mapping="JEV/resources/**" location="resources/html/"/>
     <mvc:resources mapping="JEV/view/resources/**" location="resources/html/"/>
+    <mvc:resources mapping="error/**/**" location="resources/html/"/>
   
       <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	    <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-	    <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=Financials;integratedSecurity=true" />
-  	   </bean>
+          <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+          <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=Financials;integratedSecurity=true" />
+      </bean>
 
 	
 
