@@ -143,17 +143,8 @@
     </section>
 </aside>
 </div>
-    
-    <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
+
+<%@ include file = "../../commonFoot.jsp" %>
 
 </body>
 </html>

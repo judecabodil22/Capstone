@@ -19,7 +19,7 @@
                 </ol>
             </section>
             <section class="content">
-                <div style="margin:0">
+                <div class="col-md-12">
                         <div class="portlet box primary">
                            <div class="portlet-title">
                                 <h3 class="caption">
@@ -28,7 +28,7 @@
                                 </h3>
                                 <div class="pull-right">
 									
-									<a type="button" class="btn btn-success btn-sm" data-toggle="modal" data-href="#add" href="#add"><span class="glyphicon glyphicon-check"></span>Add</a>
+									<a type="button" class="btn btn-success btn-sm buttonSize" data-toggle="modal" data-href="#add" href="#add"><span class="glyphicon glyphicon-check"></span>Add</a>
                                   
                                    </div>
                                    
