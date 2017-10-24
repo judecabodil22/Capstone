@@ -32,14 +32,13 @@
     <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
 
     <!-- global css -->
+<<<<<<< HEAD
     
+=======
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
-    <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
-    <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>   
 	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 	
     <!-- end of global css -->    
@@ -49,6 +48,7 @@
     <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
     <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
 	
    
@@ -58,6 +58,10 @@
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>
+=======
+   
+    <!-- global css -->
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
       
     <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -70,6 +74,7 @@
     <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
     <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
     <!-- end of global js -->
+<<<<<<< HEAD
    
     <!-- global css -->
    
@@ -114,6 +119,8 @@
     <!-- end of global js -->
     <!-- begining of page level js -->
     <!--  todolist-->
+=======
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
     <script src="resources/js/todolist.js"></script>
     <!-- EASY PIE CHART JS -->
     <script src="resources/vendors/charts/easypiechart.min.js"></script>
@@ -133,6 +140,7 @@
     <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <script src="resources/vendors/jscharts/Chart.js"></script>
     <script src="resources/js/dashboard.js" type="text/javascript"></script>
+<<<<<<< HEAD
   
     <!-- global css -->
     
@@ -231,23 +239,15 @@
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
     <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css"/>    
+=======
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
     <!-- end of global css -->    
     <!--page level css -->
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.colReorder.min.css" />
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.scroller.min.css" />
     <link rel="stylesheet" type="text/css" href="resources/vendors/datatables/css/dataTables.bootstrap.css" />
-    <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css">
     <!--end of page level css-->
 		
-	<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
     <!-- begining of page level js -->
     <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
@@ -258,6 +258,7 @@
 	<script src="resources/vendors/modal/js/classie.js"></script>
 	<script src="resources/vendors/modal/js/modalEffects.js"></script>
 	
+<<<<<<< HEAD
 	 
    
     
@@ -284,6 +285,8 @@
 	<link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
     <!--end of page level css-->
 	
+=======
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
    	
     <script type="text/javascript">
     $(document).ready(function() {
@@ -296,6 +299,7 @@
     });
     </script>
     <!-- end of page level js -->
+<<<<<<< HEAD
 	
     <!--end of page level css-->
     
@@ -358,6 +362,8 @@
         
     
 
+=======
+>>>>>>> 516fab18f20086913c11ac78484a7e955ceea7bd
 </head>
 
 <body class="skin-josh">
@@ -366,7 +372,7 @@
 		<!-- Logo -->
 		<a href="financials_dashboard" class="logo">
 			<!-- <img src="resources/img/logo.png" alt="Logo"> -->
-			FINANCIALS
+			<h1>FINANCIALS</h1>
         </a>       
         <!-- /Logo -->
         
@@ -601,14 +607,14 @@
                                 </a>
                                 
                                 <ul class="sub-menu">
-                                	<li>
+                                	<li id="JEV_create">
                                 		<a href="financials_createjev">
                                 			<i class="fa fa-angle-double-right"></i>
                                 			Create JEV
                                 		</a>
                                 	</li>
                                 	
-                                	<li>
+                                	<li id="JEV_list">
                                 		<a href="JEV/list">
                                 			<i class="fa fa-angle-double-right"></i>
                                 			Review JEV
