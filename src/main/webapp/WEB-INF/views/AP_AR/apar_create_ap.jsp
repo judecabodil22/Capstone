@@ -426,10 +426,7 @@
 																<option value="">Paid</option>
 																</select>
 														</div>
-														<div class="form-group col-md-12">
-                                                                <label for="">Disbursement Voucher (DV) Number</label>
-                                                                <input type="text" class="form-control">
-														</div>
+														
 													</form>
                                                 </div>
 												<div class="row">
@@ -588,10 +585,6 @@
                                                 <td>Status</td>
                                                 <td>Paid</td>
                                             </tr>
-                                            <tr>
-                                                <td>Disbursement Voucher Number</td>
-                                                <td>DV20140304000012</td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -676,10 +669,6 @@
 																<option value="">Unpaid</option>
 																<option value="">Paid</option>
 																</select>
-														</div>
-														<div class="form-group col-md-12">
-                                                                <label for="">Disbursement Voucher (DV) Number</label>
-                                                                <input type="text" class="form-control">
 														</div>
 													</form>
                                                 </div>
