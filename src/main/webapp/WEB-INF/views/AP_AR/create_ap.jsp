@@ -58,22 +58,26 @@
 						</h3>
 					</div>
 					<div class="panel-body">
-					<form:form action="" modelAttribute="model" method="post" accept-charset="UTF-8" role="form">
+					<form:form action="save" modelAttribute="model" method="post" accept-charset="UTF-8" role="form">
 						<div class="row">
 							<div class="col-md-6">
 									<div class="form-group col-md-12">
 										<label for="">Company Name</label>
-										 	<input type="text" class="form-control ">
+										 	<form:input path="ap_company_name" type="text" class="form-control "/>
 									</div>
 									<div class="form-group col-md-12">
 										<label for="">Claimant Name</label>
-										<input type="text" class="form-control">
+										<form:input path="ap_claimant" type="text" class="form-control"/>
 									</div>
 									<div class="form-group col-md-12">
 										<label for="">Responsibility Center</label>
-										<select	class="form-control select2">
-											<option value="">AAAACK</option>
-										</select>
+										<form:select id="ap1" path ="resp_center_uid" class="form-control select2">
+											<c:forEach var="resp" items="${tbl_responsibility_center}">
+											<option value="${resp.resp_center_uid}">
+											${resp.resp_center_description}
+											</option>
+											</c:forEach>
+										</form:select>
 									</div>
 									<div class="form-group col-md-12">
 										 <label>Voucher Date</label>
@@ -110,7 +114,7 @@
 									</div>
 								<div class="form-group col-md-12">
 									<label for="">Particulars</label>
-									<textarea id="textarea" rows="4" class="form-control"style="resize:none" maxlength="1000" placeholder="Write something here..."></textarea>
+									<form:textarea path="ap_particulars" id="textarea" rows="4" class="form-control"style="resize:none" maxlength="1000" placeholder="Write something here..."></form:textarea>
 								</div>
 								<div class="form-group col-md-12">
 									<label for="">Status</label>
@@ -119,20 +123,20 @@
 										<form:option value="2">Paid</form:option>
 									</form:select>
 								</div>
+							</div>
+							<div class="row">
+								<hr>
+								<div style="float: right">
+									<label class="col-md-4 control-label" for="CAPSaveButton"></label>
+									<div class="col-md-4">
+										<button id="CAPSaveButton" name="CAPSaveButton" class="btn btn-primary">Save</button>
+									</div>
+								
 								</div>
-									<div class="row">
-										<hr>
-										<div style="float: right">
-											<label class="col-md-4 control-label" for="CAPSaveButton"></label>
-											<div class="col-md-4">
-												<button id="CAPSaveButton" name="CAPSaveButton" class="btn btn-primary">Save</button>
-											</div>
-										
-										</div>
-									</div> 
-								</div>
-							</form:form>	
+							</div> 
 						</div>
+					</form:form>
+					</div>
 				</div>
 			</div>
 		</div>

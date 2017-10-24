@@ -2,6 +2,7 @@ package financials.controllers;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -31,6 +32,13 @@ public class financials_apar_apController extends BaseController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("AP_AR/create_ap");
 		mav.addObject("model", model);
+		
+		List<apar_CreateapMODEL> list = dao.dropdownresp_id();
+		mav.addObject("tbl_responsibility_center", list);
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i).getResp_center_description());
+		}
 		return mav;
 	}
 }
