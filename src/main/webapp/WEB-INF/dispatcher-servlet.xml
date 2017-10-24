@@ -112,7 +112,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="AdminCoADao" class="financials.dao.AdminCoADao">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
-	<bean id="CreateAPDao" class="financials.dao.AdminCoADao">
+	<bean id="CreateAPDAO" class="financials.dao.CreateAPDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
 </beans>
