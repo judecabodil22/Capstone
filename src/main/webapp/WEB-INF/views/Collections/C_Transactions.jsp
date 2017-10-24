@@ -48,11 +48,11 @@
                                         <div class="col-md-4 pd-col-4">
                                           
 											
-                                            <form role="form" style="margin-top:1em;">
+                                            <form:form role="form" style="margin-top:1em;" modelAttribute="ctransac">
 											
 											<div>
                                                     <label for="input-text-1">OR Number</label>
-                                                    <input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" disabled>
+                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="C_OR_ID"/>
 													<p class="help-block"></p>
 													
 						 
@@ -60,38 +60,39 @@
 												
 												<div>
 												<label for="input-text-1">Type</label>
-												<select id="e1" class="form-control select2">
-                                        <optgroup label="Income Generating Projects">
-                                            <option value="CT">Canteen</option>
-                                            <option value="HI">Job Fair</option>
-											<option value="HI">Seminars</option>
-                                        </optgroup>
-                                        
-                                            <option value="CA">Tuition Fees</option>
-                                            <option value="NV">Government Fund</option>
-												</select>
+												
+                                        		<form:select id="e1" class="form-control select2" path="Type_ID">
+												<c:forEach var="igp" items="${IGP_Type}">  
+   	  
+   												<option value="${igp.type_ID}">
+           											${igp.c_Type}
+    											</option>
+												</c:forEach>
+	
+												</form:select>
+												
 											<p class="help-block"></p>
 												</div>
 											
                                                 <div>
                                                     <label for="input-text-1">Name</label>
-                                                    <input type="name" class="form-control" id="input-text-1" placeholder="Enter Name">
+                                                    <form:input type="name" class="form-control" id="input-text-1" placeholder="Enter Name" path="C_Payee"/>
                                                     <p class="help-block">Name of Payer</p>
                                                 </div>
                                                 <div>
                                                     <label for="input-password-1">Description</label>
-                                                    <input type="desc" class="form-control" id="input-password-1" placeholder="Description">
+                                                    <form:input type="desc" class="form-control" id="input-password-1" placeholder="Description" path="C_TransDesc"/>
 													<p class="help-block">Transaction Purposes</p>
                                                     
                                                 </div>
                                                 <div>
                                                     <label for="select-1">Payment</label>
-                                                    <input type="float" class="form-control" id="input-password-1" placeholder="&#8369; 000.00">
+                                                    <form:input type="float" class="form-control" id="input-password-1" placeholder="&#8369; 000.00" path="C_Payment"/>
                                                     <p class="help-block">Please enter amount in Peso.</p>
                                                 </div>
                                                 <div class="form-group draggable">
                                                     <label for="select-1">Date</label>
-                                                    <input type="date" class="form-control" id="input-password-1">
+                                                    <form:input type="date" class="form-control" id="input-password-1" path="C_Date_Paid"/>
                                                     <p class="help-block"></p>
 													
 													</div>
@@ -101,7 +102,7 @@
                                                 </div>
 												
 												
-												</form>
+												</form:form>
 												 <a class="btn btn-effect btn-primary" data-modal="modal-confirmation">Submit</a>
 											</div>
 										</div>
