@@ -4,14 +4,15 @@
 <head>
 	<meta charset="UTF-8">   
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ 
     <!--[if lt IE 9]>
     <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
+    <!-- Done -->
     <link href="resources/css/Necessary.css" rel="stylesheet" type="text/css" />
+    <!-- Done -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -31,7 +32,7 @@
     <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
 
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
@@ -49,10 +50,10 @@
     <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
     <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	
    
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -71,7 +72,7 @@
     <!-- end of global js -->
    
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+   
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
@@ -88,10 +89,10 @@
     <link rel="stylesheet" media="all" href="resources/vendors/jvectormap/jquery-jvectormap.css" />
     <link rel="stylesheet" href="resources/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
-	<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	
 	
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+   
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -134,7 +135,7 @@
     <script src="resources/js/dashboard.js" type="text/javascript"></script>
   
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
@@ -153,7 +154,7 @@
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
 
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -164,7 +165,7 @@
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
    
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
 	<link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
@@ -183,7 +184,7 @@
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
    
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -194,7 +195,7 @@
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
 	
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
 	 <link href="resources/vendors/Simple-Line-Icons-Webfont/simple-line-icons.css" rel="stylesheet" type="text/css" />
 
     <!-- font Awesome -->
@@ -213,7 +214,7 @@
     <link rel="stylesheet" href="resources/css/only_dashboard.css" />
 	
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -224,7 +225,7 @@
     <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
     
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- font Awesome -->
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
@@ -257,9 +258,9 @@
 	<script src="resources/vendors/modal/js/classie.js"></script>
 	<script src="resources/vendors/modal/js/modalEffects.js"></script>
 	
-	 <meta charset="UTF-8">
+	 
    
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -267,7 +268,7 @@
     <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- font Awesome -->
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
@@ -314,9 +315,9 @@
         <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
         <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
 		
-		 <meta charset="UTF-8">
+		
  
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -324,7 +325,7 @@
     <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -334,9 +335,9 @@
 		<script src="resources/vendors/modal/js/classie.js"></script>
 		<script src="resources/vendors/modal/js/modalEffects.js"></script>
 
-		  <meta charset="UTF-8">
+		 
     
-    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -344,7 +345,7 @@
     <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
     <link href="resources/css/panel.css" rel="stylesheet" type="text/css"/>
@@ -529,7 +530,7 @@
 					<!-- Dashboard -->
 					<li class="active">
 						<a href="financials_dashboard">
-							<!--  <i class="livicon" data-name=" " data-size="18" data-c="#fff" data-hc="#fff" data-loop="true"></i> -->
+							  <i class="livicon" data-name=" " data-size="18" data-c="#fff" data-hc="#fff" data-loop="true"></i>
   								<span class="title">Dashboard</span>
   						</a>
   					</li>
