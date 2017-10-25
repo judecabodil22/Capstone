@@ -138,6 +138,15 @@ public class JEVDAO {
 	}
 	
 	
+	public String getNewNo() {
+		List<Object> params = new ArrayList<Object>();
+		StringBuilder sql = new StringBuilder("SELECT count(*) as cnt FROM ");
+		sql.append(this.table);
+		int count = jdbcTemplate.queryForObject(sql.toString(), params.toArray(), Integer.class);
+		return "TRAN" + String.format("%04d", ++count);
+	}
+	
+	
 	
 	public UserModel get(String id, String username, String password) {
 		List<Object> params = new ArrayList<Object>();
