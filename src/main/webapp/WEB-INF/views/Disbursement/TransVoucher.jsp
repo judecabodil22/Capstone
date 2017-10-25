@@ -40,8 +40,8 @@
 
 <body class="skin-josh">
 	<header class="header">
-		<a href="resources/index.html" class="logo"> <img
-			src="resources/img/logo.png" alt="logo">
+		<a href="resources/index.html" class="logo">
+		<h1>Financials</h1>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">
 			<!-- Sidebar toggle button-->
@@ -390,7 +390,11 @@
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 						<div class="portlet box primary">
 							<div class="portlet-title">
-								<div class="caption">Payables</div>
+								<div class="caption">
+										<i class="livicon" data-name="camera-alt" data-size="16"
+											data-loop="true" data-c="#fff" data-hc="white"></i>
+										Pending Transactions
+									</div>
 							</div>
 							<div class="portlet-body">
 								<div class="table-toolbar"></div>
@@ -399,16 +403,14 @@
 										<thead>
 											<tr role="row">
 												<th>Institute Name</th>
-												<th>Purpose</th>
 												<th>Due Date</th>
 												<th>Amount</th>
 												<th>Status</th>
 											</tr>
 											<c:forEach var="pay" items="${pList}">
 
-												<tr data-institute="${pay.ap_institute_name}" data-claimant="${pay.claim_name}" data-rcenter="${pay.resp_center}" data-amount="${pay.amount}" data-id="${pay.ap_uid}">
+												<tr data-institute="${pay.ap_institute_name}" data-claimant="${pay.claim_name}" data-rcenter="${pay.resp_center}" data-amount="${pay.amount}" data-id="${pay.ap_uid}" data-ap_address="${pay.ap_address}">
 													<td>${pay.ap_institute_name}</td>
-													<td>${pay.purpose}</td>
 													<td>${pay.date}</td>
 													<td>${pay.amount}</td>
 <!-- btn btn-success btn-large -->					<td><span style="margin-top: 75px;"
@@ -537,8 +539,8 @@
 												class='require'>*</span></td>
 										<td><div class="col-md-12">
 												<form:textarea style="margin-top: 10px;" class="form-control"
-													id="message" name="message" placeholder="Enter Address" path="address"
-													rows="3"></form:textarea>
+													id="ap_address" name="message" placeholder="Enter Address" path="address"
+													readOnly="true" rows="3"></form:textarea>
 											</div></td>
 									</tr>
 									<tr>
@@ -559,7 +561,7 @@
 										<td>Date <span
 												class='require'>*</span></td>
 										<td><form:input style="margin-left: 10px; margin-top: 10px;"
-											id="name" name="name" type="text" placeholder="Date"
+											id="name" name="name" type="date" placeholder="Date"
 											class="form-control" path="dv_date"></form:input></td>
 									</tr>
 									</div>
@@ -656,6 +658,7 @@
             	$('.modal #claim_name').val(data.claimant);
             	$('.modal #rcenter').val(data.rcenter);
             	$('.modal #amount').val(data.amount);
+            	$('.modal #ap_address').val(data.ap_address);
             	$('.modal #ap_uid').val(data.id);
             }
         </script>

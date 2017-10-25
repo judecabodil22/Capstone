@@ -29,19 +29,19 @@ public class TVoucherDAO {
 	}
 	public List<TVoucherModel> getList() {
 
-		sql = "Select * from tbl_apayable ";
+		sql = "Select * from tbl_apayable " + "WHERE ap_status = 'Pending'";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
 				tvm.setAp_uid(rs.getString("ap_uid"));
 				tvm.setAp_institute_name(rs.getString("ap_institute_name"));
-				tvm.setPurpose(rs.getString("ap_purpose"));
 				tvm.setDate(rs.getString("ap_date"));
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setAp_status(rs.getString("ap_status"));
 				tvm.setClaim_name(rs.getString("claimant_name"));
 				tvm.setResp_center(rs.getString("ap_resp_center"));
+				tvm.setAp_address(rs.getString("ap_address"));
 				return tvm;
 			}
 		});

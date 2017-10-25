@@ -28,7 +28,7 @@ public class tblreportsDAO {
 	
 	public List<tblreportsModel> getDV() {
 
-		sql = "Select dv_no, disbursement_purpose, mode_of_payment, institute_name, responsibility_center, amount, employee_no from dv_transaction";
+		sql = "Select dv_no, disbursement_purpose, mode_of_payment, institute_name, responsibility_center, amount, employee_assigned, status from dv_transaction";
 
 		return jdbcTemplate.query(sql, new RowMapper<tblreportsModel>() {
 			public tblreportsModel mapRow(ResultSet rs, int row) throws SQLException {
@@ -39,7 +39,8 @@ public class tblreportsDAO {
 				trm.setInstitute_name(rs.getString("institute_name"));
 				trm.setResponsibility_center(rs.getString("responsibility_center"));
 				trm.setAmount(rs.getString("amount"));
-				trm.setEmployee_no(rs.getString("employee_no"));
+				trm.setEmployee_assigned(rs.getString("employee_assigned"));
+				trm.setStatus(rs.getString("status"));
 				return trm;
 			}
 		});

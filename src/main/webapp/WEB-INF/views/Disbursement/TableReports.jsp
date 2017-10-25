@@ -39,8 +39,8 @@
 
 <body class="skin-josh">
 	<header class="header">
-		<a href="resources/index.html" class="logo"> <img src="resources/img/logo.png"
-			alt="logo">
+		<a href="resources/index.html" class="logo">
+		<h1>Financials</h1>
 		</a>
 		<nav class="navbar navbar-static-top" role="navigation">
 			<!-- Sidebar toggle button-->
@@ -128,14 +128,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<!--section starts-->
-				<h1>Advanced Datatables</h1>
-				<ol class="breadcrumb">
-					<li><a href="resources/index.html"> <i class="livicon"
-							data-name="home" data-size="18" data-loop="true"></i> Home
-					</a></li>
-					<li><a href="resources/#">DataTables</a></li>
-					<li class="active">Advanced Datatables</li>
-				</ol>
+				<h1>List</h1>
 			</section>
 			<!--section ends-->
 			<section class="content">
@@ -147,7 +140,7 @@
 									<div class="caption">
 										<i class="livicon" data-name="camera-alt" data-size="16"
 											data-loop="true" data-c="#fff" data-hc="white"></i>
-										TableTools
+										Paid Transactions
 									</div>
 
 								</div>
@@ -155,7 +148,7 @@
 
 							</div>
 							<div class="panel-body">
-								<table class="table table-striped table-responsive" id="table1">
+								<table class="table table-striped table-responsive">
 									<thead>
 										<tr>
 
@@ -166,6 +159,7 @@
 											<th>Responsibility Center</th>
 											<th>Amount</th>
 											<th>Officer Assigned</th>
+											<th>Status</th>
 										</tr>
 										
 										<c:forEach var="dv" items="${dvList}">
@@ -177,7 +171,8 @@
 												<td>${dv.institute_name}</td>
 												<td>${dv.responsibility_center}</td>
 												<td>${dv.amount}</td>
-												<td>${dv.employee_no}</td>
+												<td>${dv.employee_assigned}</td>
+												<td><span class="label label-sm label-primary">${dv.status}</span></td>
 							
 											</tr>
 										</c:forEach>
