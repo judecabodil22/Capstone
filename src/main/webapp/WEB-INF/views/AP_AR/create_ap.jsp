@@ -128,9 +128,9 @@
 							<div class="row">
 								<hr>
 								<div style="float: right">
-									<label class="col-md-4 control-label" for="CAPSaveButton"></label>
+									<label class="col-md-4 control-label" for="cap_save"></label>
 									<div class="col-md-4">
-										<button id="CAPSaveButton" name="CAPSaveButton" class="btn btn-primary">Save</button>
+										<button id="CAPSaveButton" input type="submit" name="CAPSaveButton" class="btn btn-primary">Save</button>
 									</div>
 								
 								</div>

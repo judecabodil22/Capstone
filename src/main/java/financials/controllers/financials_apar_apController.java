@@ -26,9 +26,11 @@ public class financials_apar_apController extends BaseController {
 	
 	@RequestMapping("ap_create")
 	public ModelAndView create(
+			@ModelAttribute("cap_model") apar_CreateapMODEL cap_model,
 			HttpServletRequest request, 
 			HttpSession session,
-			@ModelAttribute("modelBind") apar_CreateapMODEL model){
+			@ModelAttribute("modelBind") apar_CreateapMODEL model)
+			{
 		
 		
 		ModelAndView mav = new ModelAndView();
