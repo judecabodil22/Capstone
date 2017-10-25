@@ -23,6 +23,13 @@ public class JEVModel {
 	private	Integer disapproved_by;
 	private	String remarks;
 	
+	// name for foreign key
+	private	String fund_uid_name;
+	private	String tmp_header_uid_name;
+	private	String trans_transaction_type_uid_name;
+	private	String resp_center_uid_name;
+	private	String prepared_by_name;
+	
 	
 	public JEVModel() {
 	}
@@ -301,6 +308,84 @@ public class JEVModel {
 	 */
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
+	}
+
+	/**
+	 * @return the fund_uid_name
+	 */
+	public String getFund_uid_name() {
+		return fund_uid_name;
+	}
+
+	/**
+	 * @param fund_uid_name the fund_uid_name to set
+	 */
+	public void setFund_uid_name(String fund_uid_name) {
+		this.fund_uid_name = fund_uid_name;
+	}
+
+	/**
+	 * @return the tmp_header_uid_name
+	 */
+	public String getTmp_header_uid_name() {
+		return tmp_header_uid_name;
+	}
+
+	/**
+	 * @param tmp_header_uid_name the tmp_header_uid_name to set
+	 */
+	public void setTmp_header_uid_name(String tmp_header_uid_name) {
+		this.tmp_header_uid_name = tmp_header_uid_name;
+	}
+
+	/**
+	 * @return the trans_transaction_type_uid_name
+	 */
+	public String getTrans_transaction_type_uid_name() {
+		return trans_transaction_type_uid_name;
+	}
+
+	/**
+	 * @param trans_transaction_type_uid_name the trans_transaction_type_uid_name to set
+	 */
+	public void setTrans_transaction_type_uid_name(
+	        String trans_transaction_type_uid_name) {
+		this.trans_transaction_type_uid_name = trans_transaction_type_uid_name;
+	}
+
+	/**
+	 * @return the resp_center_uid_name
+	 */
+	public String getResp_center_uid_name() {
+		return resp_center_uid_name;
+	}
+
+	/**
+	 * @param resp_center_uid_name the resp_center_uid_name to set
+	 */
+	public void setResp_center_uid_name(String resp_center_uid_name) {
+		this.resp_center_uid_name = resp_center_uid_name;
+	}
+
+	/**
+	 * @return the prepared_by_name
+	 */
+	public String getPrepared_by_name() {
+		return prepared_by_name;
+	}
+
+	/**
+	 * @param prepared_by_name the prepared_by_name to set
+	 */
+	public void setPrepared_by_name(String prepared_by_name) {
+		this.prepared_by_name = prepared_by_name;
+	}
+
+	/**
+	 * @param disapproved_date the disapproved_date to set
+	 */
+	public void setDisapproved_date(Date disapproved_date) {
+		this.disapproved_date = disapproved_date;
 	}
 
 

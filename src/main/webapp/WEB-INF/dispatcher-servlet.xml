@@ -44,6 +44,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
   	</bean>
     
     <!-- DAO auto-wired -->
+    <bean id="helpers" class="financials.common.helpers">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
     <bean id="UserDAO" class="financials.dao.UserDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>

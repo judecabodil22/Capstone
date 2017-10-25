@@ -73,7 +73,7 @@
                                     <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
                                     <form:input path="jev_date" name="jev_date" value="${jsp_jev_date}"
                                         type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
-                                    <span class="input-group-addon danger" required="required">
+                                    <span class="input-group-addon danger">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </span>
                                 </div>
@@ -86,11 +86,9 @@
                                     Fund
                                 </label>
                                 <form:select path="fund_uid" name="fund_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Fund Sample 1</form:option>
-                                    <form:option value="2">Fund Sample 2</form:option>
-                                    <form:option value="3">Fund Sample 3</form:option>
-                                    <form:option value="4">Fund Sample 4</form:option>
-                                    <form:option value="5">Fund Sample 5</form:option>
+                                    <c:forEach var="item" items="${listFund}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -99,8 +97,9 @@
                                     Transaction Type
                                 </label>
                                 <form:select path="trans_transaction_type_uid" name="trans_transaction_type_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Collection</form:option>
-                                    <form:option value="2">Disbursement</form:option>
+                                    <c:forEach var="item" items="${listTransType}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -110,11 +109,9 @@
                                     Transaction Template
                                 </label>
                                 <form:select path="tmp_header_uid" name="tmp_header_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Template 1</form:option>
-                                    <form:option value="2">Template 2</form:option>
-                                    <form:option value="3">Template 3</form:option>
-                                    <form:option value="4">Template 4</form:option>
-                                    <form:option value="5">Template 5</form:option>
+                                    <c:forEach var="item" items="${listTemp}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -123,9 +120,9 @@
                                     Responsibility Center
                                 </label>
                                 <form:select path="resp_center_uid" name="resp_center_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">IT Department</form:option>
-                                    <form:option value="2">HR Department</form:option>
-                                    <form:option value="3">Faculty</form:option>
+                                    <c:forEach var="item" items="${listResp}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
