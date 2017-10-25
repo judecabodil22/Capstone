@@ -7,13 +7,15 @@ public class apar_CreateapMODEL {
 	private String ap_company_name;
 	private String ap_claimant;
 	private Integer resp_center_uid;
+	private String resp_center_description;
 	private String ap_voucher_date;
 	private String  ap_due_date;
 	private Integer ap_amount;
-	private String account_type;
+	private Integer acc_uid;
+	private String acc_description;
 	private String ap_particulars;
 	private String ap_status;
-	private String resp_center_description;
+
 	
 	public Integer getAp_uid() {
 		return ap_uid;
@@ -57,12 +59,6 @@ public class apar_CreateapMODEL {
 	public void setAp_amount(Integer ap_amount) {
 		this.ap_amount = ap_amount;
 	}
-	public String getAccount_type() {
-		return account_type;
-	}
-	public void setAccount_type(String account_type) {
-		this.account_type = account_type;
-	}
 	public String getAp_particulars() {
 		return ap_particulars;
 	}
@@ -87,7 +83,16 @@ public class apar_CreateapMODEL {
 	public void setResp_center_uid(Integer resp_center_uid) {
 		this.resp_center_uid = resp_center_uid;
 	}
-
-	
-	
+	public Integer getAcc_uid() {
+		return acc_uid;
+	}
+	public void setAcc_uid(Integer acc_uid) {
+		this.acc_uid = acc_uid;
+	}
+	public String getAcc_description() {
+		return acc_description;
+	}
+	public void setAcc_description(String acc_description) {
+		this.acc_description = acc_description;
+	}
 }

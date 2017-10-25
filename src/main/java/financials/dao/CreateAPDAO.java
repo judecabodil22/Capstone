@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import financials.model.AdminFundModel;
 import financials.model.UserModel;
 import financials.model.apar_CreateapMODEL;
 
@@ -19,13 +20,14 @@ public class CreateAPDAO {
 		public JdbcTemplate jdbcTemplate;
 		public PlatformTransactionManager platformTransactionManager;
 		public TransactionTemplate transactionTemplate;
+		private String sql;
 		
 		public CreateAPDAO(DataSource dataSource) {
 			jdbcTemplate = new JdbcTemplate(dataSource);	
 		}
 		public boolean insert (apar_CreateapMODEL modelcap) {
-			String sql = "Insert into tbl_payable(ap_uid,ap_transaction_num,ap_company_name,ap_claimant,resp_center_uid,ap_voucher_date,ap_due_date,ap_amount,account_type,ap_particulars,ap_status)" + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
-		jdbcTemplate.update(sql, new Object[] { modelcap.getAp_uid(),modelcap.getAp_transaction_num(),modelcap.getAp_company_name(),modelcap.getAp_claimant(),modelcap.getResp_center_uid(),modelcap.getAp_voucher_date(),modelcap.getAp_due_date(),modelcap.getAp_amount(),modelcap.getAccount_type(),modelcap.getAp_particulars(),modelcap.getAp_status(), modelcap.getResp_center_description() });
+			String sql = "Insert into tbl_apayable(ap_uid,ap_transaction_num,ap_company_name,ap_claimant,resp_center_uid,ap_voucher_date,ap_due_date,ap_amount,acc_uid,ap_particulars,ap_status)" + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		jdbcTemplate.update(sql, new Object[] { modelcap.getAp_uid(),modelcap.getAp_transaction_num(),modelcap.getAp_company_name(),modelcap.getAp_claimant(),modelcap.getResp_center_uid(),modelcap.getAp_voucher_date(),modelcap.getAp_due_date(),modelcap.getAp_amount(),modelcap.getAcc_uid(),modelcap.getAp_particulars(),modelcap.getAp_status(), modelcap.getResp_center_description(),modelcap.getAcc_description() });
 		return true;
 	}
 		
@@ -41,5 +43,45 @@ public class CreateAPDAO {
 
 		});
 	}
+	
+	public List<apar_CreateapMODEL> dropdownacc_id() {
+		String sql = "Select * from tbl_account_type";
+		return jdbcTemplate.query(sql, new RowMapper<apar_CreateapMODEL>() {
+			public apar_CreateapMODEL mapRow(ResultSet rs, int row) throws SQLException {
+				apar_CreateapMODEL user = new apar_CreateapMODEL();
+				user.setAcc_description(rs.getString("acc_description"));
+				user.setAcc_uid(rs.getInt("acc_uid"));
+				return user;
+			}
+
+		});
+	}
+	
+	public List<apar_CreateapMODEL> getcap() {
+
+		sql = "Select * from tbl_apayable";
+
+		return jdbcTemplate.query(sql, new RowMapper<apar_CreateapMODEL>() {
+			public apar_CreateapMODEL mapRow(ResultSet rs, int row) throws SQLException {
+				apar_CreateapMODEL user = new apar_CreateapMODEL();
+				user.setAcc_uid(rs.getInt("ap_uid"));
+				user.setAp_transaction_num(rs.getInt("ap_transaction_num"));
+				user.setAp_company_name(rs.getString("ap_company_name"));
+				user.setAp_claimant(rs.getString("ap_claimant"));
+				user.setResp_center_uid(rs.getInt("resp_center_uid"));
+				user.setResp_center_description(rs.getString("resp_center_description"));
+				user.setAp_voucher_date(rs.getString("ap_voucher_date"));
+				user.setAp_due_date(rs.getString("ap_due_date"));
+				user.setAp_amount(rs.getInt("ap_amount"));
+				user.setAcc_uid(rs.getInt("acc_uid"));
+				user.setAcc_description(rs.getString("acc_description"));
+				user.setAp_particulars(rs.getString("ap_particulars"));
+				user.setAp_status(rs.getString("ap_status"));
+				return user;
+			}
+
+		});
+	}
+
 	}
 

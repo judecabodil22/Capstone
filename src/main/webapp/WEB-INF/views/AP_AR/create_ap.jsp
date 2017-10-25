@@ -58,7 +58,7 @@
 						</h3>
 					</div>
 					<div class="panel-body">
-					<form:form action="save" modelAttribute="model" method="post" accept-charset="UTF-8" role="form">
+					<form:form action="cap_save" modelAttribute="cap_model" method="post" accept-charset="UTF-8" role="form">
 						<div class="row">
 							<div class="col-md-6">
 									<div class="form-group col-md-12">
@@ -105,22 +105,23 @@
 								</div>
 								<div class="form-group col-md-12">
 									<label for="">Account Type</label>
-										<form:select path="account_type" name="account_type" id="1" class="form-control select2">
-											<form:option value="1">Taxes and Licenses</form:option>
-											<form:option value="2">Utilities Expense</form:option>
-											<form:option value="3">Miscellaneous Expense</form:option>
-											<form:option value="4">Repair & Maintenance</form:option>
+										<form:select id="ap2" path="acc_uid" class="form-control select2">
+											<c:forEach var="acc" items="${tbl_account_type}">
+											<option value="${acc.acc_uid}">
+											${acc.acc_description}
+											</option>
+											</c:forEach>
 										</form:select>
 									</div>
 								<div class="form-group col-md-12">
 									<label for="">Particulars</label>
-									<form:textarea path="ap_particulars" id="textarea" rows="4" class="form-control"style="resize:none" maxlength="1000" placeholder="Write something here..."></form:textarea>
+									<form:textarea path="ap_particulars" id="textarea" rows="4" class="form-control" style="resize:none" maxlength="1000" placeholder="Write something here..."></form:textarea>
 								</div>
 								<div class="form-group col-md-12">
 									<label for="">Status</label>
-									<form:select path="ap_status" name="status" id="2" class="form-control select2">
-										<form:option value="1">Unpaid</form:option>
-										<form:option value="2">Paid</form:option>
+									<form:select id="ap3" path="ap_status" name="status" class="form-control select2">
+										<form:option value="0">Unpaid</form:option>
+										<form:option value="1">Paid</form:option>
 									</form:select>
 								</div>
 							</div>
