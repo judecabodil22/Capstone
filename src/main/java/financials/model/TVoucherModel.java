@@ -4,12 +4,12 @@ public class TVoucherModel {
 
 	private String ap_uid;
 	private String ap_institute_name;
-	private String purpose;
 	private String date;
 	private String amount;
 	private String ap_status;
 	private String resp_center;
 	private String claim_name;
+	private String ap_address;
 	
 	private String dv_no;
 	private String ors_burs_no;
@@ -32,12 +32,6 @@ public class TVoucherModel {
 	}
 	public void setAp_uid(String ap_uid) {
 		this.ap_uid = ap_uid;
-	}
-	public String getPurpose() {
-		return purpose;
-	}
-	public void setPurpose(String purpose) {
-		this.purpose = purpose;
 	}
 	
 	public String getDate() {
@@ -163,6 +157,12 @@ public class TVoucherModel {
 	}
 	public void setAp_institute_name(String ap_institute_name) {
 		this.ap_institute_name = ap_institute_name;
+	}
+	public String getAp_address() {
+		return ap_address;
+	}
+	public void setAp_address(String ap_address) {
+		this.ap_address = ap_address;
 	}
 	
 }

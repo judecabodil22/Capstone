@@ -6,9 +6,10 @@ public class tblreportsModel {
 	private String purpose_name;
 	private String mode_of_payment;
 	private String institute_name;
-	private String employee_no;
+	private String employee_assigned;
 	private String responsibility_center;
 	private String amount;
+	private String status;
 	
 	public String getDv_no() {
 		return dv_no;
@@ -34,11 +35,18 @@ public class tblreportsModel {
 	public void setInstitute_name(String institute_name) {
 		this.institute_name = institute_name;
 	}
-	public String getEmployee_no() {
-		return employee_no;
+	
+	public String getEmployee_assigned() {
+		return employee_assigned;
 	}
-	public void setEmployee_no(String employee_no) {
-		this.employee_no = employee_no;
+	public void setEmployee_assigned(String employee_assigned) {
+		this.employee_assigned = employee_assigned;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public String getResponsibility_center() {
 		return responsibility_center;
