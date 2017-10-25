@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import financials.common.constants;
+import financials.common.helpers;
 import financials.dao.JEVDAO;
 import financials.model.JEVModel;
 import financials.model.UserModel;
@@ -25,6 +27,9 @@ public class JEVController extends BaseController {
 	
 	@Autowired
 	private JEVDAO daoJEV;
+	
+	@Autowired
+	private helpers helpers;
 	
 	@RequestMapping("list")
 	public ModelAndView listing(
@@ -42,6 +47,7 @@ public class JEVController extends BaseController {
 		
 		mav.addObject("data", daoJEV.list());
 		
+		mav.addObject("module", "JEV_list");
 		return mav;
 	}
 	
@@ -66,6 +72,13 @@ public class JEVController extends BaseController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("GLedger/JEV/create");
 		mav.addObject("modelJEV", modelJEV);
+		mav.addObject("module", "JEV_create");
+		
+		mav.addObject("listFund", helpers.listFund());
+		mav.addObject("listTransType", helpers.listTransType());
+		mav.addObject("listTemp", helpers.listTemp());
+		mav.addObject("listResp", helpers.listResp());
+		
 		return mav;
 	}
 	
@@ -110,6 +123,7 @@ public class JEVController extends BaseController {
 			mav.setViewName("GLedger/JEV/create");
 			mav.addObject("error", "Insert Failed");
 		}
+		mav.addObject("module", "JEV_create");
 		return mav;
 	}
 	
@@ -126,10 +140,23 @@ public class JEVController extends BaseController {
 		}
 		
 		JEVModel modelJEV = daoJEV.getByJevNo(jev_no);
+		modelJEV.setFund_uid_name(
+				helpers.getName(modelJEV.getFund_uid(), constants.TBL_FS_FUND)
+		);
+		modelJEV.setTmp_header_uid_name(
+				helpers.getName(modelJEV.getTmp_header_uid(), constants.TBL_FS_TEMPHEADER)
+		);
+		modelJEV.setTrans_transaction_type_uid_name(
+				helpers.getName(modelJEV.getTrans_transaction_type_uid(), constants.TBL_FS_TRANSACTYPE)
+		);
+		modelJEV.setResp_center_uid_name(
+				helpers.getName(modelJEV.getResp_center_uid(), constants.TBL_FS_RESPCENTER)
+		);
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("GLedger/JEV/view");
 		mav.addObject("modelJEV", modelJEV);
+		mav.addObject("module", "JEV_list");
 		return mav;
 	}
 }

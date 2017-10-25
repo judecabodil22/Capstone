@@ -73,7 +73,7 @@
                                     <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
                                     <form:input path="jev_date" name="jev_date" value="${jsp_jev_date}"
                                         type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
-                                    <span class="input-group-addon danger" required="required">
+                                    <span class="input-group-addon danger">
                                         <span class="glyphicon glyphicon-remove"></span>
                                     </span>
                                 </div>
@@ -86,11 +86,9 @@
                                     Fund
                                 </label>
                                 <form:select path="fund_uid" name="fund_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Fund Sample 1</form:option>
-                                    <form:option value="2">Fund Sample 2</form:option>
-                                    <form:option value="3">Fund Sample 3</form:option>
-                                    <form:option value="4">Fund Sample 4</form:option>
-                                    <form:option value="5">Fund Sample 5</form:option>
+                                    <c:forEach var="item" items="${listFund}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -99,8 +97,9 @@
                                     Transaction Type
                                 </label>
                                 <form:select path="trans_transaction_type_uid" name="trans_transaction_type_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Collection</form:option>
-                                    <form:option value="2">Disbursement</form:option>
+                                    <c:forEach var="item" items="${listTransType}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -110,24 +109,20 @@
                                     Transaction Template
                                 </label>
                                 <form:select path="tmp_header_uid" name="tmp_header_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Template 1</form:option>
-                                    <form:option value="2">Template 2</form:option>
-                                    <form:option value="3">Template 3</form:option>
-                                    <form:option value="4">Template 4</form:option>
-                                    <form:option value="5">Template 5</form:option>
+                                    <c:forEach var="item" items="${listTemp}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
                             <div class="form-group">
                                 <label for="e1" class="control-label">
-                                    Account Type
+                                    Responsibility Center
                                 </label>
-                                <form:select path="acc_uid" name="acc_uid" id="e1" class="form-control select2">
-                                    <form:option value="1">Account Type 1</form:option>
-                                    <form:option value="2">Account Type 2</form:option>
-                                    <form:option value="3">Account Type 3</form:option>
-                                    <form:option value="4">Account Type 4</form:option>
-                                    <form:option value="5">Account Type 5</form:option>
+                                <form:select path="resp_center_uid" name="resp_center_uid" id="e1" class="form-control select2">
+                                    <c:forEach var="item" items="${listResp}">
+                                        <form:option value="${item.code}">${item.name}</form:option>
+                                    </c:forEach>
                                 </form:select>
                             </div>
                             
@@ -145,17 +140,8 @@
     </section>
 </aside>
 </div>
-    
-    <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-    <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
+
+<%@ include file = "../../commonFoot.jsp" %>
 
 </body>
 </html>

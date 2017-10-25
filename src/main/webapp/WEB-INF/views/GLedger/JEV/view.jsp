@@ -50,53 +50,54 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel-body">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <i class="livicon" data-name="bell" data-loop="true" data-color="#fff" data-hovercolor="#fff" data-size="18"></i>
-                            Journal Entry Voucher
-                        </h3>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped" id="users">
-                            <tr>
-                                <td>Entry Date</td>
-                                <td>
-                                    <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
-                                    <label>${jsp_jev_date}</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Fund</td>
-                                <td>
-                                    <label>${modelJEV.fund_uid}</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Transaction Type</td>
-                                <td>
-                                    <label>${modelJEV.trans_transaction_type_uid}</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Transaction Template</td>
-                                <td>
-                                    <label>${modelJEV.tmp_header_uid}</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Account Type</td>
-                                <td>
-                                    <label>${modelJEV.acc_uid}</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Text Area</td>
-                                <td>
-                                    <p>${modelJEV.particulars}</p>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <i class="livicon" data-name="bell" data-loop="true" data-color="#fff" data-hovercolor="#fff" data-size="18"></i>
+                                Journal Entry Voucher
+                            </h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped" id="users">
+                                <tr>
+                                    <td>Entry Date</td>
+                                    <td>
+                                        <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
+                                        <label>${jsp_jev_date}</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fund</td>
+                                    <td>
+                                        <label>${modelJEV.fund_uid_name}</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Transaction Type</td>
+                                    <td>
+                                        <label>${modelJEV.trans_transaction_type_uid_name}</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Transaction Template</td>
+                                    <td>
+                                        <label>${modelJEV.tmp_header_uid_name}</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Responsibility Center</td>
+                                    <td>
+                                        <label>${modelJEV.resp_center_uid_name}</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Text Area</td>
+                                    <td>
+                                        <p>${modelJEV.particulars}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

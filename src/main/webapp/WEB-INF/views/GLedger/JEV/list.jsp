@@ -70,20 +70,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>JEV010117</td>
-                                        <td>2017-01-01</td>
-                                        <td>Juan Dela Cruz</td>
-                                        <td>
-                                            <span class="label label-sm label-success">Approved</span>
-                                            <span class="label label-sm label-info">Pending</span>
-                                            <span class="label label-sm label-warning">Suspended</span>
-                                            <span class="label label-sm label-danger">Blocked</span>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-edit"></span> View</a>
-                                        </td>
-                                    </tr>
+                                    <!-- <span class="label label-sm label-success">Approved</span>
+                                    <span class="label label-sm label-info">Pending</span>
+                                    <span class="label label-sm label-warning">Suspended</span>
+                                    <span class="label label-sm label-danger">Blocked</span> -->
                                     <c:forEach var="datum" items="${data}">
                                         <tr>
                                             <td>${datum.jev_no}</td>
@@ -119,17 +109,8 @@
     </section>
 </aside>
 </div>
-    
-    <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-   <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
+
+<%@ include file = "../../commonFoot.jsp" %>
 
 </body>
 </html>

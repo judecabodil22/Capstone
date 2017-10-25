@@ -5,6 +5,7 @@ public class KaiModel {
 	private String user_id;
 	private String username;
 	private String password;
+	
 	public String getUser_id() {
 		return user_id;
 	}
