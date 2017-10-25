@@ -29,11 +29,11 @@ public class financials_apar_apController extends BaseController {
 			@ModelAttribute("cap_model") apar_CreateapMODEL cap_model,
 			HttpServletRequest request, 
 			HttpSession session,
+			
 			@ModelAttribute("modelBind") apar_CreateapMODEL model)
 			{
 		
 		
-		ModelAndView mav = new ModelAndView();
 		mav.setViewName("AP_AR/create_ap");
 		mav.addObject("model", model);
 		
@@ -53,21 +53,20 @@ public class financials_apar_apController extends BaseController {
 	}
 	@RequestMapping("cap_save")
 	public ModelAndView save(@ModelAttribute("cap_model") apar_CreateapMODEL cap,
-			@RequestParam(value = "submit", required = false) String save,
-			@RequestParam(value = "reset", required = false) String reset)
+			@RequestParam(value = "CAPSaveButton", required = false) String save)
 	{
 		ModelAndView mav = new ModelAndView();
 		
 	
 		
-		mav.setViewName("redirect:cap_save");
-		if(save != null)
-		{
+		mav.setViewName("AP_AR/create_ap");
+/*		if(save != null)*/
+	/*	{*/
 			dao.insert(cap);
 			System.out.println("Success");
 			List<apar_CreateapMODEL> list = dao.getcap();
 			mav.addObject("list", list);	
-		}
+	/*	}*/
 		return mav;
 	}
 }

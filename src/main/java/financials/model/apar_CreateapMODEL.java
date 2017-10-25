@@ -3,7 +3,7 @@ package financials.model;
 public class apar_CreateapMODEL {
 	
 	private Integer ap_uid;
-	private Integer ap_transaction_num;
+	private String ap_transaction_num;
 	private String ap_company_name;
 	private String ap_claimant;
 	private Integer resp_center_uid;
@@ -22,12 +22,6 @@ public class apar_CreateapMODEL {
 	}
 	public void setAp_uid(Integer ap_uid) {
 		this.ap_uid = ap_uid;
-	}
-	public Integer getAp_transaction_num() {
-		return ap_transaction_num;
-	}
-	public void setAp_transaction_num(Integer ap_transaction_num) {
-		this.ap_transaction_num = ap_transaction_num;
 	}
 	public String getAp_company_name() {
 		return ap_company_name;
@@ -94,5 +88,11 @@ public class apar_CreateapMODEL {
 	}
 	public void setAcc_description(String acc_description) {
 		this.acc_description = acc_description;
+	}
+	public String getAp_transaction_num() {
+		return ap_transaction_num;
+	}
+	public void setAp_transaction_num(String ap_transaction_num) {
+		this.ap_transaction_num = ap_transaction_num;
 	}
 }

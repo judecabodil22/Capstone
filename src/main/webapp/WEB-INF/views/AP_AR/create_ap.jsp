@@ -58,7 +58,7 @@
 						</h3>
 					</div>
 					<div class="panel-body">
-					<form:form action="cap_save" modelAttribute="cap_model" method="post" accept-charset="UTF-8" role="form">
+				<form:form action="cap_save" modelAttribute="cap_model" method="post" accept-charset="UTF-8" role="form">
 						<div class="row">
 							<div class="col-md-6">
 									<div class="form-group col-md-12">
@@ -85,7 +85,7 @@
 											<div class="input-group-addon">
 												<i class="fa fa-calendar"></i>
 											</div>
-											<form:input path="ap_voucher_date" name="voucher_date" type="date" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask="data-mask"/>
+											<form:input path="ap_voucher_date" name="voucher_date" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group col-md-12">
@@ -94,7 +94,7 @@
 											<div class="input-group-addon">
 												<i class="fa fa-calendar"></i>
 											</div>
-											<form:input path="ap_due_date" name="due_date" type="date" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask="data-mask"/>
+											<form:input path="ap_due_date" name="due_date" type="text" class="form-control"/>
 										</div>
 									</div>
 							</div>
@@ -130,7 +130,7 @@
 								<div style="float: right">
 									<label class="col-md-4 control-label" for="cap_save"></label>
 									<div class="col-md-4">
-										<button id="CAPSaveButton" input type="submit" name="CAPSaveButton" class="btn btn-primary">Save</button>
+										<button id="CAPSaveButton" name="CAPSaveButton" class="btn btn-primary">Save</button>
 									</div>
 								
 								</div>
@@ -146,6 +146,7 @@
 </div>
 
 <%@ include file = "../commonFoot.jsp" %>
+
 
 </body>
 </html>

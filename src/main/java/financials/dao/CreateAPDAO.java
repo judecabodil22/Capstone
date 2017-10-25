@@ -1,7 +1,9 @@
 package financials.dao;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -26,8 +28,28 @@ public class CreateAPDAO {
 			jdbcTemplate = new JdbcTemplate(dataSource);	
 		}
 		public boolean insert (apar_CreateapMODEL modelcap) {
-			String sql = "Insert into tbl_apayable(ap_uid,ap_transaction_num,ap_company_name,ap_claimant,resp_center_uid,ap_voucher_date,ap_due_date,ap_amount,acc_uid,ap_particulars,ap_status)" + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-		jdbcTemplate.update(sql, new Object[] { modelcap.getAp_uid(),modelcap.getAp_transaction_num(),modelcap.getAp_company_name(),modelcap.getAp_claimant(),modelcap.getResp_center_uid(),modelcap.getAp_voucher_date(),modelcap.getAp_due_date(),modelcap.getAp_amount(),modelcap.getAcc_uid(),modelcap.getAp_particulars(),modelcap.getAp_status(), modelcap.getResp_center_description(),modelcap.getAcc_description() });
+			String sql = "Insert into tbl_apayable("
+					+ "ap_company_name,"
+					+ "ap_claimant,"
+					+ "resp_center_uid,"
+					+ "ap_voucher_date,"
+					+ "ap_due_date,"
+					+ "ap_amount,"
+					+ "acc_uid,"
+					+ "ap_particulars,"
+					+ "ap_status)" +
+					"VALUES(?,?,?,?,?,?,?,?,?)";
+		jdbcTemplate.update(sql, new Object[] { 
+				modelcap.getAp_company_name(),
+				modelcap.getAp_claimant(),
+				modelcap.getResp_center_uid(),
+				modelcap.getAp_voucher_date(),
+				modelcap.getAp_due_date(),
+				modelcap.getAp_amount(),
+				modelcap.getAcc_uid(),
+				modelcap.getAp_particulars(),
+				modelcap.getAp_status()
+		});
 		return true;
 	}
 		
@@ -65,7 +87,7 @@ public class CreateAPDAO {
 			public apar_CreateapMODEL mapRow(ResultSet rs, int row) throws SQLException {
 				apar_CreateapMODEL user = new apar_CreateapMODEL();
 				user.setAcc_uid(rs.getInt("ap_uid"));
-				user.setAp_transaction_num(rs.getInt("ap_transaction_num"));
+				user.setAp_transaction_num(rs.getString("ap_transaction_num"));
 				user.setAp_company_name(rs.getString("ap_company_name"));
 				user.setAp_claimant(rs.getString("ap_claimant"));
 				user.setResp_center_uid(rs.getInt("resp_center_uid"));
@@ -82,6 +104,10 @@ public class CreateAPDAO {
 
 		});
 	}
-
+	public String getNewTransNo(){
+		String sql= "SELECT count(*) as cnt FROM tbl_apayable";
+		int cnt = jdbcTemplate.queryForObject(sql, Integer.class);
+		return "AP" + String.format("%04d", ++cnt);
 	}
+}
 
