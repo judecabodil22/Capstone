@@ -31,7 +31,6 @@
 </head>
 <body class="skin-josh">
 
-<%@ include file = "../commonMsg.jsp" %>
 <%@ include file = "../commonHeader.jsp" %>
 
 <div class="wrapper row-offcanvas row-offcanvas-left">
@@ -39,6 +38,7 @@
 <%@ include file = "../commonLeft.jsp" %>
 
 <aside class="right-side">
+	<%@ include file = "../commonMsg.jsp" %>
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<!--section starts-->
@@ -85,7 +85,7 @@
 											<div class="input-group-addon">
 												<i class="fa fa-calendar"></i>
 											</div>
-											<form:input path="ap_voucher_date" name="voucher_date" type="text" class="form-control"/>
+											<form:input path="ap_voucher_date" name="voucher_date" type="text" class="form-control datepicker" readonly="true"/>
 										</div>
 									</div>
 									<div class="form-group col-md-12">
@@ -94,7 +94,7 @@
 											<div class="input-group-addon">
 												<i class="fa fa-calendar"></i>
 											</div>
-											<form:input path="ap_due_date" name="due_date" type="text" class="form-control"/>
+											<form:input path="ap_due_date" name="due_date" type="text" class="form-control datepicker"/>
 										</div>
 									</div>
 							</div>
@@ -123,7 +123,7 @@
 										<form:option value="0">Unpaid</form:option>
 										<form:option value="1">Paid</form:option>
 									</form:select>
-								</div>
+								</div>-
 							</div>
 							<div class="row">
 								<hr>
