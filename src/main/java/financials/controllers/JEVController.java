@@ -97,6 +97,7 @@ public class JEVController extends BaseController {
 		
 		Calendar cal = Calendar.getInstance();
 		Date date = cal.getTime();
+		
 		if(modelJEV.getJev_date() == null){
 			modelJEV.setJev_date(date);
 		}
@@ -105,6 +106,7 @@ public class JEVController extends BaseController {
 		try {
 			modelJEV.setJev_no(daoJEV.getNewJevNo(modelJEV.getJev_date()));
 			modelJEV.setPrepared_by(modelUser.getUser_id());
+			modelJEV.setResp_center_uid(1);
 			modelJEV.setStatus("Pending");
 			bool = daoJEV.insert(modelJEV);
 		} catch(Exception e){
@@ -114,7 +116,7 @@ public class JEVController extends BaseController {
 		ModelAndView mav = new ModelAndView();
 		if(bool){
 			// show view
-			mav.setViewName("redirect:/JEV/adddetails/" + modelJEV.getJev_no());
+			mav.setViewName("redirect:/JEV/view/" + modelJEV.getJev_no());
 		}
 		else {
 			// error
@@ -128,38 +130,6 @@ public class JEVController extends BaseController {
 	
 	@RequestMapping(value = "view/{jev_no}")
 	public ModelAndView view(
-			HttpServletRequest request, 
-			HttpSession session,
-			@PathVariable("jev_no") String jev_no){
-		
-		UserModel modelUser = this.getLoginSession(session);
-		if(modelUser == null){
-			return this.errorNotLogin();
-		}
-		
-		JEVModel modelJEV = daoJEV.getByJevNo(jev_no);
-		modelJEV.setFund_uid_name(
-				helpers.getName(modelJEV.getFund_uid(), constants.TBL_FS_FUND)
-		);
-		modelJEV.setTmp_header_uid_name(
-				helpers.getName(modelJEV.getTmp_header_uid(), constants.TBL_FS_TEMPHEADER)
-		);
-		modelJEV.setTrans_transaction_type_uid_name(
-				helpers.getName(modelJEV.getTrans_transaction_type_uid(), constants.TBL_FS_TRANSACTYPE)
-		);
-		modelJEV.setResp_center_uid_name(
-				helpers.getName(modelJEV.getResp_center_uid(), constants.TBL_FS_RESPCENTER)
-		);
-		
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("GLedger/JEV/view");
-		mav.addObject("modelJEV", modelJEV);
-		mav.addObject("module", "JEV_list");
-		return mav;
-	}
-	
-	@RequestMapping(value = "adddetails/{jev_no}")
-	public ModelAndView adddetails(
 			HttpServletRequest request, 
 			HttpSession session,
 			@PathVariable("jev_no") String jev_no){

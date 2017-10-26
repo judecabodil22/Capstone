@@ -29,10 +29,3 @@ $(document).ready(function(){
     });
 });
 </script>
-<link href="resources/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<script src="resources/jquery-ui/jquery-ui.js"></script>
-<script>
-$( function() {
-$( ".datepicker" ).datepicker();
-} );
-</script>

@@ -71,10 +71,13 @@
                                         <i class="fa fa-calendar"></i>
                                     </div>
                                     <fmt:formatDate value="${modelJEV.jev_date}" pattern="yyyy-MM-dd" var="jsp_jev_date"/>
-                                    <form:input path="jev_date" name="jev_date" type="text" class="datepicker" value="${jsp_jev_date}" readonly="true" />
+                                    <form:input path="jev_date" name="jev_date" value="${jsp_jev_date}"
+                                        type="date" class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="data-mask" />
+                                    <span class="input-group-addon danger">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </span>
                                 </div>
                                 <!-- /.input group -->
-                                
                             </div>
                             <!-- /.form group -->
                             
