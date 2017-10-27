@@ -25,7 +25,8 @@
     <!-- font Awesome -->
 	<link href="resources/vendors/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- end of global css -->    
-    
+    <!-- Modal Components -->
+    <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
     <!--page level css -->
     <link href="resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
     <link href="resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
@@ -58,6 +59,10 @@
     <script src="resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
     <!--Sparkline Chart-->
     <script src="resources/vendors/charts/jquery.sparkline.js"></script>
+    <!-- Modal Effects -->
+    <script src="resources/vendors/modal/js/classie.js"></script>
+	<script src="resources/vendors/modal/js/modalEffects.js"></script>
+    
     <!-- Back to Top-->
     <script type="text/javascript" src="resources/vendors/countUp/countUp.js"></script>
     <!--   maps -->

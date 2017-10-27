@@ -35,7 +35,7 @@
                             </div>
                             <div class="portlet-body">
                                 <div class="table-scrollable">
-                               
+                               	<div class="scroll">
 									<table  class="table table-striped table-hover" id="sample_5" style="text-align:center">
                                         <thead>
                                             <tr>
@@ -105,7 +105,7 @@
                                     </table>
 								
                                 </div>
-									
+									</div>
 									
                             </div>
                         </div>
@@ -113,7 +113,7 @@
             </section>
         </aside>
         <!-- right-side -->
-    </div>
+   
 	
 		 
  	<!-- add -->
