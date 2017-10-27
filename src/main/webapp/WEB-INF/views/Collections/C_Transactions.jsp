@@ -3,6 +3,7 @@
 <title>Cashier | Financials</title>
 <%@ include file = "../commonDesign.jsp" %>
 
+
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
                 <!-- Content Header (Page header) -->
@@ -48,11 +49,11 @@
                                         <div class="col-md-4 pd-col-4">
                                           
 											
-                                            <form:form role="form" style="margin-top:1em;" modelAttribute="ctransac">
+                                            <form:form action="ctrans_save" role="form" style="margin-top:1em;" modelAttribute="ctransac">
 											
 											<div>
                                                     <label for="input-text-1">OR Number</label>
-                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="C_OR_ID"/>
+                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="C_OR_No"/>
 													<p class="help-block"></p>
 													
 						 
@@ -103,7 +104,7 @@
 												
 												
 												</form:form>
-												 <a class="btn btn-effect btn-primary" data-modal="modal-confirmation">Submit</a>
+												 <a id="ohyes" name="ohyes" class="btn btn-effect btn-primary" data-modal="modal-confirmation">Submit</a>
 											</div>
 										</div>
 									</div>

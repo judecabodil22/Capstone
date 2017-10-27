@@ -649,7 +649,7 @@
 		<!-- end of page level js -->
 		
 		<script>
-            $(document).ready(function(){
+           $(document).ready(function(){
                 $('table .ToModal').on('click', function(){
                     var data = $(obj).closest('tr').data();
                     $('.modal #inst_name').val(data.institute);
