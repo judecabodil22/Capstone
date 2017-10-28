@@ -39,7 +39,7 @@ public class JEVController extends BaseController {
 		
 		UserModel modelUser = this.getLoginSession(session);
 		if(modelUser == null){
-			return this.errorNotLogin();
+//			return this.errorNotLogin();
 		}
 		
 		ModelAndView mav = new ModelAndView();
@@ -59,7 +59,7 @@ public class JEVController extends BaseController {
 		
 		UserModel modelUser = this.getLoginSession(session);
 		if(modelUser == null){
-			return this.errorNotLogin();
+//			return this.errorNotLogin();
 		}
 		
 		Calendar cal = Calendar.getInstance();
@@ -92,7 +92,7 @@ public class JEVController extends BaseController {
 		
 		UserModel modelUser = this.getLoginSession(session);
 		if(modelUser == null){
-			return this.errorNotLogin();
+//			return this.errorNotLogin();
 		}
 		
 		Calendar cal = Calendar.getInstance();
@@ -134,7 +134,7 @@ public class JEVController extends BaseController {
 		
 		UserModel modelUser = this.getLoginSession(session);
 		if(modelUser == null){
-			return this.errorNotLogin();
+//			return this.errorNotLogin();
 		}
 		
 		JEVModel modelJEV = daoJEV.getByJevNo(jev_no);
@@ -166,7 +166,7 @@ public class JEVController extends BaseController {
 		
 		UserModel modelUser = this.getLoginSession(session);
 		if(modelUser == null){
-			return this.errorNotLogin();
+//			return this.errorNotLogin();
 		}
 		
 		JEVModel modelJEV = daoJEV.getByJevNo(jev_no);
