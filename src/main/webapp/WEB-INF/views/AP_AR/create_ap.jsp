@@ -27,18 +27,11 @@
 	<link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
 	<!--end of page level css-->
 	
-	<%@ include file = "../commonHead.jsp" %>
+	<%@ include file = "../commonDesign.jsp" %>
 </head>
-<body class="skin-josh">
-
-<%@ include file = "../commonHeader.jsp" %>
-
-<div class="wrapper row-offcanvas row-offcanvas-left">
-
-<%@ include file = "../commonLeft.jsp" %>
 
 <aside class="right-side">
-	<%@ include file = "../commonMsg.jsp" %>
+	
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<!--section starts-->
