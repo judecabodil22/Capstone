@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
 
 <head>
 	<meta charset="UTF-8">
@@ -947,14 +948,14 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="/JEVcreate">
+                                                <a href="${ctx}/JEV/create">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
                                             </a>
                                             </li>
 
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/list">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Review JEV</span>
                                             </a>
