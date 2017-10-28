@@ -53,7 +53,7 @@ public class helpers {
 		return jdbcTemplate.query(sql, new RowMapper<CodeNameModel>() {
 			public CodeNameModel mapRow(ResultSet rs, int row) throws SQLException {
 				CodeNameModel model = new CodeNameModel();
-				model.setCode(rs.getObject("tmp_header_code"));
+				model.setCode(rs.getObject("tmp_header_uid"));
 				model.setName(rs.getString("tmp_header_particular"));
 				return model;
 			}
@@ -81,7 +81,7 @@ public class helpers {
 			sql.append(" trans_description FROM " + table + " WHERE trans_code=?");
 		}
 		else if(constants.TBL_FS_TEMPHEADER.equals(table)){
-			sql.append(" tmp_header_particular FROM " + table + " WHERE tmp_header_code=?");
+			sql.append(" tmp_header_particular FROM " + table + " WHERE tmp_header_uid=?");
 		}
 		else if(constants.TBL_FS_RESPCENTER.equals(table)){
 			sql.append(" resp_center_name FROM " + table + " WHERE resp_center_no=?");
