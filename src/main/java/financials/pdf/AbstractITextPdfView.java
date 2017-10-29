@@ -1,4 +1,4 @@
-package financials.controllers;
+package financials.pdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
