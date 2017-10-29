@@ -1071,7 +1071,7 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/PDFUATB">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Unadjasted Trial Balance</span>
                                             </a>

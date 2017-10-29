@@ -1,4 +1,4 @@
-package financials.controllers;
+package financials.pdf;
 
 public class Book {
 	private String title;
