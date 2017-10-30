@@ -576,14 +576,14 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/create">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
                                             </a>
                                             </li>
 
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/list">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Review JEV</span>
                                             </a>

@@ -1,5 +1,6 @@
 package financials.pdf;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -25,6 +26,8 @@ import com.itextpdf.text.pdf.PdfWriter;
  */
 public class PDFBuilder extends AbstractITextPdfView {
 
+	private DecimalFormat formatter = new DecimalFormat("#,###.00");
+	
 	@Override
 	protected void buildPdfDocument(
 			Map<String, Object> model, 
@@ -154,10 +157,10 @@ public class PDFBuilder extends AbstractITextPdfView {
 			table.addCell(cell);
 			
 			cell.setHorizontalAlignment(PdfPCell.ALIGN_RIGHT);
-			cell.setPhrase(new Phrase(String.valueOf(rec.getDebit())));
+			cell.setPhrase(new Phrase(this.format(rec.getDebit())));
 			table.addCell(cell);
 			
-			cell.setPhrase(new Phrase(String.valueOf(rec.getCredit())));
+			cell.setPhrase(new Phrase(this.format(rec.getCredit())));
 			table.addCell(cell);
 			
 			totalDebit += rec.getDebit();
@@ -178,12 +181,22 @@ public class PDFBuilder extends AbstractITextPdfView {
 		
 		font = FontFactory.getFont(FontFactory.HELVETICA);
 		font.setStyle(Font.UNDERLINE);
-		cell.setPhrase(new Phrase(String.valueOf(totalDebit), font));
+		cell.setPhrase(new Phrase(this.format(totalDebit), font));
 		table.addCell(cell);
 		
-		cell.setPhrase(new Phrase(String.valueOf(totalCredit), font));
+		
+		
+		cell.setPhrase(new Phrase(this.format(totalCredit), font));
 		table.addCell(cell);
 		
 		doc.add(table);
+	}
+	
+	
+	private String format(float value){
+		String str = null;
+		if(value == 0) return str;
+		
+		return this.formatter.format(value);
 	}
 }
