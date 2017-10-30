@@ -948,7 +948,8 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="${ctx}/JEV/create">
+                                                <!-- <a href="${ctx}/JEV/create"> -->
+                                                <a href="financials_createjev">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
                                             </a>
@@ -987,7 +988,7 @@
                                                <li>
                                                 <a href="financials_ctransac">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Cashiering</span>
+                                                <span class="title">Casheiring</span>
                                             </a>
                                             </li>
                                              
