@@ -72,8 +72,6 @@ public class UserDAO {
 		StringBuilder sql = new StringBuilder("INSERT INTO users");
 		sql.append(" VALUES ( ");
 		sql.append(" ? ");
-		params.add(modelUser.getUser_id());
-		sql.append(" , ? ");
 		params.add(modelUser.getUsername());
 		sql.append(" , ? ");
 		params.add(modelUser.getPassword());
@@ -91,13 +89,6 @@ public class UserDAO {
 	}
 	
 	
-	
-//	public boolean insert(UserModel user) {
-//		String sql = "Insert into Users(user_id,username,password)" + "VALUES(?,?,?)";
-//		jdbcTemplate.update(sql, new Object[] { user.getUser_id(), user.getUsername(), user.getPassword() });
-//		return true;
-//	}
-
 	public boolean update(UserModel user) {
 		String sql = "Update Users " + "Set username = ?, password = ? " + "WHERE user_id = ?";
 		jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getUser_id() });
@@ -111,7 +102,7 @@ public class UserDAO {
 	}
 
 	public List<UserModel> getUsers() {
-		String sql = "Select * from USERS";
+		String sql = "Select * from Users";
 		return jdbcTemplate.query(sql, new RowMapper<UserModel>() {
 			public UserModel mapRow(ResultSet rs, int row) throws SQLException {
 				UserModel user = new UserModel();
