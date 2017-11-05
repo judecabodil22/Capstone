@@ -20,7 +20,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Users](
-	[user_id] int NULL,
+	[user_id] [int] IDENTITY(1,1) NOT NULL,
 	[username] [varchar](50) NULL,
 	[password] [varchar](50) NULL
 ) ON [PRIMARY]
