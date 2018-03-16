@@ -39,22 +39,18 @@
 									<table  class="table table-striped table-hover" id="sample_5" style="text-align:center">
                                         <thead>
                                             <tr >
-                                            	  <th class="center-align">
-                                                    <i class="fa fa-sort-numeric-asc"></i>
-													
-                                                 ID
-                                                </th>
+                                            	 
                                                 <th class="hidden-xs center-align">
                                                     <i class="fa fa-user center-align"></i>
 												Code
                                                 </th>
 												 <th class="hidden-xs center-align">
                                                     <i class="fa fa-user"></i>
-												Description
+												Account Name
                                                 </th>
 												 <th class="hidden-xs center-align">
                                                     <i class="fa fa-user"></i>
-												Parent
+												Account Title
                                                 </th>
 												
 												 <th class="hidden-xs center-align">
@@ -69,12 +65,12 @@
                                         	 <tr data-uid="${list.acc_uid}" data-code="${list.acc_code}" data-desc="${list.acc_description}" data-parent="${list.acc_parent_uid}" >
                                                 
                                             
-                                                <td class="highlight" class="info">
+                                               <%--  <td class="highlight" class="info">
                                                      <div class="info"></div>
 
-                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${list.acc_uid}</a>
-                                                   
-                                                </td>
+                                                    <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${list.acc_uid}</a>
+                                                    
+                                                </td> --%>
                                                 
                                                 <td class="hidden-xs">${list.acc_code}</td>
                                                 
@@ -83,14 +79,15 @@
                                                   <td class="hidden-xs">${list.parent}</td>
                                                 
                                                  <td>
-                                                 	<form:form action="admin_accountType_delete" modelAttribute="accountType_delete">
+                                                 	<form:form action="admin_accountType_delete" modelAttribute="accountType_delete" id ="formDel">
                                                    	<form:input type="hidden" id="uid" path="acc_uid" value="${list.acc_uid}"/>
                                                    <div class="spring">
                                                     	<a  type="button"  data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="btn btn-info btn-sm ToModal nature">Edit</a>
 													</div>													
 												 	<div class="spring"> 
-                                                     	<input type="submit" value="Delete" name="Delete" class="btn btn-danger btn-sm">
-                                                 	</div>  
+                                                     <!-- 	<input type="button" value="Delete" name="Delete" id="del" ">  -->
+                                                     	<button type="button"  data-toggle="modal" id="del" class="btn btn-danger btn-sm">Delete</button> 
+                                                     	</div>
                                                      </form:form>    	                                       
                                                 </td>
                                                 
@@ -268,7 +265,7 @@
 
   <label class="col-md-4 control-label" for="button1id"></label>
   
-   <input type="submit" class="btn btn-success" value="Submit" style="width:100%;">
+   <input type="submit" class="btn btn-success btn-sm" value="Submit" style="width:100%;">
    
   
 
@@ -308,6 +305,14 @@ $(document).ready(function(){
 		 document.getElementById("modal_description").value = data.desc;
 		 document.getElementById("modal_uid").value = data.uid;
 		// put to modal ----------------------- ends
+		
+		$('#del').click(function()
+				{
+					$('#formDel').submit();
+				})		
+		
+		
+		
 	});
 });
 

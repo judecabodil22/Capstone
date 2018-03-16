@@ -39,11 +39,7 @@
 									<table  class="table table-striped table-hover" id="sample_5" style="text-align:center">
                                         <thead>
                                             <tr>
-                                            	  <th style="text-align:center">
-                                                    <i class="fa fa-sort-numeric-asc"></i>
-													
-                                                 ID
-                                                </th>
+                                            	 
                                                 <th  style="text-align:center" class="hidden-xs">
                                                     <i class="fa fa-user"></i>
 												Code
@@ -78,14 +74,7 @@
                                           <c:forEach var="list" items="${CoA}">
                                         	 <tr data-uid="${list.coa_account_uid}" data-code="${list.coa_code}" data-desc="${list.coa_description}" data-account="${list.coa_account_flag}" data-active="${list.coa_active_flag}" data-parent="${list.acc_parent_uid}" >
                                                 
-                                            
-                                                <td class="highlight" class="info">
-                                                     <div class="info"></div>
-
-                                                   <a  type="button" data-toggle="modal" id="modal" data-href="#edit" href="#edit" class="ToModal">${list.coa_account_uid}</a>
-                                                   
-                                                </td>
-                                                
+                                         
                                                 <td class="hidden-xs">${list.coa_code}</td>
                                                 
                                                  <td class="hidden-xs alignment">${list.coa_description}</td>
@@ -119,16 +108,12 @@
                                                 
                                                 
                                                  <td>
-                                                 
-                                                 
-                                                 
-                                                  
-                                                 <c:choose>
-                                                 	<c:when test="${list.coa_active_flag == '0'}">
-                                                 	
-                                                 	 <a href="#" class="label label-sm label-info" style="padding:1em">
-                                                        <i class="fa fa-check-circle-o"></i>
-                                                        Active
+							                      <c:choose>
+                            	                     	<c:when test="${list.coa_active_flag == '0'}">
+                                	                 	
+                                    	             	 <a href="#" class="label label-sm label-info" style="padding:1em">
+                                        	                <i class="fa fa-check-circle-o"></i>
+                                            	            Active
                                                     </a>
                                                  	
                                                  	
@@ -138,7 +123,7 @@
                          							
                          							  <a href="#" class="label label-sm label-warning" style="padding:1em">
                                                         <i class="fa fa-sign-in"></i>
-                                                        Off
+                                                       Inactive
                                                     </a>
                          							
                          							
@@ -250,7 +235,7 @@
 
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="radios">ActiveFlags</label>
+  <label class="col-md-4 control-label" for="radios">Account Status</label>
   <div class="col-md-4"> 
     <label class="radio-inline" for="radios-0">
       <form:radiobutton name="radios" id="radios-0" value="0" path="coa_active_flag"/>
@@ -258,7 +243,7 @@
     </label> 
     <label class="radio-inline" for="radios-1">
       <form:radiobutton name="radios" id="radios-1" value="1" path="coa_active_flag"/>
-      Off
+      Inactive
     </label>
   </div>
 </div>

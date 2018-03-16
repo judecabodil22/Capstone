@@ -12,6 +12,11 @@ public class financials_cjevController {
 	{
 		ModelAndView cjev = new ModelAndView();
 		cjev.setViewName("GLedger/financials_cjev");//jsp file
+		
+
+		
+		
+		
 		return cjev;
 	}
 }
