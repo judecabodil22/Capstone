@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class financials_rjevController {
 	
 	@RequestMapping("financials_reviewjev") //url
-	public ModelAndView fdash()
+	public ModelAndView frj()
 	{
-		ModelAndView fd = new ModelAndView();
-		fd.setViewName("GLedger/financials_rjev");//
-		return fd;
+		ModelAndView rjev = new ModelAndView();
+		rjev.setViewName("GLedger/financials_rjev");//
+		return rjev;
 	}
 }
