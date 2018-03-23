@@ -336,13 +336,13 @@
                     <div class="clearfix">
                     </div>
                     &nbsp;
-                    <center>
+					<center>
                     <img src="resources/img/jmari.jpg" class="img-responsive img-circle" width="70px" height="70px" alt="User Image">
                     <h5 class="topprofiletext" style="color:white; padding-left:15px;">Vitas</h5>
                     <p>
                     <span class="topprofiletext" style="color:white; font-size:11px; padding-left:15px;">Super Admin</span>
                     </center>
-                    
+                  
                     &nbsp;  
                     <h6 style="color:white">&nbsp;&nbsp;General</h6>
                     

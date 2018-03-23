@@ -5,13 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class financials_rjevController {
+public class DropDownPracticeController {
+
 	
-	@RequestMapping("financials_reviewjev") //url
-	public ModelAndView frj()
+	@RequestMapping("dropdown")
+	public ModelAndView mav()
 	{
-		ModelAndView rjev = new ModelAndView();
-		rjev.setViewName("GLedger/financials_rjev");//
-		return rjev;
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("Admin/DropDown");
+		
+		return mav;
 	}
+	
 }
