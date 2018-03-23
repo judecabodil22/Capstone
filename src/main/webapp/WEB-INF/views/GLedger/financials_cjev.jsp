@@ -282,12 +282,6 @@
 									<option value="2">Disbursement</option>
 								</select>
 							</div>
-
-							<!-- Particulars -->
-							<div class="col-md-12 form-group required">
-							<label>Particulars</label>
-								<textarea id="textarea" class="form-control" style="resize:none" maxlength="1000" rows="3" placeholder="Write something here..."></textarea>
-							</div>
 							
 							<!-- Buttons -->
 							<div class="form-group pull-right">
@@ -324,7 +318,7 @@
                              						<th class="col-md-1">Debit Amount</th>
                              						<th class="col-md-2">Credit Account</th>
                              						<th class="col-md-1">Credit Amount</th>
-                             						<th class="col-md-4">Description</th>
+                             						<th class="col-md-4">Explanation</th>
                              					</tr>
                              				</thead>
                              				
