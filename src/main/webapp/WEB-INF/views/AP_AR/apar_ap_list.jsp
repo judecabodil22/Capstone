@@ -36,9 +36,6 @@
                                 <div class="tools pull-right"></div>
                             </div>
 							<div class="panel-body">
-                               
-                             
-                               
                                 <table class="table table-striped table-responsive" id="table1">
                                     <thead>
                                         <tr>
@@ -53,33 +50,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    
-                                      <c:forEach var="list" items="${APList}">
-                                    
-                                        <tr data-ap_transaction_num="${list.ap_transaction_num}" data-CompanyName="${list.ap_company_name}" data-ap_voucher_date="${list.ap_voucher_date}" data-ap_due_date="${list.ap_due_date}" data-amount="${list.ap_amount}">
-                                        	
-											<td>${list.ap_transaction_num}</td>
-                                            <td>${list.ap_company_name}</td>
-                                            <td>${list.ap_voucher_date}</td>
-                                            <td>${list.ap_due_date}</td>
-											<td>${list.ap_amount}</td>
-                                            
-                                           
-                                            
-                                            <c:choose>
-                                                 	<c:when test="${list.ap_status == '0'}">
-                                                 	  <td> <span class="label label-sm label-success">Paid</span></td>
-                                                 	</c:when>
-                         							
-                         							<c:otherwise>
-                         							 <td><span class="label label-sm label-warning">Unpaid</span></td>
-                         							</c:otherwise>
-                                                 </c:choose>
-                                           
-                                           
-                                           
+                                        <tr>
+											<td>223131321</td>
+                                            <td>Eureka's Furniture</td>
+                                            <td>2017-04-15</td>
+                                            <td>2017-12-30</td>
+											<td>20,000.00</td>
+                                            <td><span class="label label-sm label-warning">Overdue</span></td>
                                             <td>  
-												<a href="#full-width" class="btn default btn-xs purple" id="ToModal" data-toggle="modal" data-href="#full-width">
+												<a href="#full-width" class="btn default btn-xs purple" data-toggle="modal" data-href="#full-width">
 													<i class="fa fa-eye" ></i>
 													View
                                                 </a>
@@ -93,8 +72,28 @@
                                                 </a>
 											</td>
                                         </tr>
-                                       
-                                       </c:forEach>
+                                        <tr>
+											<td>20143242</td>
+                                            <td>Wilcon</td>
+                                            <td>2017-10-15</td>
+                                            <td>2018-01-30</td>
+											<td>50,000.00</td>
+                                            <td> <span class="label label-sm label-success">Paid</span></td>
+                                            <td>
+												<a href="#full-width" class="btn default btn-xs purple" data-toggle="modal" data-href="#full-width">
+													<i class="fa fa-eye" ></i>
+													View
+                                                </a>
+												<a href="#stack1" class="btn default btn-xs purple" data-toggle="modal" data-href="#stack1">
+													<i class="fa fa-edit" ></i>
+													Edit
+                                                </a>
+													<a href="#stackdelete" class="btn default btn-xs purple" data-toggle="modal" data-href="#stackdelete">
+													<i class="fa fa-trash-o" ></i>
+													Request Delete
+                                                </a>
+											</td>
+                                        </tr>
                                         
 									</tbody>
                                 </table>
@@ -149,43 +148,43 @@
                                         <tbody>
                                             <tr>
                                                 <td>Institute Name</td>
-                                                <td id="instName"></td>
+                                                <td>Blossomcity inc</td>
                                             </tr>
                                             <tr>
                                                 <td>Claimant Name</td>
-                                                <td id="claimantName">Kiana Velasco</td>
+                                                <td>Kiana Velasco</td>
                                             </tr>
                                             <tr>
                                                 <td>Mode of Payment</td>
-                                                <td id="modeOfPayment">once a month</td>
+                                                <td>once a month</td>
                                             </tr>
                                             <tr>
                                                 <td>Fund Cluster</td>
-                                                <td id="fundCluster">---</td>
+                                                <td>---</td>
                                             </tr>
                                             <tr>
                                                 <td>Responsibility Center</td>
-                                                <td id="responsibilityCenter">Logistics</td>
+                                                <td>Logistics</td>
                                             </tr>
                                             <tr>
                                                 <td>Voucher Date</td>
-                                                <td id="voucherDate">2017-04-15</td>
+                                                <td>2017-04-15</td>
                                             </tr>
                                             <tr>
                                                 <td>Due Date</td>
-                                                <td id="dueDate">2017-04-15</td>
+                                                <td>2017-04-15</td>
                                             </tr>
                                             <tr>
                                                 <td>Amount</td>
-                                                <td id="amount">20,000.00</td>
+                                                <td>20,000.00</td>
                                             </tr>
                                             <tr>
                                                 <td>Status</td>
-                                                <td id="status">Paid</td>
+                                                <td>Paid</td>
                                             </tr>
                                             <tr>
                                                 <td>Disbursement Voucher Number</td>
-                                                <td id="disbursementVoucherNumber">DV20140304000012</td>
+                                                <td>DV20140304000012</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -309,7 +308,7 @@
     <!-- end of global js -->
     <!-- begining of page level js -->
     <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
-    <!-- <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script> -->
+    <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
     <script type="text/javascript" src="resources/vendors/datatables/dataTables.colReorder.min.js"></script>
      <script type="text/javascript" src="resources/vendors/datatables/dataTables.scroller.min.js"></script>
     <script type="text/javascript" src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
@@ -320,68 +319,5 @@
     <script type="text/javascript" src="resources/vendors/datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 	 <!--time picker-->
     <script src="resources/vendors/timepicker/js/bootstrap-timepicker.min.js"></script>
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-   <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
-    <!-- begining of page level js -->
-    <!--  todolist-->
-    <script src="resources/js/todolist.js"></script>
-    <!-- EASY PIE CHART JS -->
-    <script src="resources/vendors/charts/easypiechart.min.js"></script>
-    <script src="resources/vendors/charts/jquery.easypiechart.min.js"></script>
-    <!--for calendar-->
-    <script src="resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
-    <!--   Realtime Server Load  -->
-    <script src="resources/vendors/charts/jquery.flot.min.js" type="text/javascript"></script>
-    <script src="resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
-    <!--Sparkline Chart-->
-    <script src="resources/vendors/charts/jquery.sparkline.js"></script>
-    <!-- Back to Top-->
-    <script type="text/javascript" src="resources/vendors/countUp/countUp.js"></script>
-    <!--   maps -->
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-     <script src="resources/vendors/jscharts/Chart.js"></script>
-    <script src="resources/js/dashboard.js" type="text/javascript"></script>
-    <script>
-$(document).ready(function(){
-	// code to read selected table row cell data (values).
-	$(".ToModal").on('click',function(){
-		// get data
-		var data = $(this).closest('tr').data();
-
-		// put to modal ----------------------- start
-		// using jquery codes
-		/* $('#modal_code').val(data.code);
-		$('#modal_description').val(data.desc); */
-		alert('w');
-		// using native javascript codes
-		  document.getElementById("instName").text = data.CompanyName;
-		 document.getElementById("claimantName").text = data.claimantName;
-		document.getElementById("modeOfPayment").text = data.modeOfPayment;
-		document.getElementById("fundCluster").text = data.fundCluster;
-		document.getElementById("responsibilityCenter").text= data.responsibilityCenter;
-		document.getElementById("voucherDate").value
-		document.getElementById("instName").value
-		document.getElementById("instName").value
-		document.getElementById("instName").value
-		
-		// put to modal ----------------------- ends
-	});
-});
-
-
-
-</script>
-    
-    
-    
 </body>
 </html>
