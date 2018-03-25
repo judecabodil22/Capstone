@@ -20,7 +20,7 @@ public class AdminCoAController {
 			@ModelAttribute("CoA_delete") AdminCOAModel model2)
 	{
 		ModelAndView mav = new ModelAndView();
-				mav.setViewName("Admin/ChartOfAccounts");
+				mav.setViewName("Admin/ChartofAccounts");
 				mav.addObject("types", dao.dropDownType());
 				mav.addObject("CoA", dao.getCoA());
 				
