@@ -44,7 +44,7 @@
                                             <tr>
                                                 <th>
                                                     <i class="fa fa-user"></i>
-                                                    Payee
+                                                    Collectee
                                                 </th>
 												<th>
                                                     <i class="fa fa-info-circle"></i>
@@ -73,7 +73,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -87,7 +87,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
 													
                                                 </td>
                                             </tr>
@@ -103,7 +103,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
                                                 </td>
                                             </tr>
 											<tr>
@@ -117,7 +117,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
                                                 </td>
                                             </tr>
 											<tr>
@@ -131,7 +131,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
                                                 </td>
                                             </tr>
 
@@ -147,7 +147,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
-													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Pay</a>
+													<a class="btn btn-success btn-large" data-toggle="modal" data-href="resources/#responsive" href="resources/#responsive">Collect</a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -191,9 +191,9 @@
 												</div>
 											
                                                 <div>
-                                                    <label for="input-text-1">Payee</label>
+                                                    <label for="input-text-1">Collectee</label>
                                                     <input type="name" class="form-control" placeholder="Name" disabled>
-                                                    <p class="help-block">Name of Payer</p>
+                                                    <p class="help-block">Name of Collecter</p>
                                                 </div>
                                                 											
                                     </div>
@@ -206,7 +206,7 @@
                                                     
                                          </div>
                                                 <div>
-                                                    <label for="select-1">Payment</label>
+                                                    <label for="select-1">Collectment</label>
                                                     <input type="float" class="form-control" id="input-password-1" placeholder=" Please enter amount in Peso (&#8369; 000.00)">
                                                    
                                                 </div>
@@ -249,7 +249,7 @@
 												<table id="user" class="table table-bordered table-striped" style="clear:both">
 												<tbody>
 												<tr>
-                                                <td>Payee Name</td>
+                                                <td>Institute Name</td>
                                                 <td>PUPCQ</td>
 												</tr>
 												<tr>

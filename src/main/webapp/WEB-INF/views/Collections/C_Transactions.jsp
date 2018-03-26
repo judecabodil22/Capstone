@@ -53,7 +53,7 @@
 											
 											<div>
                                                     <label for="input-text-1">OR Number</label>
-                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="C_OR_No"/>
+                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="Col_ORno"/>
 													<p class="help-block"></p>
 													
 						 
@@ -62,11 +62,11 @@
 												<div>
 												<label for="input-text-1">Type</label>
 												
-                                        		<form:select id="e1" class="form-control select2" path="Type_ID">
-												<c:forEach var="igp" items="${IGP_Type}">  
+                                        		<form:select id="e1" class="form-control select2" path="Col_IGPid">
+												<c:forEach var="igp" items="${list}">  
    	  
-   												<option value="${igp.type_ID}">
-           											${igp.c_Type}
+   												<option value="${igp.Col_IGPid}">
+           											<c:out value="${igp.Col_IGPid}"/>
     											</option>
 												</c:forEach>
 	
@@ -77,23 +77,23 @@
 											
                                                 <div>
                                                     <label for="input-text-1">Name</label>
-                                                    <form:input type="name" class="form-control" id="input-text-1" placeholder="Enter Name" path="C_Payee"/>
+                                                    <form:input type="name" class="form-control" id="input-text-1" placeholder="Enter Name" path="Col_institune_name"/>
                                                     <p class="help-block">Name of Payer</p>
                                                 </div>
                                                 <div>
                                                     <label for="input-password-1">Description</label>
-                                                    <form:input type="desc" class="form-control" id="input-password-1" placeholder="Description" path="C_TransDesc"/>
+                                                    <form:input type="desc" class="form-control" id="input-password-1" placeholder="Description" path="Col_desc"/>
 													<p class="help-block">Transaction Purposes</p>
                                                     
                                                 </div>
                                                 <div>
                                                     <label for="select-1">Payment</label>
-                                                    <form:input type="float" class="form-control" id="input-password-1" placeholder="&#8369; 000.00" path="C_Payment"/>
+                                                    <form:input type="float" class="form-control" id="input-password-1" placeholder="000.00" path="Col_amount"/>
                                                     <p class="help-block">Please enter amount in Peso.</p>
                                                 </div>
                                                 <div class="form-group draggable">
                                                     <label for="select-1">Date</label>
-                                                    <form:input type="date" class="form-control" id="input-password-1" path="C_Date_Paid"/>
+                                                    <form:input type="date" class="form-control" id="input-password-1" path="Col_idate"/>
                                                     <p class="help-block"></p>
 													
 													</div>
@@ -253,6 +253,8 @@
         
     });
 	</script>
+	>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
+
 	
 </body>
     </html>
