@@ -3,12 +3,12 @@ package financials.model;
 public class TVoucherModel {
 
 	private String ap_uid;
-	private String ap_institute_name;
+	private String ap_company_name;
 	private String date;
 	private String amount;
 	private String ap_status;
 	private String resp_center;
-	private String claim_name;
+	private String ap_claimant;
 	private String ap_address;
 	
 	private String dv_no;
@@ -60,12 +60,6 @@ public class TVoucherModel {
 	}
 	public void setResp_center(String resp_center) {
 		this.resp_center = resp_center;
-	}
-	public String getClaim_name() {
-		return claim_name;
-	}
-	public void setClaim_name(String claim_name) {
-		this.claim_name = claim_name;
 	}
 	public String getDv_no() {
 		return dv_no;
@@ -152,17 +146,23 @@ public class TVoucherModel {
 	public void setDv_amount(String dv_amount) {
 		this.dv_amount = dv_amount;
 	}
-	public String getAp_institute_name() {
-		return ap_institute_name;
-	}
-	public void setAp_institute_name(String ap_institute_name) {
-		this.ap_institute_name = ap_institute_name;
-	}
 	public String getAp_address() {
 		return ap_address;
 	}
 	public void setAp_address(String ap_address) {
 		this.ap_address = ap_address;
+	}
+	public String getAp_company_name() {
+		return ap_company_name;
+	}
+	public void setAp_company_name(String ap_company_name) {
+		this.ap_company_name = ap_company_name;
+	}
+	public String getAp_claimant() {
+		return ap_claimant;
+	}
+	public void setAp_claimant(String ap_claimant) {
+		this.ap_claimant = ap_claimant;
 	}
 	
 }
