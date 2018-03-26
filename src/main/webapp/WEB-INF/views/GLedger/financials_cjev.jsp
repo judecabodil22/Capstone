@@ -57,6 +57,296 @@
 <%@ include file="../commonDesign.jsp"%>
 </head>
 
+<<<<<<< HEAD
+                                            <li>
+                                                <a href="#l">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Applicant Management</span>
+                                            </a>
+                                            </li>
+
+
+                                            <li >
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">New Hire on Board</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Queries</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Reports</span>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </li>                                       
+                                </ul>
+
+                                <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Planning and Analytics</span>
+                                        </a>
+
+
+                                        <ul class = "sub-menu">
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Succession Planning</span>
+                                            </a>
+                                            </li>
+
+
+                                            <li >
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">HR Analytics</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Queries</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Reports</span>
+                                            </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>                                       
+                                </ul>
+                       </li>
+                       
+                        
+                       <li>
+                            <a href="#">
+                                <i class="livicon" data-name="truck" data-size="18"  data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
+                                <span class="title">Logistics</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                             <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Procurement</span>
+                                        </a>
+                                        <ul class = "sub-menu">
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Purchase Request Form</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Purchase Order Form</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Approved Purchase Request</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Request Form Quotation</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Bids</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Notice of Awards</span>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Warehouse Management</span>
+                                        </a>
+                                        <ul class = "sub-menu">
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Items</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Delivery</span>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </li>                                       
+                                </ul>
+
+                                <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Asset Management</span>
+                                        </a>
+                                    <ul class = "sub-menu">
+                                            <li>
+                                                <a href="#l">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Acquisition</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Maintenance Work Order</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Transfer</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Disposal</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Retirement</span>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </li>                                       
+                                </ul>
+                                 <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Queries</span>
+                                        </a>
+                                    </li>                                       
+                                </ul>
+                                 <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Reports</span>
+                                        </a>
+                                    <ul class = "sub-menu">
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Purchase Request</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Purchase Order</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Fast-Moving Items</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Slowing-Moving Items</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#l">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Item History</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Acquisition Summary</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Work Order Summary</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Transfer Summary</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Disposal Summary</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Retirement Summary</span>
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </li>                                       
+                                </ul>
+                       </li>
+                        
+                        <li class="active">
+                            <a href="#">
+                                <i class="livicon" data-name="money" data-size="18" data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
+                                <span class="title">Financials</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            
+                               <ul class="sub-menu">   
+                                    <li class="active">
+                                        <a href="#">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Journal Entry Voucher</span>
+                                        </a>
+
+                                        <ul class = "sub-menu">
+                                            <li class="active">
+                                                <a href="#">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Create JEV</span>
+                                            </a>
+                                            </li>
+=======
 <aside class="right-side">
 
 	<!-- Main Content -->
@@ -101,6 +391,7 @@
 										data-inputmask="'alias': 'mm/dd/yyyy'" data-mask />
 								</div>
 							</div>
+>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
 
 							<!-- Transaction Type -->
 							<div class="col-md-12 form-group">

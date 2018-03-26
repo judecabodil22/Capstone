@@ -7,7 +7,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Capstone Maven Webapp</name>
   <url>http://maven.apache.org</url>
-   
    <properties>
         <spring.version>4.3.3.RELEASE</spring.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -61,24 +60,6 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>6.1.0.jre8</version>
         </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.5.12</version>
-        </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>4.3.3.RELEASE</version>
-        </dependency>
-                
-
-                
-                
 
 	
 
