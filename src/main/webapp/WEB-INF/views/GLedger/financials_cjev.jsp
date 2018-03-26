@@ -696,7 +696,7 @@
                                 </ul>
                        </li>
                         
-                        <li>
+                        <li class="active">
                             <a href="#">
                                 <i class="livicon" data-name="money" data-size="18" data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
                                 <span class="title">Financials</span>
@@ -704,14 +704,14 @@
                             </a>
                             
                                <ul class="sub-menu">   
-                                    <li class="">
+                                    <li class="active">
                                         <a href="#">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Journal Entry Voucher</span>
                                         </a>
 
                                         <ul class = "sub-menu">
-                                            <li>
+                                            <li class="active">
                                                 <a href="#">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
