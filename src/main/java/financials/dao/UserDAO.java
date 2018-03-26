@@ -28,7 +28,7 @@ public class UserDAO {
 	
 	public UserModel get(String id, String username, String password) {
 		List<Object> params = new ArrayList<Object>();
-		StringBuilder sql = new StringBuilder("SELECT * FROM users");
+		StringBuilder sql = new StringBuilder("SELECT * FROM tbl_Users");
 		sql.append(" WHERE 0=0 ");
 		
 		// only add parameter when value is not null

@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
+<<<<<<< HEAD
 <head>
 <meta charset="UTF-8">
 <title>Disbursement Voucher</title>
@@ -54,8 +55,13 @@
 			</div>
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
+=======
+>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
 
+<title>Disbursement Voucher</title>
+<%@ include file = "../commonDesign.jsp" %>
 
+<<<<<<< HEAD
 					<li class="dropdown user user-menu"><a href="resources/#"
 						class="dropdown-toggle" data-toggle="dropdown"> <img
 							data-src="resources/holder.js/35x35/#fff:#000" width="35"
@@ -590,6 +596,8 @@
 			</section>
 			<!-- /.sidebar -->
 		</aside>
+=======
+>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
 		<!-- Right side column. Contains the navbar and content of the page -->
 		<aside class="right-side">
 			<!-- Content Header (Page header) -->
@@ -820,6 +828,7 @@
 			data-loop="true" data-c="#fff" data-hc="white"></i>
 		</a>
 		<!-- global js -->
+<<<<<<< HEAD
 		<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
 		<script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
 		<!--livicons-->
@@ -849,6 +858,9 @@
 			src="resources/js/pages/table-advanced.js"></script> -->
 		<!-- end of page level js -->
 
+=======
+		
+>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
 		<script>
 			$(document).ready(function() {
 				$('table .ToModal').on('click', function() {

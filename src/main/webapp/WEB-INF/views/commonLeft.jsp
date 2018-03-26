@@ -10,7 +10,7 @@
                     </div>
                     &nbsp;
                     <center>
-                    <img src="img/jmari.jpg" class="img-responsive img-circle" width="70px" height="70px" alt="User Image">
+                    <img src="resources/img/jmari.jpg" class="img-responsive img-circle" width="70px" height="70px" alt="User Image">
                     <h5 class="topprofiletext" style="color:white; padding-left:15px;">Jose Mari</h5>
                     <p>
                     <span class="topprofiletext" style="color:white; font-size:11px; padding-left:15px;">Super Admin</span>
@@ -576,14 +576,14 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/create">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
                                             </a>
                                             </li>
 
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/list">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Review JEV</span>
                                             </a>

@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"></c:set>
 
 <head>
 	<meta charset="UTF-8">
@@ -98,6 +99,75 @@
     });
     </script>
     <!-- end of global css -->
+    
+    <!-- Zeus Unfixed TransVoucher Links -->
+    <meta charset="UTF-8">
+
+<meta
+	content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+	name='viewport'>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="resources/https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="resources/https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<!-- global css -->
+<link href="resources/css/bootstrap.min.css" rel="stylesheet"
+	type="text/css" />
+<!-- font Awesome -->
+<link
+	href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="resources/css/styles/black.css" rel="stylesheet"
+	type="text/css" id="colorscheme" />
+<link href="resources/css/panel.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/metisMenu.css" rel="stylesheet"
+	type="text/css" />
+<!-- end of global css -->
+<!--page level css -->
+<link rel="stylesheet" type="text/css"
+	href="resources/vendors/datatables/css/dataTables.colReorder.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="resources/vendors/datatables/css/dataTables.scroller.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="resources/vendors/datatables/css/dataTables.bootstrap.css" />
+<link href="resources/css/pages/tables.css" rel="stylesheet"
+	type="text/css">
+<!--end of page level css-->
+
+<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+		<!--livicons-->
+		<script src="resources/vendors/livicons/minified/raphael-min.js"
+			type="text/javascript"></script>
+		<script src="resources/vendors/livicons/minified/livicons-1.4.min.js"
+			type="text/javascript"></script>
+		<script src="resources/js/josh.js" type="text/javascript"></script>
+		<script src="resources/js/metisMenu.js" type="text/javascript"> </script>
+		<script src="resources/vendors/holder-master/holder.js"
+			type="text/javascript"></script>
+		<!-- end of global js -->
+		<!-- begining of page level js -->
+		<script type="text/javascript"
+			src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
+		<!-- <script type="text/javascript"
+			src="resources/vendors/datatables/dataTables.tableTools.min.js"></script> -->
+		<script type="text/javascript"
+			src="resources/vendors/datatables/dataTables.colReorder.min.js"></script>
+		<script type="text/javascript"
+			src="resources/vendors/datatables/dataTables.scroller.min.js"></script>
+		<script type="text/javascript"
+			src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
+		<!-- <script type="text/javascript"
+			src="resources/js/pages/table-advanced.js"></script> -->
+		<!-- end of page level js -->
+		
+		<!-- End of Zeus TransVoucher -->
+		
+		
+    
+    
 
 </head>
 
@@ -266,13 +336,13 @@
                     <div class="clearfix">
                     </div>
                     &nbsp;
-                    <center>
-                    <img src="jmari.jpg" class="img-responsive img-circle" width="70px" height="70px" alt="User Image">
-                    <h5 class="topprofiletext" style="color:white; padding-left:15px;">Jose Mari</h5>
+					<center>
+                    <img src="resources/img/jmari.jpg" class="img-responsive img-circle" width="70px" height="70px" alt="User Image">
+                    <h5 class="topprofiletext" style="color:white; padding-left:15px;">Vitas</h5>
                     <p>
                     <span class="topprofiletext" style="color:white; font-size:11px; padding-left:15px;">Super Admin</span>
                     </center>
-                    
+                  
                     &nbsp;  
                     <h6 style="color:white">&nbsp;&nbsp;General</h6>
                     
@@ -307,7 +377,52 @@
                                         <a href="">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Financials</span>
+                                         <span class="fa arrow"></span>
                                         </a>
+                                        
+                                        <ul class="sub-menu">
+                                        
+                                         <li>
+                                        <a href="admin_accountTypes">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Account Types</span>
+                                        </a>
+                                        </li>
+                                        
+                                         <li>
+                                        <a href="admin_CoA">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Chart of Accounts</span>
+                                        </a>
+                                        </li>
+                                        
+                                         <li>
+                                        <a href="admin_rCenters">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Responsibility &nbsp; 
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Centers</span>
+                                        </a>
+                                        </li>
+                                        
+                                         <li>
+                                        <a href="admin_transaction">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Transaction Types</span>
+                                        </a>
+                                        </li>
+                                        
+                                         <li>
+                                        <a href="admin_funds">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">Funds</span>
+                                        </a>
+                                        </li>
+                                        
+                                        
+                                        </ul>
+                                        
                                         </li>
                                         </ul>
                         </li>
@@ -833,14 +948,15 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="">
+                                                <!-- <a href="${ctx}/JEV/create"> -->
+                                                <a href="financials_createjev">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create JEV</span>
                                             </a>
                                             </li>
 
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/JEV/list">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Review JEV</span>
                                             </a>
@@ -850,54 +966,87 @@
                                 </ul>
 
                                  <ul class="sub-menu">
-                                    <li class="">
-                                        <a href="">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <span class="title">Collections</span>
-                                        </a>
+                                 
 
-                                        <ul class = "sub-menu">
-                                            <li>
-                                                <a href="">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Accounts Receivable</span>
-                                            </a>
-                                            </li>
-
+                                      
+                                           
                                             <li>
                                                 <a href="">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Collection</span>
                                             </a>
+                                            
+                                             <ul class = "sub-menu">
+                                             
+                                                <li>
+                                                <a href="financials_ctransac2">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Accounts Receivable (Collections)</span>
+                                            </a>
                                             </li>
-                                        </ul>
+                                            
+                                               <li>
+                                                <a href="financials_ctransac">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Casheiring</span>
+                                            </a>
+                                            </li>
+                                             
+                                             </ul>
+                                             
+                                            
+                                            </li>
+                                       
                                     </li>
                                 </ul>
 
                                 <ul class="sub-menu">   
                                     <li class="">
-                                        <a href="">
+                                        <a href="voucher_transaction">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Disbursement</span>
                                         </a>
+                     
+                                    </li>
+                                </ul>
+                                
+                                <!-- start of ap ar -->
+                                  <ul class="sub-menu">   
+                                    <li class="">
+                                        <a href="">
+                                        <i class="fa fa-angle-double-right"></i>
+                                        <span class="title">AP / AR</span>
+                                        </a>
 
                                         <ul class = "sub-menu">
-                                            <li>
-                                                <a href="">
+                                              <li>
+                                           		     <a href="ap_create">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Accounts Payable</span>
-                                            </a>
-                                            </li>
+                                                <span class="title">Create Accounts &nbsp; &nbsp; &nbsp; &nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Payable</span>
+                                           		 </a>
+                                           		  </li>
 
                                             <li>
-                                                <a href="">
+                                                <a href="ar_list">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Disbursement</span>
+                                                <span class="title">List(Accounts Receivable)</span>
+                                            </a>
+                                            </li>
+                                            
+                                              <li>
+                                                <a href="ap_list">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">List(Accounts Payable)</span>
                                             </a>
                                             </li>
                                          </ul>
                                     </li>
                                 </ul>
+                                <!-- end of ap ar -->
+                                
+                                
+                                
                                 <ul class="sub-menu">   
                                     <li class="">
                                         <a href="">
@@ -923,7 +1072,7 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="">
+                                                <a href="${ctx}/PDFUATB" target="_blank">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Unadjasted Trial Balance</span>
                                             </a>
