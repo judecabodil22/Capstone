@@ -120,9 +120,10 @@ public class TVoucherDAO {
 	public boolean submit(TVoucherModel tvm) {
 
 		String sql = "Insert into dv_transaction(dv_no, ors_burs_no, disbursement_purpose, mode_of_payment, institute_name, claimant_name,"
-						+ "fund_cluster, date, particulars, responsibility_center, mfo_pap, amount, employee_assigned)" + "VALUES(?,?,?,?,?,?,?,getdate(),?,?,?,?,?)";
+						+ "fund_cluster, date, particulars, responsibility_center, mfo_pap, amount, employee_assigned)" 
+						+ "VALUES (concat(year(getdate()), '-', iif(convert(int, month(getdate())) <= '9', concat('0', convert(int,month(getdate()))), convert(varchar, month(getdate()))), '-', '1000' + '1'),?,?,?,?,?,?,getdate(),?,?,?,?,?)";
 
-		jdbcTemplate.update(sql, new Object[] { tvm.getDv_no(), tvm.getOrs_burs_no(), tvm.getPurpose_name(), tvm.getMode_of_payment(),
+		jdbcTemplate.update(sql, new Object[] { tvm.getOrs_burs_no(), tvm.getPurpose_name(), tvm.getMode_of_payment(),
 												tvm.getInstitute(), tvm.getClaimant_name(), tvm.getFund_cluster(),
 												tvm.getParticulars(), tvm.getResponsibility_center(),
 												tvm.getMfo_pap(), tvm.getDv_amount(), tvm.getEmployee_assigned()});
