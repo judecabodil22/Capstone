@@ -41,7 +41,7 @@ public class TVoucherDAO {
 				tvm.setAp_status(rs.getString("ap_status"));
 				tvm.setClaim_name(rs.getString("claimant_name"));
 				tvm.setResp_center(rs.getString("ap_resp_center"));
-				tvm.setAp_address(rs.getString("ap_address"));
+				
 				return tvm;
 			}
 		});
