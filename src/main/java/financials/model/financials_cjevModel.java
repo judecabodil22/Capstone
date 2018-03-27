@@ -2,93 +2,174 @@ package financials.model;
 
 public class financials_cjevModel {
 	
-	private int jevp_id;
-	private String jevp_no;
-	private String jevp_date;
-	private String jevp_transtype;
-	private int resp_center_uid;
-	private String jevp_particular;
-	private String ui_id;
-	private String jevp_remarks;
-	private int gs_id;
-	private int jevae_id;
-	private String jevae_desc;
-	private String db_amount;
-	private String cr_amount;
-	private int jevsd_id;
+	//JEV_INFO PART I
+	private String jev_id;
+	private String jev_no;
+	private String jev_date;
+	private String jev_trans_type;
+	private String tot_dbamt;
+	private String tot_cramt;
+	private String jev_remarks;
+	private String tstat_name;
+	
+	//JEV_DETAILS PART II
+	private String jevd_id;
+	private String resp_center_description;
+	private String coa_description;
+	private String dbcoa_name;
+	private String jevd_dbamt;
+	private String crcoa_name;
+	private String jevd_cramt;
+	private String jevd_expl;
+	private String resp_name;
+	
+	//JEV SUPPORTING DOCU PART III
+	private String jevsd_id;
 	private String jevsd_type;
 	private String jevsd_value;
 	private String jevsd_date;
 	
-	public int getJevp_id() {
-		return jevp_id;
+	//part i
+	public String getJev_id() {
+		return jev_id;
 	}
-	public String getJevp_no() {
-		return jevp_no;
+	public void setJev_id(String jev_id) {
+		this.jev_id = jev_id;
 	}
-	
-	public String getJevp_date() {
-		return jevp_date;
+	public String getJev_no() {
+		return jev_no;
 	}
-	
-	public String getJevp_trans() {
-		return jevp_transtype;
+	public void setJev_no(String jev_no) {
+		this.jev_no = jev_no;
 	}
-	
-	public int getResp_center () {
-		return resp_center_uid;
+	public String getJev_date() {
+		return jev_date;
 	}
-	
-	public String getJevp_part() {
-		return jevp_particular;
+	public void setJev_date(String jev_date) {
+		this.jev_date = jev_date;
 	}
-	
-	public String getUI_id () {
-		return ui_id;
+	public String getJev_trans_type() {
+		return jev_trans_type;
 	}
-	
-	public String getJevp_remarks () {
-		return jevp_remarks;
+	public void setJev_trans_type(String jev_trans_type) {
+		this.jev_trans_type = jev_trans_type;
 	}
-	
-	public int getGs_id () {
-		return gs_id;
+	public String getTot_dbamt() {
+		return tot_dbamt;
 	}
-	
-	public int getJevae_id () {
-		return jevae_id;
+	public void setTot_dbamt(String tot_dbamt) {
+		this.tot_dbamt = tot_dbamt;
 	}
-	
-	public String getJevae_desc () {
-		return jevae_desc;
+	public String getTot_cramt() {
+		return tot_cramt;
 	}
-	
-	public String getdb_amount () {
-		return db_amount;
+	public void setTot_cramt(String tot_cramt) {
+		this.tot_cramt = tot_cramt;
 	}
-	
-	public String getcr_amount () {
-		return cr_amount;
+	public String getJev_remarks() {
+		return jev_remarks;
 	}
-	
-	public int getJevsd_id () {
-		return jevsd_id;
+	public void setJev_remarks(String jev_remarks) {
+		this.jev_remarks = jev_remarks;
+	}
+	public String getTstat_name() {
+		return tstat_name;
+	}
+	public void setTstat_name(String tstat_name) {
+		this.tstat_name = tstat_name;
 	}
 	
-	public String getJevsd_type () {
-		return jevsd_type;
-	}
-	
-	public String getJevsd_value () {
-		return jevsd_value;
-	}
-	
-	public String getJevsd_date () {
-		return jevsd_date;
+	//part ii
+	public String getJevd_id() {
+		return jevd_id;
 	}
 
-	
+	public void setJevd_id(String jevd_id) {
+		this.jevd_id = jevd_id;
 	}
+	
+	public String getResp_center_description() {
+		return resp_center_description;
+	}
+
+	public void setResp_center_description(String resp_center_description) {
+		this.resp_center_description = resp_center_description;
+	}
+	public String getDbcoa_name() {
+		return dbcoa_name;
+	}
+	public void setDbcoa_name(String dbcoa_name) {
+		this.dbcoa_name = dbcoa_name;
+	}
+	public String getJevd_dbamt() {
+		return jevd_dbamt;
+	}
+	public void setJevd_dbamt(String jevd_dbamt) {
+		this.jevd_dbamt = jevd_dbamt;
+	}
+	public String getCrcoa_name() {
+		return crcoa_name;
+	}
+	public void setCrcoa_name(String crcoa_name) {
+		this.crcoa_name = crcoa_name;
+	}
+	public String getJevd_cramt() {
+		return jevd_cramt;
+	}
+	public void setJevd_cramt(String jevd_cramt) {
+		this.jevd_cramt = jevd_cramt;
+	}
+	public String getJevd_expl() {
+		return jevd_expl;
+	}
+	public void setJevd_expl(String jevd_expl) {
+		this.jevd_expl = jevd_expl;
+	}
+	
+	//part iii
+	public String getJevsd_id() {
+		return jevsd_id;
+	}
+	public void setJevsd_id(String jevsd_id) {
+		this.jevsd_id = jevsd_id;
+	}
+	public String getJevsd_type() {
+		return jevsd_type;
+	}
+	public void setJevsd_type(String jevsd_type) {
+		this.jevsd_type = jevsd_type;
+	}
+	public String getJevsd_value() {
+		return jevsd_value;
+	}
+	public void setJevsd_value(String jevsd_value) {
+		this.jevsd_value = jevsd_value;
+	}
+	public String getJevsd_date() {
+		return jevsd_date;
+	}
+	public void setJevsd_date(String jevsd_date) {
+		this.jevsd_date = jevsd_date;
+	}
+	public String getResp_name() {
+		return resp_name;
+	}
+	public void setResp_name(String resp_name) {
+		this.resp_name = resp_name;
+	}
+	public String getCoa_description() {
+		return coa_description;
+	}
+	public void setCoa_description(String coa_description) {
+		this.coa_description = coa_description;
+	}
+	
+	
+	
+	
+	
+}
+	
 	
 	
 	

@@ -27,7 +27,7 @@ public class C_TransactionsController {
 		ModelAndView ts = new ModelAndView();
 		ts.setViewName("Collections/C_Transactions");
 		
-		List<C_TransactionsModel> list = a.dropDownType();
+		List<C_TransactionsModel> list = dropDownType();
 		ts.addObject("dropdown", list);
 		
 		for(int i=0; i<list.size(); i++) {
@@ -37,8 +37,8 @@ public class C_TransactionsController {
 	
 	}
 	
-	public List<C_TransactionsModel> list() {
-		return a.dropDownType();
+	public List<C_TransactionsModel> dropDownType() {
+		return dropDownType();
 	}
 	
 	@RequestMapping("ctrans_save")

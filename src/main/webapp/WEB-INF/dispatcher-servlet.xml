@@ -134,4 +134,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	<bean id="CreateAPDAO" class="financials.dao.CreateAPDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+    
+    <bean id="CJEVDAO" class="financials.dao.financials_cjevDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
 </beans>
