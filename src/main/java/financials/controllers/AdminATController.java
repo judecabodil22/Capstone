@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import financials.dao.AccountTypeDao;
 import financials.model.AccountTypeModel;
@@ -64,6 +65,13 @@ public class AdminATController {
 
 		return mav;
 
+	}
+	
+	@RequestMapping("/logistics")
+	public RedirectView localRedirect() {
+	    RedirectView redirectView = new RedirectView();
+	    redirectView.setUrl("http://localhost:8080/wms/");
+	    return redirectView;
 	}
 
 }

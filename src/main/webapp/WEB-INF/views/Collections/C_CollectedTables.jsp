@@ -11,7 +11,7 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <!--section starts-->
-                <h1>Accounts Receivables/Collections</h1>
+                <h1>Collections</h1>
                 <ol class="breadcrumb">
                     <li>
                         <a href="resources/index.html">
@@ -20,7 +20,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="resources/#">Accounts Receivable</a>
+                        <a href="resources/#">Collected Accounts</a>
                     
                 </ol>
             </section>
@@ -52,11 +52,10 @@
                                                 </th>
                                                 <th class="hidden-xs">
                                                     <i class="fa fa-money"></i>
-                                                    Balance
+                                                    Amount
                                                 </th>
                                                 <th>
-                                                    <i class="fa fa-rub"></i>
-                                                    Total
+                                                   
                                                 </th>
                                                 <th></th>
                                             </tr>
@@ -69,7 +68,7 @@
                                                 <td class="hidden-xs">Tuition Fees</td>
                                                 <td>
                                                     <span>&#8369;</span>52560.10
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
@@ -83,7 +82,7 @@
                                                 <td class="hidden-xs">Canteen</td>
                                                 <td>
                                                     <span>&#8369;</span>5760.00
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
@@ -99,7 +98,7 @@
                                                 <td class="hidden-xs">Seminars</td>
                                                 <td>
                                                     <span>&#8369;</span>5760.00
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
@@ -113,7 +112,7 @@
                                                 <td class="hidden-xs">Job Fairs</td>
                                                 <td>
                                                     <span>&#8369;</span>5760.00
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
@@ -127,7 +126,7 @@
                                                 <td class="hidden-xs">Job Fairs</td>
                                                 <td>
                                                     <span>&#8369;</span>5760.00
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
@@ -143,7 +142,7 @@
                                                 <td class="hidden-xs">Seminars</td>
                                                 <td>
                                                     <span>&#8369;</span>610.50
-                                                    <span class="label label-sm label-warning label-mini">Pending</span>
+                                                    
                                                 </td>
                                                 <td>
                                                     <a class="btn default btn-xs yellow-stripe" data-toggle="modal" data-href="resources/#view" href="resources/#view">View</a>
