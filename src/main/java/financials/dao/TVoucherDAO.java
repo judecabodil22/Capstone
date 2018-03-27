@@ -29,19 +29,20 @@ public class TVoucherDAO {
 	}
 	public List<TVoucherModel> getList() {
 
-		sql = "Select * from tbl_apayable " + "WHERE ap_status = 'Pending'";
+		sql = "Select * from tbl_apayable " + "WHERE ap_status = '0'";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
 				tvm.setAp_uid(rs.getString("ap_uid"));
-				tvm.setAp_institute_name(rs.getString("ap_institute_name"));
-				tvm.setDate(rs.getString("ap_date"));
+				tvm.setAp_company_name(rs.getString("ap_company_name"));
+				tvm.setDate(rs.getString("ap_voucher_date"));
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setAp_status(rs.getString("ap_status"));
-				tvm.setClaim_name(rs.getString("claimant_name"));
-				tvm.setResp_center(rs.getString("ap_resp_center"));
-				tvm.setAp_address(rs.getString("ap_address"));
+				tvm.setAp_claimant(rs.getString("ap_claimant"));
+				
+				
+				
 				return tvm;
 			}
 		});
@@ -91,7 +92,7 @@ public class TVoucherDAO {
 	
 	public List<TVoucherModel> dropDownRespCenter() {
 
-		sql = "select resp_center_name from responsibility_center";
+		sql = "select resp_center_no from tbl_apayable";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
@@ -120,11 +121,11 @@ public class TVoucherDAO {
 	public boolean submit(TVoucherModel tvm) {
 
 		String sql = "Insert into dv_transaction(dv_no, ors_burs_no, disbursement_purpose, mode_of_payment, institute_name, claimant_name,"
-						+ "address, fund_cluster, date, particulars, responsibility_center, mfo_pap, amount, employee_assigned)" + "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+						+ "fund_cluster, date, particulars, responsibility_center, mfo_pap, amount, employee_assigned)" + "VALUES(?,?,?,?,?,?,?,getdate(),?,?,?,?,?)";
 
 		jdbcTemplate.update(sql, new Object[] { tvm.getDv_no(), tvm.getOrs_burs_no(), tvm.getPurpose_name(), tvm.getMode_of_payment(),
-												tvm.getInstitute(), tvm.getClaimant_name(), tvm.getAddress(), tvm.getFund_cluster(),
-												tvm.getDv_date(), tvm.getParticulars(), tvm.getResponsibility_center(),
+												tvm.getInstitute(), tvm.getClaimant_name(), tvm.getFund_cluster(),
+												tvm.getParticulars(), tvm.getResponsibility_center(),
 												tvm.getMfo_pap(), tvm.getDv_amount(), tvm.getEmployee_assigned()});
 
 		return true;

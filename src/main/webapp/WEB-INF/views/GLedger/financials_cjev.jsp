@@ -45,6 +45,8 @@
 <%@ include file="../commonDesign.jsp"%>
 </head>
 
+
+                                           
 <aside class="right-side">
 
 	<!-- Main Content -->
@@ -61,6 +63,7 @@
 						<h3 class="panel-title">Journal Entry Voucher</h3>
 					</div>
 
+
 					<div class="panel-body">
 						<div class="bs-example">
 							<ul class="nav nav-pills">
@@ -71,44 +74,51 @@
 								<li><a href="#page3" data-toggle="tab">Supporting
 										Documents</a></li>
 							</ul>
+
+					<br>
+
+					<div id="myTabContent" class="tab-content">
+						<!-- Page I -->
+						<div class="tab-pane fade active in" id="page1">
+
+							<!-- Entry Date -->
+							<div class="col-md-4 form-group">
+								<label>Entry Date</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control required"
+										placeholder="mm/dd/yyyy"
+										data-inputmask="'alias': 'mm/dd/yyyy'" data-mask />
+								</div>
+							</div>
+
+
+							<!-- Transaction Type -->
+							<div class="col-md-12 form-group">
+								<label>Transaction Type</label> <select id="e1"
+									class="form-control select2">
+									<option value="1">Collection</option>
+									<option value="2">Disbursement</option>
+								</select>
+							</div>
+
+							<!-- Buttons -->
+							<div class="form-group pull-right">
+								<button type="submit"
+									class="btn btn-responsive btn-default disabled">Back</button>
+								<a href="#page2" data-toggle="tab">
+									<button type="submit" class="btn btn-responsive btn-primary">Next</button>
+								</a>
+							</div>
+
+
 						</div>
 
 						<br>
 
-						<div id="myTabContent" class="tab-content">
-							<!-- Page I -->
-							<div class="tab-pane fade active in" id="page1">
-
-								<!-- Entry Date -->
-								<div class="col-md-4 form-group">
-									<label>Entry Date</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-calendar"></i>
-										</div>
-										<form:input type="text" path="jev_date" class="form-control required" placeholder="mm/dd/yyyy" data-inputmask="'alias'" data-mask="'mm/dd/yyyy'" />
-									</div>
-								</div>
-
-								<!-- Transaction Type -->
-								<div class="col-md-12 form-group">
-									<label>Transaction Type</label>
-									<form:select path="jev_trans_type" class="form-control select2">
-										<option value="Collection">Collection</option>
-										<option value="Disbursment">Disbursement</option>
-									</form:select>
-								</div>
-
-								<!-- Buttons -->
-								<div class="form-group pull-right">
-									<button type="submit" class="btn btn-responsive btn-default disabled">Back</button>
-									<a href="#page2" data-toggle="tab">
-										<button type="submit" class="btn btn-responsive btn-primary">Next</button>
-									</a>
-								</div>
-
-							</div>
-
+						
 							<!-- Page II -->
 							<div class="tab-pane fade" id="page2">
 								<div class="portlet box primary">
@@ -151,10 +161,10 @@
 
 														<td><form:select
 															class="form-control" path="dbcoa_name" name="dbcoa_name">
-															<c:forEach var= "account" items= "${accounts}">
+															<c:forEach var= "coa" items= "${dropDownAccount}">
 
-																<option value="${account.coa_description}">
-          											<c:out value="${account.coa_description}"/>
+																<option value="${coa.coa_description}">
+          											<c:out value="${coa.coa_description}"/>
     												</option>
 															</c:forEach>
 														</form:select></td>

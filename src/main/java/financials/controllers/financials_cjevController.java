@@ -26,17 +26,17 @@ public class financials_cjevController {
 	{
 		ModelAndView cjev = new ModelAndView();
 		List<financials_cjevModel> respCenter = respCenter();
-		List<financials_cjevModel> accounts = accounts();
+		List<financials_cjevModel> dropDownAccount = dropDownAccount();
 		cjev.addObject("respCenter", respCenter);
-		cjev.addObject("accounts", accounts);
+		cjev.addObject("coaAccount", dropDownAccount);
 		cjev.setViewName("GLedger/financials_cjev");//jsp file
 		return cjev;
 	}
 	public List<financials_cjevModel> respCenter() {
 		return cjvDAO.respCenter();
 	}
-	public List<financials_cjevModel> accounts() {
-		return cjvDAO.accounts();
+	public List<financials_cjevModel> dropDownAccount() {
+		return cjvDAO.dropDownAccount();
 	}
 	
 	@RequestMapping("financials_cjevsave")

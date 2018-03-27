@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.C_TransactionsDao;
 import financials.model.C_TransactionsModel;
+import financials.model.TVoucherModel;
 import financials.model.apar_CreateapMODEL;
 
 @Controller
@@ -26,15 +27,20 @@ public class C_TransactionsController {
 		ModelAndView ts = new ModelAndView();
 		ts.setViewName("Collections/C_Transactions");
 		
-		List<C_TransactionsModel> list = a.dropDownType();
-		ts.addObject("IGP_Type", list);
+		List<C_TransactionsModel> list = dropDownType();
+		ts.addObject("dropdown", list);
 		
 		for(int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i).getC_Type());
+			System.out.println(list.get(i).getCol_IGPname());
 		}
 		return ts;
 	
 	}
+	
+	public List<C_TransactionsModel> dropDownType() {
+		return dropDownType();
+	}
+	
 	@RequestMapping("ctrans_save")
 	public ModelAndView save(@ModelAttribute("ctransac") C_TransactionsModel trans,
 			@RequestParam(value = "ohyes", required = false) String save)
@@ -53,6 +59,8 @@ public class C_TransactionsController {
 	/*	}*/
 		return ts;
 	}
+	
+	
 	
 	
 }

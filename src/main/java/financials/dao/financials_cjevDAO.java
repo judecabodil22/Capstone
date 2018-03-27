@@ -70,9 +70,9 @@ public class financials_cjevDAO {
 		});
 	}
 	
-	public List<financials_cjevModel> accounts() {
+	public List<financials_cjevModel> dropDownAccount() {
 
-		sql = "select coa_description from tbl_coa";
+		sql = "Select coa_description from tbl_coa";
 
 		return jdbcTemplate.query(sql, new RowMapper<financials_cjevModel>() {
 			public financials_cjevModel mapRow(ResultSet rs, int row) throws SQLException {
