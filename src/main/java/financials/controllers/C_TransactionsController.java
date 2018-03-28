@@ -27,26 +27,26 @@ public class C_TransactionsController {
 		ModelAndView ts = new ModelAndView();
 		ts.setViewName("Collections/C_Transactions");
 		
-<<<<<<< HEAD
+
 		List<C_TransactionsModel> dropDown = a.dropDownType();
 		ts.addObject("dropdown", dropDown);
 		
-=======
+
 		List<C_TransactionsModel> list = dropDownType();
 		ts.addObject("dropdown", list);
->>>>>>> e8096c62eabfa894f382ea16cfe7487db6c73c1f
+
 		
 		return ts;
 	
 	}
 	
-<<<<<<< HEAD
+
 	public List<C_TransactionsModel> dropDown() {
 		return a.dropDownType();
-=======
+	}
 	public List<C_TransactionsModel> dropDownType() {
 		return dropDownType();
->>>>>>> e8096c62eabfa894f382ea16cfe7487db6c73c1f
+
 	}
 	
 	@RequestMapping("ctrans_save")
