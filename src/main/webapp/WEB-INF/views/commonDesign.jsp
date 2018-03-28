@@ -947,6 +947,14 @@
                                         </a>
 
                                         <ul class = "sub-menu">
+                                        	<li>
+                                                <!-- <a href="${ctx}/JEV/create"> -->
+                                                <a href="financials_jevlist">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">JEV LIST</span>
+                                            </a>
+                                            </li>
+                                        	
                                             <li>
                                                 <!-- <a href="${ctx}/JEV/create"> -->
                                                 <a href="financials_createjev">
@@ -992,6 +1000,12 @@
                                             </a>
                                             </li>
                                              
+                                             <li>
+                                                <a href="financials_Collected">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Collected Accounts</span>
+                                            </a>
+                                            </li>
                                              </ul>
                                              
                                             
