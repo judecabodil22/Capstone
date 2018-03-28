@@ -62,7 +62,7 @@
 												<div>
 												<label for="input-text-1">Type</label>
 												
-                                        		<form:select id="e1" class="form-control select2" path="Col_IGPid">
+                                        		<form:select id="" class="form-control select2" path="Col_IGPid">
 												<c:forEach var="igp" items="${list}">  
    	  
    												<option value="${igp.Col_IGPid}">

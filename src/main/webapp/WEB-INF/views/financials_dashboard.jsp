@@ -23,7 +23,7 @@
 			</div>
 			
 			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="#" type="button" class="btn btn-lg btn-danger">
+				<a href="../wms/warehouse-setup" type="button" class="btn btn-lg btn-danger">
 					<strong class="livicon" data-name="money" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
 						<label style="position:relative; top:2em">DISBURSEMENT</label>
 				</a>

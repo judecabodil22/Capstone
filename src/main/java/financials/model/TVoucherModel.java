@@ -7,7 +7,7 @@ public class TVoucherModel {
 	private String date;
 	private String amount;
 	private String ap_status;
-	private String resp_center;
+	private String resp_center_no;
 	private String ap_claimant;
 	private String ap_address;
 	
@@ -54,12 +54,6 @@ public class TVoucherModel {
 	}
 	public void setAp_status(String ap_status) {
 		this.ap_status = ap_status;
-	}
-	public String getResp_center() {
-		return resp_center;
-	}
-	public void setResp_center(String resp_center) {
-		this.resp_center = resp_center;
 	}
 	public String getDv_no() {
 		return dv_no;
@@ -163,6 +157,12 @@ public class TVoucherModel {
 	}
 	public void setAp_claimant(String ap_claimant) {
 		this.ap_claimant = ap_claimant;
+	}
+	public String getResp_center_no() {
+		return resp_center_no;
+	}
+	public void setResp_center_no(String resp_center_no) {
+		this.resp_center_no = resp_center_no;
 	}
 	
 }

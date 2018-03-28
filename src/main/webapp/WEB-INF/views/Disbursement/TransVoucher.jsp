@@ -78,7 +78,7 @@
 
 												<tr data-institute="${pay.ap_company_name}"
 													data-claimant="${pay.ap_claimant}"
-													data-rcenter="${pay.resp_center}"
+													data-rcenter="${pay.resp_center_no}"
 													data-amount="${pay.amount}" data-id="${pay.ap_uid}">
 													<td>${pay.ap_company_name}</td>
 													<td>${pay.date}</td>
@@ -188,7 +188,7 @@
 										<td><form:input
 												style="margin-left: 10px; margin-top: 10px;"
 												class="form-control" id="claim_name" type="text"
-												path="ap_claimant" readOnly="true"></form:input></td>
+												path="claimant_name" readOnly="true"></form:input></td>
 									</tr>
 
 									<tr>
@@ -240,7 +240,7 @@
 												<td><form:input type="text" placeholder="Particulars"
 														class="form-control" path="particulars"></form:input></td>
 												<td><form:input class="form-control" id="rcenter"
-														type="text" path="responsibility_center" readOnly="true"></form:input></td>
+													 path="responsibility_center" readOnly="true"></form:input></td>
 												<td><form:input type="text" placeholder="MFO/PAP"
 														class="form-control" path="mfo_pap"></form:input></td>
 												<td><form:input class="form-control" id="amount"

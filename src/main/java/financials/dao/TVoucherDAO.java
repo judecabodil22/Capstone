@@ -40,6 +40,7 @@ public class TVoucherDAO {
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setAp_status(rs.getString("ap_status"));
 				tvm.setAp_claimant(rs.getString("ap_claimant"));
+				tvm.setResp_center_no(rs.getString("resp_center_no"));
 				
 				
 				
@@ -97,7 +98,7 @@ public class TVoucherDAO {
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
-				tvm.setResponsibility_center(rs.getString("resp_center_name"));
+				tvm.setResp_center_no(rs.getString("resp_center_no"));
 				return tvm;
 			}
 

@@ -27,17 +27,15 @@ public class C_TransactionsController {
 		ModelAndView ts = new ModelAndView();
 		ts.setViewName("Collections/C_Transactions");
 		
-		List<C_TransactionsModel> list = a.dropDownType();
-		ts.addObject("dropdown", list);
+		List<C_TransactionsModel> dropDown = a.dropDownType();
+		ts.addObject("dropdown", dropDown);
 		
-		for(int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i).getCol_IGPname());
-		}
+		
 		return ts;
 	
 	}
 	
-	public List<C_TransactionsModel> list() {
+	public List<C_TransactionsModel> dropDown() {
 		return a.dropDownType();
 	}
 	
