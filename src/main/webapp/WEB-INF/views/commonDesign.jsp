@@ -749,171 +749,114 @@
                                         <span class="title">Procurement</span>
                                         </a>
                                         <ul class = "sub-menu">
-                                           <li>
-                                                <a href="prtry">
+                                            <li>
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Purchase Request Form</span>
                                             </a>
                                             </li>
-                                             <li>
-                                                <a href="P-R-Approve">
+                                            <li>
+                                                <a href="ss_manage evaluators.html">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Purchase Order Form</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Approved Purchase Request</span>
                                             </a>
                                             </li>
-                                          
-                                           
-                                                <li>
-                                                <a href="bidding">
+                                            <li>
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Bidding</span>
+                                                <span class="title">Request Form Quotation</span>
                                             </a>
                                             </li>
-                                       
                                             <li>
-                                                <a href="bids">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Bids</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="notice-of-award">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Notice of Awards</span>
                                             </a>
                                             </li>
-                                              <li>
-                                                <a href="purchase-order">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Purchase Order Form</span>
-                                            </a>
-                                            </li>
                                         </ul>
                                     </li>
-                                   
                                 </ul>
                                 <ul class="sub-menu">   
-                                  <li class="">
+                                    <li class="">
                                         <a href="ss_manage evaluations criteria.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Warehouse Management</span>
                                         </a>
                                         <ul class = "sub-menu">
-                                           
-                                            
                                             <li>
-                                                <a href="warehouse-list">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Warehouse Items</span>
-                                            </a>
-                                            </li>
-											<li>
-                                                <a href="transaction-receive2">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Item Delivery</span>
+                                                <span class="title">Items</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="transaction-inspect2">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Item Inspection</span>
+                                                <span class="title">Delivery</span>
                                             </a>
                                             </li>
-                                                 </ul>
-                                    </li>                                                         
+                                        </ul>
+                                    </li>                                       
                                 </ul>
 
                                 <ul class="sub-menu">   
-                                <li class="">
+                                    <li class="">
                                         <a href="ss_users.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Asset Management</span>
                                         </a>
                                     <ul class = "sub-menu">
                                             <li>
-                                                <a href="adding-asset">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Add Asset</span>
+                                                <span class="title">Acquisition</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="assign-asset">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Request Asset</span>
+                                                <span class="title">Maintenance Work Order</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="receive-asset">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Request for inspection</span>
+                                                <span class="title">Transfer</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="for-inspections">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">For Inspection</span>
+                                                <span class="title">Disposal</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="transfer-asset">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Transfer Asset</span>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="repair-asset">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Repair Asset</span>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="pullout-asset">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Pull Out Asset</span>
+                                                <span class="title">Retirement</span>
                                             </a>
                                             </li>
                                         </ul>
-                                    </li>                                                   
+                                    </li>                                       
                                 </ul>
                                  <ul class="sub-menu">   
-                                   <li class="">
+                                    <li class="">
                                         <a href="ss_users.html">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Queries</span>
                                         </a>
-                                        <ul class = "sub-menu">
-                                           <li>
-                                                <a href="list-of-purchase-request">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Purchase Request </span>
-                                            </a>
-                                            </li>
-                                             <li>
-                                                <a href="List-of-Biddings">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Bidding </span>
-                                            </a>
-                                            </li>
-                                              <li>
-                                                <a href="list-of-purchase-order">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Purchase Order </span>
-                                            </a>
-                                            </li>
-                                              <li>
-                                                <a href="List-of-Supplier">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Supplier </span>
-                                            </a>
-                                            </li>
-                                            <li>
-                                                <a href="assetinventory">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Asset Inventory</span>
-                                            </a>
-                                            </li>
-                                            
-                                        </ul>
                                     </li>                                       
                                 </ul>
                                  <ul class="sub-menu">   
@@ -924,15 +867,15 @@
                                         </a>
                                     <ul class = "sub-menu">
                                             <li>
-                                                <a href="pr-report">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Purchase Request </span>
+                                                <span class="title">Purchase Request</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="report">
+                                                <a href="ss_manage evaluators.html">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List of Purchase Order</span>
+                                                <span class="title">Purchase Order</span>
                                             </a>
                                             </li>
                                             <li>
@@ -984,7 +927,7 @@
                                             </a>
                                             </li>
                                         </ul>
-                                    </li>                                            
+                                    </li>                                       
                                 </ul>
                        </li>
                        
