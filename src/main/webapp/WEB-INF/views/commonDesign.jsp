@@ -987,41 +987,36 @@
                                 </ul>
                        </li>
                        
-                            
-                        <li>
-                            <a href="">
-                                <i class="livicon" data-name="money" data-size="18"  data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
-                                <span class="title">Financials</span>
-                                <span class="fa arrow"></span>
+                       <li>
+                       		<a href="">
+                       			<i class="livicon" data-name="money" data-size="18"  data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
+                       			<span class="title">Financials</span>
+                       			<span class="fa arrow"></span>
+                       		</a>
+                       		
+                       		<ul class="sub-menu">
+                       			<li>
+                       				<a href="financials_jevlist">
+                       					<i class="fa fa-angle-double-right"></i>
+                       						<span class="title">Journal Entry Voucher</span>
+                       				</a>
+                       			</li>
+                       		</ul>
+                       		
+                       		<!-- <a href="${ctx}/JEV/create"> -->
+                       		<!--  
+                       		<li>
+                          	<a href="${ctx}/JEV/list">
+                            <i class="fa fa-angle-double-right"></i>
+                            <span class="title">Review JEV</span>
                             </a>
-                            
-                               <ul class="sub-menu">   
-                                    <li class="">
-                                        <a href="">
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <span class="title">Journal Entry Voucher</span>
-                                        </a>
-
-                                        <ul class = "sub-menu">
-                                        	<li>
-                                                <!-- <a href="${ctx}/JEV/create"> -->
-                                                <a href="financials_jevlist">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">JEV LIST</span>
-                                            </a>
-                                            </li>
+                            </li>
+                             -->
+                                       
                                         	
                                            
-
-                                            <li>
-                                                <a href="${ctx}/JEV/list">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Review JEV</span>
-                                            </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+											
+                          
 
                                  <ul class="sub-menu">
                                  

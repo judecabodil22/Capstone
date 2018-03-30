@@ -10,8 +10,8 @@ public class financials_rjevController {
 	@RequestMapping("financials_reviewjev") //url
 	public ModelAndView frj()
 	{
-		ModelAndView rjev = new ModelAndView();
-		rjev.setViewName("GLedger/financials_rjev");//
-		return rjev;
+		ModelAndView rjv = new ModelAndView();
+		rjv.setViewName("GLedger/financials_rjev");//directory
+		return rjv;
 	}
 }
