@@ -1011,13 +1011,7 @@
                                             </a>
                                             </li>
                                         	
-                                            <li>
-                                                <!-- <a href="${ctx}/JEV/create"> -->
-                                                <a href="financials_createjev">
-                                                <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">Create JEV</span>
-                                            </a>
-                                            </li>
+                                           
 
                                             <li>
                                                 <a href="${ctx}/JEV/list">
