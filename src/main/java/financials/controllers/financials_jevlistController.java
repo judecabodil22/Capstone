@@ -11,7 +11,7 @@ public class financials_jevlistController {
 	public ModelAndView jvl()
 	{
 		ModelAndView jvl = new ModelAndView();
-		jvl.setViewName("GLedger/financials_jevlist");//
+		jvl.setViewName("GLedger/financials_jevlist");//directory
 		return jvl;
 	}
 }
