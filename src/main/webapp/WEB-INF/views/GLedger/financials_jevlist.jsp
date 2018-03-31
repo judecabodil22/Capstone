@@ -23,7 +23,6 @@
 <link href="resources/css/panel.css" rel="stylesheet" type="text/css" />
 <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css" />
 <!-- end of global css -->
-<!-- Added Scripts -->
 
 <!-- start add row -->
 <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -35,6 +34,8 @@
 <link href="resources/css/pages/icon.css" rel="stylesheet" type="text/css" />
 <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
 <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
+<link href="resources/vendors/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/pages/formelements.css" rel="stylesheet" />
 
 <%@ include file="../commonDesign.jsp"%>
 </head>
@@ -47,7 +48,7 @@
 	</section>
 	
 	<section class="content">
-	<div class="col-md-12">
+		<div class="col-md-12">
 		<div class="portlet box primary">
 			
 			<div class="portlet-title">
@@ -58,8 +59,9 @@
 			</div>
 			
 			<div class="portlet-body">
+				
 				<div class="table-toolbar">
-					<div class="btn-group pull-right">
+					<div class="btn-group pull-left">
 						<a href="financials_createjev">
 							<button class=" btn btn-success">
 								<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
@@ -67,6 +69,16 @@
 							</button>
 						</a>
 					</div>
+					
+					<div class="col-md-4 form-group pull-right">
+						<div class="input-group">
+							<div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+							</div>
+								<input type="text" class="form-control pull-right" id="reservation" placeholder="Show by: Date"/>
+						</div>
+					</div>
+					
 				</div>
 				
 				<br>
@@ -79,30 +91,36 @@
 								<th>JEV No.</th>
 								<th>Prepared by</th>
 								<th>Remarks</th>
-								<th colspan="4"></th> 	
+								<th>Status</th>
+								<th colspan="3"></th> 	
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td> March 30, 2018 </td>
+								<td> 03/30/2018 </td>
 								<td>
-									<a href="#"> 00-2018-03-SAMP </a>
+									<a href="financials_reviewjev"> 00-2018-03-SAMP </a>
 								</td>
 								<td>Edrian Valdez</td>
 								<td>Drinking water will not dehydrate you.</td>
-								<td><a href="#" class="btn btn-responsive info btn-xs">
+								<td>
+									<span class="label label-sm label-warning">Pending</span>
+								</td>
+								<td><a href="financials_reviewjev" class="btn btn-responsive info btn-xs">
                                     	<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> </a>
                                 </td>
                                 
+                                <!--
                                 <td><a href="#" class="btn warning btn-xs">
                                     	<i class="livicon" data-name="edit" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Edit" style="margin-bottom:10px;"></i> </a>
                                 </td>
+                                -->
                                 
                                 <td><a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove">
                                     	<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> </a>
                                 </td>
                                 
-                                <td><a href="#" class="btn default btn-xs">
+                                <td><a class="btn default btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
                                     	<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> </a>
                                 </td>                                                    
 							</tr>
@@ -123,8 +141,25 @@
                             </div>
                         </div>
                    </div>
-
-
+                   
+                   <!-- static modal (post)-->
+					<div class="modal fade in" id="staticpost" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+                    	<div class="modal-dialog modal-md">
+                        	<div class="modal-content">
+                            	<div class="modal-body">
+                                	<p>Do you want to post this JEV to General Ledger?</p>
+                                	<br>
+                                	<div class="alert alert-warning">
+                                    	<p>Note: You cannot undo this action once posted.</p>
+                               		</div>	
+                                </div>
+                            	<div class="modal-footer">
+                            		<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                                	<button type="button" data-dismiss="modal" class="btn">No</button>
+                            	</div>
+                            </div>
+                        </div>
+                   </div>
                   
 				</div>
 			</div>
@@ -151,63 +186,14 @@
 <!-- Added Scripts -->
 <script src="resources/vendors/modal/js/classie.js"></script>
 <script src="resources/vendors/modal/js/modalEffects.js"></script>
+<script src="resources/vendors/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 
-<!-- Pop-up hover -->
-<script type="text/javascript">
-    $(function() {
-        $("[data-toggle='popover']").popover();
-    });
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-
-        $('.po-markup > .po-link').popover({
-            trigger: 'hover',
-            html: true, // must have if HTML is contained in popover
-
-            // get the title and conent
-            title: function() {
-                return $(this).parent().find('.po-title').html();
-            },
-            content: function() {
-                return $(this).parent().find('.po-body').html();
-            },
-
-            container: 'body',
-            placement: 'right'
-
-        });
-
-    });
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $(".tooltip-examples a").tooltip({
-            placement: 'top'
-        });
-    });
-    </script>
-    <script type="text/javascript">
-    $('#myTabContent').slimscroll({
-        height: '130px',
-        size: '3px',
-        color: '#D84A38',
-        opacity: 1
-
-    });
-    $('#slim2').slimscroll({
-        height: '120px',
-        size: '3px',
-        color: '#35AA47',
-        opacity: 1
-    });
-    $('#slim3').slimscroll({
-        height: '100px',
-        size: '3px',
-        color: '#FE6A0A',
-        opacity: 1
-    });
-    </script>
-
+<script src="resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
+<script src="resources/vendors/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+<script src="resources/vendors/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
+    
+<script src="resources/vendors/maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+<script src="resources/js/pages/formelements.js" type="text/javascript"></script>
+    
 </body>
 </html>
