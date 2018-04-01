@@ -100,6 +100,7 @@
 							<tr data-jevid="${list.jev_id}" data-jevdate="${list.jev_date}"
 								data-jevno="${jev_no}" data-jevcreator="${list.jev_creator}"
 								data-jevremarks="${list.jev_remarks}" data-jevstatus="${list.tstat_name}">
+								
 								<td>${list.jev_date}</td>
 								<td>
 									<a href="financials_reviewjev">${list.jev_no}</a>
@@ -139,7 +140,7 @@
                                 	<p>Do you want to remove this JEV from the list?</p>
                                 </div>
                             	<div class="modal-footer">
-                            		<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                            		<button type="button" data-dismiss="modal" class="btn btn-primary" id="del">Yes</button>
                                 	<button type="button" data-dismiss="modal" class="btn">No</button>
                             	</div>
                             </div>
