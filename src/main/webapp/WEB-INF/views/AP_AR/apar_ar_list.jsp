@@ -1,219 +1,148 @@
-<!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <html>
- <title>Advanced Datatables| Josh Admin Template</title>
+
+<head>
+<title>Financials System Project</title>
+
+<!-- Added Script -->
+<link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
 
 <%@ include file = "../commonDesign.jsp" %>
-   
-        <!-- Right side column. Contains the navbar and content of the page -->
-        <aside class="right-side">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <!--section starts-->
-                <h1>List of Receivables</h1>
-                <ol class="breadcrumb">
-                    <li>
-                        <a href="resources/index.html">
-                            <i class="livicon" data-name="home" data-size="18" data-loop="true"></i>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="resources/#">Accounts Receivable</a>
-                    </li>
-                    <li class="active">List of Receivables</li>
-                </ol>
-            </section>
-            <!--section ends-->
-            <section class="content">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-primary filterable">
-                            <div class="panel-heading clearfix  ">
-                                <div class="panel-title pull-left">
-									<div class="caption">
-										<i class="livicon" data-name="camera-alt" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-										Table Tools
-									</div>
-                                    
-                                </div>
-                                <div class="tools pull-right"></div>
-                            </div>
+</head>
+
+<aside class="right-side">
+	<section class="content-header">
+		<h1>List of Receivables</h1>
+	</section>
+	
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary filterable">
+					<div class="panel-heading clearfix">
+						<div class="panel-title pull-left">
+							<div class="caption">
+								<i class="livicon" data-name="sign-in" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+								List of Receivables
+							</div>
+						</div>
+						
+						<div class="tools pull-right"></div>
+					</div>
+					
+					<div class="panel-body">
+					
+					<table class="table-toolbar">
+						<div class="btn-group pull-left">
+							<a href="financials_ctransac">
+								<button class=" btn btn-success">
+									<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
+									Collection 
+								</button>
+							</a>
+						</div>
+					</table>
+					
+					
+						<table class="table table-striped table-responsive">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>JEV No.</th>
+									<th>Amount</th>
+									<th>Status</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>04-03-2018</td>
+									<td>	
+										<a data-toggle="modal" data-href="#staticview" href="#staticview">00-2018-04-SAMP</a>
+									</td>
+									<td>P 1,000.00</td>
+									<td>
+										<span class="label label-sm label-primary">Pending</span>
+									</td>
+									<td><a class="btn info btn-xs" data-toggle="modal" data-href="#staticview" href="#staticview">
+											<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<!-- static modal (view) -->
+				<div class="modal fade in" id="staticview" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h4 class="modal-title">Receivable Information</h4>
+							</div>
 							
-                            <div class="panel-body">
-								
-                                <table class="table table-striped table-responsive" id="table1">
-								
-                                     <thead>
-                                        <tr>
-
-                                            <th>Transaction Number</th>
-											<th>Payee Name</th>
-                                            <th>Voucher Date</th>
-                                            <th>Due Date</th>
-											<th>Amount</th>
-											<th>Status</th>
-											<th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-											<td>223131321</td>
-                                            <td>Eureka's Furniture</td>
-                                            <td>2017-04-15</td>
-                                            <td>2017-12-30</td>
-											<td>20,000.00</td>
-                                            <td><span class="label label-sm label-warning">Overdue</span></td>
-                                            <td>  
-												<a href="resources/#full-width" class="btn default btn-xs purple" data-toggle="modal" data-href="resources/#full-width">
-													<i class="fa fa-eye" ></i>
-													View
-                                                </a>
-												<a href="resources/#stack1" class="btn default btn-xs purple" data-toggle="modal" data-href="resources/#stack1">
-													<i class="fa fa-eye" ></i>
-													Edit
-                                                </a>
-											</td>
-                                        </tr>
-                                        <tr>
-											<td>20143242</td>
-                                            <td>Wilcon</td>
-                                            <td>2017-10-15</td>
-                                            <td>2018-01-30</td>
-											<td>50,000.00</td>
-                                            <td> <span class="label label-sm label-success">Paid</span></td>
-                                            <td>
-												<a href="resources/#full-width" class="btn default btn-xs purple" data-toggle="modal" data-href="resources/#full-width">
-													<i class="fa fa-eye" ></i>
-													View
-                                                </a>
-												<a href="resources/#stack1" class="btn default btn-xs purple" data-toggle="modal" data-href="resources/#stack1">
-													<i class="fa fa-eye" ></i>
-													Edit
-                                                </a>
-											</td>
-                                        </tr>
-                                        
-</tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Basic Table Ends Here-->
-                <!--delete modal starts here-->
-                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title custom_align" id="Heading">
-                                    Delete this entry
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="alert alert-warning">
-                                    <span class="glyphicon glyphicon-warning-sign"></span>
-                                    Are you sure you want to delete this Record?
-                                </div>
-                            </div>
-                            <div class="modal-footer ">
-                                <button type="button" class="btn btn-warning">
-                                    <span class="glyphicon glyphicon-ok-sign"></span>
-                                    Yes
-                                </button>
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                    No
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.modal ends here -->
-				<!-- view modal starts here -->
-				 <div class="modal fade in" id="full-width" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">20143242</h4>
-                            </div>
-                            
-						 <div class="panel-body">
-                                <div class="table-scrollable">
-                                    <table id="user" class="table table-bordered table-striped" style="clear:both">
-                                        <tbody>
-                                            <tr>
-                                                <td>Payee Name</td>
-                                                <td>Blossomcity inc</td>
+							<div class="panel-body">
+								<div class="table-scrollable">
+									<table id="tbl1" class="table table-bordered table-striped" style="clear:both">
+										<tbody>
+											<tr>
+												<td>Date</td>
+                                                <td>04-03-2018</td>
                                             </tr>
                                             <tr>
-                                                <td>Type</td>
-                                                <td>Tuition Fee</td>
+                                                <td>JEV No</td>
+                                                <td>00-2018-04-SAMP</td>
                                             </tr>
                                             <tr>
-                                            <tr>
-                                                <td>Responsibility Center</td>
-                                                <td>Logistics</td>
+                                            	<td>Receivable Type</td>
+                                                <td>Accounts Receivable</td>
                                             </tr>
                                             <tr>
-                                                <td>Date</td>
-                                                <td>2017-04-15</td>
+                                            	<td>Amount</td>
+                                            	<td>P 1,000.00</td>
                                             </tr>
                                             <tr>
-                                                <td>Due Date</td>
-                                                <td>2017-04-15</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Amount</td>
-                                                <td>20,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Status</td>
-                                                <td>Paid</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Official Receipt(OR) Number</td>
-                                                <td>DV20140304000012</td>
+                                            	<td>Explanation</td>
+                                            	<td>aaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaa</td>
                                             </tr>
                                         </tbody>
-                                    </table>
-                                </div>
-                            </div>
-							<div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---view modal ends here-->
-            </section>
-            <!-- content -->
-        </aside>
-        <!-- right-side -->
-    </div>
-    <!-- ./wrapper -->
-    <a id="back-to-top" href="resources/#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left">
-        <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
-    </a>
-    <!-- global js -->
-    <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-    <!--livicons-->
-    <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-    <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-   <script src="resources/js/josh.js" type="text/javascript"></script>
-    <script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-    <script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-    <!-- end of global js -->
-    <!-- begining of page level js -->
-    <script type="text/javascript" src="resources/vendors/datatables/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.tableTools.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.colReorder.min.js"></script>
-     <script type="text/javascript" src="resources/vendors/datatables/dataTables.scroller.min.js"></script>
-    <script type="text/javascript" src="resources/vendors/datatables/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="resources/js/pages/table-advanced.js"></script>
-    <!-- end of page level js -->
+                                     </table>
+                                 </div>
+                             </div>
+                             
+                             <div class="modal-footer">
+                         		<button type="button" data-dismiss="modal" class="btn">Close</button>
+                         	</div>
+                         </div>
+                         
+                      </div>
+                   </div>
+				
+			</div>
+		</div>
+	</section>
+                
+</aside>
+</div>
+
+<!-- global js -->
+<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+<!--livicons-->
+<script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
+<script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
+<script src="resources/js/josh.js" type="text/javascript"></script>
+<script src="resources/js/metisMenu.js" type="text/javascript"> </script>
+<script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
+<!-- end of global js -->
+
+<!-- Added Scripts -->
+<script src="resources/vendors/modal/js/classie.js"></script>
+<script src="resources/vendors/modal/js/modalEffects.js"></script>
+
 </body>
 </html>

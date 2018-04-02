@@ -108,7 +108,7 @@
 								<td>${list.jev_creator}</td>
 								<td>${list.jev_remarks}</td>
 								<td>
-									<span class="label label-sm label-warning">${list.tstat_name}</span>
+									<span class="label label-sm label-primary">${list.tstat_name}</span>
 								</td>
 								<td><a href="financials_reviewjev" class="btn btn-responsive info btn-xs">
                                     	<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> </a>
