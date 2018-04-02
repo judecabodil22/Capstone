@@ -7,7 +7,7 @@ public class TVoucherModel {
 	private String date;
 	private String amount;
 	private String ap_status;
-	private String resp_center_no;
+	private String resp_center_uid;
 	private String ap_claimant;
 	private String ap_address;
 	
@@ -17,7 +17,7 @@ public class TVoucherModel {
 	private String mode_of_payment;
 	private String institute;
 	private String claimant_name;
-	private String address;
+	
 	private String fund_cluster;
 	private String dv_date;
 	private String employee_assigned;
@@ -91,12 +91,6 @@ public class TVoucherModel {
 	public void setClaimant_name(String claimant_name) {
 		this.claimant_name = claimant_name;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
 	public String getFund_cluster() {
 		return fund_cluster;
 	}
@@ -158,11 +152,11 @@ public class TVoucherModel {
 	public void setAp_claimant(String ap_claimant) {
 		this.ap_claimant = ap_claimant;
 	}
-	public String getResp_center_no() {
-		return resp_center_no;
+	public String getResp_center_uid() {
+		return resp_center_uid;
 	}
-	public void setResp_center_no(String resp_center_no) {
-		this.resp_center_no = resp_center_no;
+	public void setResp_center_uid(String resp_center_uid) {
+		this.resp_center_uid = resp_center_uid;
 	}
 	
 }

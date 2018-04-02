@@ -49,7 +49,7 @@ public class financials_jevlistModel {
 		this.jev_remarks = jev_remarks;
 	}
 	
-	public String getTsat_name() {
+	public String getTstat_name() {
 		return tstat_name;
 	}
 	

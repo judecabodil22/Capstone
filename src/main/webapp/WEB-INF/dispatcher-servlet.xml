@@ -138,4 +138,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <bean id="CJEVDAO" class="financials.dao.financials_cjevDAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
+    
+    <bean id="financials_jevlistDAO" class="financials.dao.financials_jevlistDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
 </beans>

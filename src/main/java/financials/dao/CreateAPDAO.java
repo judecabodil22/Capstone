@@ -73,7 +73,7 @@ public class CreateAPDAO {
 	
 	public List<apar_CreateapMODEL> getcap() {
 
-		sql = "Select * from tbl_apayable [AP] inner join tbl_responsibility_center [RC] ON RC.resp_center_uid = AP.resp_center_no inner join tbl_account_type [AT] ON AT.acc_uid = AP.acc_uid";
+		sql = "Select * from tbl_apayable [AP] inner join tbl_responsibility_center [RC] ON RC.resp_center_uid = AP.resp_center_uid inner join tbl_account_type [AT] ON AT.acc_uid = AP.acc_uid";
 																												
 		return jdbcTemplate.query(sql, new RowMapper<apar_CreateapMODEL>() {
 			public apar_CreateapMODEL mapRow(ResultSet rs, int row) throws SQLException {

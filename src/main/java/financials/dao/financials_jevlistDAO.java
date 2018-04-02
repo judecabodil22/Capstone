@@ -31,7 +31,7 @@ public boolean insert (financials_jevlistModel jl)	{
 
 public List<financials_jevlistModel> getJev_info() {
 	
-	sql = "select jev_no,jev_date,jev_creator,jev_remarks,tstat_name from tbl_fs_jev_info as ji \r\n" +	
+	sql = "select jev_id, jev_no,jev_date,jev_creator,jev_remarks,tstat_name from tbl_fs_jev_info \r\n" +	
 		  "order by jev_id";
 	
 	return jdbcTemplate.query(sql, new RowMapper<financials_jevlistModel>() {
@@ -43,7 +43,7 @@ public List<financials_jevlistModel> getJev_info() {
 			jl.setJev_no(rs.getString("jev_no"));
 			jl.setJev_creator(rs.getString("jev_creator"));
 			jl.setJev_remarks(rs.getString("jev_remarks"));
-			jl.setTstat_name(rs.getString("tsat_name"));
+			jl.setTstat_name(rs.getString("tstat_name"));
 			
 			return jl;
 		}

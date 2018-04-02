@@ -29,7 +29,7 @@ public class TVoucherDAO {
 	}
 	public List<TVoucherModel> getList() {
 
-		sql = "Select * from tbl_apayable " + "WHERE ap_status = '0'";
+		sql = "Select * from tbl_apayable " + "WHERE ap_status = 'Pending'";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
@@ -40,7 +40,7 @@ public class TVoucherDAO {
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setAp_status(rs.getString("ap_status"));
 				tvm.setAp_claimant(rs.getString("ap_claimant"));
-				tvm.setResp_center_no(rs.getString("resp_center_no"));
+				tvm.setResp_center_uid(rs.getString("resp_center_uid"));
 				
 				
 				
@@ -93,12 +93,12 @@ public class TVoucherDAO {
 	
 	public List<TVoucherModel> dropDownRespCenter() {
 
-		sql = "select resp_center_no from tbl_apayable";
+		sql = "select resp_center_uid from tbl_apayable";
 
 		return jdbcTemplate.query(sql, new RowMapper<TVoucherModel>() {
 			public TVoucherModel mapRow(ResultSet rs, int row) throws SQLException {
 				TVoucherModel tvm = new TVoucherModel();
-				tvm.setResp_center_no(rs.getString("resp_center_no"));
+				tvm.setResp_center_uid(rs.getString("resp_center_uid"));
 				return tvm;
 			}
 

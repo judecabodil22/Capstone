@@ -78,7 +78,7 @@
 
 												<tr data-institute="${pay.ap_company_name}"
 													data-claimant="${pay.ap_claimant}"
-													data-rcenter="${pay.resp_center_no}"
+													data-rcenter="${pay.resp_center_uid}"
 													data-amount="${pay.amount}" data-id="${pay.ap_uid}">
 													<td>${pay.ap_company_name}</td>
 													<td>${pay.date}</td>

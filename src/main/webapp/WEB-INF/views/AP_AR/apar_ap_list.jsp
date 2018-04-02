@@ -49,12 +49,12 @@
                                             <th>Due Date</th>
 											<th>Amount</th>
 											<th>Status</th>
-											<th>Action</th>
+											<th colspan="3"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     
-                                      <c:forEach var="list" items="${APList}">
+                                      <c:forEach var="list" items="${aplist}">
                                     
                                         <tr data-ap_transaction_num="${list.ap_transaction_num}" data-CompanyName="${list.ap_company_name}" data-ap_voucher_date="${list.ap_voucher_date}" data-ap_due_date="${list.ap_due_date}" data-amount="${list.ap_amount}">
                                         	
@@ -83,10 +83,14 @@
 													<i class="fa fa-eye" ></i>
 													View
                                                 </a>
+                                            </td>
+                                            <td>
 												<a href="#stack1" class="btn default btn-xs purple" data-toggle="modal" data-href="#stack1">
 													<i class="fa fa-edit" ></i>
 													Edit
                                                 </a>
+                                                </td>
+                                            <td>
 												<a href="#stackdelete" class="btn default btn-xs purple" data-toggle="modal" data-href="#stackdelete">
 													<i class="fa fa-trash-o" ></i>
 													Request Delete
