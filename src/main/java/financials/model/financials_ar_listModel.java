@@ -2,19 +2,19 @@ package financials.model;
 
 public class financials_ar_listModel {
 	
-	private int ar_id;
+	private String jev_id;
 	private String jev_date;
 	private String jev_no;
+	private String jevd_id;
 	private String crcoa_name;
 	private String jevd_cramt;
 	private String jevd_expl;
-	private String ar_status;
 	
-	public int getAr_id() {
-		return ar_id;
+	public String getJev_id() {
+		return jev_id;
 	}
-	public void setAr_id(int ar_id) {
-		this.ar_id = ar_id;
+	public void setJev_id(String jev_id) {
+		this.jev_id = jev_id;
 	}
 	public String getJev_date() {
 		return jev_date;
@@ -27,6 +27,12 @@ public class financials_ar_listModel {
 	}
 	public void setJev_no(String jev_no) {
 		this.jev_no = jev_no;
+	}
+	public String getJevd_id() {
+		return jevd_id;
+	}
+	public void setJevd_id(String jevd_id) {
+		this.jevd_id = jevd_id;
 	}
 	public String getCrcoa_name() {
 		return crcoa_name;
@@ -46,11 +52,4 @@ public class financials_ar_listModel {
 	public void setJevd_expl(String jevd_expl) {
 		this.jevd_expl = jevd_expl;
 	}
-	public String getAr_status() {
-		return ar_status;
-	}
-	public void setAr_status(String ar_status) {
-		this.ar_status = ar_status;
-	}
-
 }
