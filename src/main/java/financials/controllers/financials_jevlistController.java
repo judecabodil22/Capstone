@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.financials_jevlistDAO;
-import financials.model.TVoucherModel;
 import financials.model.financials_jevlistModel;
 
 @Controller

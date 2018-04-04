@@ -25,18 +25,22 @@ public class financials_ap_listDAO {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-	public List<financials_ap_listModel> dropDownType() {
+	public List<financials_ap_listModel> getAplist() {
 
-		sql = "select apl.ap_id, ji.jev_date, ji.jev_no, jd.crcoa_name, jd.jevd_cramt, jd.jevd_expl, apl.ap_status from tbl_fs_aplist as apl, \r\n" + 
-			  " tbl_fs_jev_info as ji, tbl_fs_jev_details as jd /r/n" +
-			  " where apl.jev_id = ji.jev_id and ji.jev_id = jd.jev_id and jd.crcoa_name like '%Payable%'";
+		sql = "select apl.ap_id, ji.jev_id, ji.jev_date, ji.jev_no, jd.jevd_id, jd.crcoa_name, jd.jevd_cramt, jd.jevd_expl, apl.ap_status \r\n" +
+			  "from tbl_fs_aplist apl inner join tbl_fs_jev_info ji on apl.jev_id = ji.jev_id \r\n" +
+	    	  "inner join tbl_fs_jev_details jd on ji.jev_id = jd.jev_id \r\n" +
+		      "where jd.crcoa_name like '%Payable%'";
+
 		
 		return jdbcTemplate.query(sql, new RowMapper<financials_ap_listModel>() {
 			public financials_ap_listModel mapRow(ResultSet rs, int row) throws SQLException {
 				financials_ap_listModel h3h3 = new financials_ap_listModel();
 				h3h3.setAp_id(rs.getInt("ap_id"));
+				h3h3.setJev_id(rs.getString("jev_id"));
 				h3h3.setJev_date(rs.getString("jev_date"));
 				h3h3.setJev_no(rs.getString("jev_no"));
+				h3h3.setJevd_id(rs.getString("jevd_id"));
 				h3h3.setCrcoa_name(rs.getString("crcoa_name"));
 				h3h3.setJevd_cramt(rs.getString("jevd_cramt"));
 				h3h3.setJevd_expl(rs.getString("jevd_expl"));
@@ -46,5 +50,4 @@ public class financials_ap_listDAO {
 
 		});
 	}
-
 }

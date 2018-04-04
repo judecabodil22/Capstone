@@ -51,26 +51,32 @@
 								<tr>
 									<th>Date</th>
 									<th>JEV No.</th>
+									<th>Receivable Type</th>
 									<th>Amount</th>
 									<th>Status</th>
 									<th></th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>04-03-2018</td>
+								<c:forEach var="list" items="${arlist}">
+								<tr data-arid="${list.ar_id}" data-jevdate="${list.jev_date}"
+								data-jevno="${list.jev_no}" data-artype="${list.crcoa_name}"
+								data-amt="${list.jevd_cramt}" data-arstatus="${list.ar_status}">
+									<td>${list.jev_date}</td>
 									<td>	
-										<a data-toggle="modal" data-href="#staticview" href="#staticview">00-2018-04-SAMP</a>
+										<a data-toggle="modal" data-href="#staticview" href="#staticview">${list.jev_no}</a>
 									</td>
-									<td>P 1,000.00</td>
+									<td>${list.crcoa_name}</td>
+									<td>${list.jevd_cramt}</td>
 									<td>
-										<span class="label label-sm label-primary">Pending</span>
+										<span class="label label-sm label-primary">${list.ar_status}</span>
 									</td>
 									<td><a class="btn info btn-xs" data-toggle="modal" data-href="#staticview" href="#staticview">
 											<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i>
 										</a>
 									</td>
 								</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</div>

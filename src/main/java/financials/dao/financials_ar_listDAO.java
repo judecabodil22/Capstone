@@ -11,8 +11,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import financials.model.AccountTypeModel;
-import financials.model.financials_ap_listModel;
 import financials.model.financials_ar_listModel;
 
 public class financials_ar_listDAO {
@@ -29,9 +27,10 @@ public class financials_ar_listDAO {
 	
 	public List<financials_ar_listModel> getArlist() {
 		
-		sql = "select arl.ar_id, ji.jev_date, ji.jev_no, jd.crcoa_name, jd.jevd_cramt, jd.jevd_expl, arl.ar_status from tbl_fs_arlist as arl, \r\n" + 
-				  " tbl_fs_jev_info as ji, tbl_fs_jev_details as jd /r/n" +
-				  " where arl.jev_id = ji.jev_id and ji.jev_id = jd.jev_id and jd.crcoa_name like '%Receivable%'";
+		sql = "select arl.ar_id, ji.jev_date, ji.jev_no, jd.crcoa_name, jd.jevd_cramt, jd.jevd_expl, arl.ar_status \r\n" +
+		      "from tbl_fs_arlist arl inner join tbl_fs_jev_info ji on arl.jev_id = ji.jev_id \r\n" +
+			  "inner join tbl_fs_jev_details jd on ji.jev_id = jd.jev_id \r\n" +
+		      "where jd.crcoa_name like '%Receivable%' ";
 		
 		return jdbcTemplate.query(sql, new RowMapper<financials_ar_listModel>() {
 			public financials_ar_listModel mapRow(ResultSet rs, int row) throws SQLException {

@@ -98,7 +98,7 @@
 						<tbody>
 							<c:forEach var="list" items="${jev_info}">
 							<tr data-jevid="${list.jev_id}" data-jevdate="${list.jev_date}"
-								data-jevno="${jev_no}" data-jevcreator="${list.jev_creator}"
+								data-jevno="${list.jev_no}" data-jevcreator="${list.jev_creator}"
 								data-jevremarks="${list.jev_remarks}" data-jevstatus="${list.tstat_name}">
 								
 								<td>${list.jev_date}</td>
@@ -124,7 +124,7 @@
                                     	<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> </a>
                                 </td>
                                 
-                                <td><a class="btn success btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
+                                <td><a class="btn warning btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
                                     	<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> </a>
                                 </td>                                                    
 							</tr>

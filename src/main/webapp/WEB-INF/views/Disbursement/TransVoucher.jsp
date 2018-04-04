@@ -181,14 +181,14 @@
 										<td><form:input
 												style="margin-left: 10px; margin-top: 10px;"
 												class="form-control" id="inst_name" type="text"
-												path="institute" readOnly="true"></form:input></td>
+												path="institute" ></form:input></td>
 									</tr>
 									<tr>
 										<td>Claimant Name <span class='require'>*</span></td>
 										<td><form:input
 												style="margin-left: 10px; margin-top: 10px;"
 												class="form-control" id="claim_name" type="text"
-												path="claimant_name" readOnly="true"></form:input></td>
+												path="claimant_name" ></form:input></td>
 									</tr>
 
 									<tr>

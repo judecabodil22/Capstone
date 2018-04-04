@@ -18,7 +18,7 @@ public class financials_apar_ar_listController {
 	{
 		ModelAndView arl = new ModelAndView();
 		arl.setViewName("AP_AR/apar_ar_list");
-		arl.addObject("aplist", ARDAO.getArList());
+		arl.addObject("arlist", ARDAO.getArlist());
 		return arl;
 	}
 }
