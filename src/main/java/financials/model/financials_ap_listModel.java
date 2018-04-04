@@ -19,6 +19,14 @@ public class financials_ap_listModel {
 	public void setAp_id (int ap_id) {
 		this.ap_id = ap_id;
 	}
+	
+	public String getJev_id() {
+		return jev_id;
+	}
+
+	public void setJev_id(String jev_id) {
+		this.jev_id = jev_id;
+	}
 
 	public String getJev_date() {
 		return jev_date;
@@ -34,6 +42,14 @@ public class financials_ap_listModel {
 
 	public void setJev_no(String jev_no) {
 		this.jev_no = jev_no;
+	}
+	
+	public String getJevd_id() {
+		return jevd_id;
+	}
+
+	public void setJevd_id(String jevd_id) {
+		this.jevd_id = jevd_id;
 	}
 
 	public String getCrcoa_name() {
@@ -68,20 +84,4 @@ public class financials_ap_listModel {
 		this.ap_status = ap_status;
 	}
 
-	public String getJev_id() {
-		return jev_id;
-	}
-
-	public void setJev_id(String jev_id) {
-		this.jev_id = jev_id;
-	}
-	
-	public String getJevd_id() {
-		return jevd_id;
-	}
-
-	public void setJevd_id(String jevd_id) {
-		this.jevd_id = jevd_id;
-	}
-	
 }
