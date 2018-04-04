@@ -15,7 +15,7 @@
 
 <aside class="right-side">
 	<section class="content-header">
-		<h1>List of Payable</h1>
+		<h1>List of Payables</h1>
 	</section>
 	
 	<section class="content">
@@ -26,7 +26,7 @@
 						<div class="panel-title pull-left">
 							<div class="caption">
 								<i class="livicon" data-name="sign-out" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-								List of Payables
+								Payable List
 							</div>
 						</div>
 					</div>

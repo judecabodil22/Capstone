@@ -25,8 +25,8 @@
 					<div class="panel-heading clearfix">
 						<div class="panel-title pull-left">
 							<div class="caption">
-								<i class="livicon" data-name="sign-out" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-								List of Receivables
+								<i class="livicon" data-name="sign-in" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+								Receivable List
 							</div>
 						</div>
 					</div>
