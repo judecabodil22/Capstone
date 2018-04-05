@@ -310,12 +310,11 @@
 			.ready(
 					function() {
 
+
 						$('#add_row2')
 								.click(
 										function() {
-											$('#tableAppend')
-													.append(
-															'<tr id="addr0"> <td> <select id="e1" class="form-control select2"> <option value="1">sample</option> </select> </td> <td><select id="e1" class="form-control select2"> <optgroup label="Assets"> <option value="1">Cash</option> <option value="2">Accounts Receivable</option> <option value="3">Notes Receivable</option> </optgroup> <optgroup label="Liabilities"> <option value="1">Accounts Payable</option> <option value="1">Notes Payable</option> </optgroup> </select></td> <td><input id="debitt" type="number" onkeyup="calculations();" value="0"  class="form-control debit" maxlength="19" /></td> <td><select id="e1" class="form-control select2"> <optgroup label="Assets"> <option value="1">Cash</option> <option value="2">Accounts Receivable</option> <option value="3">Notes Receivable</option> </optgroup> <optgroup label="Liabilities"> <option value="1">Accounts Payable</option> <option value="1">Notes Payable</option> </optgroup> </select></td> <td><input id="creditt" type="number" onkeyup="calculations();" class="form-control credit" maxlength="19" /></td> <td><input type="text" class="form-control" maxlength="500" /></td> </tr>');
+											$('#addr0').clone().appendTo('#tableAppend');
 										});
 					});
 

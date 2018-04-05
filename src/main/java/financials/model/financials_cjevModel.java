@@ -14,8 +14,8 @@ public class financials_cjevModel {
 	
 	//JEV_DETAILS PART II
 	private String jevd_id;
-	private String resp_center_description;
-	private String coa_description;
+	/*private String resp_center_description;*/
+	/*private String coa_description;*/
 	private String dbcoa_name;
 	private String jevd_dbamt;
 	private String crcoa_name;
