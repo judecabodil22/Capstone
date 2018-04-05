@@ -27,7 +27,7 @@ public class TVoucherDAO {
 	public TVoucherDAO(DataSource dataSource) {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	public List<TVoucherModel> getList() {
+	public List<TVoucherModel> listPayable() {
 
 		sql = "Select * from tbl_apayable " + "WHERE ap_status = 'Pending'";
 
@@ -36,13 +36,10 @@ public class TVoucherDAO {
 				TVoucherModel tvm = new TVoucherModel();
 				tvm.setAp_uid(rs.getString("ap_uid"));
 				tvm.setAp_company_name(rs.getString("ap_company_name"));
-				tvm.setDate(rs.getString("ap_voucher_date"));
+				tvm.setDate(rs.getString("ap_due_date"));
 				tvm.setAmount(rs.getString("ap_amount"));
 				tvm.setAp_status(rs.getString("ap_status"));
-				tvm.setAp_claimant(rs.getString("ap_claimant"));
 				tvm.setResp_center_uid(rs.getString("resp_center_uid"));
-				
-				
 				
 				return tvm;
 			}

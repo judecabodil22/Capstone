@@ -31,21 +31,27 @@ public class C_TransactionsDao
 	//insert
 	public boolean insert(C_TransactionsModel Trans) {
 
-		String sql = "Insert into dbo.col_tbl_transactions"
-				+ "(col_ORid,"
+		String sql = "Insert into tbl_ctransactions"
+				+ "(col_ORno,"
+				+ "col_IGPname,"
 				+ "col_institune_name,"
 				+ "col_desc,"
 				+ "col_amount,"
-				+ "col_idate)"
-				+ "VALUES(?,?,?,?,?)";
+				+ "col_idate,"
+				+ "col_duedate,"
+				+ "col_stat)"
+				+ "VALUES(?,?,?,?,?,getdate(),getdate()+30,'Pending')";
 
-	//update
 		jdbcTemplate.update(sql, new Object[] {
-				Trans.getCol_ORid(),
+				
+				Trans.getCol_ORno(),
+				Trans.getCol_IGPname(),
 				Trans.getCol_institune_name(),
 				Trans.getCol_desc(),
 				Trans.getCol_amount(),
-				Trans.getCol_idate() });
+				Trans.getCol_idate(),
+				Trans.getCol_duedate(),
+				Trans.getCol_stat()});
 
 		return true;
 		
@@ -53,12 +59,11 @@ public class C_TransactionsDao
 	}
 	
 	public List<C_TransactionsModel> dropDownType() {
-		String sql = "Select * from dbo.col_tbl_IGPtype";
+		String sql = "Select C_Type from dbo.tbl_IGP_Type";
 		return jdbcTemplate.query(sql, new RowMapper<C_TransactionsModel>() {
 			public C_TransactionsModel mapRow(ResultSet rs, int row) throws SQLException {
 				C_TransactionsModel user = new C_TransactionsModel();
-				user.setCol_IGPname(rs.getString("col_IGPname"));
-				user.setCol_IGPid(rs.getInt("col_IGPid"));
+				user.setC_Type(rs.getString("C_Type"));
 				
 				return user;
 			}
@@ -73,12 +78,12 @@ public class C_TransactionsDao
 		return jdbcTemplate.query(sql, new RowMapper<C_TransactionsModel>() {
 			public C_TransactionsModel mapRow(ResultSet rs, int row) throws SQLException {
 				C_TransactionsModel user = new C_TransactionsModel();
-				user.setCol_ORid(rs.getInt("col_ORid"));
+				
 				user.setCol_IGPid(rs.getInt("col_IGPid"));
 				user.setCol_IGPname(rs.getString("col_IGPname"));
 				user.setCol_institune_name(rs.getString("col_institune_name"));
 				user.setCol_desc(rs.getString("col_desc"));
-				user.setCol_amount(rs.getFloat("col_amount"));
+				user.setCol_amount(rs.getString("col_amount"));
 				user.setCol_idate(rs.getDate("col_idate"));
 				
 				

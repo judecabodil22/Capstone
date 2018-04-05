@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%> --%>
 
 <html>
 
@@ -15,7 +15,7 @@
 
 <aside class="right-side">
 	<section class="content-header">
-		<h1>List of Payable</h1>
+		<h1>List of Payables</h1>
 	</section>
 	
 	<section class="content">
@@ -26,7 +26,7 @@
 						<div class="panel-title pull-left">
 							<div class="caption">
 								<i class="livicon" data-name="sign-out" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-								List of Payables
+								Payable List
 							</div>
 						</div>
 					</div>
@@ -35,7 +35,8 @@
 					
 					<table class="table-toolbar">
 						<div class="btn-group pull-left">
-							<a href="voucher_transaction">
+							<a type="button" value="Open Window" onclick="window.open('voucher_transaction')"> 
+							<!-- <a href="voucher_transaction">  -->	
 								<button class=" btn btn-success">
 									<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
 									Disbursement Voucher 
@@ -54,7 +55,6 @@
 								<th>JEV No.</th>
 								<th>Payable Type</th>
 								<th>Amount</th>
-								<th>Status</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -64,12 +64,13 @@
 						
 							<tr> 
 								
-								<td>${list.jev_date}</td>
+								<td><%-- <fmt:formatDate type = "date" /> --%>
+									${list.jev_date}
+								</td>
 								<td>${list.jev_no}</td>
 								<td>${list.crcoa_name}</td>
-								<td>${list.jevd_cramt}</td>
-								<td>
-									<span class="label label-sm label-primary">${list.ap_status}</span>
+								<td><%-- <fmt:formatNumber type = "currency" /> --%>
+									${list.jevd_cramt}
 								</td>
 								<td>
 									<button type="button" class="btn info btn-xs" data-toggle="modal" data-target="#g${vs.index}" id="viewDetailButton${vs.index}"><i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i></button>

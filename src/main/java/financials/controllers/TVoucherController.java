@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.TVoucherDAO;
-import financials.model.DVModel;
 import financials.model.TVoucherModel;
-import financials.model.tblreportsModel;
+
 
 @Controller
 public class TVoucherController {
@@ -52,12 +51,13 @@ public class TVoucherController {
 		mav.addObject("dropDown5", dropDown5);
 		mav.addObject("dropDown6", dropDown6);
 		mav.addObject("dropDown7", dropDown7);
-		mav.addObject("pList", listPayable());
+		mav.addObject("plist", listPayable());
 		return mav;
 
 	}
+	
 	public List<TVoucherModel> listPayable() {
-		return tvdao.getList();
+		return tvdao.listPayable();
 	}
 	
 	public List<TVoucherModel> dropDown() {
@@ -97,6 +97,7 @@ public class TVoucherController {
 			e.printStackTrace();
 		}
 		mav.setViewName("Disbursement/TransVoucher");
+		mav.addObject("plist", listPayable());
 		List<TVoucherModel> dropDown = dropDown();
 		List<TVoucherModel> dropDown2 = dropDown2();
 		List<TVoucherModel> dropDown5 = dropDown5();
@@ -108,7 +109,6 @@ public class TVoucherController {
 		mav.addObject("dropDown5", dropDown5);
 		mav.addObject("dropDown6", dropDown6);
 		mav.addObject("dropDown7", dropDown7);
-		mav.addObject("pList", listPayable());
 		return mav;
 	}
 }

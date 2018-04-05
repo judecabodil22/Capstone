@@ -405,20 +405,25 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;Centers</span>
                                         </a>
                                         </li>
+                                       
                                         
+                                         <!--
                                          <li>
                                         <a href="admin_transaction">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Transaction Types</span>
                                         </a>
                                         </li>
+                                         -->
                                         
+                                         <!--
                                          <li>
                                         <a href="admin_funds">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Funds</span>
                                         </a>
                                         </li>
+                                         -->
                                         
                                         
                                         </ul>
@@ -1078,25 +1083,27 @@
                                         </a>
 
                                         <ul class = "sub-menu">
-                                              <li>
+                                              
+                                              
+                                              <!--  <li>
                                            		     <a href="ap_create">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Create Accounts &nbsp; &nbsp; &nbsp; &nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Payable</span>
                                            		 </a>
-                                           		  </li>
+                                           		  </li>-->
 
                                             <li>
                                                 <a href="ar_list">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List(Accounts Receivable)</span>
+                                                <span class="title">List of Receivables</span>
                                             </a>
                                             </li>
                                             
                                               <li>
                                                 <a href="ap_list">
                                                 <i class="fa fa-angle-double-right"></i>
-                                                <span class="title">List(Accounts Payable)</span>
+                                                <span class="title">List of Payables</span>
                                             </a>
                                             </li>
                                          </ul>
@@ -1108,7 +1115,7 @@
                                 
                                 <ul class="sub-menu">   
                                     <li class="">
-                                        <a href="">
+                                        <a href="#">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Queries</span>
                                         </a>
@@ -1117,7 +1124,7 @@
                                 
                                 <ul class="sub-menu">   
                                     <li class="">
-                                        <a href="">
+                                        <a href="#">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Reports</span>
                                         </a>
@@ -1131,7 +1138,8 @@
 
                                         <ul class = "sub-menu">
                                             <li>
-                                                <a href="${ctx}/PDFUATB" target="_blank">
+                                            	<a href="#" target="_blank">
+                                                <!--  <a href="${ctx}/PDFUATB" target="_blank">-->
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Unadjasted Trial Balance</span>
                                             </a>

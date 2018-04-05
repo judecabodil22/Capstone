@@ -49,11 +49,11 @@
                                         <div class="col-md-4 pd-col-4">
                                           
 											
-                                            <form:form action="ctrans_save" role="form" style="margin-top:1em;" modelAttribute="ctransac">
+                                            <form:form action="cashiering_save" modelAttribute="ctransac">
 											
 											<div>
                                                     <label for="input-text-1">OR Number</label>
-                                                    <form:input class="form-control" id="disabledInput" type="text" placeholder="CV0012017" path="Col_ORno"/>
+                                                    <form:input class="form-control"  type="text" placeholder="CV0012017" path="col_ORno"/>
 													<p class="help-block"></p>
 													
 						 
@@ -62,11 +62,11 @@
 												<div>
 												<label for="input-text-1">Type</label>
 												
-                                        		<form:select id="" class="form-control select2" path="Col_IGPid">
-												<c:forEach var="igp" items="${list}">  
+                                        		<form:select id="" class="form-control select2" path="col_IGPname">
+												<c:forEach var="igp" items="${dropdown}">  
    	  
-   												<option value="${igp.Col_IGPid}">
-           											<c:out value="${igp.Col_IGPid}"/>
+   												<option value="${igp.c_Type}">
+           											<c:out value="${igp.c_Type}"/>
     											</option>
 												</c:forEach>
 	
@@ -77,43 +77,31 @@
 											
                                                 <div>
                                                     <label for="input-text-1">Name</label>
-                                                    <form:input type="name" class="form-control" id="input-text-1" placeholder="Enter Name" path="Col_institune_name"/>
+                                                    <form:input type="name" class="form-control" id="input-text-1" placeholder="Enter Name" path="col_institune_name"/>
                                                     <p class="help-block">Name of Payer</p>
                                                 </div>
                                                 <div>
                                                     <label for="input-password-1">Description</label>
-                                                    <form:input type="desc" class="form-control" id="input-password-1" placeholder="Description" path="Col_desc"/>
+                                                    <form:input type="desc" class="form-control" id="input-password-1" placeholder="Description" path="col_desc"/>
 													<p class="help-block">Transaction Purposes</p>
                                                     
                                                 </div>
                                                 <div>
                                                     <label for="select-1">Payment</label>
-                                                    <form:input type="float" class="form-control" id="input-password-1" placeholder="000.00" path="Col_amount"/>
+                                                    <form:input class="form-control" id="input-password-1" placeholder="000.00" path="col_amount"/>
                                                     <p class="help-block">Please enter amount in Peso.</p>
                                                 </div>
-                                                <div class="form-group draggable">
-                                                    <label for="select-1">Date</label>
-                                                    <form:input type="date" class="form-control" id="input-password-1" path="Col_idate"/>
-                                                    <p class="help-block"></p>
-													
-													</div>
+                                                
 												
 													<div class="form-group" style="float:right;" >
                                                    
                                                 </div>
 												
 												
-												</form:form>
-												 <a id="ohyes" name="ohyes" class="btn btn-effect btn-primary" data-modal="modal-confirmation">Submit</a>
+												<div>
+												 <a id="ohyes" name="ohyes" class="btn btn-effect btn-primary" data-modal="modal-confirmation">Save</a>
 											</div>
-										</div>
-									</div>
-									<!--form builder ends--> </div>
-									</div>
-									</div>
-									</div>
-									
-								<!--MODAL KUNO HAHAHHA!-->	
+											<!--MODAL KUNO HAHAHHA!-->	
 								<div class="md-modal md-effect-1" id="modal-confirmation">
 								<div class="md-content md-content-white">
 								<h3>Are you sure?</h3>
@@ -132,10 +120,23 @@
 							<div style="float:left;">
                             <button type="close" class="btn btn-modal btn-default"><span class="glyphicon glyphicon-remove"></span>Cancel</button> </div>
 							<div style="float:right;">
-							<button type="submit" class="btn btn-modal btn-default"><span class="glyphicon glyphicon-ok"></span>Confirm</button></div>
+							<button name="submit" type="submit" class="btn btn-modal btn-default"><span class="glyphicon glyphicon-ok"></span>Confirm</button></div>
                         </div>
+                        </form:form>
                     </div>
                 </div>
+										</div>
+										
+									</div>
+									<!--form builder ends--> </div>
+									
+									</div>
+									</div>
+									
+									
+								
+                
+                
 				<!--END NA PO NG MODAL KUNO!-->
 				
                 <section class="content">
@@ -148,14 +149,17 @@
                                 <div class="box-body">
                                     <div id="calendar"></div>
                                 </div>
+                                
                             
                             <!-- /.box --> </div>
+                            
                         <!-- /.col --> </div>
+                        
                    
                     
                 </section>
             </aside>
-        </div>
+        
 		
 		
 		
@@ -253,8 +257,5 @@
         
     });
 	</script>
-	>>>>>>> b72bbbea76e74e5551ce143ee324c50bd4ec38cd
-
-	
-</body>
+	</body>
     </html>

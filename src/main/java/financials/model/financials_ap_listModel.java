@@ -2,7 +2,6 @@ package financials.model;
 
 public class financials_ap_listModel {
 	
-	private int ap_id;
 	private String jev_id;
 	private String jev_date;
 	private String jev_no;
@@ -10,15 +9,6 @@ public class financials_ap_listModel {
 	private String crcoa_name;
 	private String jevd_cramt;
 	private String jevd_expl;
-	private String ap_status;
-	
-	public int getAp_id() {
-		return ap_id;
-	}
-	
-	public void setAp_id (int ap_id) {
-		this.ap_id = ap_id;
-	}
 	
 	public String getJev_id() {
 		return jev_id;
@@ -74,14 +64,6 @@ public class financials_ap_listModel {
 
 	public void setJevd_expl(String jevd_expl) {
 		this.jevd_expl = jevd_expl;
-	}
-
-	public String getAp_status() {
-		return ap_status;
-	}
-
-	public void setAp_status(String ap_status) {
-		this.ap_status = ap_status;
 	}
 
 }

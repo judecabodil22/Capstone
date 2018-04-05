@@ -74,10 +74,9 @@
 												<th>Amount</th>
 												<th>Status</th>
 											</tr>
-											<c:forEach var="pay" items="${pList}">
+											<c:forEach var="pay" items="${plist}">
 
-												<tr data-institute="${pay.ap_company_name}"
-													data-claimant="${pay.ap_claimant}"
+												<tr 
 													data-rcenter="${pay.resp_center_uid}"
 													data-amount="${pay.amount}" data-id="${pay.ap_uid}">
 													<td>${pay.ap_company_name}</td>
@@ -181,14 +180,14 @@
 										<td><form:input
 												style="margin-left: 10px; margin-top: 10px;"
 												class="form-control" id="inst_name" type="text"
-												path="institute" ></form:input></td>
+												path="institute"></form:input></td>
 									</tr>
 									<tr>
 										<td>Claimant Name <span class='require'>*</span></td>
 										<td><form:input
 												style="margin-left: 10px; margin-top: 10px;"
 												class="form-control" id="claim_name" type="text"
-												path="claimant_name" ></form:input></td>
+												path="claimant_name"></form:input></td>
 									</tr>
 
 									<tr>
@@ -295,8 +294,6 @@
 			$(document).ready(function() {
 				$('table .ToModal').on('click', function() {
 					var data = $(this).closest('tr').data();
-					$('.modal #inst_name').val(data.institute);
-					$('.modal #claim_name').val(data.claimant);
 					$('.modal #rcenter').val(data.rcenter);
 					$('.modal #amount').val(data.amount);
 
@@ -306,8 +303,6 @@
 
 			function toModal(obj) {
 				var data = $(this).closest('tr').data();
-				$('.modal #inst_name').val(data.institute);
-				$('.modal #ap_claimant').val(data.claimant);
 				$('.modal #rcenter').val(data.rcenter);
 				$('.modal #amount').val(data.amount);
 
