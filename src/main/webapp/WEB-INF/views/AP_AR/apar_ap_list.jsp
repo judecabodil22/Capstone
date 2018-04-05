@@ -35,7 +35,8 @@
 					
 					<table class="table-toolbar">
 						<div class="btn-group pull-left">
-							<a href="voucher_transaction">
+							<a type="button" value="Open Window" onclick="window.open('voucher_transaction')"> 
+							<!-- <a href="voucher_transaction">  -->	
 								<button class=" btn btn-success">
 									<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
 									Disbursement Voucher 
