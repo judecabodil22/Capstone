@@ -15,7 +15,7 @@
 
 <aside class="right-side">
 	<section class="content-header">
-		<h1>List of Receivables</h1>
+		<h1>List of Payables</h1>
 	</section>
 	
 	<section class="content">
@@ -25,8 +25,8 @@
 					<div class="panel-heading clearfix">
 						<div class="panel-title pull-left">
 							<div class="caption">
-								<i class="livicon" data-name="sign-in" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-								Receivable List
+								<i class="livicon" data-name="sign-out" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+								Payable List
 							</div>
 						</div>
 					</div>
@@ -35,10 +35,10 @@
 					
 					<table class="table-toolbar">
 						<div class="btn-group pull-left">
-							<a href="#">
+							<a href="voucher_transaction">
 								<button class=" btn btn-success">
 									<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-									Collection 
+									Disbursement Voucher 
 								</button>
 							</a>
 						</div>
@@ -59,16 +59,16 @@
 						</thead>
 						
 						<tbody>
-							<c:forEach var="list" items="${arlist}" varStatus="vs">
+							<c:forEach var="list" items="${aplist}" varStatus="vs">
 						
 							<tr> 
 								
-								<td><%-- <fmt:formatDate type = "date" value="${list.jev_date}"/> --%>
+								<td><!--<fmt:formatDate type = "date" />-->
 									${list.jev_date}
 								</td>
 								<td>${list.jev_no}</td>
 								<td>${list.crcoa_name}</td>
-								<td><%-- <fmt:formatNumber type = "currency" value="${list.jevd_cramt}"/> --%>
+								<td><!--<fmt:formatNumber type = "currency" />-->
 									${list.jevd_cramt}
 								</td>
 								<td>
@@ -82,7 +82,7 @@
 											<div class="modal-content">
 												<div class="modal-header">
 													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-														<h4 class="modal-title">Receivable Information</h4>
+														<h4 class="modal-title">Payable Information</h4>
 												</div>
 												
 												<div class="panel-body">

@@ -63,12 +63,12 @@
 						
 							<tr> 
 								
-								<td><!--<fmt:formatDate type = "date" />-->
+								<td><%-- <fmt:formatDate type = "date" /> --%>
 									${list.jev_date}
 								</td>
 								<td>${list.jev_no}</td>
 								<td>${list.crcoa_name}</td>
-								<td><!--<fmt:formatNumber type = "currency" />-->
+								<td><%-- <fmt:formatNumber type = "currency" /> --%>
 									${list.jevd_cramt}
 								</td>
 								<td>
