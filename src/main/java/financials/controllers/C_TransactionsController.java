@@ -12,8 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import financials.dao.C_TransactionsDao;
 import financials.model.C_TransactionsModel;
 import financials.model.TVoucherModel;
-import financials.model.apar_CreateapMODEL;
-
 @Controller
 public class C_TransactionsController {
 
@@ -22,52 +20,38 @@ public class C_TransactionsController {
 	C_TransactionsDao a;
 	
 	@RequestMapping("financials_ctransac") //url
-	public ModelAndView transactions(@ModelAttribute("ctransac")C_TransactionsModel ctransac)
+	public ModelAndView transactions(@ModelAttribute("ctransac") C_TransactionsModel ctransac)
 	{
 		ModelAndView ts = new ModelAndView();
 		ts.setViewName("Collections/C_Transactions");
 		
 
-		List<C_TransactionsModel> dropDown = a.dropDownType();
+		List<C_TransactionsModel> dropDown = dropDownType();
 		ts.addObject("dropdown", dropDown);
-
-		List<C_TransactionsModel> list = dropDownType();
-		ts.addObject("dropdown", list);
-
 		
 		return ts;
 	
 	}
 	
 
-	public List<C_TransactionsModel> dropDown() {
-		return a.dropDownType();
-	}
+	
 	public List<C_TransactionsModel> dropDownType() {
-		return dropDownType();
+		return a.dropDownType();
 
 	}
 	
-	@RequestMapping("ctrans_save")
-	public ModelAndView save(@ModelAttribute("ctransac") C_TransactionsModel trans,
-			@RequestParam(value = "ohyes", required = false) String save)
+	@RequestMapping("cashiering_save")
+	public ModelAndView cashiering_save(@ModelAttribute("ctransac") C_TransactionsModel model,
+			@RequestParam(value = "submit", required = false) String submit)
 	{
-		ModelAndView ts = new ModelAndView();
 		
-	
+		ModelAndView mav = new ModelAndView();
 		
-		ts.setViewName("financials_ctransac");
-/*		if(save != null)*/
-	/*	{*/
-			a.insert(trans);
-			System.out.println("Success");
-			List<C_TransactionsModel> list = a.view();
-			ts.addObject("list", list);
-	/*	}*/
-		return ts;
+				a.insert(model);
+		
+		mav.setViewName("Collections/C_Transactions");
+		return mav;
+			
 	}
-	
-	
-	
 	
 }
