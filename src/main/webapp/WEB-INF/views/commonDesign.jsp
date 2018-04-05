@@ -405,20 +405,25 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;Centers</span>
                                         </a>
                                         </li>
+                                       
                                         
+                                         <!--
                                          <li>
                                         <a href="admin_transaction">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Transaction Types</span>
                                         </a>
                                         </li>
+                                         -->
                                         
+                                         <!--
                                          <li>
                                         <a href="admin_funds">
                                         <i class="fa fa-angle-double-right"></i>
                                         <span class="title">Funds</span>
                                         </a>
                                         </li>
+                                         -->
                                         
                                         
                                         </ul>
