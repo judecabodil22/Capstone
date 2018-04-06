@@ -144,7 +144,7 @@
                                                     		<div class="col-md-12 form-group">
                                                     			<label>Transaction Type</label> 
                                                     				<select id="e1" class="form-control select2">
-                                                    					<option value="1">Collection</option>
+                                                    					<option value="1">Cash Disbursement</option>
                                                     					<option value="2">Disbursement</option>
                                                     				</select>
                                                     		</div>
@@ -160,7 +160,7 @@
                                                     		<!-- JEV Remarks -->
                                                     		<div class="col-md-12 form-group">
 																<label>Remarks</label>
-																	<textarea id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" placeholder="Drinking water will not dehydrate you."></textarea>
+																	<textarea id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" placeholder="Journal Entry Voucher - March 20, 2018"></textarea>
 															</div>
                                                     	</fieldset>
                                                     	
