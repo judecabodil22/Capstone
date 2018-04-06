@@ -84,31 +84,27 @@
 							<!-- Entry Date -->
 							<div class="col-md-4 form-group">
 								<label>Entry Date</label>
-								<div class="input-group">
-									<div class="input-group-addon">
-										<i class="fa fa-calendar"></i>
+									<div class="input-group">
+										<div class="input-group-addon">
+											<i class="fa fa-calendar"></i>
+										</div>
+										<form:input path="jev_date" type="text" class="form-control required" placeholder="mm/dd/yyyy"  />
 									</div>
-									<input type="text" class="form-control required"
-										placeholder="mm/dd/yyyy"
-										data-inputmask="'alias': 'mm/dd/yyyy'" data-mask />
-								</div>
 							</div>
-
-
+							
 							<!-- Transaction Type -->
 							<div class="col-md-12 form-group">
-								<label>Transaction Type</label> <select id="e1"
-									class="form-control select2">
-									<option value="Cash Receipts">Cash Receipts</option>
-									<option value="Cash Disbursement">Cash Disbursement</option>
-									<option value="Non-cash Transactions">Non-cash Transactions</option>
-								</select>
+								<label>Transaction Type</label>
+									<form:select id="e1" class="form-control select2" path="jev_trans_type">
+										<option value="Cash Receipts">Cash Receipts</option>
+										<option value="Cash Disbursement">Cash Disbursement</option>
+										<option value="Non-cash Transactions">Non-cash Transactions</option>
+									</form:select>
 							</div>
-
+							
 							<!-- Buttons -->
 							<div class="form-group pull-right">
-								<button type="submit"
-									class="btn btn-responsive btn-default disabled">Back</button>
+								<button type="submit" class="btn btn-responsive btn-default disabled">Back</button>
 								<a href="#page2" data-toggle="tab">
 									<button type="submit" class="btn btn-responsive btn-primary">Next</button>
 								</a>
@@ -150,8 +146,7 @@
 												<tbody id="tableAppend">
 													<tr id="addr0">
 
-														<td><form:select
-															class="form-control" path="resp_name" name="resp_name">
+														<td><form:select class="form-control" path="resp_name" name="resp_name">
 															<c:forEach var= "resp" items= "${respCenter}">
 
 																<option value="${resp.resp_center_description}">
