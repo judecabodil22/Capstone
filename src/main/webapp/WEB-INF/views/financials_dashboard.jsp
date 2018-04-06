@@ -37,7 +37,7 @@
 			</div>
 			
 			<div class="col-lg-3 col-md-6 col-sm-6 margin_10">
-				<a href="logistics" type="button" class="btn btn-lg btn-primary">
+				<a href="localhost:8080/wms/" type="button" class="btn btn-lg btn-primary">
 					<strong class="livicon" data-name="notebook" data-size="100" data-c="#fff" data-hc="#fff" data-loop="true"></strong>
 						<label style="position:relative; top:1.5em">Go to <br> Logistics</label>
 				</a>
