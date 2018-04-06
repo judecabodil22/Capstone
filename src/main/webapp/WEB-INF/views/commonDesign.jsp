@@ -740,8 +740,7 @@
                                 </ul>
                        </li>
                        
-                        
-                         <li>
+                        <li>
                             <a href="">
                                 <i class="livicon" data-name="truck" data-size="18"  data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
                                 <span class="title">Logistics</span>
@@ -755,13 +754,13 @@
                                         </a>
                                         <ul class = "sub-menu">
                                            <li>
-                                                <a href="prtry">
+                                                <a href="../wms/purchase-request">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Purchase Request Form</span>
                                             </a>
                                             </li>
                                              <li>
-                                                <a href="P-R-Approve">
+                                                <a href="../wms/P-R-Approve">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Approved Purchase Request</span>
                                             </a>
@@ -769,26 +768,26 @@
                                           
                                            
                                                 <li>
-                                                <a href="bidding">
+                                                <a href="../wms/bidding">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Bidding</span>
                                             </a>
                                             </li>
                                        
                                             <li>
-                                                <a href="bids">
+                                                <a href="../wms/bids">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Bids</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="notice-of-award">
+                                                <a href="../wms/notice-of-award">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Notice of Awards</span>
                                             </a>
                                             </li>
                                               <li>
-                                                <a href="purchase-order">
+                                                <a href="../wms/purchase-order">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Purchase Order Form</span>
                                             </a>
@@ -806,19 +805,19 @@
                                            
                                             
                                             <li>
-                                                <a href="warehouse-list">
+                                                <a href="../wms/warehouse-list">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Warehouse Items</span>
                                             </a>
                                             </li>
 											<li>
-                                                <a href="transaction-receive2">
+                                                <a href="../wms/transaction-receive">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Item Delivery</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="transaction-inspect2">
+                                                <a href="../wms/transaction-inspect">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Item Inspection</span>
                                             </a>
@@ -835,30 +834,36 @@
                                         </a>
                                     <ul class = "sub-menu">
                                             <li>
-                                                <a href="adding-asset">
+                                                <a href="../wms/adding-asset">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Add Asset</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="assign-asset">
+                                                <a href="../wms/assets-trp">
+                                                <i class="fa fa-angle-double-right"></i>
+                                                <span class="title">Assets</span>
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="../wms/assign-asset">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Request Asset</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="receive-asset">
+                                                <a href="../wms/receive-asset">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Request for inspection</span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="for-inspections">
+                                                <a href="../wms/for-inspections">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">For Inspection</span>
                                             </a>
                                             </li>
-                                            <li>
+                                          <!--  <li>
                                                 <a href="transfer-asset">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Transfer Asset</span>
@@ -875,7 +880,7 @@
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Pull Out Asset</span>
                                             </a>
-                                            </li>
+                                            </li> -->
                                         </ul>
                                     </li>                                       
                                 </ul>
@@ -887,31 +892,31 @@
                                         </a>
                                         <ul class = "sub-menu">
                                            <li>
-                                                <a href="list-of-purchase-request">
+                                                <a href="../wms/list-of-purchase-request">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Purchase Request </span>
                                             </a>
                                             </li>
                                              <li>
-                                                <a href="List-of-Biddings">
+                                                <a href="../wms/List-of-Biddings">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Bidding </span>
                                             </a>
                                             </li>
                                               <li>
-                                                <a href="list-of-purchase-order">
+                                                <a href="../wms/list-of-purchase-order">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Purchase Order </span>
                                             </a>
                                             </li>
                                               <li>
-                                                <a href="List-of-Supplier">
+                                                <a href="../wms/List-of-Supplier">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Supplier </span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="assetinventory">
+                                                <a href="../wms/assetinventory">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">Asset Inventory</span>
                                             </a>
@@ -928,13 +933,13 @@
                                         </a>
                                     <ul class = "sub-menu">
                                             <li>
-                                                <a href="pr-report">
+                                                <a href="../wms/pr-report">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Purchase Request </span>
                                             </a>
                                             </li>
                                             <li>
-                                                <a href="report">
+                                                <a href="../wms/report">
                                                 <i class="fa fa-angle-double-right"></i>
                                                 <span class="title">List of Purchase Order</span>
                                             </a>
@@ -992,6 +997,7 @@
                                 </ul>
                        </li>
                        
+                         
                        <li>
                        		<a href="">
                        			<i class="livicon" data-name="money" data-size="18"  data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
