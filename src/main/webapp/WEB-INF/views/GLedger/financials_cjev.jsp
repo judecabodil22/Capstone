@@ -99,9 +99,9 @@
 							<div class="col-md-12 form-group">
 								<label>Transaction Type</label> <select id="e1"
 									class="form-control select2">
-									<option value="1">Cash Receipts</option>
-									<option value="2">Cash Disbursement</option>
-									<option value="3">Non-cash Transactions</option>
+									<option value="Cash Receipts">Cash Receipts</option>
+									<option value="Cash Disbursement">Cash Disbursement</option>
+									<option value="Non-cash Transactions">Non-cash Transactions</option>
 								</select>
 							</div>
 

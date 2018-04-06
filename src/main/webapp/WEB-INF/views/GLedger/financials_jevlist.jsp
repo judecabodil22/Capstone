@@ -102,15 +102,15 @@
 								data-jevremarks="${list.jev_remarks}" data-jevstatus="${list.tstat_name}">
 								
 								<td>${list.jev_date}</td>
-								<td>
-									<a href="financials_reviewjev">${list.jev_no}</a>
+								<td>${list.jev_no}
+									<%-- <a href="financials_reviewjev">${list.jev_no}</a>--%> 
 								</td>
 								<td>${list.jev_creator}</td>
 								<td>${list.jev_remarks}</td>
 								<td>
 									<span class="label label-sm label-primary">${list.tstat_name}</span>
 								</td>
-								<td><a href="financials_reviewjev" class="btn btn-responsive info btn-xs">
+								<td><a href="financials_reviewjev" class="btn btn-responsive info btn-xs"> 
                                     	<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> </a>
                                 </td>
                                 
@@ -120,7 +120,7 @@
                                 </td>
                                 -->
                                 
-                                <td><a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove" id="del">
+                                <td><a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove">
                                     	<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> </a>
                                 </td>
                                 
@@ -200,7 +200,8 @@
 <script src="resources/vendors/maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
 <script src="resources/js/pages/formelements.js" type="text/javascript"></script>
 
-<!-- Delete Script -->
+<!-- Remove Script -->
+<%-- 
 <script>
 $('#del').click(function(){
 		if(confirm("Are you sure you want to delete this?"))
@@ -209,10 +210,7 @@ $('#del').click(function(){
 			}
 		});
 </script>
+--%>
 		
-
-
-
-    
 </body>
 </html>

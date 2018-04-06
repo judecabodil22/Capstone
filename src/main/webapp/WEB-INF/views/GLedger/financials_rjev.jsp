@@ -40,7 +40,6 @@
 
 
 
-
 <%@ include file="../commonDesign.jsp"%>
 </head>
 
@@ -74,7 +73,7 @@
 				
 						<div class="pull-right">
 							<a href=#>
-								<button type="button" class=" btn btn-default btn-sm">
+								<button type="button" class=" btn btn-warning btn-sm">
 									<i class="livicon" data-name="edit" data-size="20" data-c="#000" data-hc="#fff" data-loop="true"></i>
 									 Edit JEV
 								</button>
@@ -125,7 +124,7 @@
                                                     		<div class="col-md-4 form-group pull-left">
                                                     			<label>JEV No.</label>
                                                     				<div class="input-group"> 	
-                                                    					<input type="text" class="form-control required " placeholder="00-2018-03-SAMP"/>
+                                                    					<input type="text" class="form-control required" placeholder="00-2018-03-SAMP"/>
                                                     				</div>
                                                     		</div>
                                                    			
@@ -136,7 +135,7 @@
                                                     					<div class="input-group-addon">
                                                     						<i class="fa fa-calendar"></i>
                                                     					</div>
-                                                    					<input type="text" class="form-control required " placeholder="03/30/2018" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
+                                                    					<input type="text" class="form-control required " data-inputmask="'alias': 'mm/dd/yyyy'" data-mask placeholder="04/01/2018"/>  
                                                     				</div>
                                                     		</div>
                                                     		
@@ -144,8 +143,9 @@
                                                     		<div class="col-md-12 form-group">
                                                     			<label>Transaction Type</label> 
                                                     				<select id="e1" class="form-control select2">
-                                                    					<option value="1">Cash Disbursement</option>
-                                                    					<option value="2">Disbursement</option>
+                                                    					<option value="Cash Receipts">Cash Receipts</option>
+																		<option value="Cash Disbursement">Cash Disbursement</option>
+																		<option value="Non-cash Transactions">Non-cash Transactions</option>
                                                     				</select>
                                                     		</div>
                                                     		
@@ -160,7 +160,7 @@
                                                     		<!-- JEV Remarks -->
                                                     		<div class="col-md-12 form-group">
 																<label>Remarks</label>
-																	<textarea id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" placeholder="Journal Entry Voucher - March 20, 2018"></textarea>
+																	<textarea id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" >Journal Entry Voucher - March 20, 2018</textarea>
 															</div>
                                                     	</fieldset>
                                                     	
@@ -214,12 +214,46 @@
                                  							
                                  							<tbody>
                                  								<tr>
-                                 									<td></td>
-                                 									<td></td>
-                                 									<td></td>
-                                 									<td></td>
-                                 									<td></td>
-                                 									<td></td>
+                                 									<td>
+                                 										<select class="form-control">
+                                 											<option value="1">Administration</option>
+																			<option value="2">Faculty</option>
+																			<option value="3">IT Department</option>
+																			<option value="4">HR Department</option>
+																			<option value="5">Guidance Office</option>
+																		</select>
+																	</td>
+																	
+																	<td>
+                                 										<select class="form-control">
+                                 											<option value="1">Cash</option>
+																			<option value="2">Accounts Receivable</option>
+																			<option value="3">Salary Expense</option>
+																			<option value="4">Accounts Payable</option>
+																			<option value="5">Notes Payable</option>
+																		</select>
+																	</td>
+																	
+																	<td>
+																		<input type="number" class="form-control debit" onkeyup="calculations();" value="0" maxlength="19" />
+																	</td>
+																	
+																	<td>
+                                 										<select class="form-control">
+                                 											<option value="1">Cash</option>
+																			<option value="2">Accounts Receivable</option>
+																			<option value="3">Salary Expense</option>
+																			<option value="4">Accounts Payable</option>
+																			<option value="5">Notes Payable</option>
+																		</select>
+																	</td>
+
+																	<td>
+																		<input type="number" class="form-control credit" onkeyup="calculations();" value="0" maxlength="19" />
+																	</td>
+																	<td>
+																		<input type="text" class="form-control" maxlength="500" />
+																	</td>
                                  								</tr>
                                  							</tbody>
                                  							
@@ -227,9 +261,9 @@
                                  								<tr>
                                  									<td></td>
                                  									<td>Total Debit</td>
-                                 									<td></td>
+                                 									<td><input id = "totalDebit" ></td>
                                  									<td>Total Credit</td>
-                                 									<td></td>
+                                 									<td><input id = "totalCredit" /></td>
                                  									<td></td>
                                  								</tr>
                                  							</tfoot>
