@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import financials.model.TVoucherModel;
 import financials.model.financials_cjevModel;
 
 public class financials_cjevDAO {
@@ -30,10 +29,10 @@ public class financials_cjevDAO {
 	public boolean submit(financials_cjevModel cjv1) {
 		
 		//JEV INFO (PART I)
-		String sql = "insert into tbl_fs_jev_info(jev_date,jev_trans_type,tot_db,tot_cr,jev_remarks,tstat_name) + values(getdate(),?,?,?,?,Pending)";
+		String sql = "insert into tbl_fs_jev_info(jev_date,jev_trans_type,tot_db,tot_cr,jev_creator,jev_remarks,tstat_name) + values(getdate(),?,?,?,?,?,Pending)";
 
 		jdbcTemplate.update(sql, new Object[] { cjv1.getJev_id(), cjv1.getJev_no(), cjv1.getJev_date(), cjv1.getJev_trans_type(),
-												cjv1.getTot_dbamt(), cjv1.getTot_cramt(), cjv1.getJev_remarks (), cjv1.getTstat_name()
+												cjv1.getTot_dbamt(), cjv1.getTot_cramt(), cjv1.getJev_creator(), cjv1.getJev_remarks (), cjv1.getTstat_name()
 											  }
 		);
 	

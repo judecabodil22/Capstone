@@ -9,6 +9,7 @@ public class financials_cjevModel {
 	private String jev_trans_type;
 	private String tot_dbamt;
 	private String tot_cramt;
+	private String jev_creator;
 	private String jev_remarks;
 	private String tstat_name;
 	
@@ -68,6 +69,12 @@ public class financials_cjevModel {
 	}
 	public void setTot_cramt(String tot_cramt) {
 		this.tot_cramt = tot_cramt;
+	}
+	public String getJev_creator() {
+		return jev_creator;
+	}
+	public void setJev_creator(String jev_creator) {
+		this.jev_creator = jev_creator;
 	}
 	public String getJev_remarks() {
 		return jev_remarks;
@@ -166,6 +173,7 @@ public class financials_cjevModel {
 	public void setCoa_description(String coa_description) {
 		this.coa_description = coa_description;
 	}
+	
 	
 	
 	
