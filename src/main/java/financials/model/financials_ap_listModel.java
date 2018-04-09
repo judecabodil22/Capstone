@@ -1,9 +1,11 @@
 package financials.model;
 
+import java.util.Date;
+
 public class financials_ap_listModel {
 	
 	private String jev_id;
-	private String jev_date;
+	private Date   jev_date;
 	private String jev_no;
 	private String jevd_id;
 	private String crcoa_name;
@@ -18,11 +20,11 @@ public class financials_ap_listModel {
 		this.jev_id = jev_id;
 	}
 
-	public String getJev_date() {
+	public Date getJev_date() {
 		return jev_date;
 	}
 
-	public void setJev_date(String jev_date) {
+	public void setJev_date(Date jev_date) {
 		this.jev_date = jev_date;
 	}
 

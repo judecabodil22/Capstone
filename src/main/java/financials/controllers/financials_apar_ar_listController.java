@@ -16,7 +16,6 @@ public class financials_apar_ar_listController {
 	@RequestMapping("ar_list")//url
 	public ModelAndView fapr()
 	{	
-		
 		ModelAndView arl = new ModelAndView();
 		arl.setViewName("AP_AR/apar_ar_list");
 		arl.addObject("arlist", ARDAO.getArlist());

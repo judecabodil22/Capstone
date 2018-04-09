@@ -1,6 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%> --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <html>
 
@@ -63,16 +63,16 @@
 						
 							<tr> 
 								
-								<td><%-- <fmt:formatDate type = "date" value="${list.jev_date}"/> --%>
-									${list.jev_date}
+								<td>
+									<fmt:formatDate value="${list.jev_date}" type="date" />
 								</td>
 								<td>${list.jev_no}</td>
 								<td>${list.crcoa_name}</td>
-								<td><%-- <fmt:formatNumber type = "currency" value="${list.jevd_cramt}"/> --%>
-									${list.jevd_cramt}
+								<td>
+									<fmt:formatNumber value="${list.jevd_cramt}" type="currency" />
 								</td>
 								<td>
-									<button type="button" class="btn info btn-xs" data-toggle="modal" data-target="#g${vs.index}" id="viewDetailButton${vs.index}"><i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i></button>
+									<a type="button" class="btn info btn-xs" data-toggle="modal" data-target="#g${vs.index}" id="viewDetailButton${vs.index}"><i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i></a>
 									
 									<!-- Modal -->
 									<div class="modal fade" id="g${vs.index}" role="dialog">
@@ -91,7 +91,7 @@
 														<tbody>
 															<tr>
 																<td>Date</td>
-				                                                <td>${list.jev_date}</td>
+				                                                <td><fmt:formatDate value="${list.jev_date}" type="date" /></td>
 				                                            </tr>   
 				                                            <tr>
 				                                                <td>JEV No</td>
@@ -103,7 +103,7 @@
 				                                            </tr>
 				                                            <tr>
 				                                            	<td>Amount</td>
-				                                            	<td>${list.jevd_cramt}</td>
+				                                            	<td><fmt:formatNumber value="${list.jevd_cramt}" type="currency" /></td>
 				                                            </tr>
 				                                            <tr>
 				                                            	<td>Explanation</td>
