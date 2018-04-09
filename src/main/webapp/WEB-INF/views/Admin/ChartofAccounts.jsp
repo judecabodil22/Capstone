@@ -233,43 +233,38 @@ function searchFunction() {
 <script src="resources/vendors/modal/js/classie.js"></script>
 <script src="resources/vendors/modal/js/modalEffects.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var composeHeight = $('#calendar').height() +21 - $('.adds').height();
-        $('.list_of_items').slimScroll({
-            color: '#A9B6BC',
-            height: composeHeight + 'px',
-            size: '5px'
-        });
-    });
-    </script>
-  
-  <script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var composeHeight = $('#calendar').height() +21 - $('.adds').height();
+		$('.list_of_items').slimScroll({
+			color: '#A9B6BC',
+			height: composeHeight + 'px',
+			size: '5px'
+		});
+	});
+</script>
+
+<script>
 $(document).ready(function(){
 	// code to read selected table row cell data (values).
 	$(".ToModal").on('click',function(){
-		// get data
-		var data = $(this).closest('tr').data();
+	// get data
+	var data = $(this).closest('tr').data();
 
-		// put to modal ----------------------- start
-		// using jquery codes
-		/* $('#modal_code').val(data.code);
-		$('#modal_description').val(data.desc); */
-		
-		// using native javascript codes
-		 document.getElementById("modal_code").value = data.code;
-		 document.getElementById("modal_description").value = data.desc;
-		 document.getElementById("modal_uid").value = data.uid;
-		// put to modal ----------------------- ends
+	// put to modal ----------------------- start
+	// using jquery codes
+	/* $('#modal_code').val(data.code);
+	$('#modal_description').val(data.desc); */
+	
+	// using native javascript codes
+	document.getElementById("modal_code").value = data.code;
+	document.getElementById("modal_description").value = data.desc;
+	document.getElementById("modal_uid").value = data.uid;
+	// put to modal ----------------------- ends
+	
 	});
 });
-
-
-
 </script>
 	
-  
-  
-  
 </body>
 </html>
