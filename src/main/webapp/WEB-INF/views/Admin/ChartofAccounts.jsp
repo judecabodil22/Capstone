@@ -97,7 +97,7 @@
                                         		</c:otherwise>
                                         	</c:choose>
                                         </td>                       
-                                        <td>
+                                        <td style="text-align:center">
                                         	<button href="#" class="btn btn-responsive warning btn-xs"> 
                                         		<i class="livicon" data-name="edit" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Edit" style="margin-bottom:10px;"></i> 
                                         	</button>
