@@ -126,7 +126,7 @@
 																</tr>
 																<tr>
 																	<td>Total Debit</td>
-																	<td><fmt:setLocale value = "en_PH"/>
+																	<td>
 																		<fmt:formatNumber value="${list.tot_db}" type="currency" />
 																	</td>
 																</tr>
