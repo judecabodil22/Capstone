@@ -102,7 +102,7 @@
                                         		<i class="livicon" data-name="edit" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Edit" style="margin-bottom:10px;"></i> 
                                         	</button>
                                         </td>	
-                                        <td>
+                                        <td style="text-align:center">
                                         	<form:form action="admin_CoA_delete" modelAttribute="CoA_delete">
                                         		<form:input type="hidden" id="uid" path="coa_account_uid" value="${list.coa_account_uid}" />
                                         			<button type="submit" value="" class="btn btn-responsive danger btn-xs"> 
