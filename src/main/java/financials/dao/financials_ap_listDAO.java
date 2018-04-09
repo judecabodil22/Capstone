@@ -36,7 +36,7 @@ public class financials_ap_listDAO {
 			public financials_ap_listModel mapRow(ResultSet rs, int row) throws SQLException {
 				financials_ap_listModel h3h3 = new financials_ap_listModel();
 				h3h3.setJev_id(rs.getString("jev_id"));
-				h3h3.setJev_date(rs.getString("jev_date"));
+				h3h3.setJev_date(rs.getDate("jev_date"));
 				h3h3.setJev_no(rs.getString("jev_no"));
 				h3h3.setJevd_id(rs.getString("jevd_id"));
 				h3h3.setCrcoa_name(rs.getString("crcoa_name"));

@@ -25,13 +25,9 @@ public class financials_jevlistDAO {
 		jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
-public boolean insert (financials_jevlistModel jl)	{
-	return true;
-}
-
 public List<financials_jevlistModel> getJev_info() {
 	
-	sql = "select jev_id, jev_no,jev_date,jev_creator,jev_remarks,tstat_name from tbl_fs_jev_info \r\n" +	
+	sql = "select * from tbl_fs_jev_info \r\n" +	
 		  "order by jev_id";
 	
 	return jdbcTemplate.query(sql, new RowMapper<financials_jevlistModel>() {
@@ -39,15 +35,31 @@ public List<financials_jevlistModel> getJev_info() {
 			financials_jevlistModel jl = new financials_jevlistModel();
 			
 			jl.setJev_id(rs.getInt("jev_id"));
-			jl.setJev_date(rs.getString("jev_date"));
+			jl.setJev_date(rs.getDate("jev_date"));
 			jl.setJev_no(rs.getString("jev_no"));
+			jl.setJev_trans_type(rs.getString("jev_trans_type"));
+			jl.setTot_db(rs.getString("tot_db"));
+			jl.setTot_cr(rs.getString("tot_cr"));
 			jl.setJev_creator(rs.getString("jev_creator"));
 			jl.setJev_remarks(rs.getString("jev_remarks"));
 			jl.setTstat_name(rs.getString("tstat_name"));
+			jl.setJev_checker(rs.getString("jev_checker"));
+			jl.setJev_checker_remarks(rs.getString("jev_checker_remarks"));
 			
 			return jl;
 		}
 	});
 }
+
+//DELETE FUNCTION
+//public boolean delete(financials_jevlistModel user) {
+
+//	sql = "Delete from tbl_fs_jev_info " + "WHERE jev_id = ?";
+//	sql = "Delete from tbl_fs_jev_details " + "WHERE jev_id = ?";
+//	sql = "Delete from tbl_fs_jev_supporting_docu" + "WHERE jev_id = ?";
+//	jdbcTemplate.update(sql, new Object[] { user.getJev_id() });
+//	return true;
+	
+//}
 			
 }

@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <html>
 
@@ -24,17 +25,11 @@
 <link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css" />
 <!-- end of global css -->
 
-<!-- start add row -->
-<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-
 <!-- Added -->
 <link rel="stylesheet" href="resources/css/pages/buttons.css" />
 <link href="resources/css/pages/icon.css" rel="stylesheet" type="text/css" />
 <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
 <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
-<link href="resources/vendors/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
 <link href="resources/css/pages/formelements.css" rel="stylesheet" />
 
 <%@ include file="../commonDesign.jsp"%>
@@ -44,7 +39,7 @@
 
 	<!-- Main Content -->
 	<section class='content-header'>
-		<h1>Journal Entry Voucher</h1>
+		<h1>General Journal</h1>
 	</section>
 	
 	<section class="content">
@@ -73,18 +68,17 @@
 					<div class="col-md-4 form-group pull-right">
 						<div class="input-group">
 							<div class="input-group-addon">
-								<i class="fa fa-calendar"></i>
+								<i class="fa fa-search"></i>
 							</div>
-								<input type="text" class="form-control pull-right" id="reservation" placeholder="Show by: Date"/>
+							<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control pull-right" placeholder="Search by: JEV No." />
 						</div>
 					</div>
-					
 				</div>
 				
 				<br>
 				
 				<div class="table-scrollable">
-					<table class="table table-striped table-bordered table-advance table-hover">
+					<table id="jevTable" class="table table-striped table-bordered table-advance table-hover">
 						<thead>
 							<tr>
 								<th>Date</th>
@@ -96,85 +90,236 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach var="list" items="${jev_info}">
-							<tr data-jevid="${list.jev_id}" data-jevdate="${list.jev_date}"
-								data-jevno="${list.jev_no}" data-jevcreator="${list.jev_creator}"
-								data-jevremarks="${list.jev_remarks}" data-jevstatus="${list.tstat_name}">
-								
-								<td>${list.jev_date}</td>
-								<td>${list.jev_no}
-									<%-- <a href="financials_reviewjev">${list.jev_no}</a>--%> 
+							<c:forEach var="list" items="${jev_info}" varStatus="vs">
+							<tr>
+								<td>
+									<fmt:formatDate value="${list.jev_date}" type="date" />
+								</td>
+								<td>
+									<a data-toggle="modal" data-target="#j${vs.index}" id="viewDetailButton${vs.index}">${list.jev_no}</a>
+									
+									<div class="modal fade" id="j${vs.index}" role="dialog">
+										<div class="modal-dialog">
+										
+											<!-- Modal content-->
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+														<h4 class="modal-title">JEV Information</h4>
+												</div>
+												
+												<div class="panel-body">
+													<div class="table-scrollable">
+														<table id="tbl1" class="table table-bordered table-striped" style="clear:both">
+															<tbody> 
+																<tr>
+																	<td>Date</td>
+																	<td><fmt:formatDate value="${list.jev_date}" type="date" /></td>
+																</tr>
+																<tr>
+																	<td>JEV No</td>
+																	<td>${list.jev_no}</td>
+																</tr>
+																<tr>
+																	<td>Transaction Type</td>
+																	<td>${list.jev_trans_type}</td>
+																</tr>
+																<tr>
+																	<td>Total Debit</td>
+																	<td>
+																		<fmt:formatNumber value="${list.tot_db}" type="currency" />
+																	</td>
+																</tr>
+																<tr>
+																	<td>Total Credit</td>
+																	<td>
+																		<fmt:formatNumber value="${list.tot_cr}" type="currency" />
+																	</td>
+																</tr>
+																<tr>
+																	<td>Status</td>
+																	<td>${list.tstat_name}</td>
+																</tr>
+																<tr>
+																	<td>Prepared by</td>
+																	<td>${list.jev_creator}</td>
+																</tr>
+																<tr>
+																	<td>Remarks</td>
+																	<td>${list.jev_remarks}</td>
+																</tr>
+																<tr>
+																	<td>Reviewed by</td>
+																	<td>${list.jev_checker}</td>
+																</tr>
+																<tr>
+																	<td>Reviewer's Remarks</td>
+																	<td>${list.jev_checker_remarks}</td>
+																</tr>
+																
+															</tbody>
+														</table>
+													</div>
+												</div>
+												
+												<div class="modal-footer">
+													<button type="button" data-dismiss="modal" class="btn">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
 								</td>
 								<td>${list.jev_creator}</td>
 								<td>${list.jev_remarks}</td>
 								<td>
-									<span class="label label-sm label-primary">${list.tstat_name}</span>
+									<c:choose>
+										<c:when test="${list.tstat_name eq 'Pending'}">
+											<span class="label label-sm label-warning">${list.tstat_name}</span>
+										</c:when>
+										<c:when test="${list.tstat_name eq 'Approved'}">
+											<span class="label label-sm label-success">${list.tstat_name}</span>
+										</c:when>
+										<c:when test="${list.tstat_name eq 'Disapproved'}">
+											<span class="label label-sm label-danger">${list.tstat_name}</span>
+										</c:when>
+										<c:otherwise>${list.tstat_name}</c:otherwise>
+									</c:choose>
 								</td>
-								<td><a href="financials_reviewjev" class="btn btn-responsive info btn-xs"> 
-                                    	<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> </a>
+								<td>
+									<a href="financials_reviewjev" class="btn btn-responsive info btn-xs"> 
+										<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> 
+									</a>
                                 </td>
                                 
-                                <!--
-                                <td><a href="#" class="btn warning btn-xs">
-                                    	<i class="livicon" data-name="edit" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Edit" style="margin-bottom:10px;"></i> </a>
-                                </td>
-                                -->
+                                <%--<td>
+                                	<form:form action="financials_jevlist_delete" modelAttribute="jevlist_delete" id="formDel">
+                                		<form:input type="hidden" id="uid" path="jev_id" value="${list.jev_id}" />
+                                			<div class="spring">
+                                				<button type="button" data-toggle="modal" id="del" class="btn btn-danger btn-sm">Delete</button>
+                                			</div>
+                                	</form:form>
+                                </td>--%>
                                 
-                                <td><a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove">
-                                    	<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> </a>
+                                <td>
+                                	<a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove">
+                                		<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> 
+                                	</a>
                                 </td>
-                                
-                                <td><a class="btn warning btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
-                                    	<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> </a>
-                                </td>                                                    
-							</tr>
-							</c:forEach>
-						</tbody>
-					</table>
-					
-					<!-- static modal (remove)-->
-					<div class="modal fade in" id="staticremove" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    	<div class="modal-dialog modal-md">
-                        	<div class="modal-content">
-                            	<div class="modal-body">
-                                	<p>Do you want to remove this JEV from the list?</p>
-                                </div>
-                            	<div class="modal-footer">
-                            		<button type="button" data-dismiss="modal" class="btn btn-primary" id="del">Yes</button>
-                                	<button type="button" data-dismiss="modal" class="btn">No</button>
-                            	</div>
-                            </div>
-                        </div>
-                   </div>
+                                <td>
+                                	<a class="btn default btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
+                                		<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> 
+                                	</a>
+                                </td>
+                             </tr>
+                          </c:forEach>
+                       </tbody>
+                   </table>
                    
-                   <!-- static modal (post)-->
-					<div class="modal fade in" id="staticpost" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    	<div class="modal-dialog modal-md">
-                        	<div class="modal-content">
-                            	<div class="modal-body">
-                                	<p>Do you want to post this JEV to General Ledger?</p>
-                                	<br>
-                                	<div class="alert alert-warning">
-                                    	<p>Note: You cannot undo this action once posted.</p>
-                               		</div>	
-                                </div>
-                            	<div class="modal-footer">
-                            		<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
-                                	<button type="button" data-dismiss="modal" class="btn">No</button>
-                            	</div>
-                            </div>
-                        </div>
-                   </div>
-                  
-				</div>
-			</div>
-		</div>
-	</div>
-	</section>
-	
+                   <!-- static modal (remove)-->
+                   <div class="modal fade in" id="staticremove" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+                   		<div class="modal-dialog modal-md">
+                   			<div class="modal-content">
+                   				<div class="modal-body">
+                   					<p>Do you want to remove this JEV from the list?</p>
+                   				</div>
+                   				<div class="modal-footer">
+                   					<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                   					<button type="button" data-dismiss="modal" class="btn">No</button>
+                   				</div>
+                   			</div>
+                   		</div>
+                   	</div>
+                   	
+                   	<!-- static modal (post)-->
+                   	<div class="modal fade in" id="staticpost" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+                   		<div class="modal-dialog modal-md">
+                   			<div class="modal-content">
+                   				<div class="modal-body">
+                   					<p>Do you want to post this JEV to General Ledger?</p>
+                   					<br>
+                   					<div class="alert alert-warning">
+                   						<p>Note: You cannot undo this action once posted.</p>
+                   					</div>
+                   				</div>
+                   				<div class="modal-footer">
+                   					<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+                   					<button type="button" data-dismiss="modal" class="btn">No</button>
+                   				</div>
+                   			</div>
+                   		</div>
+                   	</div>
+            
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
 </aside>
 
 </div>
+
+<%--Search Script (JEV No) --%>
+<script>
+function searchFunction() {
+	// Declare variables 
+	var input, filter, table, tr, td, i;
+	input = document.getElementById("searchInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("jevTable");
+	tr = table.getElementsByTagName("tr");
+	
+	// Loop through all table rows, and hide those who don't match the search query
+	for (i = 1; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[1];
+		if (td) {
+			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+				}
+			} 
+		}
+	}
+</script>
+
+<%-- 
+<!-- For "Delete" Button -->
+<script>
+$('#del').click(function(){
+	if(confirm("Are you sure you want to remove this JEV from the list?"))
+		{
+			$('#formDel').submit();
+		}
+	});
+</script>
+--%>
+
+<%-- 
+<!-- For Status & "Post" Button -->
+<script>
+function endisbtn() {
+var id;
+status = document.getElementById(${list.tstat_name});
+id = document.getElementById("pstbtn");
+
+if (status == 'Pending'){
+	function disableBtn() {
+	    document.getElementById(id).disabled = true;
+	}
+} 
+else if (status == "Approved"){
+	function undisableBtn() {
+	    document.getElementById(id).disabled = false;
+	}
+} 
+else {
+	function undisableBtn() {
+	    document.getElementById("pstbtn").disabled = true;
+	}
+} 
+}
+</script>
+--%>
 
 <!-- global js -->
 <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -191,26 +336,9 @@
 <!-- Added Scripts -->
 <script src="resources/vendors/modal/js/classie.js"></script>
 <script src="resources/vendors/modal/js/modalEffects.js"></script>
-<script src="resources/vendors/daterangepicker/daterangepicker.js" type="text/javascript"></script>
-
-<script src="resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-<script src="resources/vendors/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
-<script src="resources/vendors/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
     
 <script src="resources/vendors/maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
 <script src="resources/js/pages/formelements.js" type="text/javascript"></script>
-
-<!-- Remove Script -->
-<%-- 
-<script>
-$('#del').click(function(){
-		if(confirm("Are you sure you want to delete this?"))
-			{
-				$('#formDel').submit();
-			}
-		});
-</script>
---%>
-		
+	
 </body>
 </html>
