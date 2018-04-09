@@ -16,6 +16,8 @@ import financials.dao.financials_cjevDAO;
 import financials.model.TVoucherModel;
 import financials.model.financials_cjevModel;
 
+/*
+@RequestMapping("ajax")*/
 @Controller
 public class financials_cjevController {
 	
@@ -29,7 +31,9 @@ public class financials_cjevController {
 		List<financials_cjevModel> respCenter = respCenter();
 		List<financials_cjevModel> dropDownAccount = dropDownAccount();
 		cjev.addObject("respCenter", respCenter);
+		
 		cjev.addObject("coaAccount", dropDownAccount);
+		
 		cjev.setViewName("GLedger/financials_cjev");//jsp file
 		return cjev;
 	}
@@ -48,10 +52,14 @@ public class financials_cjevController {
 			return mav;
 		}
 	
-	@RequestMapping(value = "CjevAjax", method = RequestMethod.POST, headers={"Content-type:application/json"})
+	@RequestMapping(value = "CjevAjax", method = RequestMethod.POST, headers={"Content-type=application/json"})
 	@ResponseBody
-	public boolean GaganaIto(@RequestBody financials_cjevModel model[])
-	{
+	public boolean GaganaIto(@RequestBody financials_cjevModel model)
+	{	
+		
+		cjvDAO.insertJevInfo(model);
+	/*	System.out.print(model.getResp_name()[2]);*/
+		
 		return true;
 	}
 			

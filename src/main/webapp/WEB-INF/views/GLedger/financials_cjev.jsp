@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Financials System Project</title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />;
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +51,7 @@
 	</section>
 	
 	<section class="content paddingleft_right15">	
-
+		<form accept-charset=UTF-8>
 		<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
@@ -68,7 +68,7 @@
 								<li class="acc-wizard-todo acc-wizard-active">
 									<a href="#part1">Particulars</a>
 								</li>
-								<li class="acc-wizard-todo">
+								<li class="acc-wizard-todo ">
 									<a href="#part2">Accounting Entries</a>
 								</li>
 								<li class="acc-wizard-todo">
@@ -89,7 +89,7 @@
 									</div>
                                             <div id="part1" class="panel-collapse collapse in">
                                                 <div class="panel-body">
-                                                    <form:form action="financials_createjev" modelAttribute="insert_cjev" id="form-part1">
+                                                  
                                                     	
                                                     	<!-- Remove Placeholder After -->
                                                     	<fieldset>                                   			
@@ -100,32 +100,32 @@
                                                     					<div class="input-group-addon">
                                                     						<i class="fa fa-calendar"></i>
                                                     					</div>
-                                                    					<form:input type="date" path="jev_date" class="form-control required" data-inputmask="'alias': 'mm/dd/yyyy'" />	
+                                                    					<input type="date" class="form-control required" data-inputmask="'alias': 'mm/dd/yyyy'" />	
                                                     				</div>
                                                     		</div>
                                                     		
                                                     		<!-- Transaction Type -->
                                                     		<div class="col-md-12 form-group">
                                                     			<label>Transaction Type</label> 
-                                                    				<form:select path="jev_trans_type" id="trnsctype" class="form-control select2">
+                                                    				<select id="trnsctype" class="form-control select2">
                                                     					<option value="Cash Receipts">Cash Receipts</option>
 																		<option value="Cash Disbursement">Cash Disbursement</option>
 																		<option value="Non-cash Transactions">Non-cash Transactions</option>
-                                                    				</form:select>
+                                                    				</select>
                                                     		</div>
                                                     		
                                                     		<!-- JEV Creator -->
                                                     		<div class="col-md-12 form-group">
                                                     			<label>Prepared by</label>
                                                     				<div class="input-group"> 	
-                                                    					<form:input path="jev_creator" type="text" class="form-control required" />
+                                                    					<input class="form-control" id="jev_creator">
                                                     				</div>
                                                     		</div>
                                                     		
                                                     		<!-- JEV Remarks -->
                                                     		<div class="col-md-12 form-group">
 																<label>Remarks</label>
-																	<form:textarea path="jev_remarks" id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" placeholder="Write here..." />
+																	<textarea id="textarea" class="form-control" style="resize: none" maxlength="1000" rows="3" placeholder="Write here..."></textarea>
 															</div>
 																					
                                                     	</fieldset>
@@ -133,7 +133,7 @@
                                                     	<!-- Next Button -->
                                                     	<div class="acc-wizard-step"></div>
                                                     	
-                                                    </form:form>
+                                                   
                                                 </div>
                                             </div>
                                  </div>
@@ -142,13 +142,13 @@
                                  <div class="panel panel-default">
                                  	<div class="panel-heading">
                                  		<h4 class="panel-title">
-                                 			<a href="#part2" data-parent="#accordion-demo" data-toggle="collapse">Accounting Entries</a>
+                                 			<a href="#part2" data-parent="#accordion-demo" data-toggle="collapse" class="acc-wizard-step">Accounting Entries</a>
                                  		</h4>
                                  	</div>
                                  	
                                  	<div id="part2" class="panel-collapse collapse awd-h" style="height: 36.400001525878906px;">
                                  		<div class="panel-body">
-                                 			<form:form action="financials_createjev" modelAttribute="insert_cjev" id="form-part2">
+                                 			
                                  				
                                  				<fieldset>
                                  				<div class="portlet box primary">
@@ -168,9 +168,9 @@
                                  							
                                  							<thead>
                                  								<tr>
-                                 									<th class="col-md-2">Responsibility <br> Center</th>
+                                 									<th class="col-md-2">Responsibility Center</th>
                                  									<th class="col-md-2">Debit Account</th>
-                                 									<th>Debit <br> Amount</th>
+                                 									<th>Debit Amount</th>
                                  									<th class="col-md-2">Credit Account</th>
                                  									<th>Credit <br> Amount</th>
                                  									<th class="col-md-4">Explanation</th>
@@ -180,44 +180,44 @@
                                  							<tbody id="tableAppend">
                                  								<tr id="addr0">
                                  									<td>
-                                 										<form:select path="resp_name" class="form-control" name="resp_name">
+                                 										<select  class="form-control resp_name">
                                  											<c:forEach var="resp" items="${respCenter}">
                                  												<option value="${resp.resp_center_description}">
-																					<c:out value="${resp.resp_center_description}" />
+																						${resp.resp_center_description}
 																				</option>
                                  											</c:forEach>
-																		</form:select>
+																		</select>
 																	</td>
 																	
 																	<td>
-                                 										<form:select path="dbcoa_name" class="form-control" name="dbcoa_name">
-                                 											<c:forEach var="coa" items="${dropDownAccount}">
+                                 										<select class="form-control dbcoa_name">
+                                 											<c:forEach var="coa" items="${coaAccount}">
                                  												<option value="${coa.coa_description}">
 																					<c:out value="${coa.coa_description}" />
 																				</option>
                                  											</c:forEach>
-																		</form:select>
+																		</select>
 																	</td>
 																	
 																	<td>
-																		<form:input path="jevd_dbamt" type="number" class="form-control debit" onkeyup="calculations();" value="0" maxlength="19" />
+																		<input type="number" class="form-control debit jevd_dbamt" onkeyup="calculations();" value="0" maxlength="19" />
 																	</td>
 																	
 																	<td>
-                                 										<form:select path="crcoa_name" class="form-control">
-                                 											<c:forEach var="coa" items="${dropDownAccount}">
+                                 										<select class="form-control crcoa_name">
+                                 											<c:forEach var="coa" items="${coaAccount}">
                                  												<option value="${coa.coa_description}">
 																					<c:out value="${coa.coa_description}" />
 																				</option>
                                  											</c:forEach>
-																		</form:select>
+																		</select>
 																	</td>
 
 																	<td>
-																		<form:input path="jevd_cramt" type="number" class="form-control credit" onkeyup="calculations();" value="0" maxlength="19" />
+																		<input type="number" class="form-control credit jevd_cramt" onkeyup="calculations();" value="0" maxlength="19" />
 																	</td>
 																	<td>
-																		<form:input path="jevd_expl" type="text" class="form-control" maxlength="500" />
+																		<input type="text" class="form-control jevd_expl" maxlength="500" />
 																	</td>
                                  								</tr>
 																<tr id='addr1'></tr>
@@ -227,9 +227,9 @@
                                  								<tr>
                                  									<td></td>
                                  									<td>Total Debit</td>
-                                 									<td><form:input path="tot_dbamt" id = "totalDebit" readOnly = "true" /></td>
+                                 									<td><input type="text"  value="0" id = "totalDebit" disabled/></td>
                                  									<td>Total Credit</td>
-                                 									<td><form:input path="tot_cramt" id = "totalCredit" readOnly = "true"/></td>
+                                 									<td><input type="text"  value="0" id = "totalCredit" disabled/></td>
                                  									<td></td>
                                  								</tr>
                                  							</tfoot>
@@ -242,7 +242,7 @@
                                  				
                                  				<!-- Next Button -->
                                  				<div class="acc-wizard-step"></div>
-                                 			</form:form>
+                                 		
                                  		</div>
                                  	</div>
                                  </div>
@@ -257,7 +257,7 @@
                                  	
                                  	<div id="part3" class="panel-collapse collapse" style="height: 36.400001525878906px;">
                                  		<div class="panel-body">
-                                 			<form:form action="financials_createjev" modelAttribute="insert_cjev" id="form-part3">
+                                 		
                                  				
                                  				<fieldset>
                                  				<div class="portlet box primary">
@@ -283,13 +283,13 @@
 	                                 						<tbody id="sdtableAppend">
                                  								<tr id="sdaddr0">
 	                                 								<td>
-	                                 									<form:select path="jevsd_type" id="sd_type" class="form-control select2">
+	                                 									<select class="form-control select2 jevsd_type">
 																			<option value="Receipt">Receipt</option>
 																			<option value="Voucher">Voucher</option>
-																		</form:select>
+																		</select>
 																	</td>
-																	<td><form:input path="jevsd_value" type="text" class="form-control" /></td>
-																	<td><form:input path="jevsd_date" type="date" class="form-control" data-inputmask= "'alias': 'mm/dd/yyyy'" /></td>
+																	<td><input type="text" class="form-control jevsd_value" /></td>
+																	<td><input type="date" class="form-control jevsd_date" data-inputmask= "'alias': 'mm/dd/yyyy'" /></td>
 																</tr>
 																<tr id='sdaddr1'></tr>
 															</tbody>
@@ -301,7 +301,7 @@
                                  				
                                  				<!-- Next Button -->
                                  				<div class="acc-wizard-step"></div>
-                                 			</form:form>
+                                 			
                                  		</div>
                                  	</div>
                                  </div>
@@ -309,9 +309,9 @@
                           
                           <!-- Save and Cancel Button -->
                           <div>
-							  <div class="btn-group pull-right">
+							  <div  class="btn-group pull-right">
 							  	<a href=#>
-							  		<button class=" btn btn-default">
+							  		<button type="button" class=" btn btn-default">
 							  			<i class="livicon" data-name="remove-circle" data-size="20" data-c="#000" data-hc="#fff" data-loop="true"></i>
 										Cancel 
 									</button>
@@ -319,12 +319,12 @@
 							  </div>
 							  
 							   <div class="btn-group pull-right">
-								<a href=#>
-									<button class=" btn btn-success">
+								
+									<button type="button" class=" btn btn-success" id="saveToController">
 										<i class="livicon" data-name="check-circle" data-size="20" data-c="#000" data-hc="#fff" data-loop="true"></i>
 										 Save
 									</button>
-								</a>
+								
 							  </div>
 						  </div>
 							                        
@@ -333,7 +333,7 @@
               </div>
            </div>
         </div>
-     
+     </form>
    </section>
 </aside>
 
@@ -345,52 +345,143 @@
 
 <!-- Add rows (Supporting Documents) -->
 <script>
-	$(document)
-			.ready(
-					function() {
-
-
-						$('#add_rows2')
-								.click(
-										function() {
-											$('#sdaddr0').clone().appendTo('#sdtableAppend');
-										});
+	$(document).ready(function() {
+	
+		$('#add_rows2').click(function() 
+				{	
+						$('#sdaddr0').clone().appendTo('#sdtableAppend');
+				});
+		
+		$('#saveToController').click(function()
+				{
+			var date = new Date();
+			var dateToJev = 'JEV# '+ date.getFullYear() + '' +
+		  					date.getMonth()+''+date.getDate()+''+date.getTime();
+			var dateToJevDate = date.getMonth()+'/'+date.getDate()+'/'+date.getFullYear();
+			
+			var jts=$('#trnsctype').val();
+			var dbamt=$('#totalDebit').val();
+			var cramt=$('#totalCredit').val();
+			var creator=$('#jev_creator').val();
+			var remarks=$('#textarea').val();
+			var pending='Pending'
+			
+			var JEV = 
+				{
+					jev_no:   		dateToJev,
+			        jev_date: 		dateToJevDate,
+			        jev_trans_type: jts,
+					tot_dbamt:		dbamt,
+					tot_cramt:		cramt,
+					jev_creator:	creator,
+					jev_remarks:	remarks,
+					tstat_name:		pending,
+									
+					resp_name: [],		
+					dbcoa_name:[],
+					jevd_dbamt:[],
+					crcoa_name:[],
+					jevd_cramt:[],
+					jevd_expl:[],
+					
+					jevsd_type:[],
+					jevsd_value:[],	
+					jevsd_date:	[]
+									
+				}
+			
+				$('.resp_name').each(function()
+						{
+							JEV.resp_name.push($(this).val());
+						})
+						
+				$('.dbcoa_name').each(function()
+						{
+							JEV.dbcoa_name.push($(this).val());
+						})
+				
+				$('.jevd_dbamt').each(function()
+						{
+							JEV.jevd_dbamt.push($(this).val());
+						})
+						
+				$('.crcoa_name').each(function()
+						{
+							JEV.crcoa_name.push($(this).val());
+						})
+						
+				$('.jevd_cramt').each(function()
+						{
+							JEV.jevd_cramt.push($(this).val());
+						})
+						
+				$('.jevd_expl').each(function()
+						{
+							JEV.jevd_expl.push($(this).val());
+						})
+						
+				$('.jevsd_type').each(function()
+						{
+							JEV.jevsd_type.push($(this).val());
+						})
+						
+				$('.jevsd_value').each(function()
+						{
+							JEV.jevsd_value.push($(this).val());
+						})
+						
+				$('.jevsd_date').each(function()
+						{
+							JEV.jevsd_date.push($(this).val());
+						})
+				
+				$.ajax({
+					
+					type:'POST',
+					contentType:'application/json; charset=utf-8',
+					dataType:'json',
+					url:'${pageContext.request.contextPath}/CjevAjax',
+					data: JSON.stringify(JEV),
+					success:function(result)
+					{
+						alert('Success');
+					},
+					error:function(e)
+					{
+						alert('error')
+					}
+				
+				})
+				
+				
+						
+				
+				});
+						
+						
+						
 					});
+	
+	
 
 	
 </script>
 
 <!-- Add rows (Accounting Entries) -->
 <script>
-	$(document)
-			.ready(
-					function() {
-
-
-						$('#add_rows')
-								.click(
-										function() {
-											$('#addr0').clone().appendTo('#tableAppend');
-										});
-					});
+	$(document).ready(function() 
+			{	
+					$('#add_rows').click(function()
+							{
+								$('#addr0').clone().appendTo('#tableAppend');
+							});
+					
+					
+					
+			});
 
 	function calculations() {
-		/*  $('.debit').keyup(function(){
-		       
-		       if($('.credit').val)
-		           {
-		             $('.credit').val("0");
-		           }
-		   });
-		 
-		 $('.credit').keyup(function(){
-		       
-		       if($('.debit').val)
-		           {
-		             $('.debit').val("0");
-		           }
-		   }); */
-
+	
 		var sumOfDebit = 0;
 		var sumOfCredit = 0;
 

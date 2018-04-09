@@ -330,7 +330,6 @@ $(document).ready(function(){
 	$(".ToModal").on('click',function(){
 		// get data
 		var data = $(this).closest('tr').data();
-
 		// put to modal ----------------------- start
 		// using jquery codes
 		/* $('#modal_code').val(data.code);
@@ -343,9 +342,6 @@ $(document).ready(function(){
 		// put to modal ----------------------- ends
 	});
 });
-
-
-
 </script>
 	
   
