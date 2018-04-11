@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import financials.dao.financials_cjevDAO;
-import financials.model.TVoucherModel;
 import financials.model.financials_cjevModel;
 
 /*
