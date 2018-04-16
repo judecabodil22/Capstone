@@ -4,7 +4,7 @@ public class financials_gledgerModel {
 	
 	//JEV Info (Part I)
 	private int jev_id;
-	private String jev_no;
+ 	private String jev_no;
 	private String jev_date;
 	private String tstat_name;
 	private String jev_post_status;

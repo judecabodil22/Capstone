@@ -59,36 +59,40 @@
 							<table class="table table-bordered table-hover">
 								<thead>
 									<tr>
-										<th class="col-xs-1" colspan="2">Date</th>
+										<th class="col-xs-1" >Date</th>
 										<th>Items</th>
 										<th class="col-md-2">Debit Amount</th>
-										<th class="col-xs-1" colspan="2">Date</th>
+										<th class="col-xs-1" >Date</th>
 										<th>Items</th>
 										<th class="col-md-2">Credit Amount</th>
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach var="list" items="${pettycash}" >
+									<c:forEach var="list" items="${pettycash}">
 									<tr>
-										<td>${list.jev_date}</td>
-										<td>${list.jev_date}</td>
-										<td> </td>
-										<td><input value="${list.jevd_dbamt}" type="text" class="form-control debit jevd_dbamt" onkeyup="calculations();" value="0" maxlength="19" disabled/></td>
-										<td>${list.jev_date}</td>
-										<td>${list.jev_date}</td>
-										<td> </td>
-										<td><input value="${list.jevd_cramt}" type="text" class="form-control credit jevd_cramt" onkeyup="calculations();" value="0" maxlength="19" disabled/></td>
-									</tr>
+                                          
+                                      
+                                        		<td>${list.jev_date}</td>
+												<td></td>
+												<td>${list.jevd_dbamt}</td>	
+										
+                                        		
+												<td>${list.jev_date}</td>
+												<td></td>
+												<td>${list.jevd_cramt}</td>
+									
+										
+									</tr>									
 									</c:forEach>
 								</tbody>
 								<tfoot>
 									<tr>
 										<td></td>
-										<td></td>
+										
 										<td> </td>
 										<td><input type="text"  value="0" id = "totalDebit" disabled/></td>
 										<td></td>
-										<td></td>
+										
 										<td> </td>
 										<td><input type="text"  value="0" id = "totalCredit" disabled/></td>
 									</tr>

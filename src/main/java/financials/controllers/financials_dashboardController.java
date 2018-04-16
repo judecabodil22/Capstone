@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class financials_dashboardController {
 	
 	@RequestMapping("/financials_dashboard") //url
-	public ModelAndView fdash()
+	public ModelAndView dashboard()
 	{
 		ModelAndView fd = new ModelAndView();
-		fd.setViewName("financials_dashboard");//.jsp file
+		fd.setViewName("financials_dashboard"); //.jsp file
 		return fd;
 	}
 }
