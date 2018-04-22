@@ -151,6 +151,10 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
     
+    <bean id="glDAO" class="financials.dao.financials_gledgerDAO">
+        <constructor-arg ref="dataSource"></constructor-arg>
+    </bean>
+    
     <bean id="DV_DAO" class="financials.dao.DV_DAO">
         <constructor-arg ref="dataSource"></constructor-arg>
     </bean>
