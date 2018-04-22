@@ -1,6 +1,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
+
+
+
+  <link href="resources/vendors/select2/select2.css" rel="stylesheet" />
+  <link rel="stylesheet" href="resources/vendors/select2/select2-bootstrap.css" />
+
+
   <title>Chart of Accounts</title>
 <%@ include file = "../commonDesign.jsp" %>
 
@@ -189,13 +196,10 @@
   <label class="col-md-4 control-label" for="">Parent Type</label>
   <div class="col-md-4">
    
-   <form:select id="" name="" class="form-control" path="acc_parent_uid">
+   <form:select id="e1" class="form-control select2" path="acc_parent_uid">
 
 	<c:forEach var="list" items="${types}">  
-   	 
-   
-   	 
-   	 
+    
    	<form:option value="${list.acc_parent_uid}">
            <c:out value="${list.acc_description}"/>   
  	</form:option>
@@ -283,6 +287,11 @@
     <!-- global js -->
     <script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script>
+    
+    </script>
+    
     <!--livicons-->
     <script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
     <script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
@@ -311,7 +320,7 @@
     <script src="resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
      <script src="resources/vendors/jscharts/Chart.js"></script>
     <script src="resources/js/dashboard.js" type="text/javascript"></script>
-   
+   <script src="resources/vendors/select2/select2.js" type="text/javascript"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         var composeHeight = $('#calendar').height() +21 - $('.adds').height();

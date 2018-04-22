@@ -445,6 +445,7 @@
 					success:function(result)
 					{
 						alert('Success');
+						window.location.href = "financials_jevlist";
 					},
 					error:function(e)
 					{
@@ -474,8 +475,20 @@
 					$('#add_rows').click(function()
 							{
 								$('#addr0').clone().appendTo('#tableAppend');
+								calculations();
 							});
 					
+					
+				  
+					
+					$('#delete_row2').click(function()
+							{
+								$('#addr0').last().remove();
+								calculations();
+							})			
+				
+			
+				
 					
 					
 			});

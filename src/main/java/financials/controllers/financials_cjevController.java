@@ -48,7 +48,7 @@ public class financials_cjevController {
 		public ModelAndView mav(@ModelAttribute("save") financials_cjevModel cjv,@ModelAttribute("jevd_dbamt") financials_cjevModel cjv2) 
 		{
 			ModelAndView mav = new ModelAndView();
-			mav.setViewName("GLedger/financials_cjev");
+			mav.setViewName("GLedger/financials_jevlist");
 			return mav;
 		}
 	
