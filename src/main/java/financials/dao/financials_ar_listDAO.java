@@ -18,7 +18,7 @@ public class financials_ar_listDAO {
 	public JdbcTemplate jdbcTemplate;
 	public PlatformTransactionManager platformTransactionManager;
 	public TransactionTemplate transactionTemplate;
-
+	
 	String sql = "";
 	public String i;
 	public financials_ar_listDAO(DataSource dataSource) {
@@ -31,20 +31,38 @@ public class financials_ar_listDAO {
 		      "from tbl_fs_jev_info ji \r\n" +
 			  "inner join tbl_fs_jev_details jd on ji.jev_id = jd.jev_id \r\n" +
 		      "where jd.crcoa_name like '%Receivable%' \r\n" +
-			   "order by ji.jev_no";
+		      "and ji.jev_cdn is null  \r\n" +
+			  "order by ji.jev_no";
 		
 		return jdbcTemplate.query(sql, new RowMapper<financials_ar_listModel>() {
 			public financials_ar_listModel mapRow(ResultSet rs, int row) throws SQLException {
 				financials_ar_listModel h3h3 = new financials_ar_listModel();
-				h3h3.setJev_id(rs.getString("jev_id"));
-				h3h3.setJev_date(rs.getDate("jev_date"));
-				h3h3.setJev_no(rs.getString("jev_no"));
-				h3h3.setJevd_id(rs.getString("jevd_id"));
-				h3h3.setCrcoa_name(rs.getString("crcoa_name"));
-				h3h3.setJevd_cramt(rs.getString("jevd_cramt"));
-				h3h3.setJevd_expl(rs.getString("jevd_expl"));
+					h3h3.setJev_id(rs.getString("jev_id"));
+					h3h3.setJev_date(rs.getDate("jev_date"));
+					h3h3.setJev_no(rs.getString("jev_no"));
+					h3h3.setJevd_id(rs.getString("jevd_id"));
+					h3h3.setCrcoa_name(rs.getString("crcoa_name"));
+					h3h3.setJevd_cramt(rs.getString("jevd_cramt"));
+					h3h3.setJevd_expl(rs.getString("jevd_expl"));
 				return h3h3;
 			}
 		});
 	}
+	
+	public boolean insert (financials_ar_listModel fcol) {
+		
+		sql = "insert into tbl_fs_col_info (col_type, col_payer, col_desc, col_amt) values(?,?,?,?)";
+		
+		jdbcTemplate.update(sql, new Object[] { fcol.getCol_type(), fcol.getCol_payer(), fcol.getCol_desc(), fcol.getCol_amt() });
+		return true;
+	}
+	
+	public boolean update (financials_ar_listModel jevarcol) {
+		
+		sql = "update tbl_fs_jev_info set jev_cdn = 'C' where jev_id = ?";
+		
+		jdbcTemplate.update(sql, new Object[] { jevarcol.getJev_id() });
+		return true;
+	}
+
 }

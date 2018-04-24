@@ -8,29 +8,13 @@
 <meta charset="UTF-8">
 <title>Financials System Project</title>
 
-<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
-
-<!-- global css -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<!-- font Awesome -->
-<link href="resources/vendors/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="resources/css/styles/black.css" rel="stylesheet" type="text/css" id="colorscheme" />
-<link href="resources/css/panel.css" rel="stylesheet" type="text/css" />
-<link href="resources/css/metisMenu.css" rel="stylesheet" type="text/css" />
-<!-- end of global css -->
-
-<!-- Added -->
+<!-- added -->
 <link rel="stylesheet" href="resources/css/pages/buttons.css" />
 <link href="resources/css/pages/icon.css" rel="stylesheet" type="text/css" />
 <link href="resources/css/pages/tables.css" rel="stylesheet" type="text/css" />
 <link href="resources/vendors/modal/css/component.css" rel="stylesheet" />
 <link href="resources/css/pages/formelements.css" rel="stylesheet" />
+<!-- /added -->
 
 <%@ include file="../commonDesign.jsp"%>
 </head>
@@ -39,13 +23,14 @@
 
 	<!-- Main Content -->
 	<section class='content-header'>
-		<h1>General Journal</h1>
+		<h1>Journal Entry Voucher</h1>
 	</section>
 	
 	<section class="content">
-		<div class="col-md-12">
+	
+	<div class="col-md-12">
 		<div class="portlet box primary">
-			
+		
 			<div class="portlet-title">
 				<div class="caption">
 					<i class="livicon" data-name="notebook" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
@@ -54,13 +39,13 @@
 			</div>
 			
 			<div class="portlet-body">
-				
+			
 				<div class="table-toolbar">
 					<div class="btn-group pull-left">
 						<a href="financials_createjev">
 							<button class=" btn btn-success">
-								<i class="livicon" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-								Create JEV 
+								<i class="livicon pull-left" data-name="plus-alt" data-size="20" data-c="#fff" data-hc="#fff"></i>
+									<span>&nbsp;Create JEV</span>
 							</button>
 						</a>
 					</div>
@@ -81,12 +66,11 @@
 					<table id="jevTable" class="table table-striped table-bordered table-advance table-hover">
 						<thead>
 							<tr>
-								<th>Date</th>
-								<th>JEV No.</th>
-								<th>Prepared by</th>
-								<th>Remarks</th>
-								<th>Status</th>
-								<th colspan="3"></th> 	
+								<th class="col-md-2">Date</th>
+								<th class="col-md-3">JEV No.</th>
+								<th class="col-md-3">Prepared by</th>
+								<th class="col-md-1">Status</th>
+								<th class="col-md-2"></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -126,15 +110,11 @@
 																</tr>
 																<tr>
 																	<td>Total Debit</td>
-																	<td>
-																		<fmt:formatNumber value="${list.tot_db}" type="currency" />
-																	</td>
+																	<td><fmt:formatNumber value="${list.tot_db}" type="currency" /></td>
 																</tr>
 																<tr>
 																	<td>Total Credit</td>
-																	<td>
-																		<fmt:formatNumber value="${list.tot_cr}" type="currency" />
-																	</td>
+																	<td><fmt:formatNumber value="${list.tot_cr}" type="currency" /></td>
 																</tr>
 																<tr>
 																	<td>Status</td>
@@ -156,7 +136,6 @@
 																	<td>Reviewer's Remarks</td>
 																	<td>${list.jev_checker_remarks}</td>
 																</tr>
-																
 															</tbody>
 														</table>
 													</div>
@@ -170,7 +149,6 @@
 									</div>
 								</td>
 								<td>${list.jev_creator}</td>
-								<td>${list.jev_remarks}</td>
 								<td>
 									<c:choose>
 										<c:when test="${list.tstat_name eq 'Pending'}">
@@ -186,74 +164,61 @@
 									</c:choose>
 								</td>
 								<td>
-									<a href="financials_reviewjev" class="btn btn-responsive info btn-xs"> 
+									<button href="financials_reviewjev" class="btn btn-responsive info btn"> 
 										<i class="livicon" data-name="eye-open" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="View" style="margin-bottom:10px;"></i> 
-									</a>
-                                </td>
-                                
-                                <%--<td>
-                                	<form:form action="financials_jevlist_delete" modelAttribute="jevlist_delete" id="formDel">
-                                		<form:input type="hidden" id="uid" path="jev_id" value="${list.jev_id}" />
-                                			<div class="spring">
-                                				<button type="button" data-toggle="modal" id="del" class="btn btn-danger btn-sm">Delete</button>
-                                			</div>
-                                	</form:form>
-                                </td>--%>
-                                
-                                <td>
-                                	<a class="btn danger btn-xs" data-toggle="modal" data-href="#staticremove" href="#staticremove">
-                                		<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> 
-                                	</a>
-                                </td>
-                                <td>
-                                	<a class="btn default btn-xs" data-toggle="modal" data-href="#staticpost" href="#staticpost">
-                                		<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> 
-                                	</a>
-                                </td>
-                             </tr>
-                          </c:forEach>
-                       </tbody>
-                   </table>
-                   
-                   <!-- static modal (remove)-->
-                   <div class="modal fade in" id="staticremove" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                   		<div class="modal-dialog modal-md">
-                   			<div class="modal-content">
-                   				<div class="modal-body">
-                   					<p>Do you want to remove this JEV from the list?</p>
-                   				</div>
-                   				<div class="modal-footer">
-                   					<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
-                   					<button type="button" data-dismiss="modal" class="btn">No</button>
-                   				</div>
-                   			</div>
-                   		</div>
-                   	</div>
-                   	
-                   	<!-- static modal (post)-->
-                   	<div class="modal fade in" id="staticpost" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                   		<div class="modal-dialog modal-md">
-                   			<div class="modal-content">
-                   				<div class="modal-body">
-                   					<p>Do you want to post this JEV to General Ledger?</p>
-                   					<br>
-                   					<div class="alert alert-warning">
-                   						<p>Note: You cannot undo this action once posted.</p>
-                   					</div>
-                   				</div>
-                   				<div class="modal-footer">
-                   					<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
-                   					<button type="button" data-dismiss="modal" class="btn">No</button>
-                   				</div>
-                   			</div>
-                   		</div>
-                   	</div>
-            
-            </div>
-           </div>
-          </div>
-         </div>
-        </section>
+									</button>
+									
+									<button class="btn danger btn" data-toggle="modal" data-href="#staticremove" href="#staticremove">
+										<i class="livicon" data-name="trash" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Remove" style="margin-bottom:10px;"></i> 
+									</button>
+									<button class="btn default btn" data-toggle="modal" data-href="#staticpost" href="#staticpost">
+										<i class="livicon" data-name="columns" data-size="20" data-c="#fff" data-hc="#808080" data-loop="true" data-toggle="tooltip" data-tooltip="tooltip" data-placement="top" data-original-title="Post" style="margin-bottom:10px;"></i> 
+									</button>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+				
+				<!-- static modal (remove)-->
+				<div class="modal fade in" id="staticremove" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-body">
+								<p>Do you want to remove this JEV from the list?</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+								<button type="button" data-dismiss="modal" class="btn">No</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- static modal (post)-->
+				<div class="modal fade in" id="staticpost" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-body">
+								<p>Do you want to post this JEV to General Ledger?</p>
+								<br>
+								<div class="alert alert-warning">
+									<p>Note: You cannot undo this action once posted.</p>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
+								<button type="button" data-dismiss="modal" class="btn">No</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+</section>
 </aside>
 
 </div>
@@ -271,74 +236,24 @@ function searchFunction() {
 	// Loop through all table rows, and hide those who don't match the search query
 	for (i = 1; i < tr.length; i++) {
 		td = tr[i].getElementsByTagName("td")[1];
-		if (td) {
-			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-				tr[i].style.display = "";
-			} else {
-				tr[i].style.display = "none";
+			if (td) {
+				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				}
+				else {
+					tr[i].style.display = "none";
 				}
 			} 
 		}
 	}
-</script>
-
-<%-- 
-<!-- For "Delete" Button -->
-<script>
-$('#del').click(function(){
-	if(confirm("Are you sure you want to remove this JEV from the list?"))
-		{
-			$('#formDel').submit();
-		}
-	});
-</script>
---%>
-
-<%-- 
-<!-- For Status & "Post" Button -->
-<script>
-function endisbtn() {
-var id;
-status = document.getElementById(${list.tstat_name});
-id = document.getElementById("pstbtn");
-
-if (status == 'Pending'){
-	function disableBtn() {
-	    document.getElementById(id).disabled = true;
-	}
-} 
-else if (status == "Approved"){
-	function undisableBtn() {
-	    document.getElementById(id).disabled = false;
-	}
-} 
-else {
-	function undisableBtn() {
-	    document.getElementById("pstbtn").disabled = true;
-	}
-} 
-}
-</script>
---%>
-
-<!-- global js -->
-<script src="resources/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-<script src="resources/js/bootstrap.min.js" type="text/javascript"></script>
-
-<!--livicons-->
-<script src="resources/vendors/livicons/minified/raphael-min.js" type="text/javascript"></script>
-<script src="resources/vendors/livicons/minified/livicons-1.4.min.js" type="text/javascript"></script>
-<script src="resources/js/josh.js" type="text/javascript"></script>
-<script src="resources/js/metisMenu.js" type="text/javascript"> </script>
-<script src="resources/vendors/holder-master/holder.js" type="text/javascript"></script>
-<!-- end of global js -->
-
-<!-- Added Scripts -->
+	</script>
+	
+<!-- added -->
 <script src="resources/vendors/modal/js/classie.js"></script>
 <script src="resources/vendors/modal/js/modalEffects.js"></script>
-    
 <script src="resources/vendors/maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
 <script src="resources/js/pages/formelements.js" type="text/javascript"></script>
-	
+<!-- /added -->
+
 </body>
 </html>
